@@ -52,7 +52,7 @@ textarea.input-textarea {resize: none;}
 .board-write__table,
 .board-view__table {width:100%;}
 .board-write__table th,
-.board-view__table th {padding:5px 10px;}
+.board-view__table th {padding:5px 10px; text-align: left;}
 .board-write__table td,
 .board-view__table td {padding:5px 10px;}
 

@@ -16,6 +16,7 @@ window.addEventListener('load', function() {
               <li><a href="button.html"><i class="fas fa-minus-circle"></i> Button</a></li>
               <li><a href="form.html"><i class="fas fa-minus-circle"></i> Form</a></li>
               <li><a href="modal.html"><i class="fas fa-minus-circle"></i> Modal</a></li>
+              <li><a href="board.html"><i class="fas fa-minus-circle"></i> board</a></li>
             </ul>
           </li>
         </ul>

@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* ===== 버튼정의 ===== */
+.btn-primary {display:inline-block; min-width:100px; height:40px; padding:0 10px; border:1px solid #20529e; color:#fff; background-color: #20529e;}
+.btn-secondary {display:inline-block; min-width:100px; height:40px; padding:0 10px; border:1px solid #20529e; color:#20529e; background-color: #fff;}
+
+.btn-more {display:inline-block; margin-top:20px; padding:10px; border:1px solid #ccc;}
+
+/*  버튼레이아웃 */
+.btn-wrap {text-align: center;}
+
+/* ==== form tag ==== */
+input[type=text].input-text,
+input[type=password].input-pwd,
+input[type=email].input-text,
+input[type=number].input-text {padding: 3px 5px; border:1px solid #999;}
+
+input[type='date'].input-date {-webkit-appearance: none; appearance: none;}
+input[type='date'].input-date::-webkit-calendar-picker-indicator {}
+
+/* textarea */
+textarea.input-textarea {resize: none;}
+
+/* 검색창 */
+.input-search {display:flex; padding:5px 10px; border: 1px solid #ccc;}
+.input-search__input {width:calc(100% - 32px); margin-right:10px;}
+.input-search__btn {width:22px; height:22px; background: url(../images/icon-search.png) no-repeat 0 0 / 100% 100%;}
+
+
+/* ==== board ==== */
+
+/* 조건검색 */
+.board-search {margin-bottom:20px; padding:10px 0;}
+.board-search__row {display:flex; align-items: center;}
+.board-search__col {flex:1; display:flex; align-items: center; width:100%}
+.board-search__col ~ .board-search__col {margin-left:10px;}
+.board-search__label {padding:0 10px 0 0; white-space: nowrap;}
+.board-search__input {width:100%;}
+
+.flex-2 {flex:2;}
+.flex-1_5 {flex:1.5;}
+
+/* 게시판 상단 */
+.board-head {display:flex; align-items: center; justify-content: space-between; margin-bottom:10px;}
+
+/* 게시판 목록 */
+.board-list {overflow:hidden;}
+.board-list__table {width:calc(100% + 2px); margin:0 -1px;}
+.board-list__table th {padding:5px; border:1px solid #999; text-align: center; background-color: #eee;}
+.board-list__table td {padding:5px; border:1px solid #999; text-align: center;}
+
+/* 게시판 쓰기 & 상세 */
+.board-write__table,
+.board-view__table {width:100%;}
+.board-write__table th,
+.board-view__table th {padding:5px 10px;}
+.board-write__table td,
+.board-view__table td {padding:5px 10px;}
+
+.icon-req::before {content: '*'; color:red}
+.txt-error {margin-top:3px; color:red; font-size:12px;}
+
+/* ===== modal popup ===== */
+.modal-popup {display: none; position: fixed; top:0; right:0; bottom:0; left:0; z-index: 999; background-color:rgba(0,0,0,0.7);}
+.modal-popup--show {display: block;}
+.modal-popup__wrap {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:95%; max-width:800px; background-color: #fff; }
+.modal-popup__head {padding:20px; background-color: #20529e;}
+.modal-popup__body {overflow-y:auto; min-height:300px; max-height:500px;}
+.modal-popup__title {color:#fff}
+.modal-popup__content {padding:20px}
+.modal-popup__foot {padding:20px 10px; border-top:1px solid #ccc;}
+.modal-popup__close {position:absolute; top:20px; right:20px}
+.modal-popup__close > button {width:20px; height:20px; background-color: #eee;}
+/* full */
+.modal-popup--full .modal-popup__wrap {width:100%; max-width:100%; height:100%;}
+/* large 960*600 */
+.modal-popup--large .modal-popup__wrap {max-width:960px;}
+.modal-popup--large .modal-popup__body {max-height:600px;}
+/* small 640*400 */
+.modal-popup--small .modal-popup__wrap {max-width:640px;} 
+.modal-popup--small .modal-popup__body {max-height:400px;}
+/* xsmall 400*300 */
+.modal-popup--xsmall .modal-popup__wrap {max-width:400px;} 
+.modal-popup--xsmall .modal-popup__body {max-height:300px;}
+
+/* ===== modal alert ===== */
+.modal-alert {display: none; position: fixed; top:0; right:0; bottom:0; left:0; z-index: 999; background-color:rgba(0,0,0,0.7);}
+.modal-alert--show {display: block;}
+.modal-alert__wrap {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:350px;}
+.modal-alert__head {padding:10px; background-color: #20529e;}
+.modal-alert__title {color:#fff}
+.modal-alert__body {min-height:100px; background-color: #fff;}
+.modal-alert__msg {padding:30px 10px; text-align:center;}
+.modal-alert__btnArea {display:flex;}
+.modal-alert__btnArea > button {flex:1; padding:10px 0;}
+/* 버튼 */
+.btn-alert-action {color:#fff; background-color: #20529e;}
+.btn-alert-cancel {border-top:1px solid #20529e; color:#20529e;}
+
+

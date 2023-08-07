@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>HTML List :: 수출지원서비스 플랫폼</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!-- 가이드용 -->
+    <link rel="stylesheet" href="guide/asset/fontawesome/css/all.css">
+    <link rel="stylesheet" href="guide/asset/css/guide.css">
+    <script src="guide/asset/js/ui-guide.js"></script>
+    <!-- //가이드용 -->
+
+    <style>
+      body {background-color: #fff; font-weight: 500;}
+      .fa-solid {color:inherit} 
+
+      .fixed-head {position:fixed; top:0; width:100%; z-index:10}
+      
+      h2 {position:relative; padding:10px; margin-bottom:1px; font-size:18px; color:#fff; background-color:#0074c9;}
+      h2.bg_green {background-color:#00A684}
+      table {width:100%; line-height:1.3; margin-top:-2px; border-collapse: separate;}
+      table * {font-size:14px}
+      table thead th {height:25px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; line-height:1.3; vertical-align: middle; text-align: center; color:#333; background-color: #ddd}
+      table thead th > span {letter-spacing: -1px;}
+      table tbody th {height:35px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #ccc; line-height:1.3; padding-left:20px; line-height:1.3; vertical-align: middle; text-align:left; letter-spacing: -1px; color:#333; background-color: #eee;}
+      table td {height:27px; padding:5px 10px; line-height:1.3; border-right:1px solid #ccc; border-bottom:1px solid #f1f1f1; vertical-align: middle; color:#333}
+      table tr:nth-child(odd) {background-color:rgba(245,245,245, .7);}
+      .no {text-align:center; font-weight:bold}
+      .date {text-align:center}
+      table .file {text-align:center; color:#bbb}
+      .file > a {color:#333}
+      .status {position:absolute; right:20px; top:10px}
+      .status .sec {display:inline-block; padding:7px 10px; border-radius: 10px; font-weight: bold; font-size:14px; color:#333; background-color: rgba(255,255,255, .7);}
+      .status #finish {padding:0 10px; border-radius: 20px; font-weight:bold; background-color:#fff}
+      .etc {vertical-align: top;}
+
+      .btn-toggle {padding:3px 10px; border:1px solid #fff; border-radius: 10px; color:#004d40; font-size:12px; background-color: #fff;}
+      h2 .btn-toggle {position:absolute; right:20px; top:6px;}
+
+      th .layer, a.layer {color:green !important}
+      th .get, a.get {color:blue !important}
+      th .mobile, a.mobile {color:blue !important}
+      th .comm, a.comm {color:red !important}
+
+      .f-org {color:orange !important}
+
+      table tr.del {text-decoration: line-through; opacity: 0.5}
+
+      [class^="btn-"] > i {margin:0}
+
+      .fc-pri2 {color:green !important;}
+      .fc-point1 {color:blue}
+      .fc-point2 {color:red}
+
+      tr.web td {background-color: rgba(179, 255, 179, 0.2);}
+      tr.app td {background-color: rgba(255, 179, 179, 0.2);}
+    </style>
+  </head>
+  <body>
+    <div class="g_wrap html_list">
+      <div class="fixed-head">
+        <header>
+          <h1><i class="fab fa-html5"></i> HTML LIST : : 수출지원서비스 플랫폼</h1>
+          <button type="button" class="g-btn-gnb"><i class="fa-solid fa-bars"></i></button>
+        </header>
+        <nav class="g-gnb-wrap">
+          <div class="gnb-container">
+            <div class="gnb-head"></div>
+            <ul>
+              <li><a href="index.html">HTML List</a></li>
+              <li><a href="guide/guide.html">UI/UX Guide</a>
+                <ul>
+                  <li class="active"><a href="guide/guide.html"><i class="fa-solid fa-minus-circle"></i>  Guide</a></li>
+                  <li><a href="guide/component.html"><i class="fa-solid fa-minus-circle"></i>  Component</a></li>
+                  <li><a href="guide/button.html"><i class="fa-solid fa-minus-circle"></i> Button</a></li>
+                  <li><a href="guide/form.html"><i class="fa-solid fa-minus-circle"></i> Form</a></li>
+                  <li><a href="guide/modal.html"><i class="fa-solid fa-minus-circle"></i> Modal</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="gnb-close"><button type="button"><i class="fa-solid fa-times"></i></button></div>
+          </div>
+        </nav>
+        <div class="status">
+          <div class="sec">진행현황 : <span id="finish">0</span> / <span id="total"></span></div>
+          <div class="sec">진척률 : <span id="progress"></span> %</div>
+        </div>
+        <table class="ls-head">
+          <colgroup>
+            <col style="width:5%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:10%">
+            <col style="width:auto">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">No</th>
+              <th scope="col" colspan="3">화면</th>
+              <th scope="col" rowspan="2">파일<br><span class="comm">공통</span> / <span class="layer">레이어</span> / <span class="get">팝업</span></th>
+              <th scope="col" rowspan="2"><span class="fc-pri2">수정일</span><br>완료일</th>
+              <th scope="col" rowspan="2">비고<br><span class="fc-pri2">수정내용</span> / <span class="fc-point1">참고</span> / <span class="fc-point2">중요</span></th>
+            </tr>
+            <tr>
+              <th scope="col">1 depth</th>
+              <th scope="col">2 depth</th>
+              <th scope="col">3 depth</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">메인화면</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">Main</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="menu-01">
+        <i class="fa-solid fa-plug"></i> Common
+        <button type="button" class="btn-toggle open"><i class="fa-solid fa-chevron-up"></i></button>
+      </h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">서브레이아웃</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><a href="html/Layout.html" target="_blank">Layout</a></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">GNB</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><a href="html/gnb.html" target="_blank">gnb</a></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">통합검색</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">CM1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">퀵버튼</td>
+            <td class="2dep">알림메시지</td>
+            <td class="3dep"></td>
+            <td class="file"><span class="layer">CM1.10</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">메시지내역</td>
+            <td class="file">CM1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">사기바이어이메일</td>
+            <td class="3dep"></td>
+            <td class="file">CM1.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">전체메뉴</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><a href="html/CM2.10.html" target="_blank" class="layer">CM2.10</a></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Footer</td>
+            <td class="2dep">개인정보처리방침</td>
+            <td class="3dep"></td>
+            <td class="file">CM3.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">이용약관</td>
+            <td class="3dep"></td>
+            <td class="file">CM3.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">신용정보활용체제공시</td>
+            <td class="3dep"></td>
+            <td class="file">CM3.30</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">이메일무단수집거부</td>
+            <td class="3dep"></td>
+            <td class="file">CM3.40</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">우편번호검색</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><span class="layer">CM4.10</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">로그아웃안내</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><span class="layer">CM5.10</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">달력</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><span class="layer">CM6.10</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">에러화면</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">CM7.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">로딩바</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><span class="layer">CM8.10</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-02">
+        <i class="fa-solid fa-user"></i> USER
+        <button type="button" class="btn-toggle open"><i class="fa-solid fa-chevron-up"></i></button>
+      </h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <!-- <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 첫화면</th>
+          </tr> -->
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">로그인</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">US1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>   
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">아이디찾기</td>
+            <td class="3dep"></td>
+            <td class="file">US1.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>     
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">비밀번호찾기</td>
+            <td class="3dep">본인인증</td>
+            <td class="file"><span class="get">US1.21</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">비밀번호변경</td>
+            <td class="file">US1.22</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">비밀번호3개월안내</td>
+            <td class="3dep"></td>
+            <td class="file">US1.23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>    
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">비밀번호변경</td>
+            <td class="file">US1.22</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">회원가입</td>
+            <td class="2dep">이용약관동의</td>
+            <td class="3dep"></td>
+            <td class="file">US2.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">본인인증</td>
+            <td class="3dep"></td>
+            <td class="file"><span class="get">US1.21</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>      
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">회원정보</td>
+            <td class="3dep"></td>
+            <td class="file">US2.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>   
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">직장검색</td>
+            <td class="file"><span class="layer">US2.30</span></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">회원가입완료</td>
+            <td class="3dep"></td>
+            <td class="file">US2.40</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>      
+        </tbody>
+      </table>
+
+      <h2 id="menu-02">
+        <i class="fa-solid fa-bars"></i> GNB
+        <button type="button" class="btn-toggle open"><i class="fa-solid fa-chevron-up"></i></button>
+      </h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 바이어마케팅(소개)</th>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">빅데이터바이어발굴(조회/결과)</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">BM1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">마케팅발송</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">BM2.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">바이어조회목록</td>
+            <td class="3dep"></td>
+            <td class="file">BM2.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">관심바이어조회목록</td>
+            <td class="3dep"></td>
+            <td class="file">BM2.30</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 바이어정보</th>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">바이어조회</td>
+            <td class="2dep">바이어조회목록</td>
+            <td class="3dep"></td>
+            <td class="file">BD1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">한국거래바이어</td>
+            <td class="3dep"></td>
+            <td class="file">BD1.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">바이어상세정보</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">관심바이어</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">사기바이어이메일</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 해외기업보고서(소개)</th>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">보고서신청</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">보고서신청내역</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 수출바우처컨설팅(소개)</th>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">EC0.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">서비스신청</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">EC1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">완료</td>
+            <td class="3dep"></td>
+            <td class="file">EC1.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">신청내역</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">EC2.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">컨설팅신청정보</td>
+            <td class="3dep"></td>
+            <td class="file">EC2.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 고객센터</th>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">문의하기</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">CS1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">문의접수완료</td>
+            <td class="3dep"></td>
+            <td class="file">CS1.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">공지사항</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">CS2.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">CS2.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 마이페이지</th>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY0.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">정보수정</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY1.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">비밀번호변경</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY2.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+           <tr>
+            <td class="no"></td>
+            <td class="1dep">내캐쉬</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY3.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">관심바이어</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY4.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">문의내역</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY5.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">로그아웃</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY6.10</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <p>copyright 2023. NICE D&B all rights reserved.</p>
+    </footer>
+
+    <script>
+      let elemNo = document.querySelectorAll(".no");
+      let elemTable = document.querySelectorAll("table");
+      let elemDate = document.querySelectorAll(".date");
+      const fixedHead = document.querySelector(".fixed-head");
+      let elemDel = document.querySelectorAll(".del");
+
+      let count = 0;
+      
+      /* elemNo.forEach(function(obj, i){
+        obj.innerHTML= i + 1;
+      }); */
+
+      elemTable.forEach(function(obj){
+        const no =  obj.querySelectorAll(".no");
+        console.log(no);
+        no.forEach(function(obj, i){
+          obj.innerHTML= i + 1;
+        });
+      });
+      console.log(elemDel.length);
+
+      total.innerHTML = elemNo.length - elemDel.length;
+
+      // 완료건 count 및 진척률
+      elemDate.forEach(function(obj, i){
+        //console.log(elemDate);
+        if(obj.hasChildNodes()){
+          count = count + 1;
+          finish.innerHTML = count;
+          console.log(obj.hasChildNodes());
+        }
+
+        let progr = ( count / (elemNo.length - elemDel.length) ) * 100;
+        progress.innerHTML = Math.floor(progr);
+      });
+
+      //공통 아이콘
+      const comIcon = document.querySelectorAll(".comm");
+      comIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-plug"></i> ');
+      });
+
+      //상단 fixed
+      const htmlWrap = document.querySelector(".html_list");
+      htmlWrap.style.paddingTop = fixedHead.clientHeight + "px";
+      //alert(fixedHead.clientHeight);
+
+      //레이어 아이콘
+      const layerIcon = document.querySelectorAll(".layer");
+      layerIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-clone"></i> ');
+      });
+
+      //모바일 아이콘
+      const mobileIcon = document.querySelectorAll(".mobile");
+      mobileIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-mobile-alt"></i> ');
+      });
+
+      //팝업 아이콘
+      const winPopIcon = document.querySelectorAll(".get");
+      winPopIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-arrow-up-right-from-square"></i> ');
+      });
+
+      //열기닫기
+      const btnTbToggle = document.querySelectorAll(".btn-toggle");
+      btnTbToggle.forEach(function(obj, i){
+        obj.addEventListener('click', function(){
+          const nextTable = obj.closest("h2").nextElementSibling;
+          
+          if (obj.classList.contains("open")){
+            nextTable.style.display = "none";
+            obj.classList.remove("open");
+            obj.innerHTML = "<i class='fa-solid fa-chevron-down'></i>";
+          } else {
+            nextTable.removeAttribute("style");
+            obj.classList.add("open");
+            obj.innerHTML = "<i class='fa-solid fa-chevron-up'></i>";
+          } 
+        });
+      });
+      
+      gnbControlGuide();
+    </script>
+  </body>
+</html>

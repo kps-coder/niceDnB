@@ -96,4 +96,4 @@ textarea.input-textarea {resize: none;}
 .btn-alert-action {color:#fff; background-color: #20529e;}
 .btn-alert-cancel {border-top:1px solid #20529e; color:#20529e;}
 
-
+.loading {position: fixed; top:0; right:0; bottom:0; left:0; z-index: 999; background:rgba(0,0,0,0.7) url(../images/loading.svg) no-repeat center center ;}

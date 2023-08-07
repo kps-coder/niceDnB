@@ -4,7 +4,7 @@
 
 
 /* reset */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video { margin: 0; padding: 0; font-family: 'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif; color: #666; font-size: 14px; line-height: 1; border: 0; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video { margin: 0; padding: 0; font-family: 'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif; color: #666; font-size: 14px; line-height: 1; border: 0; box-sizing: border-box; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
 html, body { width: 100%; height: 100%; }
 
@@ -73,13 +73,14 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 /* 유틸메뉴 */
 .util-menu {position: relative; top:4px;}
 .util-menu__wrap {display:flex; align-items: center; }
+.util-menu__wrap * ~ * {margin-left:24px;}
 .btn-login {display:inline-block; width:24px; height:24px; background: url(../images/icon-login.png) no-repeat 0 0 / 100% 100%;}
-.btn-support {display:inline-block; width:24px; height:24px; margin-left:24px; background: url(../images/icon-support.png) no-repeat 0 0 / 100% 100%;}
-.btn-search {display:inline-block; width:24px; height:24px; margin-left:24px; background: url(../images/icon-search.png) no-repeat 0 0 / 100% 100%;}
-.btn-sitemap {display:inline-block; width:24px; height:24px; margin-left:24px; background: url(../images/icon-sitemap.png) no-repeat 0 0 / 100% 100%;} 
+.btn-support {display:inline-block; width:24px; height:24px; background: url(../images/icon-support.png) no-repeat 0 0 / 100% 100%;}
+.btn-search {display:inline-block; width:24px; height:24px; background: url(../images/icon-search.png) no-repeat 0 0 / 100% 100%;}
+.btn-sitemap {display:inline-block; width:24px; height:24px; background: url(../images/icon-sitemap.png) no-repeat 0 0 / 100% 100%;} 
 
 
-.container {min-height:calc(100vh - 90px - 257px); padding-top:89px;}
+.container {min-height:calc(100vh - 228px); padding-top:89px;}
 
 /* 상단 타이틀 */
 .content-head__inner {display:flex; align-items: center; justify-content: space-between; max-width:1280px; margin:30px auto 0; padding:10px 0; border-bottom: 1px solid #999;}
@@ -91,11 +92,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 /* pc */
 @media screen and (min-width: 1280px) {
-  /* skip-nav */
-  .skip-nav a { display: block; position: absolute; left: 0; top: -9999em; z-index: 9999; width: 100%; height: 30px; line-height: 30px; text-align:center; background-color: rgba(0,0,0,.8); color: #fff; }
-  .skip-nav a:active, 
-  .skip-nav a:focus { top: 0; }
-  
+ 
   .gnb {position: relative; top:6px; z-index:10;}
   .gnb__wrap {display:flex;}
   .gnb__a01 {display:block; margin:0 50px; font-size:20px; font-weight: bold; color:#000; letter-spacing: -1px;}
@@ -105,14 +102,17 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
   .gnb__a02 {display:block; padding:3px;}
   .gnb__a02:hover {color:#0051af}
 
-  .gnb__depth01:hover .gnb__depth02 {display:block;}
-  
-  
+  .gnb__depth01:hover .gnb__depth02 {display:block;}  
 
 }
 
 /* pc & 태블릿 */
 @media screen and (min-width: 769px) {
+  /* skip-nav */
+  .skip-nav a { display: block; position: absolute; left: 0; top: -9999em; z-index: 9999; width: 100%; height: 30px; line-height: 30px; text-align:center; background-color: rgba(0,0,0,.8); color: #fff; }
+  .skip-nav a:active, 
+  .skip-nav a:focus { top: 0; }
+
   .header-mobile {display:none;}
 
   .header-pc {position:fixed; top:0; z-index: 15; width:100%; padding:0 20px; border-bottom:1px solid #ccc; box-sizing: border-box; background-color: #fff;}
@@ -123,7 +123,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
   .header__msg {margin-left:30px; font-size:16px;}
 
   /* sitemap */
-  .sitemap {display:none; position: absolute; top:54px; z-index: 20; width:100%; margin-top:-1px; padding:20px 0; border:1px solid #999; background-color: #fff;}
+  .sitemap {display:none; position: absolute; z-index: 20; width:100%; margin-top:-1px; padding:20px 0; border:1px solid #999; background-color: #fff;}
   .sitemap.show {display:block;}
   .sitemap__inner {max-width:980px; margin:0 auto;}
   .sitemap__list {display:flex;}

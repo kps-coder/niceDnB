@@ -7,8 +7,8 @@
 .g_wrap header button {background-color: transparent;}
 .g_tabHead {position:sticky; top:0; z-index: 99; width:100%; overflow-y:hidden; background-color: #008ad1;}
 .g_tabHead::-webkit-scrollbar { display: none; /* Chrome, Safari, Opera*/}
-.g_tabHead ul {display:flex;}
-.g_tabHead ul > li {border: 5px solid transparent;}
+.g_tabHead ul {display:flex; overflow-x:auto}
+.g_tabHead ul > li {white-space: nowrap; border: 5px solid transparent;}
 .g_tabHead ul > li > a {display:inline-block; padding:10px 30px;font-size:16px; font-weight: bold; color:#fff}
 .g_tabHead ul > li.active {border-bottom-color:#cae2ff}
 .g_tabBody > .tabContent {display:none; padding:20px}

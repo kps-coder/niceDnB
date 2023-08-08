@@ -4,10 +4,12 @@
     <title>Guide List</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <script src="../assets/js/ui_common.js"></script>
 
     <!-- 가이드용 -->
     <link rel="stylesheet" href="asset/fontawesome/css/all.css">
@@ -47,15 +49,74 @@
       </div>
       <div class="g_tabBody">
         <section class="tabContent on">
-          <h2><i class="far fa-caret-square-right"></i> Button</h2>
+          <h2><i class="far fa-caret-square-right"></i> Tab</h2>
           <div class="contBody">
             <ul>
-              <li>* </li>
-              <li>* </li>
+              <li>* 버튼형 링크형</li>
             </ul>
+
+            <div class="com-tab">
+              <ul class="com-tab__wrap">
+                <li class="com-tab__col"><button type="button" class="com-tab__btn com-tab__btn--active">Tab 1</button></li>
+                <li class="com-tab__col"><button type="button" class="com-tab__btn">Tab 2</button></li>
+                <li class="com-tab__col"><button type="button" class="com-tab__btn">Tab 3</button></li>
+              </ul>
+            </div>
+            <div class="tab-container">
+              <div class="tab-content show">
+                Tab 1 content
+                <button type="button">버튼</button>
+              </div>
+              <div class="tab-content">
+                Tab 2 content
+                <button type="button">버튼</button>
+              </div>
+              <div class="tab-content">
+                Tab 3 content
+                <button type="button">버튼</button>
+              </div>
+            </div>
+
+            <br><br>
+
+            <div class="com-tab">
+              <ul class="com-tab__wrap">
+                <li class="com-tab__col"><a href="#" class="com-tab__btn">Tab 1</a></li>
+                <li class="com-tab__col"><a href="#" class="com-tab__btn com-tab__btn--active">Tab 2</a></li>
+                <li class="com-tab__col"><a href="#" class="com-tab__btn">Tab 3</a></li>
+              </ul>
+            </div>
   <xmp>
-    <div class="">
-      코드 삽입           
+    <!-- 버튼형 -->
+    <div class="com-tab">
+      <ul class="com-tab__wrap">
+        <li class="com-tab__col"><button type="button" class="com-tab__btn com-tab__btn--active">Tab 1</button></li>
+        <li class="com-tab__col"><button type="button" class="com-tab__btn">Tab 2</button></li>
+        <li class="com-tab__col"><button type="button" class="com-tab__btn">Tab 3</button></li>
+      </ul>
+    </div>
+    <div class="tab-container">
+      <div class="tab-content show">
+        Tab 1 content
+        <button type="button">버튼</button>
+      </div>
+      <div class="tab-content">
+        Tab 2 content
+        <button type="button">버튼</button>
+      </div>
+      <div class="tab-content">
+        Tab 3 content
+        <button type="button">버튼</button>
+      </div>
+    </div>
+
+    <!-- 링크형 -->
+    <div class="com-tab">
+      <ul class="com-tab__wrap">
+        <li class="com-tab__col"><a href="#" class="com-tab__btn">Tab 1</a></li>
+        <li class="com-tab__col"><a href="#" class="com-tab__btn com-tab__btn--active">Tab 2</a></li>
+        <li class="com-tab__col"><a href="#" class="com-tab__btn">Tab 3</a></li>
+      </ul>
     </div>
   </xmp>
           </div>
@@ -68,19 +129,8 @@
     </footer>
 
     <script type="text/javascript">
-      tabControl("g_tabHead", "g_tabBody"); // 가이드 상단 탭
 
-      const tabBtn = document.querySelectorAll(".g_tabHead li");
-      const tabContent = document.querySelectorAll(".tabContent");
-      tabBtn.forEach(function(obj, i){
-        obj.addEventListener("click",function(e){
-          setTimeout(function(){
-            const scroller = document.scrollingElement.scrollTop;
-            //console.log(scroller);
-            document.scrollingElement.scrollTop = scroller - 46;
-          }, 1);
-        });
-      });
+
     </script>
     <script src="asset/js/g_include.js"></script> <!-- 퍼블전용 :: 사용금지 -->
   </body>

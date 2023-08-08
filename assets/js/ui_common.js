@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener("DOMContentLoaded", function() {
 
   /* [S] 레이어팝업 */
   const modalPopupBtn = document.querySelectorAll("[data-roll='modal-popup']");
@@ -39,19 +39,7 @@ window.addEventListener('load', function() {
   });
 
   //사이트맵
-  let sitemapBtn = document.querySelector(".header-pc .btn-sitemap");
-  let sitemapWrap = document.querySelector(".sitemap");
-  let sitemapClose = document.querySelector(".btn-sitemap-close");
-  sitemapBtn.addEventListener("click", function(){
-    sitemapWrap.classList.add("show");
-    sitemapWrap.setAttribute("tabindex", '0');
-    sitemapWrap.focus();
-
-  });
-  sitemapClose.addEventListener("click", function(){
-    sitemapWrap.classList.remove("show");
-    sitemapWrap.removeAttribute("tabindex");
-  });
+ 
 
   //bread crumb 하위 메뉴
   let btnMenuOpen = document.querySelectorAll(".btn-downMenu");
@@ -68,17 +56,27 @@ window.addEventListener('load', function() {
     });
   });
 
-  let contentHead = document.querySelector(".content-head");
-  document.addEventListener('scroll', function(){
-    let currentScroll = document.documentElement.scrollTop;
-    if(currentScroll > 40){
-      contentHead.classList.add("content-head--sticky");
-    } else {
-      contentHead.classList.remove("content-head--sticky");
-    }
-  });
   
+
+  // pc sitemap
+  if(document.querySelector(".header-pc .btn-sitemap")){
+    sitemapPC();
+  }
+
+  // tab
+  if(document.querySelector(".com-tab")){
+    tabCtrl();
+  }  
+
+  if(document.querySelector(".com-accordion")){
+    accordionUi();
+  }
+
+  if(document.querySelector(".content-head")){
+    contentHeadSticky();
+  }
 });
+
 
 //모바일 확인
 function Mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
@@ -122,7 +120,77 @@ function modalAlertClose(alertID) {
   document.body.removeAttribute('style');
 }
 
+//tab
+function tabCtrl() {
+  let tabUI = document.querySelector(".com-tab");
+  let tabBtn = tabUI.querySelectorAll("button.com-tab__btn");
+  let tabContainer = document.querySelector(".tab-container");
+  let tabCont = tabContainer.querySelectorAll(".tab-content");
+  tabBtn.forEach(function(el, idx){
+    el.addEventListener("click", function(e){
+      tabBtn.forEach(function(el){
+        el.classList.remove("com-tab__btn--active");
+        el.removeAttribute("title");
+      });
+      tabCont.forEach(function(el){
+        el.classList.remove("show");
+      });
+      tabCont[idx].classList.add("show"); 
+      tabCont[idx].setAttribute("tabindex","0");
+      tabCont[idx].focus();     
+      this.classList.add("com-tab__btn--active");
+      this.setAttribute("title", "선택됨");
+    });
+  });
+}
 
-function gnbHover() {
-  
+//pc sitemap
+function sitemapPC() {
+  let sitemapBtn = document.querySelector(".header-pc .btn-sitemap");
+  let sitemapWrap = document.querySelector(".sitemap");
+  let sitemapClose = document.querySelector(".btn-sitemap-close");
+  sitemapBtn.addEventListener("click", function(){
+    sitemapWrap.classList.add("show");
+    sitemapWrap.setAttribute("tabindex", '0');
+    sitemapWrap.focus();
+
+  });
+  sitemapClose.addEventListener("click", function(){
+    sitemapWrap.classList.remove("show");
+    sitemapWrap.removeAttribute("tabindex");
+  });
+}
+
+// accordion
+function accordionUi() {
+  let accordionBtn = document.querySelectorAll(".com-accordion__btn");
+  let accordionRow = document.querySelectorAll(".com-accordion__row");
+  accordionBtn.forEach(function(el, idx){
+    el.addEventListener("click", function(){  
+      if(accordionRow[idx].classList.contains("open")){
+        accordionRow[idx].classList.remove("open");
+        el.querySelector(".blind").innerHTML = "내용보기";
+      } else {
+        accordionRow.forEach(function(el){
+          el.classList.remove("open");
+          el.querySelector(".com-accordion__btn .blind").innerHTML = "내용보기" ;
+        });
+        accordionRow[idx].classList.add("open");
+        el.querySelector(".blind").innerHTML = "내용닫기";
+      }        
+    });
+  });
+}
+
+// content head
+function contentHeadSticky() {
+  let contentHead = document.querySelector(".content-head");
+  document.addEventListener('scroll', function(){
+    let currentScroll = document.documentElement.scrollTop;
+    if(currentScroll > 40){
+      contentHead.classList.add("content-head--sticky");
+    } else {
+      contentHead.classList.remove("content-head--sticky");
+    }
+  });
 }

@@ -4,10 +4,12 @@
     <title>Guide List</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <script src="../assets/js/ui_common.js"></script>
 
     <!-- 가이드용 -->
     <link rel="stylesheet" href="asset/fontawesome/css/all.css">
@@ -261,7 +263,7 @@
               <table class="board-write__table">
                 <caption>회원가입을 위한 항목 입력 표</caption>
                 <colgroup>
-                  <col style="width:150px;">
+                  <col style="width:110px;">
                   <col style="width:auto;">
                 </colgroup>
                 <tbody>
@@ -334,7 +336,7 @@
       <table class="board-write__table">
         <caption>회원가입을 위한 항목 입력 표</caption>
         <colgroup>
-          <col style="width:150px;">
+          <col style="width:110px;">
           <col style="width:auto;">
         </colgroup>
         <tbody>
@@ -411,7 +413,7 @@
               <table class="board-view__table">
                 <caption>회원가입을 위한 항목 입력 표</caption>
                 <colgroup>
-                  <col style="width:150px;">
+                  <col style="width:110px;">
                   <col style="width:auto;">
                 </colgroup>
                 <tbody>
@@ -439,7 +441,7 @@
       <table class="board-view__table">
         <caption>회원가입을 위한 항목 입력 표</caption>
         <colgroup>
-          <col style="width:150px;">
+          <col style="width:110px;">
           <col style="width:auto;">
         </colgroup>
         <tbody>
@@ -465,6 +467,41 @@
   </xmp>
   <button type="button" class="btn-show" data-toggle-obj="3"></button> 
           </div>
+
+          <h2><i class="far fa-caret-square-right"></i> Accordion</h2>
+          <div class="contBody">
+            <ul>
+              <li>* 공지사항 게시판</li>
+            </ul>
+
+            <div class="com-accordion">
+              <div class="com-accordion__row">
+                <div class="com-accordion__head">
+                  <div class="com-accordion__title">
+                    <span class="com-accordion__sort">항목1</span>
+                    <span class="com-accordion__text">회원가입을 하면 받을 수 있는 정보</span>
+                    <span class="com-accordion__date">2023.02.12</span>
+                  </div>
+                  <button type="button" class="com-accordion__btn"><span class="blind">내용보기</span></button>
+                </div>
+                <div class="com-accordion__body">
+                  본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>본문<br>
+                </div>
+              </div>  
+              <div class="com-accordion__row">
+                <div class="com-accordion__head">   
+                  <div class="com-accordion__title">
+                    <span class="com-accordion__sort">항목1</span>
+                    <span class="com-accordion__text">회원가입을 하면 받을 수 있는 정보</span>
+                    <span class="com-accordion__date">2023.02.12</span>
+                  </div>
+                  <button type="button" class="com-accordion__btn"><span class="blind">내용보기</span></button>
+                </div>
+                <div class="com-accordion__body">
+                  본문
+                </div>
+              </div>              
+            </div>
         </section>
       </div>
     </div>
@@ -474,19 +511,7 @@
     </footer>
 
     <script>
-      //tabControl("g_tabHead", "g_tabBody"); // 가이드 상단 탭
 
-      const tabBtn = document.querySelectorAll(".g_tabHead li");
-      const tabContent = document.querySelectorAll(".tabContent");
-      tabBtn.forEach(function(obj, i){
-        obj.addEventListener("click",function(e){
-          setTimeout(function(){
-            const scroller = document.scrollingElement.scrollTop;
-            //console.log(scroller);
-            document.scrollingElement.scrollTop = scroller - 46;
-          }, 1);
-        });
-      });
     </script>
     <script src="asset/js/g_include.js"></script> <!-- 퍼블전용 :: 사용금지 -->
   </body>

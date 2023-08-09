@@ -54,6 +54,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .paBot10 { padding-bottom: 10px; }
 
 /* margin */
+.maTop20 {margin-top: 20px;}
 .maBot10 { margin-bottom: 10px; }
 
 /* text */
@@ -82,12 +83,11 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 .container {min-height:calc(100vh - 228px); padding-top:89px;}
 
-/* 상단 타이틀 */
-.content-head__inner {display:flex; align-items: center; justify-content: space-between; max-width:1280px; margin:30px auto 0; padding:10px 0; border-bottom: 1px solid #999;}
-.content-head--sticky {position:fixed; top:89px; width:100%; border-bottom: 1px solid #999;}
-.content-head--sticky .content-head__inner {margin-top:0; border-bottom:0;}
 
 .title-area {display:flex; align-items: center;}
+
+.section-cont {max-width: 1280px; margin:0 auto; padding:15px}
+.section-cont + .section-cont {margin-top:30px;}
 
 
 /* pc */
@@ -121,6 +121,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
   
   .header--gnbNone .header__inner {align-items: center; padding-top:0;}
   .header__msg {margin-left:30px; font-size:16px;}
+  
 
   /* sitemap */
   .sitemap {display:none; position: absolute; z-index: 20; width:100%; margin-top:-1px; padding:20px 0; border:1px solid #999; background-color: #fff;}
@@ -141,6 +142,11 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
   .btn-downMenu::after {content: "▼"; font-size:10px; padding-left:5px; }
   .btn-downMenu.open::after {content:"▲";}
   .btn-downMenu.open + .down-menu {display:block}
+
+  /* 상단 타이틀 */
+  .content-head__inner {display:flex; align-items: center; justify-content: space-between; max-width:1280px; margin:30px auto 0; padding:10px 0; border-bottom: 1px solid #999;}
+  .content-head--sticky {position:fixed; top:89px; width:100%; border-bottom: 1px solid #999;}
+  .content-head--sticky .content-head__inner {margin-top:0; border-bottom:0;}
 
    /* footer */
   .footer {padding:26px 0 40px; border-top:1px solid #9a9a9a}
@@ -179,6 +185,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
   .header-mobile {position:absolute; top:0; width:100%;}
   .header__inner {display:flex; align-items: center; justify-content: space-between; height:54px; padding:0 20px; border-bottom:1px solid #ccc;}
+  .header-mobile__logo a {display:block;}
+  .header-mobile__logo img {width:75px; height:auto; vertical-align: top;}
   .btn-page-prev {display:block; width:24px; height:24px; background-color: #999;}
 
   .down-menu {display:none; position: absolute; z-index: 10; top:55px; left:0; right:0; padding:10px 0; border-bottom:1px solid #ccc; text-align: center; background-color: #fff;}
@@ -187,12 +195,31 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
   .btn-downMenu.open::after {content:"▲";}
   .btn-downMenu.open + .down-menu {display:block}
 
-  .gnb {position:absolute; top:54px; overflow-x:auto; width:100%; padding: 15px 0; border-bottom:1px solid #eee;}
+  .gnb {position:absolute; top:54px; overflow-x:auto; width:100%; padding: 10px 0; border-bottom:1px solid #eee;}
   .gnb::-webkit-scrollbar {display:none}
   .gnb__wrap {display:flex; align-items: center;  width:100%;  }
-  .gnb__a01 {white-space: nowrap; padding:0 10px;}
+  .gnb__a01 {white-space: nowrap; padding:0 10px; font-weight: 600; color:#000;}
 
   .sitemap {display:none; position: absolute; top:0; left:0; bottom:0; right:0; background-color: #fff;}
   .sitemap.show {display:block;} 
   .btn-sitemap-close {position: absolute; right:20px; top:20px; width:24px; height:24px; background: url(../images/icon-close.png) no-repeat 0 0 / 100% 100%;}
+
+  .content-head {padding:30px 0 0;}
+  .content-head__inner {padding:0 15px;}
+  .content-head__right {margin-top:15px; text-align: right;}
+
+  /* footer */
+  .footer {padding:18px 15px 24px; border-top:1px solid #9a9a9a}
+  .footer__inner {position:relative;}
+  .footer__logo img {width:165px; height:auto;}
+
+  .site-address {margin-top:15px; font-size:14px; line-height:18px; color:#000; font-size:12px}
+
+  .fnb {margin-bottom:15px;}
+  .fnb__wrap {display:flex; align-items: center; flex-wrap: wrap;}
+  .fnb__wrap > li {margin-top:4px; margin-right:4px; padding-right:4px; border-right:1px solid #999; line-height: 12px;}
+  .fnb__wrap > li:last-child {border-right:0;}
+  .fnb__link {font-size:12px; font-weight: 600; color:#000;}
+
+  .copyright {margin-top:15px; color:#999; font-size:11px;}
 }

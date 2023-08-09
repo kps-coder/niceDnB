@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <title>수출지원서비스 플랫폼</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ui -->
-  <link rel="stylesheet" href="../assets/css/default.css">
-  <link rel="stylesheet" href="../assets/css/common.css">
-  
-  <script src="../assets/js/ui_common.js"></script>
-</head>
-<body> 
-  <div class="skip-nav">
-    <a href="#gnbWrap">주요 메뉴 바로가기</a>
-    <a href="#container">본문 바로가기</a>
-  </div>
-
-  <div class="wrap" id="wrap">
+window.addEventListener('DOMContentLoaded', function() {
+   headerInclud.outerHTML = `
     <!-- pc header -->
     <header class="header-pc">
       <div class="header__inner">
@@ -160,78 +141,23 @@
       </div>
       <button type="button" class="btn-sitemap-close"><span class="blind">닫기</span></button>
     </div>
-    <!-- //sitemap -->
+    <!-- //sitemap -->`;
 
-    <!-- bread-crumb -->
-    <div class="bread-crumb">
-      <ul class="bread-crumb__inner">
-        <li><a href="/" class="btn-home">HOME</a></li>
-        <li>
-          <button type="button" class="btn-downMenu">바이어 정보</button>
-          <ul class="down-menu">
-            <li><a href="#n">빅바이어 마케팅</a></li>
-            <li><a href="#n">바이어정보</a></li>
-            <li><a href="#n">해외기업보고서</a></li>
-            <li><a href="#n">수출바우처 컨설팅</a></li>
-          </ul>
-        </li>
-        <li>
-          <button type="button" class="btn-downMenu">바이어 조회</button>
-          <ul class="down-menu">
-            <li><a href="#n">바이어 조회</a></li>
-            <li><a href="#n">관심 바이어</a></li>
-            <li><a href="#n">사기바이어 이메일</a></li>
-          </ul>
-        </li>
-      </ul>        
-    </div><!-- //bread-crumb -->
 
-    <div class="container" id="container"> 
-      <div class="content-head">
-        <div class="content-head__inner">
-          <div class="title-area">
-            <h2 class="com-tit2">화면 타이틀</h2>
-            <p class="com-titDesc">요약문구입니다.</p>
-          </div>          
-          <div class="content-head__right">
-            <button type="button">마케팅 발송</button>
-          </div>
-        </div>        
-      </div>
+    /*Array.prototype.forEach.call(allElements, function(el) {
+        var includePath = "header.html";
+        if (includePath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    el.outerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', includePath, true);
+            xhttp.send();
+        }
+    }); */
 
-      <div class="content-body">
+});
 
-      </div>
-    </div><!-- //container -->
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="fnb">
-          <ul class="fnb__wrap">
-            <li><a href="#n" class="fnb__link">개인정보처리방침</a></li>
-            <li><a href="#n" class="fnb__link">이용약관</a></li>
-            <li><a href="#n" class="fnb__link">신용정보활용체제공시</a></li>
-            <li><a href="#n" class="fnb__link">이메일무단수집거부</a></li>
-          </ul>
-        </div>
-  
-        <div class="footer__logo"><img src="../assets/images/footer-logo.png" alt="NICE dun & bradstreet"></div>
-  
-        <address class="site-address">
-          서울특별시 마포구 마초대로 217 크레디트센터 16층 ㈜나이스디앤비<br>
-          통신판매업신고: 제2012-서울마포-0168호 
-          사업자등록번호: 107-86-24874 
-          TEL: 02-2122-2500 FAX: 02-2122-2591
-        </address>
-  
-        <p class="copyright">COPYRIGHT 2006 NICE D&B Co.,Ltd. ALL RIGHTS RESERVED.</p>
-      </div>
-    </footer><!-- //footer -->
-  </div><!-- //wrap -->
-
-  <script>
-    
-  </script>
-</body>
-</html>

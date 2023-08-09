@@ -1,12 +1,32 @@
 @charset "utf-8";
+
+/* ==== text color ==== */
+.txt-point01 {color:#0066ff}
+.txt-point02 {color:#ff0000}
+.txt-error {margin-top:3px; color:red; font-size:12px;}
+
 /* ===== 버튼정의 ===== */
 .btn-primary {display:inline-block; min-width:100px; height:40px; padding:0 10px; border:1px solid #20529e; color:#fff; background-color: #20529e;}
 .btn-secondary {display:inline-block; min-width:100px; height:40px; padding:0 10px; border:1px solid #20529e; color:#20529e; background-color: #fff;}
 
 .btn-more {display:inline-block; margin-top:20px; padding:10px; border:1px solid #ccc;}
+.btn-line-link {display:inline-block; padding-bottom:2px; border-bottom:1px solid #0066ff; color:#0066ff}
 
 /*  버튼레이아웃 */
 .btn-wrap {text-align: center;}
+
+/* ==== title ==== */
+.com-tit2 {font-size:24px; color:#333}
+.com-tit3 {margin-bottom:15px; font-size:18px; color:#333}
+.com-titDesc {margin-left:15px}
+
+/* ==== notiBox ==== */
+.com-notiBox {margin-top:30px; padding:15px; border: 1px solid #ccc;}
+.com-notiBox * {line-height:1.5;}
+.com-notiBox__title {margin-bottom:9px; font-weight: bold; color:#000;}
+
+/* ==== text list ==== */
+.txt-li > li ~ li {margin-top:6px}
 
 /* ==== tab ==== */
 .com-tab__wrap {display:flex; border-bottom:1px solid #ccc}
@@ -20,10 +40,12 @@
 input[type=text].input-text,
 input[type=password].input-pwd,
 input[type=email].input-text,
-input[type=number].input-text {padding: 3px 5px; border:1px solid #999;}
+input[type=number].input-text {height:30px; padding: 3px 5px; border:1px solid #999;}
 
-input[type='date'].input-date {-webkit-appearance: none; appearance: none;}
+input[type='date'].input-date {-webkit-appearance: none; appearance: none; border: 1px solid #ccc;}
 input[type='date'].input-date::-webkit-calendar-picker-indicator {/* 달력 이미지 */}
+
+.input-jq-date {border:1px solid #ccc; background: url(../images/icon-calendar.png) no-repeat top 3px right 5px / 10px auto;}
 
 
 /* textarea */
@@ -63,7 +85,7 @@ textarea.input-textarea {resize: none;}
 .board-view__table td {padding:5px 10px;}
 
 .icon-req::before {content: '*'; color:red}
-.txt-error {margin-top:3px; color:red; font-size:12px;}
+
 
 /* pc & 태블릿 */
 @media screen and (min-width: 769px) {
@@ -133,6 +155,17 @@ textarea.input-textarea {resize: none;}
 
 .loading {position: fixed; top:0; right:0; bottom:0; left:0; z-index: 999; background:rgba(0,0,0,0.7) url(../images/loading.svg) no-repeat center center ;}
 
+/* ==== 윈도우 팝업 ==== */
+.window-popup {height:100%;}
+.window-popup__head {padding:6px 20px; border-bottom:1px solid #ccc; background-color: #eee;}
+.window-popup__logo img {width:75px; height:auto; vertical-align: top;}
+.window-popup__body {overflow-y:auto; height:calc(100% - 38px - 30px);}
+.window-popup__content {padding:20px}
+.window-popup__h2 {margin-bottom:15px; padding-bottom:12px; border-bottom:1px solid #ccc; font-size:18px; color:#333;}
+.window-popup__foot {display:flex; align-items: center; justify-content: center; height:30px;  background-color: #eee;}
+.window-popup__foot-title {margin-right:10px; padding-right:10px; border-right:1px solid #666; font-size:12px;}
+.window-popup__copyright {font-size:12px;}
+
 
 
 /* ==== 아코디언 === */
@@ -150,4 +183,31 @@ textarea.input-textarea {resize: none;}
 /* 모바일 */
 @media screen and (max-width: 768px) {
   .com-accordion__date {display:block; margin-top:5px; padding:0; border-left:0;}
+}
+
+
+/* ==== 주소 검색 ==== */
+.com-post-search .input-search {margin-bottom: 15px;}
+.com-post-search .txt-li {margin-top:15px}
+.com-post-search__result {margin-top:15px; border:1px solid #ccc;}
+.com-post-search__result > ul > li {padding:15px;}
+.com-post-search__result > ul > li + li {border-top:1px solid #ccc;}
+.com-post-search__btn > * {display:block; line-height: 1.5; text-align:left;}
+.com-post-search__btn > em {color:#ff0000}
+.com-post-search__btn:hover {color:#0066ff}
+
+
+/* ==== 로그인 ==== */
+.com-login {max-width:1280px; margin: 0 auto; padding:30px 0;}
+.com-login__inputArea {width:300px; margin:0 auto;}
+.com-login__inputArea input {width:100%;}
+.com-login__pw {margin-top:15px}
+.com-login .btn-wrap {width:300px; margin:15px auto;}
+.com-login .btn-primary  {width:100%}
+.com-login__help {display:flex; align-items: center; justify-content: space-between; width:300px; margin:0 auto;}
+.com-login__find > a {margin-left:6px;}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+  .com-login .com-notiBox {margin-left:15px; margin-right:15px}
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- header includ -->
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- bread-crumb -->
+    <div class="bread-crumb">
+      <ul class="bread-crumb__inner">
+        <li><a href="/" class="btn-home">HOME</a></li>
+        <li>
+          <button type="button" class="btn-downMenu">바이어 정보</button>
+          <ul class="down-menu">
+            <li><a href="#n">빅바이어 마케팅</a></li>
+            <li><a href="#n">바이어정보</a></li>
+            <li><a href="#n">해외기업보고서</a></li>
+            <li><a href="#n">수출바우처 컨설팅</a></li>
+          </ul>
+        </li>
+        <li>
+          <button type="button" class="btn-downMenu">바이어 조회</button>
+          <ul class="down-menu">
+            <li><a href="#n">바이어 조회</a></li>
+            <li><a href="#n">관심 바이어</a></li>
+            <li><a href="#n">사기바이어 이메일</a></li>
+          </ul>
+        </li>
+      </ul>        
+    </div><!-- //bread-crumb -->
+
+    <div class="container" id="container"> 
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h2 class="com-tit2">화면 타이틀</h2>
+            <p class="com-titDesc">요약문구입니다.</p>
+          </div>          
+          <div class="content-head__right">
+            <button type="button">마케팅 발송</button>
+          </div>
+        </div>        
+      </div>
+
+      <div class="content-body">
+        <section class="section-cont">
+          <h3 class="com-tit3">html5 : input type date</h3>
+          <input type="date" name="party" min="2022-04-01" max="2023-04-30" value="2022-04-01" class="input-date">
+        </section>
+
+        <section class="section-cont">
+          <h3 class="com-tit3">jquery datepicker</h3>
+          <input type="text" id="datepicker" class="input-jq-date">
+        </section>
+      </div>
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+</body>
+</html>

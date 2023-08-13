@@ -6,20 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+
   <!-- jquery datepicker -->
   <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
   <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
   <script src="../assets/js/lib/jquery-ui.min.js"></script>
 
-  <!-- ui -->  
-  <link rel="stylesheet" href="../assets/css/default.css">
-  <link rel="stylesheet" href="../assets/css/common.css">  
-  
-  <script src="../assets/js/ui_common.js"></script>
-
-
-  <!-- 퍼블 전용 UI : 사용금지 -->
-  <script src="../guide/asset/js/ui-include.js"></script> <!-- header includ -->
+   <!-- ui -->  
+   <link rel="stylesheet" href="../assets/css/default.css">
+   <link rel="stylesheet" href="../assets/css/common.css">  
+   
+   <script src="../assets/js/ui_common.js"></script>
+ 
 </head>
 <body> 
   <!-- skip nav -->
@@ -31,51 +32,53 @@
     <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //header -->
 
-    <!-- bread-crumb -->
-    <div class="bread-crumb">
-      <ul class="bread-crumb__inner">
-        <li><a href="/" class="btn-home">HOME</a></li>
-        <li>
-          <button type="button" class="btn-downMenu">바이어 정보</button>
-          <ul class="down-menu">
-            <li><a href="#n">빅바이어 마케팅</a></li>
-            <li><a href="#n">바이어정보</a></li>
-            <li><a href="#n">해외기업보고서</a></li>
-            <li><a href="#n">수출바우처 컨설팅</a></li>
-          </ul>
-        </li>
-        <li>
-          <button type="button" class="btn-downMenu">바이어 조회</button>
-          <ul class="down-menu">
-            <li><a href="#n">바이어 조회</a></li>
-            <li><a href="#n">관심 바이어</a></li>
-            <li><a href="#n">사기바이어 이메일</a></li>
-          </ul>
-        </li>
-      </ul>        
-    </div><!-- //bread-crumb -->
+    <!-- sub-visual -->
+    <div class="sub-visual sub-visual--sub1">
+      <h2 class="sub-visual__h2">빅바이어 마케팅</h2>
+      <p class="sub-visual__desc">5억 개 이상의 해외기업 DB POOL을 활용하여, 잠재된 바이어들에게 마케팅 잠재된 바이어들에게 마케팅 서비스를 제공합니다.</p>
+    </div><!-- //sub-visual -->
 
     <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">바이어 정보</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">바이어 조회</button>
+            <ul class="down-menu">
+              <li><a href="#n">바이어 조회</a></li>
+              <li><a href="#n">관심 바이어</a></li>
+              <li><a href="#n">사기바이어 이메일</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+      
       <div class="content-head">
         <div class="content-head__inner">
           <div class="title-area">
-            <h2 class="com-tit2">화면 타이틀</h2>
-            <p class="com-titDesc">요약문구입니다.</p>
-          </div>          
-          <div class="content-head__right">
-            <button type="button">마케팅 발송</button>
+            <h3 class="com-tit3">화면 타이틀</h3>
           </div>
-        </div>        
+        </div>      
       </div>
 
       <div class="content-body">
         <section class="section-cont">
-          <h3 class="com-tit3">html5 : input type date</h3>
+          <h4 class="com-tit4">html5 : input type date</h4>
           <input type="date" name="party" min="2022-04-01" max="2023-04-30" value="2022-04-01" class="input-date">
         </section>
 
         <section class="section-cont">
-          <h3 class="com-tit3">jquery datepicker</h3>
+          <h4 class="com-tit4">jquery datepicker</h4>
           <input type="text" id="datepicker" class="input-jq-date">
         </section>
       </div>

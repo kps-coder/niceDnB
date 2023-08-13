@@ -112,6 +112,25 @@
   </xmp>
           </div>  
 
+          <h2><i class="far fa-caret-square-right"></i> 파일첨부</h2>
+          <div class="contBody">
+            <span class="input-file">
+              <input type="file" name="inpFile" id="inpFile">
+              <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+            </span>
+            <span class="selected-file">
+              <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+              파일명.png
+            </span>
+
+  <xmp>
+    <span class="input-file">
+      <input type="file" name="inpFile" id="inpFile">
+      <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+    </span>
+  </xmp>
+          </div> 
+
           <h2><i class="far fa-caret-square-right"></i> form element</h2>
           <div class="contBody">
             <h3><i class="fa-solid fa-keyboard"></i> 검색창</h3>
@@ -120,15 +139,80 @@
               <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
             </div>
 
+
   <xmp>
     <div class="input-search">
       <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="placeholder">
       <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
     </div>
   </xmp>
-          </div>  
-          
+  <br><br> 
 
+            <h3><i class="fa-solid fa-keyboard"></i> 주소입력</h3>
+            <div class="input-address">
+              <div class="input-address__post">
+                <div class="input-withBtn">
+                  <input type="text" class="input-text" id="inp_cpaddress" value="" disabled>
+                  <button type="button" class="btn">주소검색</button>
+                </div>                
+                <p class="txt-error">주소검색을 통해 입력해 주세요.</p>
+              </div>
+              <div class="input-address__detail">
+                <input type="text" class="input-text" id="inp_cpaddress_detail" value="" >
+                <p class="txt-error">이하 상세주소를 입력해 주세요.</p>
+              </div>
+            </div> 
+  <xmp>
+    <div class="input-address">
+      <div class="input-address__post">
+        <div class="input-withBtn">
+          <input type="text" class="input-text" id="inp_cpaddress" value="" disabled>
+          <button type="button" class="btn">주소검색</button>
+        </div>                
+        <p class="txt-error">주소검색을 통해 입력해 주세요.</p>
+      </div>
+      <div class="input-address__detail">
+        <input type="text" class="input-text" id="inp_cpaddress_detail" value="" >
+        <p class="txt-error">이하 상세주소를 입력해 주세요.</p>
+      </div>
+    </div> 
+  </xmp> 
+  <br><br> 
+              <h3><i class="fa-solid fa-keyboard"></i> input + button</h3>
+              <div class="input-withBtn">
+                <input type="text" class="input-text" id="inp_id" value="" placeholder="영문, 숫자, 특수문자(+ @ . _ - 만) 조합">
+                <button type="button" class="btn">중복확인</button>
+              </div>
+  <xmp>
+    <div class="input-withBtn">
+      <input type="text" class="input-text" id="inp_id" value="" placeholder="영문, 숫자, 특수문자(+ @ . _ - 만) 조합">
+      <button type="button" class="btn">중복확인</button>
+    </div>
+  </xmp>
+            <br><br> 
+
+            <h3><i class="fa-solid fa-keyboard"></i> 선택된 내용</h3>
+            <div>
+              <span class="selected-item">
+                <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                Beauty
+              </span>
+              <span class="selected-item">
+                <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                Beauty
+              </span>
+              <span class="selected-item">
+                <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                Beauty
+              </span>
+            </div> 
+  <xmp>
+    <span class="selected-item">
+      <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+      Beauty
+    </span>
+  </xmp>           
+          </div>  
         </section>
       </div>
     </div>

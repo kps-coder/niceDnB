@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- sub-visual  -->
+    <div class="sub-visual sub-visual--sub1">
+      <h2 class="sub-visual__h2">빅바이어 마케팅</h2>
+      <p class="sub-visual__desc">5억 개 이상의 해외기업 DB POOL을 활용하여, 잠재된 바이어들에게 마케팅 잠재된 바이어들에게 마케팅 서비스를 제공합니다.</p>
+    </div><!-- //sub-visual  -->
+
+    <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">빅바이어 마케팅</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">마케팅발송</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅데이터바이어발굴</a></li>
+              <li><a href="#n">마케팅발송</a></li>
+              <li><a href="#n">마케팅발송내역</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+
+      <!-- content-head -->
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h3 class="com-tit3">마케팅 발송</h3>
+          </div>
+        </div>      
+      </div><!-- //content-head -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="section-cont">
+          <!-- board-write -->
+          <div class="board-write">
+            <div class="board-write__head">
+              <div class="board-write__left">
+                <button type="button" class="btn-pri btn--small">마케팅 발송 <i class="icon12-send-wt"></i></button>
+              </div>
+              <div class="board-write__right">
+                <button type="button" class="btn-sec btn--small">미리보기</button>
+                <button type="button" class="btn-sec btn--small">임시저장</button>
+              </div>
+            </div>
+            <table class="board-write__table">
+              <caption>마케팅 발송을 위한 작성 표</caption>
+              <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="inp_name">발신자</label>
+                  </th>
+                  <td>
+                    <input type="text" class="input-text" id="inp_name" value="" placeholder="가나기업(abcdf@nicednb.com)" disabled>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">대상 바이어</th>
+                  <td>
+                    <div class="td__row">
+                      <button type="button" class="btn-sec btn--small">바이어선택</button>
+                      <button type="button" class="btn-sec btn--small" disabled>이메일 입력</button>
+                    </div>
+                    <div class="td__row">
+                      <button type="button" class="btn-reset reset--small"><span class="blind">초기화</span></button>
+                      <span class="selected-item">
+                        <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                        벨기에 바이어 기업
+                      </span>
+                      <span class="selected-item">
+                        <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                        텍사스 프린지 바이어 기업
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">대상 바이어</th>
+                  <td>
+                    <div class="td__row">
+                      <button type="button" class="btn-sec btn--small" disabled>바이어선택</button>
+                      <button type="button" class="btn-sec btn--small">이메일 입력</button>
+                    </div>
+                    <div class="td__row">
+                      <div class="input-withBtn">
+                        <input type="email" class="input-text" id="inpEmail" title="이메일">
+                        <button type="button" class="btn-reset"><span class="blind">초기화</span></button>
+                      </div>                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">파일첨부</th>
+                  <td>
+                    <div class="td__row">
+                      <span class="input-file">
+                        <input type="file" name="inpFile" id="inpFile">
+                        <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+                      </span>
+                    </div>
+                    <div class="td__row">
+                      <div class="file-list">
+                        <div class="file-list__selected">
+                          <span class="selected-file">
+                            <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                            파일명.png
+                          </span>
+                          <span class="selected-file">
+                            <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                            파일명.png
+                          </span>
+                        </div>
+                        <div class="file-list__volume">0KB / 20MB</div>
+                      </div>
+                      
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inp_subject">제목</label>
+                  </th>
+                  <td>
+                    <input type="email" class="input-text w100p" id="inp_email" value="" placeholder="제목을 입력 해 주세요">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td>
+                    <div style="display:flex; align-items: center; justify-content: center; height:200px; background-color: #eee;">HTML 편집기</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- //board-write -->
+        </div>
+      </div><!-- //content-body -->
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+</body>
+</html>

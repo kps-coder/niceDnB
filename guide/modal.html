@@ -27,6 +27,8 @@
 
       .grp_flex_between {align-items: flex-start;}
       .grp_flex_between .contBody {width:60%}
+
+      .btn-sec {margin:3px 0;}
     </style>
 
   </head>
@@ -51,13 +53,11 @@
         <section class="tabContent on">
           <h2><i class="far fa-caret-square-right"></i> Modal Popup</h2>
           <div class="contBody">
-            <ul>
-              <li><button type="button" data-roll="modal-popup" data-popid="modalPop01">풀팝업</button></li>
-              <li><button type="button" data-roll="modal-popup" data-popid="modalPop02">팝업 large 960</button></li>
-              <li><button type="button" data-roll="modal-popup" data-popid="modalPop03">팝업 Medium 800 (default)</button></li>
-              <li><button type="button" data-roll="modal-popup" data-popid="modalPop04">팝업 Small 640</button></li>
-              <li><button type="button" data-roll="modal-popup" data-popid="modalPop05">팝업 X-small 400</button></li>
-            </ul>            
+            <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop01">풀팝업</button>
+            <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop02">팝업 large 960</button>
+            <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop03">팝업 Medium 800 (default)</button>
+            <button type="button" class="btn-sec btn--small"data-roll="modal-popup" data-popid="modalPop04">팝업 Small 640</button>
+            <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop05">팝업 X-small 400</button>  
 
             <div class="modal-popup modal-popup--full" id="modalPop01">
               <div class="modal-popup__wrap">
@@ -88,8 +88,8 @@
                 </div>
                 <div class="modal-popup__foot">
                   <div class="btn-wrap">
-                    <button type="button" class="btn-primary">확인</button>
-                    <button type="button" class="btn-secondary">취소</button>
+                    <button type="button" class="btn-pri">확인</button>
+                    <button type="button" class="btn-sec">취소</button>
                   </div>                  
                 </div>
                 <div class="modal-popup__close">
@@ -164,12 +164,10 @@
   </xmp>
           </div>
 
+          <h2><i class="far fa-caret-square-right"></i> Modal Alert</h2>
           <div class="contBody">
-            <h2><i class="far fa-caret-square-right"></i> Modal Alert</h2>
-            <ul>
-              <li><button type="button" onclick="modalAlertOpen('alert01');">modal alert</button></li>
-              <li><button type="button" onclick="modalAlertOpen('alert02');">modal alert confirm</button></li>
-            </ul>
+            <button type="button" class="btn-sec btn--small" onclick="modalAlertOpen('alert01');">modal alert</button>
+            <button type="button" class="btn-sec btn--small" onclick="modalAlertOpen('alert02');">modal confirm</button>
 
             <div class="modal-alert" id="alert01">
               <div class="modal-alert__wrap">
@@ -217,11 +215,9 @@
   </xmp>
           </div>
 
+          <h2><i class="far fa-caret-square-right"></i> Window Popup</h2>
           <div class="contBody">
-            <h2><i class="far fa-caret-square-right"></i> Window Popup</h2>
-            <ul>
-              <li><button type="button" onclick="window.open('winpopup.html', 'name','width=500, height=600, top=0. left=0');">윈도우 팝업</button></li>
-            </ul>
+            <button type="button" class="btn-sec btn--small" onclick="window.open('winpopup.html', 'name','width=500, height=600, top=0. left=0');">윈도우 팝업</button>
 
             <div class="modal-alert" id="alert01">
               <div class="modal-alert__wrap">
@@ -276,23 +272,6 @@
       <p>copyright 2023. NICE D&B all rights reserved.</p>
     </footer>
 
-    <script type="text/javascript">
-      //tabControl("g_tabHead", "g_tabBody"); // 가이드 상단 탭
-
-      const tabBtn = document.querySelectorAll(".g_tabHead li");
-      const tabContent = document.querySelectorAll(".tabContent");
-      tabBtn.forEach(function(obj, i){
-        obj.addEventListener("click",function(e){
-          setTimeout(function(){
-            const scroller = document.scrollingElement.scrollTop;
-            //console.log(scroller);
-            document.scrollingElement.scrollTop = scroller - 46;
-          }, 1);
-        });
-      });
-
-      
-    </script>
     <script src="asset/js/g_include.js"></script> <!-- 퍼블전용 :: 사용금지 -->
   </body>
 </html>

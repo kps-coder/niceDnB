@@ -27,6 +27,9 @@
 
       .grp_flex_between {align-items: flex-start;}
       .grp_flex_between .contBody {width:60%}
+
+      [class^="btn-"] {margin:5px 0}
+
     </style>
 
   </head>
@@ -49,12 +52,96 @@
       </div>
       <div class="g_tabBody">
         <section class="tabContent on"> 
+          <h2><i class="far fa-caret-square-right"></i> Button CTA</h2>
           <div class="contBody">
-            <h2><i class="far fa-caret-square-right"></i> Button</h2>
+            <button type="button" class="btn-cta-pri">.btn-cta-pri</button>
+            <button type="button" class="btn-cta-sec">.btn-cta-sec</button><br><br>
+            <button type="button" class="btn-cta-pri" disabled>.btn-cta-pri</button>
+            <button type="button" class="btn-cta-sec" disabled>.btn-cta-sec</button><br><br>
+            <a href="#n" class="btn-cta-pri">a.btn-cta-pri</a>
+            <a href="#n" class="btn-cta-sec">a.btn-cta-pri</a>
+  <xmp>
+    <button type="button" class="btn-cta-pri">버튼명</button>
+    <button type="button" class="btn-cta-sec">버튼명</button>
 
-            <button type="button" class="btn-primary">primary</button>
-            <button type="button" class="btn-secondary">secondary</button>
+    <a href="#n" class="btn-cta-pri">a.btn-cta-pri</a>
+    <a href="#n" class="btn-cta-sec">a.btn-cta-pri</a>
+  </xmp>  
           </div>
+
+          <h2><i class="far fa-caret-square-right"></i> Button Default</h2>
+          <div class="contBody">
+            <ul>
+              <li>* 기본 사이즈 : height 46px</li>
+            </ul>
+            <button type="button" class="btn-pri">.btn-pri</button>
+            <button type="button" class="btn-sec">.btn-sec</button><br><br>
+            <button type="button" class="btn-pri" disabled>.btn-pri</button>
+            <button type="button" class="btn-sec" disabled>.btn-sec</button><br><br>
+            <a href="#n" class="btn-pri">a.btn-pri</a>
+            <a href="#n" class="btn-sec">a.btn-sec</a>
+            <br><br><br>
+            <ul>
+              <li>* 큰 사이즈 : height 53px</li>
+            </ul>
+            <button type="button" class="btn-pri btn--large">.btn-pri.btn--large</button>
+            <button type="button" class="btn-sec btn--large">.btn-sec.btn--large</button><br><br>
+            <button type="button" class="btn-pri btn--large" disabled>.btn-pri.btn--large</button>
+            <button type="button" class="btn-sec btn--large" disabled>.btn-sec.btn--large</button><br><br>
+            <a href="#n"class="btn-pri btn--large">a.btn-pri.btn--large</a>
+            <a href="#n"class="btn-sec btn--large">a.btn-sec.btn--large</a>
+
+            <br><br><br>
+            <ul>
+              <li>* 작은 사이즈 : height 35px</li>
+            </ul>
+            <button type="button" class="btn-pri btn--small">.btn-pri.btn--small</button>
+            <button type="button" class="btn-sec btn--small">.btn-sec.btn--small</button><br><br>
+            <button type="button" class="btn-pri btn--small" disabled>.btn-pri.btn--small</button>
+            <button type="button" class="btn-sec btn--small" disabled>.btn-sec.btn--small</button><br><br>
+            <a href="#n"class="btn-pri btn--small">a.btn-pri.btn--small</a>
+            <a href="#n"class="btn-sec btn--small">a.btn-sec.btn--small</a>
+            
+  <xmp>
+    <button type="button" class="btn-pri">버튼명</button>
+    <button type="button" class="btn-sec">버튼명</button>
+    <a href="#n" class="btn-pri">a.btn-pri</a>
+    <a href="#n" class="btn-sec">a.btn-sec</a>
+
+    <button type="button" class="btn-pri btn--large">.btn-pri.btn--large</button>
+    <button type="button" class="btn-sec btn--large">.btn-sec.btn--large</button>
+    <a href="#n" class="btn-pri btn--large">a.btn-pri.btn--large</a>
+    <a href="#n" class="btn-sec btn--large">a.btn-sec.btn--large</a>
+
+    <button type="button" class="btn-pri btn--small">.btn-pri.btn--small</button>
+    <button type="button" class="btn-sec btn--small">.btn-sec.btn--small</button>
+    <a href="#n" class="btn-pri btn--small">a.btn-pri.btn--small</a>
+    <a href="#n" class="btn-sec btn--small">a.btn-sec.btn--small</a>
+  </xmp>  
+          </div>
+
+          <h2><i class="far fa-caret-square-right"></i> Button with Icon</h2>          
+          <div class="contBody">
+            <ul>
+              <li>* small 사이즈 버튼 안 Icon 삽입</li>
+              <li>* Icon 사이즈 12*12</li>
+            </ul>
+            <button type="button" class="btn-pri btn--small">더보기 <i class="icon12-arrDown-wt"></i></button>
+            <button type="button" class="btn-pri btn--small">마케팅 발송 <i class="icon12-send-wt"></i></button>
+          </div>
+
+          <h2><i class="far fa-caret-square-right"></i> Button etc </h2>          
+          <div class="contBody">
+            <ul>
+              <li>*</li>
+              <li>* </li>
+            </ul>
+            <a href="#n" class="btn-line-link">보고서 신청</a><br>
+            <a href="#n" class="btn-line-link">보고서 신청 <i class="icon16-arrRight-bk"></i></a><br>
+            <a href="#n" class="btn-line-link"><i class="icon16-clip-bk"></i> 보고서 신청</i></a>
+          </div>
+
+          
 
           <h2><i class="far fa-caret-square-right"></i> Tab</h2>          
           <div class="contBody">
@@ -91,9 +178,9 @@
 
             <div class="com-tab">
               <ul class="com-tab__wrap">
-                <li class="com-tab__col"><a href="#" class="com-tab__btn">Tab 1</a></li>
-                <li class="com-tab__col"><a href="#" class="com-tab__btn com-tab__btn--active">Tab 2</a></li>
-                <li class="com-tab__col"><a href="#" class="com-tab__btn">Tab 3</a></li>
+                <li class="com-tab__col"><a href="#n" class="com-tab__btn">Tab 1</a></li>
+                <li class="com-tab__col"><a href="#n" class="com-tab__btn com-tab__btn--active">Tab 2</a></li>
+                <li class="com-tab__col"><a href="#n" class="com-tab__btn">Tab 3</a></li>
               </ul>
             </div>
   <xmp>

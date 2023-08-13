@@ -68,11 +68,13 @@ window.addEventListener("DOMContentLoaded", function() {
     tabCtrl();
   }  
 
+  // accordion
   if(document.querySelector(".com-accordion")){
     accordionUi();
   }
 
-  if(document.querySelector(".content-head")){
+  // 상단 sticky
+  if(document.querySelector(".container")){
     contentHeadSticky();
   }
 });
@@ -184,13 +186,14 @@ function accordionUi() {
 
 // content head
 function contentHeadSticky() {
-  let contentHead = document.querySelector(".content-head");
+  let contentHead = document.querySelector(".container");
+  let subVisualHeight = document.querySelector(".sub-visual");
   document.addEventListener('scroll', function(){
     let currentScroll = document.documentElement.scrollTop;
-    if(currentScroll > 40){
-      contentHead.classList.add("content-head--sticky");
+    if(currentScroll > 430){
+      contentHead.classList.add("container--sticky");
     } else {
-      contentHead.classList.remove("content-head--sticky");
+      contentHead.classList.remove("container--sticky");
     }
   });
 }

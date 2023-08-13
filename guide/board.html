@@ -65,7 +65,7 @@
                     상품 카테고리
                   </dt>
                   <dd class="board-search__input">
-                    <button type="button" class="">선택</button>
+                    <button type="button" class="btn-sec btn--small">선택</button>
                   </dd>
                 </dl>
                 <dl class="board-search__col">
@@ -73,9 +73,11 @@
                     <label for="sel01">국가</label>
                   </dt>
                   <dd class="board-search__input">
-                    <select name="sel01" id="sel01">
-                      <option>선택하세요</option>
-                    </select>
+                    <span class="input-select">
+                      <select name="sel01" id="sel01">
+                        <option>선택하세요</option>
+                      </select>
+                    </span>
                   </dd>
                 </dl>
                 <dl class="board-search__col flex-2">
@@ -98,7 +100,7 @@
                 <span class="board-count">총 <em>125</em> 건</span>
               </div>
               <div class="board-head__right">
-                <button type="button" class="">마케팅 발송(100건)</button>
+                <button type="button" class="btn-sec btn--small">마케팅 발송(100건)</button>
               </div>
             </div>
             <div class="board-list">
@@ -115,8 +117,8 @@
                 <thead>
                   <tr>
                     <th scope="col">
-                      <span class="input-checkbox input-checkbox--labelNone">
-                        <input type="checkbox" name="ch01" id="ch01_01"><label for="ch01_01">전체</label>
+                      <span class="input-checkbox">
+                        <input type="checkbox" name="ch01" id="ch01_01"><label for="ch01_01"><span class="blind">전체</span></label>
                       </span>
                     </th>
                     <th scope="col">No</th>
@@ -129,8 +131,8 @@
                 <tbody>
                   <tr>
                     <td>
-                      <span class="input-checkbox input-checkbox--labelNone">
-                        <input type="checkbox" name="ch01" id="ch01_02"><label for="ch01_02">125</label>
+                      <span class="input-checkbox">
+                        <input type="checkbox" name="ch01" id="ch01_02"><label for="ch01_02"><span class="blind">125</span></label>
                       </span>
                     </td>
                     <td>125</td>
@@ -141,8 +143,8 @@
                   </tr>
                   <tr>
                     <td>
-                      <span class="input-checkbox input-checkbox--labelNone">
-                        <input type="checkbox" name="ch01" id="ch01_03"><label for="ch01_03">125</label>
+                      <span class="input-checkbox">
+                        <input type="checkbox" name="ch01" id="ch01_03"><label for="ch01_03"><span class="blind">125</span></label>
                       </span>
                     </td>
                     <td>125</td>
@@ -156,7 +158,7 @@
             </div><!-- //board-list -->
 
             <div class="btn-wrap">
-              <button type="button" class="btn-more">더보기</button>
+              <button type="button" class="btn-pri btn--small">더보기 <i class="icon12-arrDown-wt"></i></button>
             </div>
 
   <xmp class="scroll" data-toggle-target="1">
@@ -210,7 +212,7 @@
         <thead>
           <tr>
             <th scope="col">
-              <span class="input-checkbox input-checkbox--labelNone">
+              <span class="input-checkbox">
                 <input type="checkbox" name="ch01" id="ch01_01"><label for="ch01_01">전체</label>
               </span>
             </th>
@@ -224,7 +226,7 @@
         <tbody>
           <tr>
             <td>
-              <span class="input-checkbox input-checkbox--labelNone">
+              <span class="input-checkbox">
                 <input type="checkbox" name="ch01" id="ch01_02"><label for="ch01_02">125</label>
               </span>
             </td>
@@ -236,7 +238,7 @@
           </tr>
           <tr>
             <td>
-              <span class="input-checkbox input-checkbox--labelNone">
+              <span class="input-checkbox">
                 <input type="checkbox" name="ch01" id="ch01_03"><label for="ch01_03">125</label>
               </span>
             </td>
@@ -291,8 +293,10 @@
                       <span class="icon-req"><em class="blind">필수</em></span>
                     </th>
                     <td>
-                      <input type="text" class="input-text" id="inp_id" value="" placeholder="영문, 숫자, 특수문자(+ @ . _ - 만) 조합">
-                      <button type="button" class="btn-from">중복확인</button>
+                      <div class="input-withBtn">
+                        <input type="text" class="input-text" id="inp_id" value="" placeholder="영문, 숫자, 특수문자(+ @ . _ - 만) 조합">
+                        <button type="button" class="btn">중복확인</button>
+                      </div>
                       <p class="txt-error">아이디를 입력해 주세요.</p>
                     </td>
                   </tr>
@@ -322,8 +326,10 @@
                       <span class="icon-req"><em class="blind">필수</em></span>
                     </th>
                     <td>
-                      <input type="email" class="input-text" id="inp_email" value="" placeholder="">
-                      <button type="button" class="btn-from">중복확인</button>
+                      <div class="input-withBtn">
+                        <input type="email" class="input-text" id="inp_email" value="" placeholder="">
+                        <button type="button" class="btn">중복확인</button>
+                      </div>                      
                       <p class="txt-error">이메일 주소를 입력해 주세요.</p>
                     </td>
                   </tr>
@@ -474,7 +480,7 @@
               <li>* 공지사항 게시판</li>
             </ul>
 
-            <div class="com-accordion">
+            <div class="com-accordion style--notice">
               <div class="com-accordion__row">
                 <div class="com-accordion__head">
                   <div class="com-accordion__title">

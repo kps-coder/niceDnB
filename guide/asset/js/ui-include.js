@@ -19,7 +19,17 @@ window.addEventListener('DOMContentLoaded', function() {
           </ul>
         </div>
 
-        <div class="footer__logo"><img src="../assets/images/footer-logo.png" alt="NICE dun & bradstreet"></div>
+        <div class="footer__row">
+          <div class="footer__logo"><img src="../assets/images/footer-logo.png" alt="NICE dun & bradstreet"></div>
+
+          <div class="footer__familySite">
+            <select id="familySite" name="familySite">
+              <option>Family site</option>
+              <option>family 1</option>
+              <option>family 2</option>
+            </select>
+          </div>
+        </div>  
 
         <address class="site-address">
           서울특별시 마포구 마초대로 217 크레디트센터 16층 ㈜나이스디앤비<br>

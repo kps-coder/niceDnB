@@ -42,7 +42,7 @@
 .board-list + .btn-wrap {margin-top:45px;}
 
 /* 모바일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .btn-cta-pri,
   .btn-cta-sec {min-width:130px;}
 }
@@ -122,7 +122,7 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 .btn-reset + .selected-item {margin-left:16px;}
 
 /* 모바일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   input[type=text].input-text,
   input[type=password].input-pwd,
   input[type=email].input-text,
@@ -193,7 +193,7 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 }
 
 /* 모바일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   /* 조건검색 */
   .board-search {margin-bottom:20px;}
   .board-search__col {display:flex; align-items: center; width:100%;}
@@ -236,7 +236,7 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 }
 
 /* 모바일 */
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 800px) {  
   .modal-popup__head {padding:20px;}
   .modal-popup__body {max-height:300px; min-height:auto;}
   .modal-popup__content {padding:0 20px 30px;}
@@ -284,7 +284,7 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 .com-accordion__row.open .com-accordion__btn::after {top:10px; transform: rotate(135deg);}
 
 /* 모바일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .com-accordion__date {display:block; margin-top:5px; padding:0; border-left:0;}
 }
 
@@ -318,7 +318,7 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 .com-login__msg {text-align: center; font-size:18px;}
 
 /* 모바일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .com-login .com-notiBox {margin-left:15px; margin-right:15px}
 }
 

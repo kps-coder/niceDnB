@@ -137,7 +137,11 @@
                   <td>바이어기업1 외 32건</td>
                   <td class="text-left"><a href="#n">마케팅입니다.</a></td>
                   <td>12MB</td>
-                  <td><i class="icon-email-off"><span class="blind">읽지않음</span></i></td>
+                  <td>
+                    <button type="button" data-roll="modal-popup" data-popid="modalPop01">
+                      <i class="icon-email-off"><span class="blind">읽지않음</span></i>
+                    </button> 
+                  </td>
                   <td>23.06.15 14:12</td>
                 </tr>
                 <tr>
@@ -150,7 +154,11 @@
                   <td>바이어기업1 외 32건</td>
                   <td class="text-left"><a href="#n">마케팅입니다.</a></td>
                   <td>12MB</td>
-                  <td><i class="icon-email-on"><span class="blind">읽음</span></i></td>
+                  <td>
+                    <button type="button" data-roll="modal-popup" data-popid="modalPop01">
+                      <i class="icon-email-on"><span class="blind">읽음</span></i>
+                    </button> 
+                  </td>
                   <td>23.06.15 14:12</td>
                 </tr>
               </tbody>
@@ -158,16 +166,88 @@
           </div><!-- //board-list -->
 
           <div class="btn-wrap">
-            <button type="button" class="btn-pri btn--small">더보기 <i class="icon12-arrDown-wt"></i></button>
+            <button type="button" class="btn-more">더보기</button>
           </div>
         </div>
       </div><!-- //content-body -->
     </div><!-- //container -->
-
-
     <!-- footer -->
     <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //footer -->
   </div><!-- //wrap -->
+
+  <!-- [L팝업]수신확인 바이어 -->
+  <div class="modal-popup" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">수신확인 바이어</h1>
+      </div>
+      <div class="modal-popup__body">
+         <div class="modal-popup__content">
+          <h2 class="com-tit5">마케팅입니다.</h2>
+          <div class="board-head">
+            <div class="board-head__left">
+              <span>23.06.28 16:00</span>
+            </div>
+            <div class="board-head__right">
+              <span>총 33건 중 25개 바이어 읽음</span>
+            </div>
+          </div>
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>바이어, 이메일 수신여부 항목 표</caption>
+              <colgroup>
+                <col style="width:20%">
+                <col style="width:auto">
+                <col style="width:18%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">바이어</th>
+                  <th scope="col">이메일</th>
+                  <th scope="col">수신여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>바이어기업1</td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>읽지 않음</td>
+                </tr>
+                <tr>
+                  <td>바이어기업1</td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>23.05.25 15:11</td>
+                </tr>
+                <tr>
+                  <td>바이어기업1</td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>읽지 않음</td>
+                </tr>
+                <tr>
+                  <td>바이어기업1</td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>23.05.25 15:11</td>
+                </tr>
+                <tr>
+                  <td>바이어기업1</td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>읽지 않음</td>
+                </tr>                
+              </tbody>
+            </table>
+          </div>
+
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]수신확인 바이어 -->
 </body>
 </html>

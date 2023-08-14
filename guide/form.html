@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- jquery datepicker -->
+    <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+    <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+    <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/common.css">
 
@@ -102,6 +107,23 @@
     </span>
   </xmp>
           </div>  
+
+          <h2><i class="far fa-caret-square-right"></i> input date</h2>
+          <div class="contBody">
+            <input type="text" id="datepicker01" class="input-jq-date"><br><br>
+            <span class="input-date">
+              <input type="text" id="datepicker02" class="input-jq-date">
+              <em>~</em> 
+              <input type="text" id="datepicker03" class="input-jq-date">
+            </span>
+  <xmp>
+    <span class="input-date">
+      <input type="text" id="datepicker01" class="input-jq-date">
+      <em>~</em> 
+      <input type="text" id="datepicker02" class="input-jq-date">
+    </span>
+  </xmp>
+          </div>
 
           <h2><i class="far fa-caret-square-right"></i> textarea</h2>
           <div class="contBody">
@@ -222,19 +244,9 @@
     </footer>
 
     <script type="text/javascript">
-      tabControl("g_tabHead", "g_tabBody"); // 가이드 상단 탭
-
-      const tabBtn = document.querySelectorAll(".g_tabHead li");
-      const tabContent = document.querySelectorAll(".tabContent");
-      tabBtn.forEach(function(obj, i){
-        obj.addEventListener("click",function(e){
-          setTimeout(function(){
-            const scroller = document.scrollingElement.scrollTop;
-            //console.log(scroller);
-            document.scrollingElement.scrollTop = scroller - 46;
-          }, 1);
-        });
-      });
+     $( "#datepicker01" ).datepicker();
+     $( "#datepicker02" ).datepicker();
+     $( "#datepicker03" ).datepicker();
     </script>
     <script src="asset/js/g_include.js"></script> <!-- 퍼블전용 :: 사용금지 -->
   </body>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="그룹_10968" data-name="그룹 10968" transform="translate(-2 -2)">
+    <circle id="타원_964" data-name="타원 964" cx="8" cy="8" r="8" transform="translate(2 2)"/>
+    <circle id="타원_965" data-name="타원 965" class="cls-1" cx="3" cy="3" r="3" transform="translate(7 7)"/>
+  </g>
+</svg>

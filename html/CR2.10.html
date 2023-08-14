@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- sub-visual  -->
+    <div class="sub-visual sub-visual--sub3">
+      <h2 class="sub-visual__h2">해외기업조회</h2>
+      <p class="sub-visual__desc">D&B의 글로벌 네트워크를 통해 모든 국가 내 대상 기업을 조회하고 보고서를 발급받으세요.</p>
+    </div><!-- //sub-visual  -->
+
+    <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">해외기업 보고서</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">보고서 신청내역</button>
+            <ul class="down-menu">
+              <li><a href="#n">보고서 신청</a></li>
+              <li><a href="#n">보고서 신청내역</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+
+      <!-- content-head -->
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h3 class="com-tit3">보고서 신청내역</h3>
+          </div>
+        </div>      
+      </div><!-- //content-head -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="section-cont">
+          <!-- 조건검색 -->
+          <div class="board-search">
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="sel01">국가/기업명</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-select">
+                    <select name="sel01" id="sel01">
+                      <option>국가명</option>
+                    </select>
+                  </span>
+                  <div class="input-search">
+                    <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="기업명 입력" title="기업명">
+                    <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dl class="board-search__col flex-1_5">
+                <dt class="board-search__label">
+                  <label for="inpSearch">D-U-N-S® Number</label>
+                </dt>
+                <dd class="board-search__input">
+                  <div class="input-search">
+                    <input type="text" name="inpSearch" id="inpCompName" class="input-search__input" placeholder="기업명 입력" title="기업명">
+                    <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="datepicker01">신청기간</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-date">
+                    <input type="text" id="datepicker01" class="input-jq-date">
+                    <em>~</em> 
+                    <input type="text" id="datepicker02" class="input-jq-date">
+                  </span>
+                  <button type="button" class="btn-reset"><spen class="blind">초기화</spen></button>
+                </dd>
+              </dl>
+            </div>
+          </div><!-- //board-search -->
+
+          <!-- 게시판 -->
+          <div class="board-head">
+            <div class="board-head__left">
+              <span class="board-count">총 <em>25</em> 건</span>
+            </div>
+          </div>
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>D-U-N-S® Number, 기업명, 주소, 국가명, 보고서신청 내용을 담은 표</caption>
+              <colgroup>
+                <col style="width:8%">
+                <col style="width:15%">
+                <col style="width:auto">
+                <col style="width:20%">
+                <col style="width:10%">
+                <col style="width:10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">D-U-N-S® Number</th>
+                  <th scope="col">기업명</th>
+                  <th scope="col">신청일</th>
+                  <th scope="col">국가명</th>
+                  <th scope="col">D&B Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>25</td>
+                  <td>15-5**-****</td>
+                  <td class="text-left">STA**************</td>
+                  <td>2023.06.29</td>
+                  <td>USA</td>
+                  <td>
+                    <button type="button" class="btn-line-link">보고서보기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>15-5**-****</td>
+                  <td class="text-left">STA**************</td>
+                  <td>2023.06.29</td>
+                  <td>USA</td>
+                  <td>
+                    <button type="button" class="btn-line-link">보고서보기</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- //board-list -->
+
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div> <!-- //section-cont -->      
+      </div><!-- //content-body -->
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+
+  <script>
+    $( "#datepicker01" ).datepicker();
+    $( "#datepicker02" ).datepicker();
+  </script>
+</body>
+</html>

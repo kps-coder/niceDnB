@@ -237,7 +237,7 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 
 
 /* pc & 태블릿 */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 801px) {
   /* large 960*600 */
   .modal-popup--large .modal-popup__wrap {max-width:960px;}
   .modal-popup--large .modal-popup__body {max-height:600px;}
@@ -252,11 +252,10 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 /* 모바일 */
 @media screen and (max-width: 800px) {  
   .modal-popup__head {padding:20px;}
-  .modal-popup__body {max-height:300px; min-height:auto;}
+  .modal-popup__body {max-height:calc(100vh - 200px); min-height:auto;}
   .modal-popup__content {padding:0 20px 30px;}
   .modal-popup__foot {padding-bottom:20px;}
   .modal-popup__close {top:20px; right:20px}
-  .modal-popup--large .modal-popup__body {max-height:400px;}
 }
 
 /* ===== modal alert ===== */

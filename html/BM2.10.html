@@ -76,7 +76,7 @@
                 <button type="button" class="btn-pri btn--small">마케팅 발송 <i class="icon12-send-wt"></i></button>
               </div>
               <div class="board-write__right">
-                <button type="button" class="btn-sec btn--small">미리보기</button>
+                <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop02">미리보기</button>
                 <button type="button" class="btn-sec btn--small">임시저장</button>
               </div>
             </div>
@@ -99,7 +99,7 @@
                   <th scope="row">대상 바이어</th>
                   <td>
                     <div class="td__row">
-                      <button type="button" class="btn-sec btn--small">바이어선택</button>
+                      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop01">바이어선택</button>
                       <button type="button" class="btn-sec btn--small" disabled>이메일 입력</button>
                     </div>
                     <div class="td__row">
@@ -162,7 +162,7 @@
                     <label for="inp_subject">제목</label>
                   </th>
                   <td>
-                    <input type="email" class="input-text w100p" id="inp_email" value="" placeholder="제목을 입력 해 주세요">
+                    <input type="email" class="input-text w100p" id="inp_subject" value="" placeholder="제목을 입력 해 주세요">
                   </td>
                 </tr>
                 <tr>
@@ -183,5 +183,237 @@
     <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //footer -->
   </div><!-- //wrap -->
+
+  <!-- [팝업]바이어 조회 -->
+  <div class="modal-popup modal-popup--large" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">바이어 조회</h1>
+      </div>
+      <div class="modal-popup__body">
+         <div class="modal-popup__content">
+          <div class="com-tab">
+            <ul class="com-tab__wrap">
+              <li class="com-tab__col">
+                <button type="button" class="com-tab__btn com-tab__btn--active">바이어 조회</button>
+              </li>
+              <li class="com-tab__col"><button type="button" class="com-tab__btn">관심바이어</button></li>
+            </ul>
+          </div>
+          <div class="tab-container">
+            <div class="tab-content show">
+              <!-- 조건검색 -->
+              <div class="board-search">
+                <div class="board-search__row">
+                  <dl class="board-search__col">
+                    <dt class="board-search__label">
+                      <label for="sel01">상품 카테고리</label>
+                    </dt>
+                    <dd class="board-search__input">
+                      <span class="input-select">
+                        <select name="sel01" id="sel01">
+                          <option>선택하세요</option>
+                        </select>
+                      </span>
+                    </dd>
+                  </dl>
+                  <dl class="board-search__col flex-2">
+                    <dt class="board-search__label">
+                      <label for="sel02">국가</label>
+                    </dt>
+                    <dd class="board-search__input">
+                      <span class="input-select">
+                        <select name="sel02" id="sel02">
+                          <option>선택하세요</option>
+                        </select>
+                      </span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="board-search__row">
+                  <dl class="board-search__col flex-2">
+                    <dt class="board-search__label">
+                      <label for="inpSearch">키워드</label>
+                    </dt>
+                    <dd class="board-search__input">
+                      <div class="input-search">
+                        <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="키워드를 입력하세요.">
+                        <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div><!-- //조건검색 -->
+
+              <div class="board-head">
+                <div class="board-head__left">
+                  <span class="board-count">총 <em>125</em> 건</span>
+                </div>
+              </div>
+              <div class="board-list">
+                <table class="board-list__table">
+                  <caption>산업분류코드, 산업명 선택 표</caption>
+                  <colgroup><!-- fixed head 와 동일 설정 -->
+                    <col style="width:5%">
+                    <col style="width:7%">
+                    <col style="width:15%">
+                    <col style="width:20%">
+                    <col style="width:18%">
+                    <col style="width:auto">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <span class="input-checkbox">
+                          <input type="checkbox" name="ch01" id="ch01_01">
+                          <label for="ch01_01"><span class="blind">125</span></label>
+                        </span>
+                      </th>
+                      <th scope="col">No</th>
+                      <th scope="col">국가명</th>
+                      <th scope="col">기업명</th>
+                      <th scope="col">D-U-N-S® Number</th>
+                      <th scope="col">카테고리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="input-checkbox">
+                          <input type="checkbox" name="ch01" id="ch01_02">
+                          <label for="ch01_02"><span class="blind">125</span></label>
+                        </span>
+                      </td>
+                      <td>75</td>
+                      <td>VATICAN CITY</td>
+                      <td class="text-left">STA**************</td>
+                      <td>15-5**-****</td>
+                      <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="input-checkbox">
+                          <input type="checkbox" name="ch01" id="ch01_03">
+                          <label for="ch01_03"><span class="blind">125</span></label>
+                        </span>
+                      </td>
+                      <td>75</td>
+                      <td>VATICAN CITY</td>
+                      <td class="text-left">COF**********************</td>
+                      <td>15-5**-****</td>
+                      <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="input-checkbox">
+                          <input type="checkbox" name="ch01" id="ch01_04">
+                          <label for="ch01_04"><span class="blind">125</span></label>
+                        </span>
+                      </td>
+                      <td>75</td>
+                      <td>VATICAN CITY</td>
+                      <td class="text-left">COF**********************</td>
+                      <td>15-5**-****</td>
+                      <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="input-checkbox">
+                          <input type="checkbox" name="ch01" id="ch01_05">
+                          <label for="ch01_05"><span class="blind">125</span></label>
+                        </span>
+                      </td>
+                      <td>75</td>
+                      <td>VATICAN CITY</td>
+                      <td class="text-left">COF**********************</td>
+                      <td>15-5**-****</td>
+                      <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-content">
+              Tab 2 content
+              <button type="button">버튼</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot">
+        <div class="btn-wrap">
+          <button type="button" class="btn-pri">선택 완료</button>
+        </div>
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]바이어 조회 -->
+
+   <!-- [L팝업]마케팅 발송 미리보기 -->
+   <div class="modal-popup" id="modalPop02">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title"><i class="icon40-email"></i>마케팅 발송 미리보기</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <div class="preview">
+            <div class="preview__subject">안녕하세요. 제목입니다.</div>
+            <div class="preview__info">
+              <ul>
+                <li><span class="lt">발신자</span> : <em class="ld"> 가나기업(abcdf@nicednb.com)</em></li>
+                <li>
+                  <span class="lt">대상바이어</span> :
+                  <div class="buyer-list"> 
+                    <button type="button" class="btn-listDown-sm"><span class="blind">열기</span></button>
+                    바이어기업1; 바이어기업2; 바이어기업3;<br>
+                    바이어기업1; 바이어기업2; 바이어기업3;
+                  </div>
+                </li>
+                <li><span class="lt">첨부파일</span> : <em class="ld"><b>3</b>개(123 kb)</em></li>
+              </ul>
+            </div>
+            <div class="preview__cont">
+              <p>
+              10시 기준 전국에는 태풍특보가 발효됐다. 동해안을 중심으로 시간당 30~60mm의 매우 강한 비가 내릴 것으로
+              예상된다. 그 밖의 지역에는 시간당 10~30mm의 강한 비가 내린다. 특히 제주도와 경상권, 동해안을 중심으로 
+              최대순간풍속 시속 90km 내외의 매우 강한 바람이 부는 곳이 있을 것으로 예상된다. 
+              한반도 상륙 진전까지 강의 강도를 유지하던 카눈은 상륙 이후 세력이 약해져 중의 강도로 내려앉을 것으로 
+              보이지만 여전히 주의가 필요한 상황이다. 기상청은 “11일 오전까지 매우 강하고 많은 비바람이 부는 곳이 
+              있을 것”이라며 “피해가 없도록 각별한 유의를 부탁드린다”라고 말했다. 
+              카눈은 내일 오전 북한으로 넘어가지만 태풍이 가져온 고온다습한 공기가 차고 건조한 공기를 만나면서
+              비구름대를 만드는 것도 그 이유입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot">
+        <div class="btn-wrap">
+          <button type="button" class="btn-pri">마케팅 발송 <i class="icon16-send-wt"></i></button>
+        </div>
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]마케팅 발송 미리보기-->
+
+  <script>
+    //미리보기
+    let listDownBtn = document.querySelector(".btn-listDown-sm");
+    let buyerList = document.querySelector(".buyer-list");
+    listDownBtn.addEventListener("click", function(){
+      if (buyerList.classList.contains("show")){
+        buyerList.classList.remove("show");
+      } else {
+        buyerList.classList.add("show");
+      }
+    });
+  </script>
 </body>
 </html>

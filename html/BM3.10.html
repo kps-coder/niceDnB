@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- sub-visual  -->
+    <div class="sub-visual sub-visual--sub1">
+      <h2 class="sub-visual__h2">빅바이어 마케팅</h2>
+      <p class="sub-visual__desc">5억 개 이상의 해외기업 DB POOL을 활용하여, 잠재된 바이어들에게 마케팅 잠재된 바이어들에게 마케팅 서비스를 제공합니다.</p>
+    </div><!-- //sub-visual  -->
+
+    <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">빅바이어 마케팅</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">마케팅 발송내역</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅데이터바이어발굴</a></li>
+              <li><a href="#n">마케팅발송</a></li>
+              <li><a href="#n">마케팅발송내역</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+
+      <!-- content-head -->
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h3 class="com-tit3">마케팅 발송내역</h3>
+          </div>
+        </div>      
+      </div><!-- //content-head -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="section-cont">
+          <!-- 조건검색 -->
+          <div class="board-search">
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label"> 
+                  <label for="inpSender">발신자</label>
+                </dt>
+                <dd class="board-search__input">
+                  <input type="text" class="input-text" id="inpSender" value="abcdf@nicednb.com" disabled>
+                </dd>
+              </dl>
+              <dl class="board-search__col flex-2">
+                <dt class="board-search__label">
+                  <label for="inpSearch">키워드</label>
+                </dt>
+                <dd class="board-search__input">
+                  <div class="input-search">
+                    <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요.">
+                    <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div><!-- //board-search -->
+
+          <!-- 게시판 -->
+          <div class="board-head">
+            <div class="board-head__left">
+              <span class="board-count">총 <em>125</em> 건</span>
+            </div>
+          </div>
+
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>대상바이어, 제목, 파일크기, 수신확인, 일시 항목 표</caption>
+              <colgroup>
+                <col style="width:8%">
+                <col style="width:15%">
+                <col style="width:auto">
+                <col style="width:15%">
+                <col style="width:15%">
+                <col style="width:15%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_01"><label for="ch01_01"><span class="blind">전체</span></label>
+                    </span>
+                  </th>
+                  <th scope="col">대상바이어</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">파일크기</th>
+                  <th scope="col">수신확인</th>
+                  <th scope="col">일시</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>바이어기업1 외 32건</td>
+                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
+                  <td>12MB</td>
+                  <td><i class="icon-email-off"><span class="blind">읽지않음</span></i></td>
+                  <td>23.06.15 14:12</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_03">
+                      <label for="ch01_03"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>바이어기업1 외 32건</td>
+                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
+                  <td>12MB</td>
+                  <td><i class="icon-email-on"><span class="blind">읽음</span></i></td>
+                  <td>23.06.15 14:12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- //board-list -->
+
+          <div class="btn-wrap">
+            <button type="button" class="btn-pri btn--small">더보기 <i class="icon12-arrDown-wt"></i></button>
+          </div>
+        </div>
+      </div><!-- //content-body -->
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+</body>
+</html>

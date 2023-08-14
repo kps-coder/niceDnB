@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <div class="section-cont">
+      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="confirmPop01">마케팅 발송 확인 안내</button>
+    </div>    
+  </div><!-- //wrap -->
+
+  <!-- [L팝업]마케팅 발송 미리보기 -->
+  <div class="modal-popup modal-popup--small" id="confirmPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">마케팅 발송 확인 안내</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <div class="board-view">
+            <table class="board-view__table">
+              <caption>회원가입을 위한 항목 입력 표</caption>
+              <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">발신자</th>
+                  <td>가나기업(abcdf@nicednb.com)</td>
+                </tr>
+                <tr>
+                  <th scope="row">대상 바이어</th>
+                  <td>바이어기업1 외 50개 바이어</td>
+                </tr>
+                <tr>
+                  <th scope="row">차감 캐시</th>
+                  <td><strong>2500</strong> 캐시 (캐시잔액: 2500캐시)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="com-notiBox">
+            <p class="com-notiBox__title">[안내]</p>
+            <!-- 차감캐시 ≤ 캐시잔액  -->
+            <ul class="txt-li">
+              <li>대상 바이어와 차감되는 캐시를 확인해 주세요.</li>
+            </ul>
+
+            <!-- 차감캐시 ＞ 캐시잔액 -->
+            <!-- <ul class="txt-li">
+              <li>캐시 잔액이 부족합니다. 충전 후 이용해 주세요.<br>(작성한 마케팅은 마케팅발송내역에서 임시저장으로 확인 가능합니다.)</li>
+            </ul> -->
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot">
+        <div class="btn-wrap">
+          <button type="button" class="btn-sec">이전으로</button>
+          <button type="button" class="btn-pri">발송하기</button>
+        </div>
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]마케팅 발송 미리보기-->
+
+  <script>
+    modalPopupOpen("confirmPop01");
+  </script>
+</body>
+</html>

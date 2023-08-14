@@ -1,0 +1,32 @@
+<svg id="BTN_Listdown_small" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0f0f0;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="사각형_4790" data-name="사각형 4790" class="cls-1">
+    <rect class="cls-3" width="14" height="14" rx="3"/>
+    <rect class="cls-4" x="0.5" y="0.5" width="13" height="13" rx="2.5"/>
+  </g>
+  <path id="패스_12641" data-name="패스 12641" class="cls-2" d="M7028.218-1499.474l3,3,3-3" transform="translate(-7024.219 1504.974)"/>
+</svg>

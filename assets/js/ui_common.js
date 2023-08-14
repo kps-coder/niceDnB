@@ -190,7 +190,7 @@ function contentHeadSticky() {
   let subVisualHeight = document.querySelector(".sub-visual");
   document.addEventListener('scroll', function(){
     let currentScroll = document.documentElement.scrollTop;
-    if(currentScroll > 430){
+    if(currentScroll > 400){
       contentHead.classList.add("container--sticky");
     } else {
       contentHead.classList.remove("container--sticky");

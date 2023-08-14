@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <div class="section-cont">
+      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop02">미리보기</button>
+    </div>    
+  </div><!-- //wrap -->
+
+  <!-- [L팝업]마케팅 발송 미리보기 -->
+  <div class="modal-popup" id="modalPop02">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title"><i class="icon40-email"></i>마케팅 발송 미리보기</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <div class="preview">
+            <div class="preview__subject">안녕하세요. 제목입니다.</div>
+            <div class="preview__info">
+              <ul>
+                <li><span class="lt">발신자</span> : <em class="ld"> 가나기업(abcdf@nicednb.com)</em></li>
+                <li>
+                  <span class="lt">대상바이어</span> :
+                  <div class="buyer-list"> 
+                    <button type="button" class="btn-listDown-sm"><span class="blind">열기</span></button>
+                    바이어기업1; 바이어기업2; 바이어기업3;<br>
+                    바이어기업1; 바이어기업2; 바이어기업3;
+                  </div>
+                </li>
+                <li><span class="lt">첨부파일</span> : <em class="ld"><b>3</b>개(123 kb)</em></li>
+              </ul>
+            </div>
+            <div class="preview__cont">
+              <p>
+              10시 기준 전국에는 태풍특보가 발효됐다. 동해안을 중심으로 시간당 30~60mm의 매우 강한 비가 내릴 것으로
+              예상된다. 그 밖의 지역에는 시간당 10~30mm의 강한 비가 내린다. 특히 제주도와 경상권, 동해안을 중심으로 
+              최대순간풍속 시속 90km 내외의 매우 강한 바람이 부는 곳이 있을 것으로 예상된다. 
+              한반도 상륙 진전까지 강의 강도를 유지하던 카눈은 상륙 이후 세력이 약해져 중의 강도로 내려앉을 것으로 
+              보이지만 여전히 주의가 필요한 상황이다. 기상청은 “11일 오전까지 매우 강하고 많은 비바람이 부는 곳이 
+              있을 것”이라며 “피해가 없도록 각별한 유의를 부탁드린다”라고 말했다. 
+              카눈은 내일 오전 북한으로 넘어가지만 태풍이 가져온 고온다습한 공기가 차고 건조한 공기를 만나면서
+              비구름대를 만드는 것도 그 이유입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot">
+        <div class="btn-wrap">
+          <button type="button" class="btn-pri">마케팅 발송 <i class="icon16-send-wt"></i></button>
+        </div>
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]마케팅 발송 미리보기-->
+
+  <script>
+    modalPopupOpen("modalPop02");
+
+    let listDownBtn = document.querySelector(".btn-listDown-sm");
+    let buyerList = document.querySelector(".buyer-list");
+    listDownBtn.addEventListener("click", function(){
+      if (buyerList.classList.contains("show")){
+        buyerList.classList.remove("show");
+      } else {
+        buyerList.classList.add("show");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -76,7 +76,7 @@ em, span, i, label, p {margin:0; padding:0; font-size:inherit; color:inherit; fo
 
 .container {min-height:calc(100vh - 271px); padding:110px 0 60px;}
 
-.title-area {display:flex; align-items: center;}
+.title-area {display:flex; align-items: flex-end;}
 
 .section-cont {max-width: 1600px; margin:0 auto; padding:15px 0;}
 .section-cont + .section-cont {margin-top:30px;}
@@ -240,6 +240,8 @@ em, span, i, label, p {margin:0; padding:0; font-size:inherit; color:inherit; fo
   .content-head {padding:30px 0 0;}
   .content-head__inner {padding:0 15px;}
   .content-head__right {margin-top:15px; text-align: right;}
+  .title-area {display:block;}
+  .title-area .com-titDesc {margin:9px 0 0}
 
   .section-cont {padding:15px 20px}
 

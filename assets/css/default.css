@@ -216,6 +216,7 @@ em, span, i, label, p {margin:0; padding:0; font-size:inherit; color:inherit; fo
 
   .down-menu {display:none; position: absolute; z-index: 10; top:55px; left:0; right:0; padding:10px 0; border-bottom:1px solid #ccc; text-align: center; background-color: #fff;}
   .down-menu a  {display:inline-block; padding:10px 0;}
+  .btn-downMenu {color:#000}
   .btn-downMenu::after {content: "▼"; font-size:10px; padding-left:5px; }
   .btn-downMenu.open::after {content:"▲";}
   .btn-downMenu.open + .down-menu {display:block}

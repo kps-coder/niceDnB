@@ -78,10 +78,10 @@
 .txt-li > li ~ li {margin-top:6px}
 
 /* ==== tab ==== */
-.com-tab__wrap {display:inline-flex; padding:6px; border-radius: 8px; background-color: #f2f2f2;}
+.com-tab__wrap {display:inline-flex; padding:10px 12px; border-radius: 32px; background-color: #ebebeb;}
 .com-tab__col ~ .com-tab__col {margin-left:-1px}
-.com-tab__btn {display:block; height:39px; line-height:39px; padding:0 24px; border-bottom:0; color: #999; font-size: 16px;  background-color: transparent;}
-.com-tab__btn--active {border-radius: 8px; color:#fff; font-weight: bold; background-color: #4b3cff;}
+.com-tab__btn {display:block; height:46px; line-height:46px; padding:0 24px; border-bottom:0; color: #000; font-size: 16px;  background-color: transparent;}
+.com-tab__btn--active {border:1.5px solid #000; border-radius: 32px; color:#000; font-weight: bold; background-color: #fff;}
 .tab-content {display:none; padding:24px 0 0;}
 .tab-content.show {display:block}
 
@@ -94,20 +94,20 @@ input[type=number].input-text {height:35px; padding: 3px 16px; border:1px solid 
 /* radio */   
 .input-radio {position: relative;}
 .input-radio > input {position:absolute; width:15px; height:15px; -webkit-appearance: none; appearance: none;}
-.input-radio > input + label {position:relative; z-index: 1; width:16px; height:16px; padding-left:20px; background: url('../images/inp-radio.svg') no-repeat 0 bottom / 16px auto;}
+.input-radio > input + label {position:relative; z-index: 1;  display:inline-block; width:16px; height:16px; padding-left:20px; background: url('../images/inp-radio.svg') no-repeat 0 bottom / 16px auto;}
 .input-radio > input:checked + label {background-position: 0 top;}
 
 /* checkbox */
 .input-checkbox {position: relative;}
 .input-checkbox > input {position:absolute; width:15px; height:15px; -webkit-appearance: none; appearance: none; }
-.input-checkbox > input + label {position:relative; z-index: 1; width:16px; height:16px; padding-left:20px; background: url('../images/inp-chk.svg') no-repeat 0 bottom / 16px auto;}
+.input-checkbox > input + label {position:relative; z-index: 1; display:inline-block; width:16px; height:16px; padding-left:20px; background: url('../images/inp-chk.svg') no-repeat 0 bottom / 16px auto;}
 .input-checkbox > input:checked + label {background-position: 0 top;}
 
 /* date */
 input[type='date'].input-date {-webkit-appearance: none; appearance: none; height:46px; padding:0 5px 0 10px; border: 1px solid #000;}
 input[type='date'].input-date::-webkit-calendar-picker-indicator {/* 달력 이미지 */}
 
-.input-jq-date {height:35px; padding-left:15px; border:1px solid #ccc; background: url(../images/icon-calendar.png) no-repeat top 50% right 5px / 10px auto;}
+.input-jq-date {height:35px; padding-left:15px; border:1px solid #ccc; background: url('../images/icon-calendar.svg') no-repeat top 50% right 16px / 18px 18px;}
 
 .input-date {display:flex; align-items: center; width:100%;}
 .input-date input {width:100%;}
@@ -210,9 +210,9 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
   .board-search {margin-bottom:20px; padding:10px 0;}
   .board-search__row {display:flex; align-items: center; flex-wrap: wrap;}
   .board-search__row ~ .board-search__row {margin-top:12px;}
-  .board-search__col {flex:1; display:flex; align-items: center; width:100%}
+  .board-search__col {flex:1; width:100%}
   .board-search__col ~ .board-search__col {margin-left:24px;}
-  .board-search__label {min-width:130px; padding:0 10px 0 0; white-space: nowrap;}
+  .board-search__label {margin-bottom:16px; font-weight: bold; font-size: 16px; white-space: nowrap;}
   .board-search__input {width:100%; display:flex; align-items: center;}
   .board-search__input > * + * {margin-left:10px;}
   .board-search__input > *:not(button) {width:100%;}
@@ -232,12 +232,12 @@ textarea.input-textarea {resize: none; border:1px solid #ccc;}
 @media screen and (max-width: 800px) {
   /* 조건검색 */
   .board-search {margin-bottom:20px;}
-  .board-search__col {display:flex; align-items: center; width:100%;}
+  .board-search__col {width:100%;}
   .board-search__row ~ .board-search__row,
   .board-search__col ~ .board-search__col,
-  .board-search__input > * + * {margin-top:10px;}
+  .board-search__input > * + * {margin-top:15px;}
   .board-search__input > *:not(button) {width:100%;}
-  .board-search__label {flex:0 0 100px}
+  .board-search__label {margin-bottom:8px; font-weight: bold; font-size: 14px; white-space: nowrap;}
   .board-search__input {width:100%;}
   
    

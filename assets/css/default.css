@@ -78,7 +78,7 @@ em, span, i, label, p {margin:0; padding:0; font-size:inherit; color:inherit; fo
 
 .title-area {display:flex; align-items: flex-end;}
 
-.section-cont {max-width: 1600px; margin:0 auto; padding:15px 0;}
+.section-cont {max-width: 1600px; margin:0 auto; padding:15px 20px; box-sizing: content-box;}
 .section-cont + .section-cont {margin-top:30px;}
 
 
@@ -145,7 +145,7 @@ em, span, i, label, p {margin:0; padding:0; font-size:inherit; color:inherit; fo
   .sub-visual--sub1 .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
 
   .sub-visual--sub2 .sub-visual__inner {background-color:#d15050;}
-  .sub-visual--sub2 .sub-visual__inner ::before  {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
+  .sub-visual--sub2 .sub-visual__inner::before  {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
 
   .sub-visual--sub3 .sub-visual__inner {background-color: #ffc639;}
   .sub-visual--sub3 .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}

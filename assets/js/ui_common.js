@@ -26,16 +26,30 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 
   // GNB focus event
+  let headerPC = document.querySelector(".header-pc");
   let gnbDepth01 = document.querySelectorAll(".gnb__depth01");
+  let gnbLogo = document.querySelector(".header__logo");
   gnbDepth01.forEach(function(elem, idx){
+    elem.addEventListener("mouseover", function(){
+      headerPC.classList.add("gnb-show");
+    });
+    elem.addEventListener("mouseleave", function(){
+      headerPC.classList.remove("gnb-show");
+    });
     elem.addEventListener("focusin", function(){
-      let gnbDepth02 = elem.querySelector(".gnb__depth02");
-      let gnblink02 = gnbDepth02.querySelector("li:last-child");
-      gnbDepth02.classList.add("show");
-      gnblink02.addEventListener("focusout", function(){
-        gnbDepth02.classList.remove("show");
+      let btnLogin = document.querySelector(".btn-login");
+      headerPC.classList.add("gnb-show");
+      btnLogin.addEventListener("focusin", function(){
+        headerPC.classList.remove("gnb-show");
+      });
+      gnbLogo.addEventListener("focusin", function(){
+        headerPC.classList.remove("gnb-show");
       });
     });
+  });
+
+  document.addEventListener("click", function(){
+    headerPC.classList.remove("gnb-show");
   });
 
   //사이트맵

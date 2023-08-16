@@ -1,54 +1,53 @@
 window.addEventListener('DOMContentLoaded', function() {
    headerInclud.outerHTML = `
-    <!-- pc header -->
-    <header class="header-pc">
-      <div class="header__inner">
-        <h1 class="header__logo"><a href="/"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>
-        <nav class="gnb" id="gnbWrap">
-          <ul class="gnb__wrap">
-            <li class="gnb__depth01">
-              <a href="#n" class="gnb__a01">빅바이어 마케팅</a>
-              <ul class="gnb__depth02">
-                <li><a href="#n" class="gnb__a02">빅데이터 바이어 발굴</a></li>
-                <li><a href="#n" class="gnb__a02">마케팅 발송</a></li>
-                <li><a href="#n" class="gnb__a02">마케팅 발송내역</a></li>
-              </ul>
-            </li>
-            <li class="gnb__depth01">
-              <a href="#n" class="gnb__a01">바이어 정보</a>
-              <ul class="gnb__depth02">
-                <li><a href="#n" class="gnb__a02">바이어 조회</a></li>
-                <li><a href="#n" class="gnb__a02">관심 바이어</a></li>
-                <li><a href="#n" class="gnb__a02">사기바이어 이메일</a></li>
-              </ul>
-            </li>
-            <li class="gnb__depth01">
-              <a href="#n" class="gnb__a01">해외기업 보고서</a>
-              <ul class="gnb__depth02">
-                <li><a href="#n" class="gnb__a02">보고서 신청</a></li>
-                <li><a href="#n" class="gnb__a02">보고서 신청내역</a></li>
-              </ul>
-            </li>
-            <li class="gnb__depth01">
-              <a href="#n" class="gnb__a01">수출바우처 컨설팅</a>
-              <ul class="gnb__depth02">
-                <li><a href="#n" class="gnb__a02">컨설팅 신청</a></li>
-                <li><a href="#n" class="gnb__a02">신청내역</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+   <header class="header-pc">
+    <div class="header__inner">
+      <h1 class="header__logo"><a href="/"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>
+      <nav class="gnb" id="gnbWrap">
+        <ul class="gnb__wrap">
+          <li class="gnb__depth01">
+            <a href="#n" class="gnb__a01">빅바이어 마케팅</a>
+            <ul class="gnb__depth02">
+              <li><a href="#n" class="gnb__a02">빅데이터 바이어 발굴</a></li>
+              <li><a href="#n" class="gnb__a02">마케팅 발송</a></li>
+              <li><a href="#n" class="gnb__a02">마케팅 발송내역</a></li>
+            </ul>
+          </li>
+          <li class="gnb__depth01">
+            <a href="#n" class="gnb__a01">바이어 정보</a>
+            <ul class="gnb__depth02">
+              <li><a href="#n" class="gnb__a02">바이어 조회</a></li>
+              <li><a href="#n" class="gnb__a02">관심 바이어</a></li>
+              <li><a href="#n" class="gnb__a02">사기바이어 이메일</a></li>
+            </ul>
+          </li>
+          <li class="gnb__depth01">
+            <a href="#n" class="gnb__a01">해외기업 보고서</a>
+            <ul class="gnb__depth02">
+              <li><a href="#n" class="gnb__a02">보고서 신청</a></li>
+              <li><a href="#n" class="gnb__a02">보고서 신청내역</a></li>
+            </ul>
+          </li>
+          <li class="gnb__depth01">
+            <a href="#n" class="gnb__a01">수출바우처 컨설팅</a>
+            <ul class="gnb__depth02">
+              <li><a href="#n" class="gnb__a02">컨설팅 신청</a></li>
+              <li><a href="#n" class="gnb__a02">신청내역</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-        <div class="util-menu">
-          <div class="util-menu__wrap">
-            <a href="#n" class="btn-login"><span class="blind">로그인</span></a>
-            <a href="#n" class="btn-support"><span class="blind">고객센터</span></a>
-            <button class="btn-search"><span class="blind">통합검색</span></button>
-            <button class="btn-sitemap"><span class="blind">전체메뉴</span></button>
-          </div>
+      <div class="util-menu">
+        <div class="util-menu__wrap">
+          <a href="#n" class="btn-login"><span class="blind">로그인</span></a>
+          <a href="#n" class="btn-support"><span class="blind">고객센터</span></a>
+          <button class="btn-search"><span class="blind">통합검색</span></button>
+          <button class="btn-sitemap"><span class="blind">전체메뉴</span></button>
         </div>
-      </div>      
-    </header><!-- //pc header -->
+      </div>
+    </div>      
+  </header><!-- //pc header -->
 
     <!-- mobile header -->
     <header class="header-mobile">

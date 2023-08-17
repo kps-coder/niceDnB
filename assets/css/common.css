@@ -60,6 +60,11 @@
 @media screen and (max-width: 800px) {
   .btn-cta-pri,
   .btn-cta-sec {min-width:130px;}
+
+  .btn-pri,
+  .btn-sec {height:27px; font-size: 12px; min-width:88px;}
+  .btn--large {height:39px; font-size:16px;}
+  .btn--small {height:20px; font-size:10px;}
 }
 
 /* ==== title ==== */

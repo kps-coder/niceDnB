@@ -146,10 +146,10 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .sub-visual--sub1 .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
 
   .sub-visual--sub2 .sub-visual__inner {background: #43bf78;}
-  .sub-visual--sub2 .sub-visual__inner::before  {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-2.png) no-repeat 0 0 / 100% auto;}
+  .sub-visual--sub2 .sub-visual__inner::before  {content: ""; position: absolute; top:50px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-2.png) no-repeat 0 0 / 100% auto;}
 
   .sub-visual--sub3 .sub-visual__inner {background: #4fc9ed;}
-  .sub-visual--sub3 .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
+  .sub-visual--sub3 .sub-visual__inner::before {content: ""; position: absolute; top:43px; right:111px; display:block;  width:501px; height:266px; background:url(../images/sub-visual-3.png) no-repeat 0 0 / 100% auto;}
 
   .sub-visual--sub4 .sub-visual__inner {background: #ff526b;}
   .sub-visual--sub4  .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}

@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     <div class="quick-menu">
       <ul class="quick-menu__wrap">
-        <li><a href="#" class="btn-quick-alarm"><span class="blind">알람메세지</span><i class="icon-alarm"><span class="blind">새알람</span></i></a></li>
+        <li><a href="#quickMessage" class="btn-quick-alarm"><span class="blind">알람메세지</span><i class="icon-alarm"><span class="blind">새알람</span></i></a></li>
         <li><a href="#" class="btn-quick-msg"><span class="blind">관심바이어</span></a></li>
       </ul>
     </div>

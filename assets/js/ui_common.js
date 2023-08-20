@@ -219,7 +219,7 @@ function contentHeadSticky() {
 // 퀵메뉴 바이어메시지
 function quickMessage() {
   let quickMessageWrap = document.querySelector('.quick-message'); 
-  let quickMsgBtn = document.querySelector('.btn-quick-msg'); 
+  let quickMsgBtn = document.querySelector('.btn-quick-alarm'); 
   let quickMsgCloseBtn = quickMessageWrap.querySelector(".quick-message__close");
   quickMsgBtn.addEventListener("click", function(){
     quickMessageWrap.style.display = "block";

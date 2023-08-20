@@ -88,6 +88,8 @@
 .com-notiBox * {line-height:1.5;}
 .com-notiBox__title {margin-bottom:9px; font-weight: bold; color:#000;}
 
+.window-popup .com-notiBox {font-size:14px; border:0; background: #f2f2f2;}
+
 .com-bubble-box {position:relative; padding:16px; margin-bottom:54px; border-radius: 16px; background: #f2f2f2;}
 .com-bubble-box::after {content: ""; position:absolute; bottom:-29px; left:50%; display:block; margin-left:-7px; border:15px solid transparent; border-top-color:#f2f2f2;}
 .com-bubble-box__msg {text-align:center; font-weight: bold;}
@@ -97,6 +99,10 @@
 .com-list-info dt {flex: 0 0 120px; position:relative;}
 .com-list-info dd {font-weight: bold; line-height:1.3}
 .com-list-info dt::after {content: ":"; position:absolute; right:0; top:0; padding-right:12px; font-weight: bold;}
+
+.notice-msg {padding-top:30px;}
+.notice-msg__title {font-size:32px; font-weight: bold; text-align: center;}
+.notice-msg__text {padding:20px; line-height: 1.3; text-align:center} 
 
 /* ==== text list ==== */
 .txt-li > li ~ li {margin-top:6px}
@@ -212,7 +218,6 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .board-count > em {color:#FF4DD6;} 
 .send-count {margin-right:12px;}
 .send-count > strong {color:#FF4DD6; text-decoration: underline;} 
-.board-head .input-search {width:523px;}
 .board-head__right {display:flex; align-items: center;}
 .board-head__right * + * {margin-left:4px;}
 
@@ -351,7 +356,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .window-popup__logo img {width:75px; height:auto; vertical-align: middle;}
 .window-popup__body {overflow-y:auto; height:calc(100% - 39px - 30px);}
 .window-popup__content {padding:20px}
-.window-popup__h2 {margin-bottom:15px; padding-bottom:12px; border-bottom:1px solid #ccc; font-size:18px; color:#333;}
+.window-popup__h2 {margin-bottom:15px; padding-bottom:12px; font-size:18px; color:#333;}
 .window-popup__foot {display:flex; align-items: center; justify-content: center; height:30px;  background-color: #eee;}
 .window-popup__foot-title {margin-right:10px; padding-right:10px; border-right:1px solid #666; font-size:12px;}
 .window-popup__copyright {font-size:12px;}

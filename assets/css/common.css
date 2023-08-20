@@ -231,7 +231,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 .board-list-headFixed {position:relative;}
 .board-list-headFixed .fixed--head {position:absolute; top:0;}
-.board-list-headFixed .fixed--body {position:relative; top:62px; overflow-y:auto; max-height:360px;}
+.board-list-headFixed .fixed--body {position:relative; top:62px; overflow-y:auto; max-height:320px;}
 .board-list-headFixed .fixed--body .board-list__table {border-top:0;}
 .modal-popup .board-list-headFixed .board-list__table {min-width: 100%;}
 
@@ -445,31 +445,34 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .bigdata-buyer__step1 .com-tit4 {background: url('../images/icon-step1.svg') no-repeat 0 0 / 68px 69px;}
 .bigdata-buyer__step1 .input-select {width:100%;}
 .bigdata-buyer__step1 .input-select select {color:#fff; font-weight: bold; background:#4976db url('../images/select-combo-w.svg') no-repeat top 50% right 24px / 15px 8px;}
-.bigdata-buyer__step1 .selected-item {border-color: #4976db; border-style: solid; color:#4976db;} 
+.bigdata-buyer__step1 .selected-item {border-color: #4976db; color:#4976db;} 
 .bigdata-buyer__step1 .btn-del {background-color: #4976db;}
 
 .bigdata-buyer__step2 {margin-left:24px; background-color:#fff7e3;}
-.bigdata-buyer__step2 .com-tit4 {background: url('../images/icon-step2.svg') no-repeat 0 center / 57px 48px;}
+.bigdata-buyer__step2 .com-tit4 {background: url('../images/icon-step2.svg') no-repeat 0 center / 69px 69px;}
 .bigdata-buyer__step2 .bigdata-buyer__input .btn {width:calc(100% - 35px); height: 35px; margin-right:8px; border-radius: 18px; color: #fff; font-weight: bold; background: #e09302;}
 .bigdata-buyer__step2 .selected-item {border-color: #e09302; color:#e09302;} 
 .bigdata-buyer__step2 .btn-del {background-color: #e09302;}
 .bigdata-buyer__step2 .btn-reset {background-image: url('../images/btn-reset-org.svg');}
 
-.bigdata-buyer__step3 {margin-left:24px; background-color:#fde7f5;}
-.bigdata-buyer__step3 .com-tit4 {background: url('../images/icon-step3.svg') no-repeat 0 center / 48px 47px;}
+.bigdata-buyer__step3 {margin-left:24px; background-color:#fceaea;}
+.bigdata-buyer__step3 .com-tit4 {background: url('../images/icon-step3.svg') no-repeat 0 center / 69px 69px;}
 .bigdata-buyer__step3 .input-withBtn {width:calc(100% - 35px)}
-.bigdata-buyer__step3 .input-withBtn .btn {width:75px; margin-right:18px; background-color: #e254bd;}
-.bigdata-buyer__step3 .input-withBtn input {width:100%; border-color:#e254bd;}
+.bigdata-buyer__step3 .input-withBtn .btn {width:75px; margin-right:18px; background-color: #d81e1e;}
+.bigdata-buyer__step3 .input-withBtn input {width:100%; border-color:#d81e1e;}
 .bigdata-buyer__step3 .btn-reset {background-image: url('../images/btn-reset-pk.svg');}
-.bigdata-buyer__step3 .selected-item {border-color: #e254bd; border-style: solid; color:#e254bd;} 
-.bigdata-buyer__step3 .btn-del {background-color: #e254bd;}
+.bigdata-buyer__step3 .selected-item {border-color: #d81e1e;color:#d81e1e;} 
+.bigdata-buyer__step3 .btn-del {background-color: #d81e1e;}
 
 .buyer-result {display:flex; max-width:1600px; margin:40px auto 0}
-.buyer-result__col {flex:1; text-align:center;}
-.buyer-result__col + .buyer-result__col {border-left:1px solid #ccc;}
-.buyer-result__tit {font-weight: bold;}
-.buyer-result__count {margin:10px 0; font-weight: bold;}
-.buyer-result__count strong {font-size:24px; color:#0066ff;}
+.buyer-result__col {position:relative; flex:1; padding:25px 60px 24px 0; border-radius: 40px 0px; text-align:right; background-color: #edeff6;}
+.buyer-result__col + .buyer-result__col {margin-left:40px;}
+.buyer-result__tit {margin-right:42px; font-weight: bold;}
+.buyer-result__count {margin:10px 0; font-weight: bold; font-size:26px;}
+.buyer-result__count strong {font-size:24px; color:#7F3CFF;}
+.buyer-result__col:nth-child(1)::before {content: ""; display:block; position:absolute; top:-14px; left:40px; width:93px; height:86px; background: url('../images/icon-buyer1.png') no-repeat 0 0 / 100% 100%;}
+.buyer-result__col:nth-child(2)::before {content: ""; display:block; position:absolute; top:-14px; left:40px; width:84px; height:86px; background: url('../images/icon-buyer2.png') no-repeat 0 0 / 100% 100%;}
+.buyer-result__col:nth-child(3)::before {content: ""; display:block; position:absolute; top:-14px; left:40px; width:85px; height:90px; background: url('../images/icon-buyer3.png') no-repeat 0 0 / 100% 100%;}
 
 /* 모바일 */
 @media screen and (max-width: 1280px) {

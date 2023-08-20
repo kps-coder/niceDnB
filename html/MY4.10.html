@@ -31,13 +31,13 @@
     <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //header -->
 
-    <!-- sub-visual  -->
+    <!-- sub-visual 
     <div class="sub-visual sub-visual--sub6">
       <div class="sub-visual__inner">
         <h2 class="sub-visual__h2">마이페이지</h2>
         <p class="sub-visual__desc">마이페이지 설명 글입니다.</p>
       </div>
-    </div><!-- //sub-visual  -->
+    </div> //sub-visual  -->
 
     <div class="container" id="container"> 
       <!-- bread-crumb -->
@@ -75,7 +75,7 @@
             <h3 class="com-tit3">캐시 내역</h3>
           </div>
           <div class="btn-wrap">
-            <button type="button" class="btn-pri btn--small">캐시 충전</button>
+            <button type="button" class="btn-pri btn--small" data-roll="modal-popup" data-popid="modalCash">캐시 충전</button>
           </div>
         </div>      
       </div><!-- //content-head -->
@@ -182,6 +182,27 @@
     <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //footer -->
   </div><!-- //wrap -->
+
+  <!-- [팝업]캐시충전 -->
+  <div class="modal-popup modal-popup--small" id="modalCash">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">캐시충전</h1>
+      </div>
+      <div class="modal-popup__body" style="max-height:600px">
+        <div class="modal-popup__content">
+          <img src="../assets/images/temp-cash-cont.png" alt="">
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot" style="padding:0;">
+        <img src="../assets/images/temp-cash-foot.png" alt="">
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]캐시충전 -->
 
   <script>
     $( "#datepicker01" ).datepicker();

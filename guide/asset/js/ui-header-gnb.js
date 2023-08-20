@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function() {
             </ul>
           </li>
           <li class="gnb__depth01">
-            <a href="EC0.10.html" class="gnb__a01">수출바우처 컨설팅</a>
+            <a href="EC1.10.html" class="gnb__a01">수출바우처 컨설팅</a>
             <ul class="gnb__depth02">
               <li><a href="EC1.10.html" class="gnb__a02">컨설팅 신청</a></li>
               <li><a href="EC2.10.html" class="gnb__a02">신청내역</a></li>
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
       <div class="util-menu">
         <div class="util-menu__wrap">
-          <a href="#n" class="btn-login"><span class="blind">로그인</span></a>
+          <a href="MY0.10.html" class="btn-login"><span class="blind">마이페이지</span></a>
           <a href="CS1.10.html" class="btn-support"><span class="blind">고객센터</span></a>
           <a href="CM1.10.html" class="btn-search"><span class="blind">통합검색</span></a>
           <button class="btn-sitemap"><span class="blind">전체메뉴</span></button>
@@ -78,42 +78,41 @@ window.addEventListener('DOMContentLoaded', function() {
       <div class="sitemap__inner">
         <ul class="sitemap__list">
           <li>
-            <a href="#n" class="sitemap__depth01">빅바이어마케팅</a>
+            <a href="BM0.10.html" class="sitemap__depth01">빅바이어마케팅</a>
             <ul>
-              <li><a href="#n" class="sitemap__depth02">빅데이터바이어발굴</a></li>
-              <li><a href="#n" class="sitemap__depth02">마케팅발송</a></li>
-              <li><a href="#n" class="sitemap__depth02">마케팅발송내역</a></li>
+              <li><a href="BM1.10.html" class="sitemap__depth02">빅데이터바이어발굴</a></li>
+              <li><a href="BM2.10.html" class="sitemap__depth02">마케팅발송</a></li>
+              <li><a href="BM3.10.html" class="sitemap__depth02">마케팅발송내역</a></li>
             </ul>
           </li>
           <li>
-            <a href="#n" class="sitemap__depth01">바이어정보</a>
+            <a href="BD1.10.html" class="sitemap__depth01">바이어정보</a>
             <ul>
-              <li><a href="#n" class="sitemap__depth02">바이어조회</a></li>
-              <li><a href="#n" class="sitemap__depth02">마케팅발송</a></li>
-              <li><a href="#n" class="sitemap__depth02">관심바이어</a></li>
+              <li><a href="BD1.10.html" class="sitemap__depth02">바이어조회</a></li>
+              <li><a href="BD3.10.html" class="sitemap__depth02">사기바이어 이메일</a></li>
             </ul>
           </li>
           <li>
-            <a href="#n" class="sitemap__depth01">해외기업보고서</a>
+            <a href="CR1.10.html" class="sitemap__depth01">해외기업보고서</a>
             <ul>
-              <li><a href="#n" class="sitemap__depth02">보고서신청</a></li>
-              <li><a href="#n" class="sitemap__depth02">보고서신청내역</a></li>
+              <li><a href="CR1.10.html" class="sitemap__depth02">보고서신청</a></li>
+              <li><a href="CR2.10.html" class="sitemap__depth02">보고서신청내역</a></li>
             </ul>
           </li>
           <li>
-            <a href="#n" class="sitemap__depth01">수출바우처컨설팅</a>
+            <a href="EC0.10.html" class="sitemap__depth01">수출바우처컨설팅</a>
             <ul>
-              <li><a href="#n" class="sitemap__depth02">서비스신청</a></li>
-              <li><a href="#n" class="sitemap__depth02">신청내역</a></li>
+              <li><a href="EC1.10.html" class="sitemap__depth02">컨설팅 신청</a></li>
+              <li><a href="EC2.10.html" class="sitemap__depth02">신청내역</a></li>
             </ul>
           </li>
         </ul>
         <ul class="sitemap__list">
           <li>
-            <a href="#n" class="sitemap__depth01">고객지원</a>
+            <a href="CS1.10.html" class="sitemap__depth01">고객지원</a>
             <ul>
-              <li><a href="#n" class="sitemap__depth02">문의하기</a></li>
-              <li><a href="#n" class="sitemap__depth02">정보마당</a></li>
+              <li><a href="CS1.10.html" class="sitemap__depth02">문의하기</a></li>
+              <li><a href="CS2.10" class="sitemap__depth02">공지사항</a></li>
             </ul>
           </li>
           <!-- 로그아웃 상태 노출 -->
@@ -127,9 +126,9 @@ window.addEventListener('DOMContentLoaded', function() {
             <ul>
               <li><a href="#n" class="sitemap__depth02">정보 수정</a></li>
               <li><a href="#n" class="sitemap__depth02">비밀번호변경</a></li>
-              <li><a href="#n" class="sitemap__depth02">캐쉬 충전</a></li>
-              <li><a href="#n" class="sitemap__depth02">관심 기업</a></li>
-              <li><a href="#n" class="sitemap__depth02">문의 내역</a></li>
+              <li><a href="MY4.10.html" class="sitemap__depth02">캐쉬 내역</a></li>
+              <li><a href="MY5.10.html" class="sitemap__depth02">관심 바이어</a></li>
+              <li><a href="MY7.10.html" class="sitemap__depth02">문의 내역</a></li>
             </ul>
           </li>
           <li>

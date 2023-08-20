@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" viewBox="0 0 15.5 15.5">
+  <g id="Listdown_Small" transform="translate(0.75 0.75)">
+    <rect id="사각형_4790" data-name="사각형 4790" width="14" height="14" rx="3" fill="#f0f0f0" stroke="#000" stroke-width="1.5"/>
+    <path id="다각형_12" data-name="다각형 12" d="M4.293.707a1,1,0,0,1,1.414,0L8.293,3.293A1,1,0,0,1,7.586,5H2.414a1,1,0,0,1-.707-1.707Z" transform="translate(12 10) rotate(180)"/>
+  </g>
+</svg>

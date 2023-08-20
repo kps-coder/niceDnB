@@ -151,8 +151,8 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .sub-visual--sub3 .sub-visual__inner {background: #4fc9ed;}
   .sub-visual--sub3 .sub-visual__inner::before {content: ""; position: absolute; top:43px; right:111px; display:block;  width:501px; height:266px; background:url(../images/sub-visual-3.png) no-repeat 0 0 / 100% auto;}
 
-  .sub-visual--sub4 .sub-visual__inner {background: #ff526b;}
-  .sub-visual--sub4  .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
+  .sub-visual--sub4 .sub-visual__inner {background: #FF526B;}
+  .sub-visual--sub4  .sub-visual__inner::before {content: ""; position: absolute; top:38px; right:111px; display:block;  width:425px; height:274px; background:url(../images/sub-visual-4.png) no-repeat 0 0 / 100% auto;}
 
   .sub-visual--sub5 .sub-visual__inner {background: #ff526b;}
   .sub-visual--sub5  .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
@@ -161,9 +161,9 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .sub-visual--sub6  .sub-visual__inner::before {content: ""; position: absolute; top:77px; right:111px; display:block;  width:498px; height:269px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 100% auto;}
 
   /* bread-crumb */
-  .bread-crumb {width:100%; margin-bottom:61px; padding:0 20px; background-color: #fff;}
+  .bread-crumb {width:100%; margin-bottom:61px; padding:0 20px;}
   .bread-crumb__inner {display:flex; align-items: center; max-width:1366px; margin: 0 auto;}
-  .bread-crumb__inner > li {position: relative; border: 1px solid #ccc;}
+  .bread-crumb__inner > li {position: relative; border: 1px solid #ccc; background-color: #fff;}
   .bread-crumb__inner > li + li {border-left:0;}
   .down-menu {display:none; position:absolute; width:100%; padding:15px 0; border:1px solid #ccc; background-color: #fff;}
   .down-menu a {display:block; padding:0 15px; line-height:24px;}

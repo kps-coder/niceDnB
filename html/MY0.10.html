@@ -81,7 +81,7 @@
               </div>
               <div class="mypage-main__cash">
                 내 캐시 <em>2,500</em>
-                <button type="button" class="btn-cash"><span class="blind">충전</span></button>
+                <button type="button" class="btn-cash" data-roll="modal-popup" data-popid="modalCash"><span class="blind">충전</span></button>
               </div>
             </div>
             <div class="mypage-main__menu">
@@ -317,5 +317,26 @@
     </div>
   </div>
   <!-- //[팝업]회원 등급 안내 -->
+
+  <!-- [팝업]캐시충전 -->
+  <div class="modal-popup modal-popup--small" id="modalCash">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">캐시충전</h1>
+      </div>
+      <div class="modal-popup__body" style="max-height:600px">
+        <div class="modal-popup__content">
+          <img src="../assets/images/temp-cash-cont.png" alt="">
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot" style="padding:0;">
+        <img src="../assets/images/temp-cash-foot.png" alt="">
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]캐시충전 -->
 </body>
 </html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- sub-visual  -->
+    <div class="sub-visual sub-visual--sub4">
+      <div class="sub-visual__inner">
+        <h2 class="sub-visual__h2">수출바우처 컨설팅</h2>
+        <p class="sub-visual__desc">전문 MD가 귀사를 위한 맞춤 컨설팅을 무료로 제공해 드립니다.</p>
+      </div>
+    </div><!-- //sub-visual  -->
+
+    <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">수출바우처 컨설팅</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">컨설팅 신청</button>
+            <ul class="down-menu">
+              <li><a href="#n">컨설팅신청</a></li>
+              <li><a href="#n">신청내역</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+
+      <!-- content-head -->
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h3 class="com-tit3">컨설팅 신청</h3>
+            <p class="com-titDesc">해외시장조사, 전시회, 진출전략 컨설팅을 제공해 드립니다.</p>
+          </div>
+        </div>      
+      </div><!-- //content-head -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="section-cont">
+          <div class="board-write">
+            <table class="board-write__table">
+              <caption>컨설팅 신청 입력 표</caption>
+              <colgroup>
+                <col style="width:180px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="inpNation">국가 </label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <span class="input-select">
+                      <select id="inpNation">
+                        <option>국가명 | 국가코드</option>
+                      </select>
+                    </span>
+                    <p class="txt-error">국가를 선택해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpItem">품목</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="text" id="inpItem" class="input-text">
+                    <p class="txt-error">품목을 입력해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpHsCode">HS CODE</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="text" id="inpHsCode" class="input-text">
+                    <p class="txt-error">HS CODE를 입력해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpStage">수출준비단계</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <span class="input-radio">
+                      <input type="radio" id="inpStage01">
+                      <label for="inpStage01">수출 준비 중</label>
+                    </span>
+                    <span class="input-radio">
+                      <input type="radio" id="inpStage02">
+                      <label for="inpStage02">기수출 경험 있음</label>
+                    </span>
+                    <span class="input-radio">
+                      <input type="radio" id="inpStage03">
+                      <label for="inpStage03">상당금액 수출 중</label>
+                    </span>
+                    <p class="txt-error">수출준비단계를 선택해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpvoucher">기선정 바우처</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" id="inpvoucher01">
+                      <label for="inpvoucher01">수출바우처</label>
+                    </span>
+                    <span class="input-checkbox">
+                      <input type="checkbox" id="inpvoucher02">
+                      <label for="inpvoucher02">혁신성장바우처</label>
+                    </span>
+                    <span class="input-checkbox">
+                      <input type="checkbox" id="inpvoucher03">
+                      <label for="inpvoucher03">관광기업바우처</label>
+                    </span>
+                    <span class="input-checkbox">
+                      <input type="checkbox" id="inpvoucher04">
+                      <label for="inpvoucher04">미선정(잘모름)</label>
+                    </span>
+                    <p class="txt-error">기선정 바우처를 선택해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    카탈로그(품목관련)
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <div class="td__row">
+                      <span class="input-file">
+                        <input type="file" name="inpFile" id="inpFile">
+                        <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+                      </span>
+                    </div>
+                    <div class="td__row">
+                      <div class="file-list">
+                        <div class="file-list__selected">
+                          <span class="selected-file">
+                            <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                            파일명.png
+                          </span>
+                          <span class="selected-file">
+                            <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                            파일명.png
+                          </span>
+                        </div>
+                        <div class="file-list__volume">0KB / 20MB</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpSite">홈페이지</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="text" id="inpSite" class="input-text w100p"  placeholder="URL 입력">
+                    <p class="txt-error">홈페이지 주소를 입력해 주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpText">기타전달사항</label>
+                  </th>
+                  <td>
+                    <input type="text" id="inpText" class="input-text w100p" size="50">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> <!-- //section-cont -->  
+        
+        <div class="section-cont">
+          <h4 class="com-tit4">추가 사항(선택)</h4>
+          <div class="board-write">
+            <table class="board-write__table">
+              <caption>컨설팅 신청 추가 사항 입력 표</caption>
+              <colgroup>
+                <col style="width:180px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="inpHopeService">희망 서비스</label>
+                  </th>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="inpHopeService" id="inpHopeService01">
+                      <label for="inpHopeService01">바이어리스트</label>
+                    </span>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="inpHopeService" id="inpHopeService02">
+                      <label for="inpHopeService02">전시회</label>
+                    </span>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="inpHopeService" id="inpHopeService03">
+                      <label for="inpHopeService03">해외시장조사</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpHopeItem">희망 조사 항목</label>
+                  </th>
+                  <td>
+                    <input type="text" id="inpHopeItem" class="input-text w100p" size="50">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpCompetitors">주요 경쟁사</label>
+                  </th>
+                  <td>
+                    <input type="text" id="inpCompetitors" class="input-text w100p" size="50">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpFocus">조사 중점 사항</label>
+                  </th>
+                  <td>
+                    <input type="text" id="inpFocus" class="input-text w100p" size="50">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> <!-- //section-cont -->  
+        <div class="btn-wrap">
+          <a href="#n" class="btn-pri">컨설팅 신청</a>
+        </div>
+      </div><!-- //content-body -->
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+
+  <script>
+    $( "#datepicker01" ).datepicker();
+    $( "#datepicker02" ).datepicker();
+  </script>
+</body>
+</html>

@@ -72,126 +72,194 @@
       <!-- content-body -->
       <div class="content-body">
         <div class="section-cont">
-          <div class="com-tab">
-            <ul class="com-tab__wrap">
-              <li class="com-tab__col"><button type="button" class="com-tab__btn com-tab__btn--active">바이어 조회</button></li>
-              <li class="com-tab__col"><button type="button" class="com-tab__btn">한국거래바이어</button></li>
-            </ul>
+          <!-- 조건검색 -->
+          <div class="board-search">
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="sel02">바이어 구분</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-checkbox">
+                    <input type="checkbox" name="buyerSelect" id="buyerSelect01">
+                    <label for="buyerSelect01">바이어 전체</label>
+                  </span>
+                  <span class="input-checkbox">
+                    <input type="checkbox" name="buyerSelect" id="buyerSelect02">
+                    <label for="buyerSelect02">한국거래바이어</label>
+                  </span>
+                  <span class="input-checkbox">
+                    <input type="checkbox" name="buyerSelect" id="buyerSelect03">
+                    <label for="buyerSelect03">관심바이어</label>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="sel02">국가</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-select">
+                    <select name="sel02" id="sel02">
+                      <option>선택하세요</option>
+                    </select>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="inpSearchKeyword">키워드</label>
+                </dt>
+                <dd class="board-search__input">
+                  <input type="text" name="inpSearch" id="inpSearchKeyword" class="input-text" placeholder="키워드 입력">
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dt class="board-search__label">
+                <label for="inpSearch04">산업분류코드</label>
+              </dt>
+              <dd class="board-search__itemSelect">
+                <button type="button" class="btn-pri btn--small">코드조회</button>
+                <span class="selected-item">
+                  <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                  벨기에 바이어 기업 1
+                </span>
+                <span class="selected-item">
+                  <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                  벨기에 바이어 기업 2
+                </span>
+              </dd>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn-pri btn--small">초기화 <i class="icon16-reset-wt"></i></button>
+            </div>
+          </div><!-- //조건검색 -->
+
+          <!-- 게시판 -->
+          <div class="board-head">
+            <div class="board-head__left">
+              <span class="board-count">총 <em>125</em> 건</span>
+            </div>
+            <div class="board-head__right">
+              <span class="send-count"><strong>100</strong>건에 대한</span>
+              <button type="button" class="btn-pri btn--small">마케팅 발송 <i class="icon16-send-wt"></i></button>
+            </div>
           </div>
-          <div class="tab-container">
-            <div class="tab-content show">
-              <!-- 조건검색 -->
-              <div class="board-search">
-                <div class="board-search__row">
-                  <dl class="board-search__col">
-                    <dt class="board-search__label">
-                      <label for="prodCategory">상품 카테고리</label>
-                    </dt>
-                    <dd class="board-search__input">
-                      <span class="input-select">
-                        <select id="prodCategory">
-                          <option>선택하세요</option>
-                        </select>
-                      </span>
-                    </dd>
-                  </dl>
-                  <dl class="board-search__col"> 
-                    <dt class="board-search__label">
-                      <label for="sel01">국가</label>
-                    </dt>
-                    <dd class="board-search__input">
-                      <span class="input-select">
-                        <select name="sel01" id="sel01">
-                          <option>선택하세요</option>
-                        </select>
-                      </span>
-                    </dd>
-                  </dl>
-                  <dl class="board-search__col flex-2">
-                    <dt class="board-search__label">
-                      <label for="inpSearch">키워드</label>
-                    </dt>
-                    <dd class="board-search__input">
-                      <div class="input-search">
-                        <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="키워드/기업명/ D-U-N-S® Number">
-                        <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
-                      </div>
-                    </dd>
-                  </dl>
-                </div>
-              </div><!-- //board-search -->
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>산업분류코드, 산업명 선택 표</caption>
+              <colgroup><!-- fixed head 와 동일 설정 -->
+                <col style="width:30px">
+                <col style="width:7%">
+                <col style="width:15%">
+                <col style="width:28%">
+                <col style="width:150px">
+                <col style="width:auto">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_01">
+                      <label for="ch01_01"><span class="blind">125</span></label>
+                    </span>
+                  </th>
+                  <th scope="col">No</th>
+                  <th scope="col">국가</th>
+                  <th scope="col">기업명</th>
+                  <th scope="col">산업분류코드</th>
+                  <th scope="col">관심품목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike01" checked>
+                      <label for="btnLike01" class="btnLike01"><span class="blind">관심바이어</span></label>
+                    </span>                    
+                    <a href="BD1.20.html">STARBUCKS</a>
+                    <span class="badge">한국거래바이어</span>
+                  </td>
+                  <td>15-5**-****</td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_03">
+                      <label for="ch01_03"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike02">
+                      <label for="btnLike02"><span class="blind">관심바이어</span></label>
+                    </span>   
+                    <a href="BD1.20.html">STARBUCKS VETNAM</a>
+                  </td>
+                  <td>15-5**-****</td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_04">
+                      <label for="ch01_04"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike03">
+                      <label for="btnLike03"><span class="blind">관심바이어</span></label>
+                    </span>     
+                    <a href="BD1.20.html">COFFEE ABCD</a>
+                  </td>
+                  <td>15-5**-****</td>
+                  <td class="text-left"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_05">
+                      <label for="ch01_05"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike04">
+                      <label for="btnLike04"><span class="blind">관심바이어</span></label>
+                    </span>     
+                    <a href="BD1.20.html">STARBUCKS</a>
+                  </td>
+                  <td>15-5**-****</td>
+                  <td class="text-left"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-              <!-- 게시판 -->
-              <div class="board-head">
-                <div class="board-head__left">
-                  <span class="board-count">총 <em>125</em> 건</span>
-                </div>
-                <div class="board-head__right">
-                  <button type="button" class="btn-pri btn--small">마케팅 발송(100건)</button>
-                </div>
-              </div>
-              <div class="board-list">
-                <table class="board-list__table">
-                  <caption>국가명, 기업명, D-U-N-S® Number, 카테고리 내용을 담은 표</caption>
-                  <colgroup>
-                    <col style="width:8%">
-                    <col style="width:8%">
-                    <col style="width:15%">
-                    <col style="width:15%">
-                    <col style="width:20%">
-                    <col style="width:auto">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_01"><label for="ch01_01"><span class="blind">전체</span></label>
-                        </span>
-                      </th>
-                      <th scope="col">No</th>
-                      <th scope="col">국가명</th>
-                      <th scope="col">기업명</th>
-                      <th scope="col">D-U-N-S® Number</th>
-                      <th scope="col">카테고리</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_02"><label for="ch01_02"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>125</td>
-                      <td>VATICAN CITY</td>
-                      <td class="text-left"><a href="#n">STA**************</a></td>
-                      <td>15-5**-****</td>
-                      <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_03"><label for="ch01_03"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>125</td>
-                      <td>VATICAN CITY</td>
-                      <td class="text-left"><a href="#n">STA**************</a></td>
-                      <td>15-5**-****</td>
-                      <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div><!-- //board-list -->
-
-              <div class="btn-wrap">
-                <button type="button" class="btn-more">더보기</button>
-              </div>
-            </div>
-            <div class="tab-content">
-              Tab 2 content
-              <button type="button">버튼</button>
-            </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
           </div>
         </div> <!-- //section-cont -->      
       </div><!-- //content-body -->

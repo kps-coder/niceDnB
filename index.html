@@ -56,6 +56,8 @@
 
       tr.web td {background-color: rgba(179, 255, 179, 0.2);}
       tr.app td {background-color: rgba(255, 179, 179, 0.2);}
+
+      .link-underline {text-decoration: underline; color:blue}
     </style>
   </head>
   <body>
@@ -130,7 +132,7 @@
             <td class="1dep">메인화면</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">Main</td>
+            <td class="file"><a href="html/Main.html" target="_blank">Main</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -185,7 +187,7 @@
             <td class="3dep"></td>
             <td class="file"><span class="layer">CM2.10</span></td>
             <td class="date"></td>
-            <td class="etc"></td>
+            <td class="etc"><a href="html/Layout.html" target="_blank" class="link-underline">Layout</a> 참조</td>
           </tr>
           <tr>
             <td class="no"></td>
@@ -354,7 +356,7 @@
             <td class="1dep"></td>
             <td class="2dep">바이어메시지보내기</td>
             <td class="3dep"></td>
-            <td class="file">CM6.40</td>
+            <td class="file"><a href="#n" onclick="window.open('html/CM6.40.html','메시지 보내기', 'width=600, height=600');" class="popup">CM6.40</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -572,18 +574,18 @@
             <td class="3dep"></td>
             <td class="file"><a href="html/BD1.20.html" target="_blank">BD1.20</a></td>
             <td class="date"></td>
-            <td class="etc"></td>
+            <td class="etc">신용등급정보  디자인 필요</td>
           </tr> 
           <tr>
             <td class="no"></td>
             <td class="1dep"></td>
-            <td class="2dep">바이어 상세정보(한국거래바이어)</td>
+            <td class="2dep">보고서 확인 안내</td>
             <td class="3dep"></td>
-            <td class="file">BD1.30</td>
+            <td class="file"><a href="html/BD1.30.html" target="_blank" class="layer">BD1.30</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
-          <tr>
+          <tr class="del">
             <td class="no"></td>
             <td class="1dep">관심바이어</td>
             <td class="2dep"></td>
@@ -594,10 +596,10 @@
           </tr> 
           <tr>
             <td class="no"></td>
-            <td class="1dep">사기바이어이메일</td>
+            <td class="1dep">사기바이어</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">BD3.10</td>
+            <td class="file"><a href="html/BD3.10.html" target="_blank">BD3.10</a></td>
             <td class="date"></td>
             <td class="etc">디자인 필요</td>
           </tr> 
@@ -648,7 +650,7 @@
             <td class="1dep">서비스신청</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">EC1.10</td>
+            <td class="file"><a href="html/EC1.10.html" target="_blank">EC1.10</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
@@ -657,7 +659,7 @@
             <td class="1dep"></td>
             <td class="2dep">완료</td>
             <td class="3dep"></td>
-            <td class="file">EC1.20</td>
+            <td class="file"><a href="html/EC1.20.html" target="_blank">EC1.20</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
@@ -666,7 +668,7 @@
             <td class="1dep">신청내역</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">EC2.10</td>
+            <td class="file"><a href="html/EC2.10.html" target="_blank">EC2.10</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
@@ -675,7 +677,7 @@
             <td class="1dep"></td>
             <td class="2dep">컨설팅신청정보</td>
             <td class="3dep"></td>
-            <td class="file">EC2.20</td>
+            <td class="file"><a href="html/EC2.20.html" target="_blank">EC2.20</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
@@ -687,7 +689,7 @@
             <td class="1dep">문의하기</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">CS1.10</td>
+            <td class="file"><a href="html/CS1.10.html" target="_blank">CS1.10</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
@@ -696,7 +698,7 @@
             <td class="1dep"></td>
             <td class="2dep">문의접수완료</td>
             <td class="3dep"></td>
-            <td class="file">CS1.20</td>
+            <td class="file"><a href="html/CS1.20.html" target="_blank">CS1.20</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr> 
@@ -705,19 +707,10 @@
             <td class="1dep">공지사항</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">CS2.10</td>
+            <td class="file"><a href="html/CS2.10.html" target="_blank">CS2.10</a></td>
             <td class="date"></td>
             <td class="etc"></td>
-          </tr> 
-          <tr>
-            <td class="no"></td>
-            <td class="1dep"></td>
-            <td class="2dep">상세</td>
-            <td class="3dep"></td>
-            <td class="file">CS2.20</td>
-            <td class="date"></td>
-            <td class="etc"></td>
-          </tr> 
+          </tr>
           <tr>
             <th colspan="7"><i class="fa-solid fa-arrow-circle-right"></i> 마이페이지</th>
           </tr> 
@@ -741,6 +734,15 @@
           </tr>  
           <tr>
             <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">회원탈퇴안내</td>
+            <td class="3dep"></td>
+            <td class="file">MY1.20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>  
+          <tr>
+            <td class="no"></td>
             <td class="1dep">비밀번호변경</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
@@ -750,10 +752,19 @@
           </tr> 
            <tr>
             <td class="no"></td>
-            <td class="1dep">내캐쉬</td>
+            <td class="1dep">캐시내역</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">MY3.10</td>
+            <td class="file"><a href="html/MY4.10.html" target="_blank">MY4.10</a></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">캐쉬충전결제</td>
+            <td class="3dep"></td>
+            <td class="file">MY4.20</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>  
@@ -762,7 +773,16 @@
             <td class="1dep">관심바이어</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">MY4.10</td>
+            <td class="file"><a href="html/MY5.10.html" target="_blank" class="layer">MY5.10</a></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr> 
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">파일관리함</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">MY6.10</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>  
@@ -771,16 +791,7 @@
             <td class="1dep">문의내역</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file">MY5.10</td>
-            <td class="date"></td>
-            <td class="etc"></td>
-          </tr>  
-          <tr>
-            <td class="no"></td>
-            <td class="1dep">로그아웃</td>
-            <td class="2dep"></td>
-            <td class="3dep"></td>
-            <td class="file">MY6.10</td>
+            <td class="file"><a href="html/MY7.10.html" target="_blank">MY7.10</a></td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>  

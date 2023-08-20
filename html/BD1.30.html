@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <div class="section-cont">
+      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="confirmPop01">보고서 확인 안내</button>
+    </div>    
+  </div><!-- //wrap -->
+
+  <!-- [L팝업]보고서 확인 안내 -->
+  <div class="modal-popup modal-popup--small" id="confirmPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">보고서 확인 안내</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <div class="com-bubble-box">
+            <!-- 차감캐시 ≤ 캐시잔액  -->
+            <p class="com-bubble-box__msg">대상 바이어와 차감되는 캐시를 확인해 주세요.</p>
+
+            <!-- 차감캐시 ＞ 캐시잔액 -->
+            <!-- <p class="com-bubble-box__msg">캐시 잔액이 부족합니다. 충전 후 이용해 주세요.<br>(작성한 마케팅은 마케팅발송내역에서 임시저장으로 확인 가능합니다.)
+            </p>-->
+          </div>
+
+          <div class="com-list-info">
+            <dl>
+              <dt>보고서 대상</dt>
+              <dd>MESSE FRANKFURT(H.K.)LTD.</dd>
+            </dl>
+            <dl>
+              <dt>차감 캐시</dt>
+              <dd><strong>2500</strong> 캐시 (캐시잔액: 2500캐시)</dd>
+            </dl>
+          </div>          
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot">
+        <div class="btn-wrap">
+          <button type="button" class="btn-sec">이전으로</button>
+          <button type="button" class="btn-pri">보고서 확인</button>
+        </div>
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]보고서 확인 안내-->
+
+  <script>
+    modalPopupOpen("confirmPop01");
+  </script>
+</body>
+</html>

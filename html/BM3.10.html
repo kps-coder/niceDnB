@@ -64,6 +64,7 @@
         <div class="content-head__inner">
           <div class="title-area">
             <h3 class="com-tit3">마케팅 발송내역</h3>
+            <div class="com-titDesc">abcdf@nicednb.com</div>
           </div>
         </div>      
       </div><!-- //content-head -->
@@ -71,35 +72,17 @@
       <!-- content-body -->
       <div class="content-body">
         <div class="section-cont">
-          <!-- 조건검색 -->
-          <div class="board-search">
-            <div class="board-search__row">
-              <dl class="board-search__col">
-                <dt class="board-search__label"> 
-                  <label for="inpSender">발신자</label>
-                </dt>
-                <dd class="board-search__input">
-                  <input type="text" class="input-text" id="inpSender" value="abcdf@nicednb.com" disabled>
-                </dd>
-              </dl>
-              <dl class="board-search__col flex-2">
-                <dt class="board-search__label">
-                  <label for="inpSearch">키워드</label>
-                </dt>
-                <dd class="board-search__input">
-                  <div class="input-search">
-                    <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요.">
-                    <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </div><!-- //board-search -->
 
           <!-- 게시판 -->
           <div class="board-head">
             <div class="board-head__left">
               <span class="board-count">총 <em>125</em> 건</span>
+            </div>
+            <div class="board-head__right">
+              <div class="input-search">
+                <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요.">
+                <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+              </div>
             </div>
           </div>
 
@@ -137,7 +120,7 @@
                     </span>
                   </td>
                   <td>바이어기업1 외 32건</td>
-                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
+                  <td class="text-left"><a href="#n" onclick="window.open('CM6.20.html','보낸메일', 'width=900, height=900');">마케팅입니다.</a></td>
                   <td>12MB</td>
                   <td>
                     <button type="button" data-roll="modal-popup" data-popid="modalPop01">
@@ -154,7 +137,7 @@
                     </span>
                   </td>
                   <td>바이어기업1 외 32건</td>
-                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
+                  <td class="text-left"><a href="#n" onclick="window.open('CM6.20.html','보낸메일', 'width=900, height=900');">마케팅입니다.</a></td>
                   <td>12MB</td>
                   <td>
                     <button type="button" data-roll="modal-popup" data-popid="modalPop01">
@@ -199,8 +182,8 @@
             <table class="board-list__table">
               <caption>바이어, 이메일 수신여부 항목 표</caption>
               <colgroup>
-                <col style="width:20%">
                 <col style="width:auto">
+                <col style="width:30%">
                 <col style="width:18%">
               </colgroup>
               <thead>
@@ -212,27 +195,57 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>바이어기업1</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike01">
+                      <label for="inpLike01"><span class="blind">관심바이어</span></label>
+                    </span>
+                    바이어기업1 
+                  </td>
                   <td class="text-left">12345@abc.com</td>
                   <td>읽지 않음</td>
                 </tr>
                 <tr>
-                  <td>바이어기업1</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike02">
+                      <label for="inpLike02"><span class="blind">관심바이어</span></label>
+                    </span>
+                    바이어기업1
+                  </td>
                   <td class="text-left">12345@abc.com</td>
                   <td>23.05.25 15:11</td>
                 </tr>
                 <tr>
-                  <td>바이어기업1</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike03">
+                      <label for="inpLike03"><span class="blind">관심바이어</span></label>
+                    </span>
+                    바이어기업1
+                  </td>
                   <td class="text-left">12345@abc.com</td>
                   <td>읽지 않음</td>
                 </tr>
                 <tr>
-                  <td>바이어기업1</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike04">
+                      <label for="inpLike04"><span class="blind">관심바이어</span></label>
+                    </span>
+                    바이어기업1
+                  </td>
                   <td class="text-left">12345@abc.com</td>
                   <td>23.05.25 15:11</td>
                 </tr>
                 <tr>
-                  <td>바이어기업1</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike05">
+                      <label for="inpLike05"><span class="blind">관심바이어</span></label>
+                    </span>
+                    바이어기업1
+                  </td>
                   <td class="text-left">12345@abc.com</td>
                   <td>읽지 않음</td>
                 </tr>                

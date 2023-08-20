@@ -139,7 +139,7 @@
         </div>
         
         <div class="btn-wrap">
-          <button type="button" class="btn-cta-pri">발굴하기</button>
+          <button type="button" class="btn-pri" id="btnBlock">발굴하기</button>
         </div>
 
         <div class="section-cont" id="buyerResult" style="display:none">
@@ -158,7 +158,7 @@
             </div>
           </div>
           <div class="btn-wrap">
-            <a href="#n" class="btn-sec">마케팅 작성</a>
+            <a href="BM2.10.html" class="btn-sec">마케팅 작성</a>
           </div>
         </div>
         
@@ -355,7 +355,7 @@
   <!-- //[팝업]산업분류코드 조회 -->
 
   <script>
-    let ctaBtn = document.querySelector(".btn-cta-pri");
+    let ctaBtn = document.querySelector("#btnBlock");
     ctaBtn.addEventListener("click", function(){
       buyerResult.style.display = "block";
     });

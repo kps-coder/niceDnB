@@ -65,6 +65,15 @@
         <div class="content-head__inner">
           <div class="title-area">
             <h3 class="com-tit3">바이어 상세정보 <small>MESSE FRANKFURT(H.K.)LTD.</small></h3>
+            <span class="badge">한국거래바이어</span>
+          </div>
+          <div class="btn-wrap">
+            <span class="input-like">
+              <input type="checkbox" name="btnLike" id="btnLike01">
+              <label for="btnLike01" class="btnLike01"><span class="blind">관심바이어</span></label>
+            </span>   
+            <button type="button" class="btn-sec btn--small">메시지 확인</button>  
+            <a href="BM2.10.html" class="btn-pri btn--small">마케팅 발송 <i class="icon12-send-wt"></i></a>  
           </div>
         </div>      
       </div><!-- //content-head -->
@@ -72,63 +81,113 @@
       <!-- content-body -->
       <div class="content-body">
         <div class="section-cont">
+          <h4 class="blind">바이어 정보</h4>
           <!-- board-view -->
           <div class="board-view">
-            <div class="board-write__head">
-              <div class="board-write__left">
-                <button type="button" class="btn-pri btn--small">마케팅 발송 <i class="icon12-send-wt"></i></button>
-              </div>
-              <div class="board-write__right">
-                <button type="button" class="btn-sec btn--small">관심 바이어 등록</button>
-              </div>
-            </div>
-            <table class="board-write__table">
-              <caption>마케팅 발송을 위한 작성 표</caption>
+            <table class="board-view__table">
+              <caption>바이어 상세정보 표</caption>
               <colgroup>
-                <col style="width:140px;">
+                <col style="width:200px;">
                 <col style="width:auto;">
               </colgroup>
               <tbody>
                 <tr>
-                  <th scope="row">DUNS NUMBER</th>
-                  <td>681451237</td>
+                  <th scope="row">D-U-N-S® Number</th>
+                  <td>15-536-6107</td>
                 </tr>
                 <tr>
-                  <th scope="row">국가코드</th>
-                  <td>HK</td>
+                  <th scope="row">Priamry SIC Code</th>
+                  <td>5812</td>
+                </tr>
+                <tr>
+                  <th scope="row">카테고리</th>
+                  <td>Food &amp; Beverage &gt; Food &gt; Fresh fruit</td>
+                </tr>
+                <tr>
+                  <th scope="row">관심품목</th>
+                  <td>Fruit, snack, beverage</td>
+                </tr>
+                <tr>
+                  <th scope="row">CEO Name</th>
+                  <td>Kevin R Johnson</td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone</th>
+                  <td>2064471575</td>
+                </tr>
+                <tr>
+                  <th scope="row">Employees(All site)</th>
+                  <td>0277000</td>
+                </tr>
+                <tr>
+                  <th scope="row">창립연도</th>
+                  <td>1985</td>
+                </tr>
+                <tr>
+                  <th scope="row">Priamry Line of Business</th>
+                  <td>Eating places</td>
+                </tr>
+                <tr>
+                  <th scope="row">Annual Sales</th>
+                  <td>000024719500000</td>
+                </tr>
+                <tr>
+                  <th scope="row">Foreign Trade</th>
+                  <td>G</td>
                 </tr>
                 <tr>
                   <th scope="row">주소</th>
-                  <td>1608 CHINA RESOURCES BUILDING 26 HARBOUR ROAD WANCHAI</td>
+                  <td>1608 CHINA RESOURCES BUILDING 26 HARBOUR</td>
                 </tr>
                 <tr>
                   <th scope="row">홈페이지</th>
                   <td>www.messefrankfurt.com</td>
-                </tr><tr>
-                  <th scope="row">카테고리</th>
-                  <td>Food &amp; Beverage &gt; Food &gt; Fresh fruit</td>
-                </tr><tr>
-                  <th scope="row">관심품목</th>
-                  <td>Fruit, snack, beverage</td>
-                </tr><tr>
-                  <th scope="row">담당자 직책</th>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- //board-view -->
+        </div>
+
+        <div class="section-cont">
+          <h4 class="com-tit4">담당자 정보</h4>
+          <div class="board-view">
+            <table class="board-view__table">
+              <caption>담당자 정보 표</caption>
+              <colgroup>
+                <col style="width:200px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">이름</th>
                   <td>MR.AHMAD SHAH</td>
-                </tr><tr>
-                  <th scope="row">담당자 유선번호</th>
+                </tr>
+                <tr>
+                  <th scope="row">직책</th>
+                  <td>MANAGER</td>
+                </tr>
+                <tr>
+                  <th scope="row">유선번호</th>
                   <td>852-28027728</td>
-                </tr><tr>
-                  <th scope="row">담당자 핸드폰</th>
+                </tr>
+                <tr>
+                  <th scope="row">휴대폰</th>
                   <td>852-25988771</td>
-                </tr><tr>
-                  <th scope="row">담당자 이메일</th>
+                </tr>
+                <tr>
+                  <th scope="row">이메일</th>
                   <td>
-                    betty.heywood@hongkong.messefrankfurt.com
-                    <a href="#n" class="btn-line-link">사이바이어이메일</a>
+                    Bet************@hongkong.messefrankfurt.com 
+                    <a href="#n" class="btn-line-link maLeft10">사이바어이이메일</a>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div><!-- //board-view -->
+
+          <div class="btn-wrap">
+            <button type="button" class="btn-sec" data-roll="modal-popup" data-popid="confirmPop01">보고서 확인</button>
+          </div>
         </div> <!-- //section-cont -->      
       </div><!-- //content-body -->
     </div><!-- //container -->
@@ -138,5 +197,47 @@
     <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //footer -->
   </div><!-- //wrap -->
+
+  <!-- [L팝업]보고서 확인 안내 -->
+  <div class="modal-popup modal-popup--small" id="confirmPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">보고서 확인 안내</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <div class="com-bubble-box">
+            <!-- 차감캐시 ≤ 캐시잔액  -->
+            <p class="com-bubble-box__msg">대상 바이어와 차감되는 캐시를 확인해 주세요.</p>
+
+            <!-- 차감캐시 ＞ 캐시잔액 -->
+            <!-- <p class="com-bubble-box__msg">캐시 잔액이 부족합니다. 충전 후 이용해 주세요.<br>(작성한 마케팅은 마케팅발송내역에서 임시저장으로 확인 가능합니다.)
+            </p>-->
+          </div>
+
+          <div class="com-list-info">
+            <dl>
+              <dt>보고서 대상</dt>
+              <dd>MESSE FRANKFURT(H.K.)LTD.</dd>
+            </dl>
+            <dl>
+              <dt>차감 캐시</dt>
+              <dd><strong>2500</strong> 캐시 (캐시잔액: 2500캐시)</dd>
+            </dl>
+          </div>          
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__foot">
+        <div class="btn-wrap">
+          <button type="button" class="btn-sec">이전으로</button>
+          <button type="button" class="btn-pri">보고서 확인</button>
+        </div>
+      </div>
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]보고서 확인 안내-->
 </body>
 </html>

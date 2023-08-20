@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <div class="section-cont">
+      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop01">관심 바이어</button>
+    </div>    
+  </div><!-- //wrap -->
+
+  <!-- [팝업]관심 바이어 -->
+  <div class="modal-popup modal-popup--large" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">관심 바이어</h1>
+      </div>
+      <div class="modal-popup__body">
+         <div class="modal-popup__content">
+          <!-- 조건검색 -->
+          <div class="board-search">
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="sel02">국가</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-select">
+                    <select name="sel02" id="sel02">
+                      <option>선택하세요</option>
+                    </select>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="inpSearchKeyword">키워드</label>
+                </dt>
+                <dd class="board-search__input">
+                  <input type="text" name="inpSearch" id="inpSearchKeyword" class="input-text" placeholder="키워드 입력">
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dt class="board-search__label">
+                <label for="inpSearch04">산업분류코드</label>
+              </dt>
+              <dd class="board-search__itemSelect">
+                <button type="button" class="btn-pri btn--small">코드조회</button>
+                <span class="selected-item">
+                  <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                  벨기에 바이어 기업 1
+                </span>
+                <span class="selected-item">
+                  <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                  벨기에 바이어 기업 2
+                </span>
+              </dd>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn-pri btn--small">초기화 <i class="icon16-reset-wt"></i></button>
+            </div>
+          </div><!-- //조건검색 -->
+
+          <div class="board-head">
+            <div class="board-head__left">
+              <span class="board-count">총 <em>125</em> 건</span>
+            </div>
+          </div>
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>산업분류코드, 산업명 선택 표</caption>
+              <colgroup><!-- fixed head 와 동일 설정 -->
+                <col style="width:30px">
+                <col style="width:7%">
+                <col style="width:15%">
+                <col style="width:28%">
+                <col style="width:100px">
+                <col style="width:auto">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_01">
+                      <label for="ch01_01"><span class="blind">125</span></label>
+                    </span>
+                  </th>
+                  <th scope="col">No</th>
+                  <th scope="col">국가명</th>
+                  <th scope="col">기업명</th>
+                  <th scope="col">산업분류코드</th>
+                  <th scope="col">관심품목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike01" checked>
+                      <label for="btnLike01" class="btnLike01"><span class="blind">관심바이어</span></label>
+                    </span>                    
+                    <a href="BD1.20.html">STARBUCKS</a>
+                    <span class="badge">한국거래바이어</span>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_03">
+                      <label for="ch01_03"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike02">
+                      <label for="btnLike02"><span class="blind">관심바이어</span></label>
+                    </span>   
+                    <a href="BD1.20.html">STARBUCKS VETNAM</a>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_04">
+                      <label for="ch01_04"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike03">
+                      <label for="btnLike03"><span class="blind">관심바이어</span></label>
+                    </span>     
+                    <a href="BD1.20.html">COFFEE ABCD</a>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_05">
+                      <label for="ch01_05"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike04">
+                      <label for="btnLike04"><span class="blind">관심바이어</span></label>
+                    </span>     
+                    <a href="BD1.20.html">STARBUCKS</a>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]관심 바이어 -->
+
+  <script>
+    modalPopupOpen("modalPop01");
+  </script>
+</body>
+</html>

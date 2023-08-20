@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- sub-visual  -->
+    <div class="sub-visual sub-visual--sub5">
+      <div class="sub-visual__inner">
+        <h2 class="sub-visual__h2">고객지원</h2>
+        <p class="sub-visual__desc">고객지원 설명 글입니다.</p>
+      </div>
+    </div><!-- //sub-visual  -->
+
+    <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">고객지원</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">공지사항</button>
+            <ul class="down-menu">
+              <li><a href="#n">문의하기</a></li>
+              <li><a href="#n">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+
+      <!-- content-head -->
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h3 class="com-tit3">공지사항</h3>
+          </div>
+        </div>      
+      </div><!-- //content-head -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="section-cont">
+          <div class="board-head">
+            <div class="board-head__left">
+              <span class="board-count">총 <em>125</em> 건</span>
+            </div>
+            <div class="board-head__right">
+              <span class="input-select">
+                <select title="항목">
+                  <option>전체</option>
+                  <option>항목 1</option>
+                </select>
+              </span>
+              <span class="input-select">
+                <select title="제목">
+                  <option>제목</option>
+                  <option>내용</option>
+                  <option>제목+내용</option>
+                </select>
+              </span>
+              <span class="input-search">
+                <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요">
+                <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+              </span>
+            </div>
+          </div>
+          <div class="com-accordion style--notice">
+            <div class="com-accordion__row">
+              <div class="com-accordion__head">
+                <div class="com-accordion__title">
+                  <span class="com-accordion__sort">항목1</span>
+                  <span class="com-accordion__text">회원가입을 하면 받을 수 있는 정보</span>
+                  <span class="com-accordion__date">2023.02.12</span>
+                </div>
+                <button type="button" class="com-accordion__btn"><span class="blind">내용보기</span></button>
+              </div>
+              <div class="com-accordion__body">
+                <div class="notice-cont">
+                  회원가입이벤트입니다.<br><br>
+
+                  이벤트 기간 : 2023.11.02~2023.12.31까지<br><br>
+
+                  많은 관심 바랍니다.<br><br>
+
+                  감사합니다.
+                </div>
+              </div>
+            </div>  
+            <div class="com-accordion__row">
+              <div class="com-accordion__head">   
+                <div class="com-accordion__title">
+                  <span class="com-accordion__sort">항목1</span>
+                  <span class="com-accordion__text">회원가입을 하면 받을 수 있는 정보</span>
+                  <span class="com-accordion__date">2023.02.12</span>
+                </div>
+                <button type="button" class="com-accordion__btn"><span class="blind">내용보기</span></button>
+              </div>
+              <div class="com-accordion__body">
+                <div class="notice-cont">
+                  회원가입이벤트입니다.<br><br>
+
+                  이벤트 기간 : 2023.11.02~2023.12.31까지<br><br>
+
+                  많은 관심 바랍니다.<br><br>
+
+                  감사합니다.
+                </div>
+              </div>
+            </div>   
+            <div class="com-accordion__row">
+              <div class="com-accordion__head">   
+                <div class="com-accordion__title">
+                  <span class="com-accordion__sort">항목1</span>
+                  <span class="com-accordion__text">회원가입을 하면 받을 수 있는 정보</span>
+                  <span class="com-accordion__date">2023.02.12</span>
+                </div>
+                <button type="button" class="com-accordion__btn"><span class="blind">내용보기</span></button>
+              </div>
+              <div class="com-accordion__body">
+                <div class="notice-cont">
+                  회원가입이벤트입니다.<br><br>
+
+                  이벤트 기간 : 2023.11.02~2023.12.31까지<br><br>
+
+                  많은 관심 바랍니다.<br><br>
+
+                  감사합니다.
+                </div>
+              </div>
+            </div>   
+            <div class="com-accordion__row">
+              <div class="com-accordion__head">   
+                <div class="com-accordion__title">
+                  <span class="com-accordion__sort">항목1</span>
+                  <span class="com-accordion__text">회원가입을 하면 받을 수 있는 정보</span>
+                  <span class="com-accordion__date">2023.02.12</span>
+                </div>
+                <button type="button" class="com-accordion__btn"><span class="blind">내용보기</span></button>
+              </div>
+              <div class="com-accordion__body">
+                <div class="notice-cont">
+                  회원가입이벤트입니다.<br><br>
+
+                  이벤트 기간 : 2023.11.02~2023.12.31까지<br><br>
+
+                  많은 관심 바랍니다.<br><br>
+
+                  감사합니다.
+                </div>
+              </div>
+            </div>              
+          </div>
+
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+      </div><!-- //content-body -->
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+
+  <script>
+    $( "#datepicker01" ).datepicker();
+    $( "#datepicker02" ).datepicker();
+  </script>
+</body>
+</html>

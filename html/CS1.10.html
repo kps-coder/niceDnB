@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <!-- header -->
+    <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //header -->
+
+    <!-- sub-visual  -->
+    <div class="sub-visual sub-visual--sub5">
+      <div class="sub-visual__inner">
+        <h2 class="sub-visual__h2">고객지원</h2>
+        <p class="sub-visual__desc">고객지원 설명 글입니다.</p>
+      </div>
+    </div><!-- //sub-visual  -->
+
+    <div class="container" id="container"> 
+      <!-- bread-crumb -->
+      <div class="bread-crumb">
+        <ul class="bread-crumb__inner">
+          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
+          <li>
+            <button type="button" class="btn-downMenu">고객지원</button>
+            <ul class="down-menu">
+              <li><a href="#n">빅바이어 마케팅</a></li>
+              <li><a href="#n">바이어정보</a></li>
+              <li><a href="#n">해외기업보고서</a></li>
+              <li><a href="#n">수출바우처 컨설팅</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-downMenu">문의하기</button>
+            <ul class="down-menu">
+              <li><a href="#n">문의하기</a></li>
+              <li><a href="#n">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>        
+      </div><!-- //bread-crumb -->
+
+      <!-- content-head -->
+      <div class="content-head">
+        <div class="content-head__inner">
+          <div class="title-area">
+            <h3 class="com-tit3">문의하기</h3>
+            <p class="com-titDesc">문의내용에 대한 답변은 이메일이나 연락처를 통해 받으실 수 있습니다.</p>
+          </div>
+        </div>      
+      </div><!-- //content-head -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="section-cont">
+          <div class="board-write">
+            <table class="board-write__table">
+              <caption>문의할 내용 입력 표</caption>
+              <colgroup>
+                <col style="width:180px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="inpCompany">기업명 </label>
+                  </th>
+                  <td>
+                    <input type="text" id="inpCompany" class="input-text" value="나이스디앤비" disabled>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpManager">담당자명</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="text" id="inpManager" class="input-text" value="홍길동" disabled>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpEmail">이메일 주소</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="text" id="inpEmail" class="input-text" value="abcd123@email.com">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpContact">연락처</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="tel" id="inpContact" class="input-text" value="">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" id="consentToContact" name="consentToContact">
+                      <label for="consentToContact">(필수) 답변 이메일 및 연락 동의</label>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpSubject">제목</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <input type="text" id="inpSubject" class="input-text w100p">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpTextarea">내용</label>
+                    <span class="icon-req"><em class="blind">필수</em></span>
+                  </th>
+                  <td>
+                    <textarea name="inpTextarea" id="inpTextarea" cols="30" rows="10" class="input-textarea w100p"></textarea>
+                    <p class="byte-count">0/2,000Byte</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">첨부파일</th>
+                  <td>
+                    <div class="td__row">
+                      <span class="input-file">
+                        <input type="file" name="inpFile" id="inpFile">
+                        <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+                      </span>
+                      <span>jpg, png, pdf, xls, xlsx 첨부가능 / 파일당 10MB이하, 최대 5개까지 등록 가능</span>
+                    </div>
+                    <div class="td__row">
+                      <div class="file-list">
+                        <div class="file-list__selected">
+                          <span class="selected-file">
+                            <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                            파일명.png
+                          </span>
+                          <span class="selected-file">
+                            <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                            파일명.png
+                          </span>
+                        </div>
+                        <div class="file-list__volume">0KB / 20MB</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> <!-- //section-cont -->  
+        
+        <div class="btn-wrap">
+          <a href="#n" class="btn-sec">취소</a>
+          <a href="#n" class="btn-pri">문의하기</a>
+        </div>
+      </div><!-- //content-body -->
+    </div><!-- //container -->
+
+
+    <!-- footer -->
+    <div id="footerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+    <!-- //footer -->
+  </div><!-- //wrap -->
+
+  <script>
+    $( "#datepicker01" ).datepicker();
+    $( "#datepicker02" ).datepicker();
+  </script>
+</body>
+</html>

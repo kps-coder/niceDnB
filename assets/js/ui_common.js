@@ -91,6 +91,10 @@ window.addEventListener("DOMContentLoaded", function() {
   if(document.querySelector(".container")){
     contentHeadSticky();
   }
+
+  if(document.querySelector(".btn-quick-msg")){
+    quickMessage();
+  }
 });
 
 
@@ -209,5 +213,30 @@ function contentHeadSticky() {
     } else {
       contentHead.classList.remove("container--sticky");
     }
+  });
+}
+
+// 퀵메뉴 바이어메시지
+function quickMessage() {
+  let quickMessageWrap = document.querySelector('.quick-message'); 
+  let quickMsgBtn = document.querySelector('.btn-quick-msg'); 
+  let quickMsgCloseBtn = quickMessageWrap.querySelector(".quick-message__close");
+  quickMsgBtn.addEventListener("click", function(){
+    quickMessageWrap.style.display = "block";
+    setTimeout(function(){
+      quickMessageWrap.animate(
+        {right:["-403px","0"]}, 
+        {duration: 200, fill: "forwards"}
+      );  
+    }); 
+  });
+  quickMsgCloseBtn.addEventListener("click", function(){
+    quickMessageWrap.animate(
+      {right:["-403px"]}, 
+      {duration: 200, fill: "forwards"}
+    );  
+    setTimeout(function(){
+      quickMessageWrap.style.display = "none";
+    }, 100); 
   });
 }

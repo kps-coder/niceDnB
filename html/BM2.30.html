@@ -23,7 +23,7 @@
     </div>    
   </div><!-- //wrap -->
 
-  <!-- [L팝업]마케팅 발송 미리보기 -->
+  <!-- [L팝업]마케팅 발송 확인 -->
   <div class="modal-popup modal-popup--small" id="confirmPop01">
     <div class="modal-popup__wrap">
       <div class="modal-popup__head">
@@ -31,42 +31,29 @@
       </div>
       <div class="modal-popup__body">
         <div class="modal-popup__content">
-          <div class="board-view">
-            <table class="board-view__table">
-              <caption>회원가입을 위한 항목 입력 표</caption>
-              <colgroup>
-                <col style="width:110px;">
-                <col style="width:auto;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">발신자</th>
-                  <td>가나기업(abcdf@nicednb.com)</td>
-                </tr>
-                <tr>
-                  <th scope="row">대상 바이어</th>
-                  <td>바이어기업1 외 50개 바이어</td>
-                </tr>
-                <tr>
-                  <th scope="row">차감 캐시</th>
-                  <td><strong>2500</strong> 캐시 (캐시잔액: 2500캐시)
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="com-notiBox">
-            <p class="com-notiBox__title">[안내]</p>
+          <div class="com-bubble-box">
             <!-- 차감캐시 ≤ 캐시잔액  -->
-            <ul class="txt-li">
-              <li>대상 바이어와 차감되는 캐시를 확인해 주세요.</li>
-            </ul>
+            <p class="com-bubble-box__msg">대상 바이어와 차감되는 캐시를 확인해 주세요.</p>
 
             <!-- 차감캐시 ＞ 캐시잔액 -->
-            <!-- <ul class="txt-li">
-              <li>캐시 잔액이 부족합니다. 충전 후 이용해 주세요.<br>(작성한 마케팅은 마케팅발송내역에서 임시저장으로 확인 가능합니다.)</li>
-            </ul> -->
+            <!-- <p class="com-bubble-box__msg">캐시 잔액이 부족합니다. 충전 후 이용해 주세요.<br>(작성한 마케팅은 마케팅발송내역에서 임시저장으로 확인 가능합니다.)
+            </p>-->
           </div>
+
+          <div class="com-list-info">
+            <dl>
+              <dt>발신자</dt>
+              <dd>가나기업(abcdf@nicednb.com)</dd>
+            </dl>
+            <dl>
+              <dt>대상 바이어</dt>
+              <dd>바이어기업1 외 50개 바이어 </dd>
+            </dl>
+            <dl>
+              <dt>차감 캐시</dt>
+              <dd><strong>2500</strong> 캐시 (캐시잔액: 2500캐시)</dd>
+            </dl>
+          </div>          
         </div>
       </div><!-- //modal-popup__body -->
       <div class="modal-popup__foot">
@@ -80,7 +67,7 @@
       </div>
     </div>
   </div>
-  <!-- //[L팝업]마케팅 발송 미리보기-->
+  <!-- //[L팝업]마케팅 발송 확인-->
 
   <script>
     modalPopupOpen("confirmPop01");

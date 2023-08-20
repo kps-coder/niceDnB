@@ -35,10 +35,9 @@
         </ul>        
       </div><!-- //bread-crumb -->
 
-      <h3 class="blind">통합검색</h3>
-
       <div class="content-body">
         <div class="search-head">
+          <h3 class="search-head_title">통합검색</h3>
           <div class="input-search">
             <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="키워드/기업명/ D-U-N-S® Number">
             <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
@@ -46,53 +45,62 @@
           <div class="search-head__keyword">
             <strong class="keyword">"BEAUTY US"</strong>검색결과 총 <span class="count">125</span>건
           </div>
+          <div class="search-result__anchor">
+            <a href="#" class="search-result__btn">전체 (<em>125</em>)</a>
+            <a href="#searchCont1" class="search-result__btn">바이어정보 (<em>125</em>)</a>
+            <a href="#searchCont2" class="search-result__btn">해외기업보고서 (<em>125</em>)</a>
+            <a href="#searchCont3" class="search-result__btn">고객지원 (<em>125</em>)</a>
+          </div>
         </div>
         <div class="search-result">
-          <div class="search-result__anchor">
-            <button type="button" class="btn-sec btn--small">전체(125)</button>
-            <button type="button" class="btn-sec btn--small">바이어정보(105)</button>
-            <button type="button" class="btn-sec btn--small">해외기업보고서(100)</button>
-            <button type="button" class="btn-sec btn--small">고객지원(10)</button>
-          </div>
-
           <div class="search-result__cont">
-            <div class="section-cont">
+            <div class="section-cont" id="searchCont1">
               <h4 class="com-tit4">바이어 정보 <small>(105)</small></h4>
               <dl class="keyword-cont">
-                <dt><a href="n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
+                <dt><a href="#n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
                 <dd>
                   <div class="keyword-cont__text">22067 FERRERO PARKWAY, CITY OF INDU STRY, LONG BEACH, CALIFORNIA 91789, US</div>
                   <div class="keyword-cont__path">바이어 정보 &gt; 바이어 조회</div>
                 </dd>
               </dl>
               <dl class="keyword-cont">
-                <dt><a href="n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
+                <dt><a href="#n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
                 <dd>
                   <div class="keyword-cont__text">22067 FERRERO PARKWAY, CITY OF INDU STRY, LONG BEACH, CALIFORNIA 91789, US</div>
                   <div class="keyword-cont__path">바이어 정보 &gt; 바이어 조회</div>
                 </dd>
               </dl>
+              <div class="btn-wrap">
+                <button type="button" class="btn-more">더보기</button>
+              </div> 
             </div>  
-            <div class="section-cont">
+            <div class="section-cont" id="searchCont2">
               <h4 class="com-tit4">해외기업보고서 <small>(100)</small></h4>
               <dl class="keyword-cont">
-                <dt><a href="n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
+                <dt><a href="#n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
                 <dd>
                   <div class="keyword-cont__text">22067 FERRERO PARKWAY, CITY OF INDU STRY, LONG BEACH, CALIFORNIA 91789, US</div>
                   <div class="keyword-cont__path">바이어 정보 &gt; 바이어 조회</div>
                 </dd>
               </dl>
               <dl class="keyword-cont">
-                <dt><a href="n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
+                <dt><a href="#n">MARKWINS <span class="keyword">BEAUTY</span> PRODUCTS, INS</a></dt>
                 <dd>
                   <div class="keyword-cont__text">22067 FERRERO PARKWAY, CITY OF INDU STRY, LONG BEACH, CALIFORNIA 91789, US</div>
                   <div class="keyword-cont__path">바이어 정보 &gt; 바이어 조회</div>
                 </dd>
               </dl>
+              <div class="btn-wrap">
+                <button type="button" class="btn-more">더보기</button>
+              </div> 
             </div> 
-            <div class="btn-wrap">
-              <button type="button" class="btn-more">더보기</button>
-            </div>         
+            
+            <div class="section-cont" id="searchCont3">
+              <h4 class="com-tit4">고객지원 <small>(0)</small></h4>
+              <div class="search-result__nodata">
+                검색결과가 없습니다.
+              </div>
+            </div> 
           </div>
         </div>
       </div>

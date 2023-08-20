@@ -79,7 +79,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 .title-area small {font-size:18px;}
 .title-area .badge {margin-left:12px}
 
-.section-cont {max-width: 1600px; margin:0 auto; padding:15px 20px; box-sizing: content-box;}
+.section-cont {max-width: 1366px; margin:0 auto; padding:15px 20px; box-sizing: content-box;}
 .section-cont + .section-cont {margin-top:30px;}
 
 
@@ -139,7 +139,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 
   /* sub visual */
   .sub-visual {padding:0 20px;}
-  .sub-visual__inner {position: relative; max-width:1600px; margin:122px auto 0; padding:64px 0 65px 111px; border-radius: 32px 0px;}
+  .sub-visual__inner {position: relative; max-width:1366px; margin:122px auto 0; padding:64px 0 65px 111px; border-radius: 32px 0px;}
   .sub-visual__h2 {position: relative; font-size: 48px; font-weight: bold; color: #fff;}
   .sub-visual__desc {position: relative; width:475px; margin-top:15px; font-size: 16px; line-height: 24px; font-weight: 500; color: #fff;}
   .sub-visual--sub1 .sub-visual__inner {background-color:#2e3372;}
@@ -162,7 +162,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 
   /* bread-crumb */
   .bread-crumb {width:100%; margin-bottom:61px; padding:0 20px; background-color: #fff;}
-  .bread-crumb__inner {display:flex; align-items: center; max-width:1600px; margin: 0 auto;}
+  .bread-crumb__inner {display:flex; align-items: center; max-width:1366px; margin: 0 auto;}
   .bread-crumb__inner > li {position: relative; border: 1px solid #ccc;}
   .bread-crumb__inner > li + li {border-left:0;}
   .down-menu {display:none; position:absolute; width:100%; padding:15px 0; border:1px solid #ccc; background-color: #fff;}
@@ -177,7 +177,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 
   /* 상단 타이틀 */
   .content-head {margin-bottom:40px;}
-  .content-head__inner {display:flex; align-items: center; justify-content: space-between; max-width:1600px; margin:0 auto; padding:0 20px; box-sizing: content-box; }
+  .content-head__inner {display:flex; align-items: center; justify-content: space-between; max-width:1366px; margin:0 auto; padding:0 20px; box-sizing: content-box; }
   .content-head .btn-wrap {margin-top:0}
   
   /* sticky header */
@@ -189,7 +189,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 
    /* footer */
   .footer {padding:40px 20px 40px; border-top:1px solid rgba(0,0,0,0.4)}
-  .footer__inner {position:relative; max-width:1600px; margin: 0 auto;}
+  .footer__inner {position:relative; max-width:1366px; margin: 0 auto;}
   .footer__logo img {width:auto; height:50px;}
 
   .site-address {margin-top:40px; font-size:16px; line-height: 26px; color: #171717;}

@@ -610,7 +610,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 /* ==== 마이페이지 메인 ==== */
 .mypage-main {border-top:2px solid #000;}
 .mypage-main__head {display:flex; align-items: center; justify-content: space-between; padding:40px; font-size: 24px; background-color:#f5f6fa;}
-.mypage-main__member .btn-member {color: #7f3cff; font-weight: bold; text-decoration: underline;}
+.mypage-main__member .btn-member {color: #7f3cff; font-weight: bold; text-decoration: underline; background-color: transparent;}
 .mypage-main__cash em {padding-left:16px; color: #587fff; text-decoration: underline; font-weight: bold;}
 .mypage-main__cash .btn-cash {margin-left:24px;}
 .mypage-main__menu {display:flex; max-width:1144px; margin:0 auto;}

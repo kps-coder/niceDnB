@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', function() {
             <a href="CS1.10.html" class="sitemap__depth01">고객지원</a>
             <ul>
               <li><a href="CS1.10.html" class="sitemap__depth02">문의하기</a></li>
-              <li><a href="CS2.10" class="sitemap__depth02">공지사항</a></li>
+              <li><a href="CS2.10.html" class="sitemap__depth02">공지사항</a></li>
             </ul>
           </li>
           <!-- 로그아웃 상태 노출 -->

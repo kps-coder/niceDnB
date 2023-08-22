@@ -26,17 +26,13 @@
     <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //header -->
 
-    <div class="container" id="container"> 
+    <div class="container container--login" id="container"> 
       <!-- content-head -->
       <div class="content-head">
         <div class="content-head__inner">
           <div class="title-area">
             <h3 class="com-tit3">로그인</h3>
-            <p class="com-titDesc">로그인하여 다양한 서비스를 이용해 보세요. </p>
-          </div>
-          <div class="content-head__right">
-            <span>아직 회원이 아니신가요?</span>
-            <a href="#n" class="btn-line-link">회원가입</a>
+            <p class="com-titDesc">로그인하여 다양한 서비스를 이용해 보세요.</p>
           </div>
         </div>      
       </div><!-- //content-head -->
@@ -54,29 +50,30 @@
               <input type="password" class="input-pwd" placeholder="비밀번호" title="비밀번호">
               <!-- <p class="txt-error">비밀번호를 입력해 주세요.</p> -->
             </div>
+            <div class="com-login__help">
+              <div class="input-checkbox">
+                <input type="checkbox" name="idSave" id="idSave">
+                <label for="idSave">아이디 저장</label>
+              </div>
+              <div class="com-login__find">
+                <a href="#n" class="btn-find">아이디 찾기</a>
+                <a href="#n" class="btn-find">비밀번호 찾기</a>
+              </div>
+            </div>   
           </div>
           <div class="btn-wrap">
-            <button type="button" class="btn-pri">로그인</button>
-          </div>
-          <div class="com-login__help">
-            <div class="com-login__idSave">
-              <input type="checkbox" name="idSave" id="idSave"><label for="idSave">아이디 저장</label>
-            </div>
-            <div class="com-login__find">
-              <a href="#n" class="btn-line-link">아이디 찾기</a>
-              <a href="#n" class="btn-line-link">비밀번호 찾기</a>
-            </div>
-          </div>
-
-          <div class="com-notiBox">
-            <p class="com-notiBox__title">[로그인 안내]</p>
-            <ul class="txt-li">
-              <li>비밀번호 입력 시, 영문대소문자, 숫자, 특수문자 포함 8자리~16자리입니다.</li>
-              <li>로그인에 문제가 있을 경우 연락 주시기 바랍니다. ㈜나이스디앤비 Trade사업실│02-2022-2510</li>
-            </ul>
-          </div>
+            <a href="#n" class="btn-cta-pri">로그인</a>
+            <a href="#n" class="btn-cta-sec">회원가입</a>
+          </div>      
         </div>
         </form>
+        <div class="com-notiBox">
+          <p class="com-notiBox__title">[로그인 안내]</p>
+          <ul class="txt-li">
+            <li>비밀번호 입력 시, 영문대소문자, 숫자, 특수문자 포함 8자리~16자리입니다.</li>
+            <li>로그인에 문제가 있을 경우 연락 주시기 바랍니다. ㈜나이스디앤비 Trade사업실│02-2022-2510</li>
+          </ul>
+        </div>
       </div><!-- //content-body -->
     </div><!-- //container -->
 

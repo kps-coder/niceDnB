@@ -406,13 +406,28 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 
 /* ==== 로그인 ==== */
-.com-login {max-width:1280px; margin: 0 auto; padding:30px 20px;}
-.com-login__inputArea {max-width:400px; margin:0 auto;}
+.container--login {background-color: #f5f6fa;}
+.container--login .content-head__inner {display:block;}
+.container--login .title-area {display:block; text-align:center}
+.container--login .com-tit3 {font-size:48px; line-height: 44px;}
+.container--login .com-titDesc {margin-top:16px; font-size:24px; line-height: 26px; color:#171717}
+.container--login .com-notiBox {width:600px; margin:0 auto; padding-left:0; border: 0; font-size:14px; color:#666;}
+.container--login .com-notiBox__title {color:#666;}
+
+.com-login {max-width:600px; margin: 0 auto; padding:56px 20px; border-radius: 40px 0px; background: #fff;}
+.com-login__inputArea {max-width:460px; margin:0 auto;}
 .com-login__inputArea input {width:100%;}
 .com-login__inp {margin-bottom:15px}
-.com-login .btn-wrap {display:flex;  max-width:400px; margin:45px auto;}
-.com-login .btn-wrap [class^="btn-"]  {width:100%; margin:0 5px;}
-.com-login__help {display:flex; align-items: center; justify-content: space-between; width:300px; margin:0 auto;}
+.com-login .btn-wrap {max-width:460px; margin:80px auto 0;}
+.com-login .btn-wrap [class^="btn-"]  {width:100%; height:61px; margin:0 5px;}
+.com-login .btn-wrap .btn-cta-pri {border-color: #7e3cff; background-color: #7e3cff;}
+.com-login .btn-wrap .btn-cta-sec {margin-top:16px; border-color:#7e3cff; color:#7e3cff}
+.com-login__help {display:flex; align-items: center; justify-content: space-between; width:460px; margin:0 auto; font-size:14px;}
+.com-login__help .input-checkbox label {color:#999;}
+.com-login__help .btn-find {color:#000; font-weight: bold;}
+.com-login__help .btn-find + .btn-find::before {content:""; display:inline-block; width:1px; height:12px; margin-right:8px; vertical-align: -1px; background-color: #000;}
+
+
 .com-login__find > a {margin-left:6px;}
 .com-login__msg {text-align: center; font-size:18px;}
 

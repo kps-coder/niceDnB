@@ -227,7 +227,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .header-pc,
   .bread-crumb {display:none;}
 
-  .header-mobile {position:absolute; top:0; width:100%;}
+  .header-mobile {position:absolute; top:0; width:100%; background-color: rgba(255,255,255,0.9);}
   .header__inner {display:flex; align-items: center; justify-content: space-between; height:54px; padding:0 20px; border-bottom:1px solid #ccc;}
   .header-mobile__logo a {display:block;}
   .header-mobile__logo img {width:75px; height:auto; vertical-align: top;}
@@ -240,7 +240,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .btn-downMenu.open::after {content:"▲";}
   .btn-downMenu.open + .down-menu {display:block}
 
-  .gnb {position:absolute; top:54px; overflow-x:auto; width:100%; padding: 10px 0; border-bottom:1px solid #eee;}
+  .gnb {position:absolute; top:54px; overflow-x:auto; width:100%; padding: 10px 0; border-bottom:1px solid #eee; background-color: rgba(255,255,255,0.9);}
   .gnb::-webkit-scrollbar {display:none}
   .gnb__wrap {display:flex; align-items: center;  width:100%;  }
   .gnb__a01 {white-space: nowrap; padding:0 10px; font-weight: 600; color:#000;}
@@ -257,7 +257,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .sub-visual--sub1::before {content: ""; position: absolute; top:125px; right:20px; display:block;  width:240px; height:128px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 240px auto;}
 
   .container {padding-top:89px;}
-  .content-head {padding:30px 0 0;}
+  .content-head {margin-bottom:30px; padding:30px 0 0;}
   .content-head__inner {padding:0 15px;}
   .content-head__right {margin-top:15px; text-align: right;}
   .title-area {display:block;}

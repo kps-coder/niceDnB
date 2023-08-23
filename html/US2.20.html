@@ -26,7 +26,7 @@
     <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //header -->
 
-    <div class="container" id="container"> 
+    <div class="container-login" id="container"> 
       <!-- content-head -->
       <div class="content-head">
         <div class="content-head__inner">
@@ -39,100 +39,97 @@
 
       <!-- content-body -->
       <div class="content-body">
-        <section class="section-cont">
-          <h3 class="blind">회원정보</h3>
-
-          <div class="com-step-flow">
-            <ul class="com-step-flow__wrap">
-              <li>약관동의</li>
-              <li>본인인증</li>
-              <li class="com-step-flow__current">회원정보</li>
-              <li>회사정보</li>
-              <li>가입완료</li>
-            </ul>
-          </div>
-
-          <div class="board-write">
-            <table class="board-write__table">
-              <caption>회원가입을 위한 항목 입력 표</caption>
-              <colgroup>
-                <col style="width:110px;">
-                <col style="width:auto;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_name">이름 </label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_name" value="홍길동" disabled>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_phone">휴대폰</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_phone" value="010-1234-5678" disabled>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_id">아이디</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <div class="input-withBtn">
-                      <input type="text" class="input-text" id="inp_id" value="" placeholder="영문, 숫자, 특수문자(+ @ . _ - 만) 조합">
-                      <button type="button" class="btn">중복확인</button>
-                    </div>
-                    <p class="txt-error">아이디를 입력해 주세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_pw">비밀번호</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <input type="password" class="input-pwd" id="inp_pw" value="" placeholder="영문, 숫자, 특수문자 조합 8~16자리">
-                    <p class="txt-error">비밀번호를 입력해 주세요</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_pwChk">비밀번호 확인</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_pwChk" value="" placeholder="영문, 숫자, 특수문자 조합 8~16자리">
-                    <p class="txt-error">비밀번호를 입력해 주세요</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_email">이메일 주소</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <div class="input-withBtn">
-                      <input type="email" class="input-text" id="inp_email" value="" placeholder="">
-                      <button type="button" class="btn">중복확인</button>
-                    </div>
-                    <p class="txt-error">이메일 주소를 입력해 주세요.</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <div class="btn-wrap">
-          <a href="#n" class="btn-cta-sec">이전</a>
-          <a href="#n" class="btn-cta-pri">다음</a>
+        <h3 class="blind">회원정보</h3>
+        <div class="com-step-flow">
+          <ul class="com-step-flow__wrap">
+            <li>약관동의</li>
+            <li>본인인증</li>
+            <li class="com-step-flow__current">회원정보</li>
+            <li>회사정보</li>
+            <li>가입완료</li>
+          </ul>
         </div>
+        <div class="join-box">
+          <table class="join-box__table">
+            <caption>회원가입을 위한 항목 입력 표</caption>
+            <colgroup>
+              <col style="width:120px;">
+              <col style="width:auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="inp_name">이름 </label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_name" value="홍길동" disabled>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_phone">휴대폰</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_phone" value="010-1234-5678" disabled>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_id">아이디</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <div class="input-withBtn">
+                    <input type="text" class="input-text" id="inp_id" value="" placeholder="영문, 숫자, 특수문자(+ @ . _ - 만) 조합">
+                    <button type="button" class="btn">중복확인</button>
+                  </div>
+                  <p class="txt-error">아이디를 입력해 주세요.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_pw">비밀번호</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <input type="password" class="input-pwd" id="inp_pw" value="" placeholder="영문, 숫자, 특수문자 조합 8~16자리">
+                  <p class="txt-error">비밀번호를 입력해 주세요</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_pwChk">비밀번호 확인</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_pwChk" value="" placeholder="영문, 숫자, 특수문자 조합 8~16자리">
+                  <p class="txt-error">비밀번호를 입력해 주세요</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_email">이메일 주소</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <div class="input-withBtn">
+                    <input type="email" class="input-text" id="inp_email" value="" placeholder="">
+                    <button type="button" class="btn">중복확인</button>
+                  </div>
+                  <p class="txt-error">이메일 주소를 입력해 주세요.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="btn-wrap">
+            <a href="#n" class="btn-cta-sec">이전</a>
+            <a href="#n" class="btn-cta-pri">다음</a>
+          </div>
+        </div>
+
+        
       </div><!-- //content-body -->
     </div><!-- //container -->
 

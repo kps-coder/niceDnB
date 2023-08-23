@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", function() {
     contentHeadSticky();
   }
 
-  if(document.querySelector(".btn-quick-msg")){
+  if(document.querySelector(".btn-quick-alarm")){
     quickMessage();
   }
 });

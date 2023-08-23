@@ -26,7 +26,7 @@
     <div id="headerInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
     <!-- //header -->
 
-    <div class="container" id="container"> 
+    <div class="container-login" id="container"> 
       <!-- content-head -->
       <div class="content-head">
         <div class="content-head__inner">
@@ -39,119 +39,117 @@
 
       <!-- content-body -->
       <div class="content-body">
-        <section class="section-cont">
-          <h3 class="blind">회사정보</h3>
+        <h3 class="blind">회사정보</h3>
 
-          <div class="com-step-flow">
-            <ul class="com-step-flow__wrap">
-              <li>약관동의</li>
-              <li>본인인증</li>
-              <li>회원정보</li>
-              <li class="com-step-flow__current">회사정보</li>
-              <li>가입완료</li>
-            </ul>
-          </div>
-
-          <div class="board-write">
-            <table class="board-write__table">
-              <caption>회원가입을 위한 항목 입력 표</caption>
-              <colgroup>
-                <col style="width:110px;">
-                <col style="width:auto;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpn">사업자번호 </label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <div class="input-withBtn">
-                      <input type="text" class="input-text" id="inp_cpn" value="107-86-24874" disabled>
-                      <button type="button" class="btn">조회</button>
-                      <button type="button" class="btn-reset"><span class="blind">초기화</span></button>
-                    </div>
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpmaster">회사명</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_cpmaster" value="나이스디앤비" disabled>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpmaster">대표자명</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_cpmaster" value="강용구" disabled>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpaddress">사업장주소</label>
-                    <span class="icon-req"><em class="blind">필수</em></span>
-                  </th>
-                  <td>
-                    <div class="input-address">
-                      <div class="input-address__post">
-                        <div class="input-withBtn">
-                          <input type="text" class="input-text" id="inp_cpaddress" value="" disabled>
-                          <button type="button" class="btn">주소검색</button>
-                        </div>                
-                        <p class="txt-error">주소검색을 통해 입력해 주세요.</p>
-                      </div>
-                      <div class="input-address__detail">
-                        <input type="text" class="input-text" id="inp_cpaddress_detail" value="" >
-                        <p class="txt-error">이하 상세주소를 입력해 주세요.</p>
-                      </div>
-                    </div>                  
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpphone">전화번호</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_cpphone" value="">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpwork">업태/업종</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_cpwork" size="5" value="">
-                    <input type="text" class="input-text" id="inp_cpwork2" size="5" value="">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_cpnation">주수출 국가<br>(희망지역)</label>
-                  </th>
-                  <td>
-                    <span class="input-select">
-                      <select name="inpSel">
-                        <option>선택하세요</option>
-                        <option>미국</option>
-                      </select>
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <div class="btn-wrap">
-          <a href="#n" class="btn-cta-sec">이전</a>
-          <a href="#n" class="btn-cta-pri">다음</a>
+        <div class="com-step-flow">
+          <ul class="com-step-flow__wrap">
+            <li>약관동의</li>
+            <li>본인인증</li>
+            <li>회원정보</li>
+            <li class="com-step-flow__current">회사정보</li>
+            <li>가입완료</li>
+          </ul>
         </div>
+
+        <div class="join-box">
+          <table class="join-box__table">
+            <caption>회원가입을 위한 항목 입력 표</caption>
+            <colgroup>
+              <col style="width:130px;">
+              <col style="width:auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpn">사업자번호 </label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <div class="input-withBtn">
+                    <input type="text" class="input-text" id="inp_cpn" value="107-86-24874" disabled>
+                    <button type="button" class="btn">조회</button>
+                    <button type="button" class="btn-reset"><span class="blind">초기화</span></button>
+                  </div>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpmaster">회사명</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_cpmaster" value="나이스디앤비" disabled>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpmaster">대표자명</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_cpmaster" value="강용구" disabled>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpaddress">사업장주소</label>
+                  <span class="icon-req"><em class="blind">필수</em></span>
+                </th>
+                <td>
+                  <div class="input-address">
+                    <div class="input-address__post">
+                      <div class="input-withBtn">
+                        <input type="text" class="input-text" id="inp_cpaddress" value="" disabled>
+                        <button type="button" class="btn">주소검색</button>
+                      </div>                
+                      <p class="txt-error">주소검색을 통해 입력해 주세요.</p>
+                    </div>
+                    <div class="input-address__detail">
+                      <input type="text" class="input-text" id="inp_cpaddress_detail" value="" >
+                      <p class="txt-error">이하 상세주소를 입력해 주세요.</p>
+                    </div>
+                  </div>                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpphone">전화번호</label>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_cpphone" value="">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpwork">업태/업종</label>
+                </th>
+                <td>
+                  <input type="text" class="input-text" id="inp_cpwork" size="5" value=""><br>
+                  <input type="text" class="input-text maTop8" id="inp_cpwork2" size="5" value="">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="inp_cpnation">주수출 국가<br>(희망지역)</label>
+                </th>
+                <td>
+                  <span class="input-select">
+                    <select name="inpSel">
+                      <option>선택하세요</option>
+                      <option>미국</option>
+                    </select>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="btn-wrap">
+            <a href="#n" class="btn-cta-sec">이전</a>
+            <a href="#n" class="btn-cta-pri">다음</a>
+          </div>
+        </div>       
       </div><!-- //content-body -->
     </div><!-- //container -->
 

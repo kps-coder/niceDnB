@@ -73,26 +73,26 @@ window.addEventListener("DOMContentLoaded", function() {
   
 
   // pc sitemap
-  if(document.querySelector(".header-pc .btn-sitemap")){
+  if(document.querySelector(".header-pc .btn-sitemap") !== null){
     sitemapPC();
   }
 
   // tab
-  if(document.querySelector(".com-tab")){
+  if(document.querySelector(".com-tab") !== null){
     tabCtrl();
   }  
 
   // accordion
-  if(document.querySelector(".com-accordion")){
+  if(document.querySelector(".com-accordion") !== null){
     accordionUi();
   }
 
   // 상단 sticky
-  if(document.querySelector(".container")){
+  if(document.querySelector(".container") !== null){
     contentHeadSticky();
   }
 
-  if(document.querySelector(".btn-quick-alarm")){
+  if(document.querySelector(".btn-quick-alarm") !== null){
     quickMessage();
   }
 });
@@ -220,7 +220,7 @@ function contentHeadSticky() {
 function quickMessage() {
   let quickMessageWrap = document.querySelector('.quick-message'); 
   let quickMsgBtn = document.querySelector('.btn-quick-alarm'); 
-  let quickMsgCloseBtn = quickMessageWrap.querySelector(".quick-message__close");
+  let quickMsgCloseBtn = document.querySelector(".quick-message__close");
   quickMsgBtn.addEventListener("click", function(){
     quickMessageWrap.style.display = "block";
     setTimeout(function(){

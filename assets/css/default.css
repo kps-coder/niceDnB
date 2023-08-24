@@ -182,7 +182,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .content-head .btn-wrap {margin-top:0}
   
   /* sticky header */
-  .container--sticky {padding-top:253px;}
+  .container--sticky {padding-top:222px;}
   .container--sticky .bread-crumb {position: fixed; z-index: 6; top:66px; width:100%; border-bottom:1px solid #ccc; border-top:1px solid #ccc; background-color:rgba(255,255,255,0.95);} 
   .container--sticky .bread-crumb__inner > li {border-top:0; border-bottom:0;}
   .container--sticky .content-head {position:fixed; z-index:5; top:116px; width:100%; padding:15px 20px; border-bottom: 1px solid #ccc; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); background-color: rgba(255,255,255,0.95);}

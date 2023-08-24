@@ -1,0 +1,8 @@
+<svg id="On_alarm" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <circle id="타원_958" data-name="타원 958" cx="21" cy="21" r="21" fill="#ff526b"/>
+  <g id="그룹_12842" data-name="그룹 12842" transform="translate(10.289 12.153)">
+    <path id="Icon_material-chat-bubble" data-name="Icon material-chat-bubble" d="M4.142,4H21.28a2.113,2.113,0,0,1,2.142,2.069V23.694l-3.284-4.139h-16A2.113,2.113,0,0,1,2,17.486V6.069A2.113,2.113,0,0,1,4.142,4Z" transform="translate(-2 -4)" fill="#fff" stroke="#f42d4a" stroke-width="1"/>
+    <path id="패스_12803" data-name="패스 12803" d="M1585.895,818.277h-11" transform="translate(-1569.684 -812.153)" fill="none" stroke="#ff526b" stroke-linecap="round" stroke-width="2"/>
+    <path id="패스_12804" data-name="패스 12804" d="M1585.895,818.277h-11" transform="translate(-1569.684 -808.153)" fill="none" stroke="#ff526b" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

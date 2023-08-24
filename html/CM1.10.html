@@ -39,7 +39,7 @@
         <div class="search-head">
           <h3 class="search-head_title">통합검색</h3>
           <div class="input-search">
-            <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="키워드/기업명/ D-U-N-S® Number">
+            <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요">
             <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
           </div>
           <div class="search-head__keyword">
@@ -141,6 +141,23 @@
   </div>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      let searchBtn = document.querySelectorAll(".search-result__btn");
+      let searchHeadHeight = document.querySelector(".search-head").offsetHeight;
+      searchBtn.forEach(function(elem, idx){
+        elem.addEventListener("click", function(e){
+          if(idx > 0){
+            e.preventDefault();
+            let myHash = this.hash;
+            let mySecY = document.querySelector(myHash).offsetTop;
+
+            window.scrollTo({
+              top:mySecY - 65 - searchHeadHeight,
+            });
+          }          
+        });
+      });
+    });
     
   </script>
 </body>

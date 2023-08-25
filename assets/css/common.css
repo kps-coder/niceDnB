@@ -1,8 +1,11 @@
 @charset "utf-8";
 
 /* ==== text color ==== */
-.txt-point01 {color:#4D6AFF}
 .text-accent {color:#ff0000}
+.txt-point01 {color:#4D6AFF}
+.txt-point02 {color:#FF4DD6}
+.txt-date {color:#999}
+
 
 .txt-error {margin-top:9px; color: #e5576c;; font-size:12px;}
 .txt-error::before {content: "! ";}
@@ -64,6 +67,7 @@
 
 /*  버튼레이아웃 */
 .btn-wrap {margin-top:45px; text-align: center;}
+.btn-wrap-right {text-align:right;}
 .board-list + .btn-wrap {margin-top:45px;}
 .btn-wrap-between {display:flex; justify-content: space-between;}
 
@@ -219,7 +223,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 /* ==== board ==== */
 /* 게시판 상단 */
-.board-head {display:flex; align-items: center; justify-content: space-between; margin-bottom:8px;}
+.board-head {display:flex; align-items: flex-end; justify-content: space-between; margin-bottom:8px;}
 .board-count {font-weight: bold;}
 .board-count > em {color:#FF4DD6;} 
 .send-count {margin-right:12px;}
@@ -252,6 +256,8 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .board-view__table td {padding:24px 0; line-height: 1.3; border-bottom:1px solid #ccc;}
 .board-write__table tr:last-child td,
 .board-view__table tr:last-child td {border-bottom:0;}
+
+.board-write__table + .com-tit4 {margin-top:40px; padding-top:32px; border-top:1px solid #000;}
 
 .board-write-simple__table {width:100%;}
 .board-write-simple__table th {padding:8px 0; text-align: left;}
@@ -312,8 +318,9 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .modal-popup__wrap {position: absolute; top:50%; left:50%; overflow: hidden; transform: translate(-50%, -50%); width:95%; max-width:800px; border-radius: 24px; background-color: #fff; }
 .modal-popup__head {padding:40px 40px 20px;}
 .modal-popup__body {overflow-y:auto; min-height:600px; max-height:500px;}
-.modal-popup__title {font-size: 24px;}
+.modal-popup__title {max-width:90%; font-size: 24px; line-height:30px; word-break: keep-all;}
 .modal-popup__title [class^="icon"] {margin-right:16px;}
+.modal-popup__title + .txt-date {margin-top:8px;}
 .modal-popup__content {padding:20px 40px;}
 .modal-popup__foot {padding:20px 10px 40px}
 .modal-popup__foot .btn-wrap {margin-top:0}
@@ -366,7 +373,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 /* ==== 윈도우 팝업 ==== */
 .window-popup {height:100%;}
-.window-popup__head {position:relative; z-index: 10; padding:20px 20px 12px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);; background-color: #fff;}
+.window-popup__head {position:relative; z-index: 10; padding:20px 20px 12px; background-color: #fff;}
 .window-popup__logo img {width:75px; height:auto; vertical-align: middle;}
 .window-popup__body {overflow-y:auto; height:calc(100% - 64px - 30px);}
 .window-popup__content {padding:20px}

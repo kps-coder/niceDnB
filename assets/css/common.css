@@ -38,9 +38,10 @@
 .btn-sec {display:inline-flex; align-items: center; justify-content: center; min-width:120px; height:42px; padding:0 20px; border:2px solid #000;  border-radius: 23px; color:#000; font-size: 19px; font-weight: bold; background-color: #fff;}
 
 .btn--large {min-width:180px; height:53px; border-radius: 26px; font-size:24px;}
-.btn--small {height:35px; border-radius: 18px; font-size:14px; border-width: 1px;}
+.btn--small {min-width:72px; height:35px; border-radius: 18px; font-size:14px; border-width: 1px;}
 
 .btn-line-link {display:inline-block; padding-bottom:2px; text-decoration: underline; font-weight: bold; color:#000}
+.btn-link {font-weight:bold;}
 
 
 [class^="btn-"] > [class^="icon"] {margin:0 4px;}
@@ -372,17 +373,23 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .loading {position: fixed; top:0; right:0; bottom:0; left:0; z-index: 999; background:rgba(0,0,0,0.64) url(../images/loading.svg) no-repeat center center ;}
 
 /* ==== 윈도우 팝업 ==== */
-.window-popup {height:100%;}
-.window-popup__head {position:relative; z-index: 10; padding:20px 20px 12px; background-color: #fff;}
+.window-popup {height:100%; background-color:#f2f2f2;}
+.window-popup__head {position:relative; z-index: 10; padding:20px 40px 12px; background-color: #fff;}
+.window-popup__body {background-color: #fff;}
 .window-popup__logo img {width:75px; height:auto; vertical-align: middle;}
-.window-popup__body {overflow-y:auto; height:calc(100% - 64px - 30px);}
-.window-popup__content {padding:20px}
+.window-popup__content {padding:20px 40px;}
 .window-popup__h2 {margin-bottom:15px; font-size:24px; line-height: 36px; color:#333;}
 .window-popup__foot {display:flex; align-items: center; justify-content: center; height:30px;  background-color: #eee;}
 .window-popup__foot-title {margin-right:10px; padding-right:10px; border-right:1px solid #666; font-size:12px;}
 .window-popup__copyright {font-size:12px;}
 
+.window-popup .com-notiBox {padding:25px 40px; background-color:#f2f2f2;}
+
 .window-popup .input-search__btn {background: #fff url(../images/icon-search-bk.svg) no-repeat center / 19px 19px;}
+
+/* 비밀번호 변경 */
+.window-popup .com-login {padding:40px 20px;}
+.window-popup .com-login .btn-wrap {margin-top:40px}
 
 
 
@@ -417,7 +424,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 
 /* ==== 주소 검색 ==== */
-.com-post-search .com-notiBox {margin-top:16px; padding-top:32px; border-top:3px solid #000;}
+.com-post-search .com-notiBox {margin-top:16px; padding:24px 0 0; border-top:3px solid #000; background-color: #fff;}
 .com-post-search .txt-li {margin-top:15px}
 .com-post-search__result {margin-top:15px; border:1px solid #ccc;}
 .com-post-search__result > ul > li {padding:15px;}
@@ -585,7 +592,6 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .mail-view .file-list * {font-size:14px}
 .mail-view .file-list > li {display:flex; justify-content: space-between; width:100%; padding:12px 0; border-top:1px dashed #ccc;}
 .mail-view .file-list__file > em {padding-right:6px; border-right:1px solid #ccc}
-.btn-wrap-between + .mail-view {margin-top:24px;}
 
  /* 모바일 */
 @media screen and (max-width: 800px) {
@@ -593,6 +599,22 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
   .mail-view * {font-size:14px;}
   .mail-view__info .lt {display:block; width:100%;}
 }
+
+/* ==== mail form ==== */
+.mail-form {border-top:1.5px solid #000;}
+.mail-form .btn-wrap {margin-top:0; padding:16px 0; text-align:right;}
+.mail-form__subject {padding:16px 0; border-top:1px solid #ccc; line-height: 32px; font-size: 24px; font-weight: bold; word-break: keep-all;}
+.mail-form__info {padding:16px 0; border-bottom:1px solid #ccc;}
+.mail-form__info .com-list-info dt {font-weight: bold;}
+.mail-form__info .com-list-info dd {font-weight: normal;}
+.mail-form__cont {padding:16px 0;}
+.mail-form__cont  * {line-height: 30px;}
+.mail-form .file-info {margin-top:16px; padding-top:16px; border-top:1px solid #ccc;}
+.mail-form .file-info dd {width:100%;}
+.mail-form .file-list {margin-top:12px;}
+.mail-form .file-list * {font-size:14px}
+.mail-form .file-list > li {display:flex; justify-content: space-between; width:100%; padding:7px 0}
+.mail-form .file-list__file > em {padding-right:6px; border-right:1px solid #ccc}
 
 /* ==== 완료화면 ==== */
 /* pc */

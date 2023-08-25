@@ -20,64 +20,60 @@
     <div class="window-popup__body">
       <div class="window-popup__content">
         <h2 class="blind">보낸메일</h2>
-        <div class="btn-wrap-between">
-          <div class="btn-wrap-between__left">
-            <button type="button" class="btn-pri btn--small">전달</button>
-          </div>
-          <div class="btn-wrap-between__right">
+        <div class="mail-form">
+          <div class="btn-wrap">
             <button type="button" class="btn-sec btn--small">삭제</button>
+            <button type="button" class="btn-sec btn--small">전달</button>
           </div>
-        </div>
-        <div class="mail-view">
-          <div class="mail-view__subject">안녕하세요. 제목입니다.</div>
-          <div class="mail-view__info">
-            <ul>
-              <li><span class="lt">발신자</span> : <em class="ld"> 가나기업(abcdf@nicednb.com)</em></li>
-              <li>
-                <span class="lt">대상바이어</span> :
-                <div class="buyer-list"> 
-                  <button type="button" class="btn-listDown-sm"><span class="blind">열기</span></button>
-                  바이어기업1; 바이어기업2; 바이어기업3;<br>
-                  바이어기업1; 바이어기업2; 바이어기업3;
-                </div>
-              </li>
-              <li>
-                <div class="file-info">
-                  <span class="lt">첨부파일</span> : <em class="ld"><b>3</b>개(123 kb)</em>
-                </div>
-                <ul class="file-list">
-                  <li>
-                    <div class="file-list__file">
-                      <em>첨부1.pdf</em> <span>50KB</span>  
-                    </div>
-                    <div class="file-list__btn">
-                      <button type="button" class="btn-line-link">저장</button>
-                      <button type="button" class="btn-line-link">보기</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="file-list__file">
-                      <em>첨부1.pdf</em> <span>50KB</span>  
-                    </div>
-                    <div class="file-list__btn">
-                      <button type="button" class="btn-line-link">저장</button>
-                      <button type="button" class="btn-line-link">보기</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="file-list__file">
-                      <em>첨부1.pdf</em> <span>50KB</span>  
-                    </div>
-                    <div class="file-list__btn">
-                      <button type="button" class="btn-line-link">저장</button>
-                      <button type="button" class="btn-line-link">보기</button>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+          <div class="mail-form__subject">안녕하세요. 제목입니다. 안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.</div>
+          <div class="mail-form__info">
+            <div class="com-list-info">
+              <dl>
+                <dt>발신자</dt>
+                <dd>가나기업(abcdf@nicednb.com)</dd>
+              </dl>
+              <dl>
+                <dt>대상바이어</dt>
+                <dd>바이어기업 1;바이어기업 2;바이어기업 3;바이어기업 1;바이어기업 2;바이어기업 3;바이어기업 1;바이어기업 2;바이어기업 3;바이어기업 1;바이어기업 2;바이어기업 3;바이어기업 1;바이어기업 2;바이어기업 3;바이어기업 1;바이어기업 2;바이어기업 3;바이어기업 1;바이어기업 2;바이어기업 3;</dd>
+              </dl>
+              <dl class="file-info">
+                <dt>첨부파일</dt>
+                <dd>
+                  <p><b>3</b>개(123 kb)</p>
+                  <ul class="file-list">
+                    <li>
+                      <div class="file-list__file">
+                        <em>첨부1.pdf</em> <span>50KB</span>  
+                      </div>
+                      <div class="file-list__btn">
+                        <button type="button" class="btn-link">[저장]</button>
+                        <button type="button" class="btn-link">[보기]</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="file-list__file">
+                        <em>첨부1.pdf</em> <span>50KB</span>  
+                      </div>
+                      <div class="file-list__btn">
+                        <button type="button" class="btn-link">[저장]</button>
+                        <button type="button" class="btn-link">[보기]</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="file-list__file">
+                        <em>첨부1.pdf</em> <span>50KB</span>  
+                      </div>
+                      <div class="file-list__btn">
+                        <button type="button" class="btn-link">[저장]</button>
+                        <button type="button" class="btn-link">[보기]</button>
+                      </div>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
           </div>
-          <div class="mail-view__cont">
+          <div class="mail-form__cont">
             <p>
             10시 기준 전국에는 태풍특보가 발효됐다. 동해안을 중심으로 시간당 30~60mm의 매우 강한 비가 내릴 것으로
             예상된다. 그 밖의 지역에는 시간당 10~30mm의 강한 비가 내린다. 특히 제주도와 경상권, 동해안을 중심으로 
@@ -91,22 +87,14 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="window-popup__foot">
-      <p class="window-popup__copyright">NICE D&B Co.,Ltd. ALL RIGHTS RESERVED.</p>
+
+      <div class="com-notiBox">
+        <ul class="txt-li">
+          <li>- 이 메시지는 수출지원플랫폼에 가입된 기업에게 전송됩니다.</li>
+          <li>- 기업은 홈페이지를 통해 메시지를 확인 후, 이메일을 통해 연락 드립니다.</li>
+        </ul>
+      </div>
     </div>
   </div>
-
-  <script>
-    let listDownBtn = document.querySelector(".btn-listDown-sm");
-    let buyerList = document.querySelector(".buyer-list");
-    listDownBtn.addEventListener("click", function(){
-      if (buyerList.classList.contains("show")){
-        buyerList.classList.remove("show");
-      } else {
-        buyerList.classList.add("show");
-      }
-    });
-  </script>
 </body>
 </html>

@@ -50,8 +50,10 @@
 .btn-more::after {content: url('../images/btn-more-arr.svg'); margin-left:5px; position: relative; top:2px;}
 
 .btn-del {display:inline-block; width:14px; height:14px; border-radius: 100px; font-weight: 500; background: #000 url('../images/btn-del.svg') no-repeat center / 6px 6px;}
+
 .btn-reset {width:35px; height:35px; background:url('../images/btn-reset-bk.svg') no-repeat center / 100%;}
 .reset--small {width:30px; height:30px; }
+
 .btn-file-del {display:inline-block; width:14px; height:14px; font-weight: 500;  background: url('../images/btn-file-del.svg') no-repeat center / 12px 13px;}
 .btn-listDown-sm {display:inline-block; width:14px; height:14px;background: url('../images/btn_listdown_small.svg') no-repeat center / 100% 100%;}
 .btn-like {display:inline-block; width:24px; height:24px; font-weight: 500; background: url('../images/icon-like.svg') no-repeat 0 0 / auto 24px;}
@@ -613,8 +615,8 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 
 /* ==== 통합검색 ==== */
-.search-head {position: sticky; top:65px; z-index: 9; padding:20px 20px 80px 20px; border-bottom:2px solid #000; background-color: #fff;}
-.search-head_title {max-width:800px; margin:0 auto 24px; padding-left:41px; font-size: 32px; background: url('../images/icon-search-bk.svg') no-repeat 0 2px / 26px 26px;}
+.search-head {padding:20px 20px 80px 20px; border-bottom:2px solid #000; background-color: #fff;}
+.search-head__title {max-width:800px; margin:0 auto 24px; padding-left:41px; font-size: 32px; background: url('../images/icon-search-bk.svg') no-repeat 0 2px / 26px 26px;}
 .search-head .input-search {max-width:800px; margin:0 auto 40px;}
 .search-head .input-search input {height:51px;}
 .search-head .input-search .input-search__btn {width:51px; height:51px; background-size: 22px 22px;}
@@ -639,6 +641,10 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .keyword-cont__path {color:#999; font-size:12px;}
 
 .keyword-cont + .keyword-cont {margin-top:30px;}
+
+@media screen and (min-width: 801px) {
+  .search-head {position: sticky; top:65px; z-index: 9;}
+}
 
 
 /* ==== 바이어 메시지 ==== */

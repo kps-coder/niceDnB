@@ -37,7 +37,7 @@
 
       <div class="content-body">
         <div class="search-head">
-          <h3 class="search-head_title">통합검색</h3>
+          <h3 class="search-head__title">통합검색</h3>
           <div class="input-search">
             <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요">
             <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
@@ -142,10 +142,20 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function(){
+      if(window.innerWidth > 800){
+        searchAnchor();
+      }
+    });
+
+    function searchAnchor(){
+      let searchHead = document.querySelector(".search-head");
       let searchBtn = document.querySelectorAll(".search-result__btn");
       let searchHeadHeight = document.querySelector(".search-head").offsetHeight;
+
+      console.log(searchHead.style.position);
       searchBtn.forEach(function(elem, idx){
         elem.addEventListener("click", function(e){
+          console.log(searchHead.style.position);
           if(idx > 0){
             e.preventDefault();
             let myHash = this.hash;
@@ -157,8 +167,7 @@
           }          
         });
       });
-    });
-    
+    }    
   </script>
 </body>
 </html>

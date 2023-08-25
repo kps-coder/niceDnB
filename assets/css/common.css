@@ -305,10 +305,12 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
   .board-search__input > *:not(button) {width:100%;}
   .board-search__label {margin-bottom:8px; font-weight: bold; font-size: 14px; white-space: nowrap;}
   .board-search__input {width:100%;}
-  
-   
 
-  th, td {font-size: 13px;}
+   th, td {font-size: 13px;}
+
+  .board-write__table colgroup {display:none;}
+  .board-write__table th {display:block; width:100%; padding:12px 0 0;}
+  .board-write__table td {display:block; width:100%; padding:12px 0}
 
   .board-list-headFixed .fixed--body {top:38px}
 }

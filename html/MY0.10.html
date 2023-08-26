@@ -308,7 +308,61 @@
       </div>
       <div class="modal-popup__body">
         <div class="modal-popup__content">
-          <img src="../assets/images/temp-member.png" alt="">
+          <table class="membership-level">
+            <caption>회원등급 안내</caption>
+            <colgroup>
+              <col style="width:22%">
+              <col style="width:25%">
+              <col style="width:23%">
+              <col style="width:30%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">FREE</th>
+                <th scope="col">BASIC</th>
+                <th scope="col" class="platinum">PLATINUM</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th scope="row">캐시</th>
+                <td>무과금 회원<br>웰컴 포인트 300 p 지급<br>(1p = 1C)</td>
+                <td>캐시 1,000 C 이상 구매 시 등급 Up</td>
+                <td>유료 캐시 10,000 C 이상 <br>사용 완료 시 등급 Up</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <th scope="row">기본제공</th>
+                <td colspan="3" class="text-left">
+                  <ul class="txt-li-dot">
+                    <li>바이어 조회</li>
+                    <li>빅데이터 바이어 발굴</li>
+                    <li>마케팅 서비스 - 마케팅 이메일 발송, 바이어 간의 메시지 관리, 발송내역 관리<br> (마케팅 메시지 1건당 1cash(500원)) </li>
+                    <li>사기바이어 검증</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">바이어 상세정보</th>
+                <td>X</td>
+                <td colspan="2">10 Cash 소진 시<br> 1회 무료 제공.<br>이후 1 cash/건</td>
+              </tr>
+              <tr>
+                <th scope="row">한국거래 바이어정보</th>
+                <td>X</td>
+                <td>X</td>
+                <td class="platinum">기본 제공</td>
+              </tr>
+              <tr>
+                <th scope="row">바이어 신용조사</th>
+                <td>X</td>
+                <td>X</td>
+                <td class="platinum">10,000 Cash 소진 시 <br> 1회 무료 제공.<br>이후 400 cash/건</td>
+              </tr>
+            </tbody>
+          </table>  
         </div>
       </div><!-- //modal-popup__body -->
       <div class="modal-popup__close">
@@ -326,11 +380,79 @@
       </div>
       <div class="modal-popup__body" style="max-height:600px">
         <div class="modal-popup__content">
-          <img src="../assets/images/temp-cash-cont.png" alt="">
+          <div class="com-notiBox">
+            <strong>희망하는 금액을 선택해 주세요.</strong>
+            <div class="mycash"><strong>120,000</strong> 캐시</div>
+          </div>
+
+          <div class="cash-payment">
+            <dl class="cash-payment__amount">
+              <dt><strong>결제금액</strong> <em>(VAT 별도)</em></dt>
+              <dd><strong>16,500,000</strong>원</dd>
+            </dl>
+            <div class="input-checkbox">
+              <input type="checkbox" name="cashPayment" id="cashPayment">
+              <label for="cashPayment">구매조건을 모두 확인했으며, 결제 진행에 동의합니다.</label>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec btn--small">취소</button>
+              <button type="button" class="btn-pri btn--small">결제</button>
+            </div>
+          </div>
+
+          <div class="cash-list">
+            <div class="cash-cont">
+              <div class="input-radio">
+                <input type="radio" name="cashList" id="cashList01">
+                <label for="cashList01">
+                  <span class="payment">500,000원</span>
+                  <em>+0 cash (Bonus 0%)</em>
+                </label>
+              </div>
+              <div class="cash-cont__amount"><strong>500,000</strong> 캐시</div>
+            </div>
+            <div class="cash-cont">
+              <div class="input-radio">
+                <input type="radio" name="cashList" id="cashList02">
+                <label for="cashList02">
+                  <span class="payment">1,500,000원</span>
+                  <em>+0 cash (Bonus 0%)</em>
+                </label>
+              </div>
+              <div class="cash-cont__amount"><strong>3,000</strong> 캐시</div>
+            </div>
+            <div class="cash-cont">
+              <div class="input-radio">
+                <input type="radio" name="cashList" id="cashList03">
+                <label for="cashList03">
+                  <span class="payment">2,500,000원</span>
+                  <em>+1,000 cash (Bonus 20%)</em>
+                </label>
+              </div>
+              <div class="cash-cont__amount"><strong>5,000</strong> 캐시</div>
+            </div>
+            <div class="cash-cont">
+              <div class="input-radio">
+                <input type="radio" name="cashList" id="cashList04">
+                <label for="cashList04">
+                  <span class="payment">5000,000원</span>
+                  <em>+3,000 cash (Bonus 30%)</em>
+                </label>
+              </div>
+              <div class="cash-cont__amount"><strong>10,000</strong> 캐시</div>
+            </div>
+          </div>
         </div>
       </div><!-- //modal-popup__body -->
       <div class="modal-popup__foot" style="padding:0;">
-        <img src="../assets/images/temp-cash-foot.png" alt="">
+        <div class="com-notiBox">
+          <ul class="txt-li-dot">
+            <li>충전 금액은 수출지원서비스플랫폼 내 서비스 이용 시 사용할 수 있습니다. </li>
+            <li>충전하신 캐시는 현금처럼 사용이 가능합니다. </li>
+            <li>캐시를 사용 하기 전에는 전액 환불 가능합니다. </li>
+            <li>금액을 일부 사용했을 경우는 캐시 환불이 불가합니다.</li>
+          </ul>
+        </div>
       </div>
       <div class="modal-popup__close">
         <button type="button"><span class="blind">팝업닫기</span></button>
@@ -338,5 +460,23 @@
     </div>
   </div>
   <!-- //[팝업]캐시충전 -->
+
+  <script>
+    cashSeleced ();
+
+    function cashSeleced () {
+      let cashRadio = document.getElementsByName("cashList");
+      let cashCont = document.querySelectorAll(".cash-cont");
+      console.log(cashRadio);
+      cashRadio.forEach(function(elem, i){
+        elem.addEventListener("change", function(){
+          cashCont.forEach(function(cont){
+            cont.classList.remove("seleced");
+          });
+          cashCont[i].classList.add("seleced");
+        });
+      });
+    }
+  </script>
 </body>
 </html>

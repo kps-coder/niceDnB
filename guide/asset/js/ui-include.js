@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
         </div>  
 
         <address class="site-address">
-          서울특별시 마포구 마초대로 217 크레디트센터 16층 ㈜나이스디앤비<br>
+          서울특별시 마포구 마포대로 217 크레디트센터 16층 ㈜나이스디앤비<br>
           통신판매업신고: 제2012-서울마포-0168호 
           사업자등록번호: 107-86-24874 
           TEL: 02-2122-2500 FAX: 02-2122-2591

@@ -72,40 +72,30 @@
       <!-- content-body -->
       <div class="content-body">
         <div class="section-cont">
-          <!-- 조건검색 -->
-          <div class="board-search">
-            <div class="board-search__row">
-              <dl class="board-search__col">
-                <dt class="board-search__label">
-                  <label for="inpSearchEmail">이메일 주소</label>
-                </dt>
-                <dd class="board-search__input">
-                  <input type="text" name="inpSearchEmail" id="inpSearchEmail" class="input-text" placeholder="qwer1234@asdfg.com">
-                </dd>
-              </dl>
-            </div>
-            <div class="btn-wrap">
-              <button type="button" class="btn-pri btn--small" id="buyerCheckBtn">확인하기</button>
-            </div>
-          </div><!-- //조건검색 -->
+          <div class="scam-buyer">
+            <label for="inpSearchEmail">이메일 주소</label>
+            <input type="text" name="inpSearchEmail" id="inpSearchEmail" class="input-text" placeholder="qwer1234@asdfg.com">
+            <button type="button" class="btn-pri" id="buyerCheckBtn">확인하기</button>
+          </div>
         </div>
 
         <!-- 결과 확인 -->
         <div class="section-cont" style="display:none" id="buyerCheck">
           <div class="buyer-check">
             <ul>
-              <li class="buyer-check__true">이메일 주소 구문이 올바릅니다.</li>
-              <li class="buyer-check__false">사기바이어 메일이 의심됩니다.</li>
+              <li class="buyer-check__true">이메일 주소 <em>구문이 올바릅니다.</em></li>
+              <li class="buyer-check__scam"><em>사기바이어 메일</em>이 의심됩니다.</li>
               <li class="buyer-check__false">asdfg.com에 연결 실패</li>
             </ul>
-          </div>
-          <div class="com-notiBox">
-            <p class="com-notiBox__title">사기바이어 결과 안내</p>
-            <ul class="txt-li">
-              <li>해당 서비스는 해외 스팸 바이어 등록 사이트에 게재된 내용을 정보 전달 목적으로 제공합니다.<br> 따라서, 사기바이어에 대한 정보는 단순 참고용으로 활용하시기 바랍니다.</li>
-              <li>서비스를 통해 제공되는 정보의 정확성 및 오류나 누락에 대해 당사는 책임지지 않습니다.</li>
-            </ul>
-          </div>
+
+            <div class="com-notiBox">
+              <p class="com-notiBox__title">[ 사기바이어 결과 안내 ]</p>
+              <ul class="txt-li">
+                <li>해당 서비스는 해외 스팸 바이어 등록 사이트에 게재된 내용을 정보 전달 목적으로 제공합니다. 따라서, 사기바이어에 대한 정보는 단순 참고용으로 활용하시기 바랍니다.</li>
+                <li>서비스를 통해 제공되는 정보의 정확성 및 오류나 누락에 대해 당사는 책임지지 않습니다.</li>
+              </ul>
+            </div>  
+          </div>                  
         </div>
       </div><!-- //content-body -->
     </div><!-- //container -->

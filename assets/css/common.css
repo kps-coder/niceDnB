@@ -685,12 +685,26 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 }
 
 /* ==== 사기바이어 ==== */
-.buyer-check li + li {margin-top:8px;}
-.buyer-check__true {color:green;}
-.buyer-check__true::before {content:"v"; padding-right:4px;}
-.buyer-check__false {color:#ff526b;}
-.buyer-check__false::before {content:"x"; padding-right:4px;}
+.scam-buyer {display: flex; align-items: center;}
+.scam-buyer label {display:inline-block; width:112px; padding-right:12px; font-weight: bold; white-space: nowrap;}
+.scam-buyer input.input-text {width:100%; max-width:532px; height:42px; margin-right:24px;}
 
+
+.buyer-check li + li {margin-top:8px;}
+.buyer-check__true {font-size:19px; font-weight: bold;}
+.buyer-check__true::before {content:url('../images/icon-true.svg'); display:inline-block; vertical-align: middle; padding-right:8px;}
+.buyer-check__true em {color:#43BF78}
+.buyer-check__scam {font-size:19px; font-weight: bold;}
+.buyer-check__scam::before {content:url('../images/icon-scam.svg'); display:inline-block; vertical-align: middle; padding-right:8px;}
+.buyer-check__scam em {color:#FA324A}
+.buyer-check__false {font-size:19px; font-weight: bold;}
+.buyer-check__false::before {content:url('../images/icon-false.svg'); display:inline-block; vertical-align: middle; padding-right:8px;}
+.buyer-check .com-notiBox {margin-top:80px; padding:24px 24px 40px; border: 1px solid #ccc; background-color: #fafafa;}
+
+/* pc */
+@media screen and (min-width: 801px) {
+  .buyer-check > ul {margin-left:112px;}
+}
 
 /* ==== 통합검색 ==== */
 .search-head {padding:20px 20px 80px 20px; border-bottom:2px solid #000; background-color: #fff;}

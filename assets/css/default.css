@@ -74,7 +74,11 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 .btn-sitemap {display:inline-block; width:24px; height:24px; background: url(../images/icon-sitemap.png) no-repeat 0 0 / 100% 100%;} 
 
 
-.container {min-height:calc(100vh - 271px); padding:110px 0 60px;}
+.container,
+.container-error {min-height:calc(100vh - 272px); padding:110px 0 60px;}
+
+.container-error {display:flex; align-items: center; justify-content: center; background: #f5f6fa;}
+.error-text {margin-top:40px; color: #0e0e0f; font-size: 19px; font-weight: bold;}
 
 .title-area {display:flex; align-items: flex-end;}
 .title-area small {font-size:18px;}

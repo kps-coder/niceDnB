@@ -305,7 +305,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 
 /* pc & 태블릿 */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 700px) {
   /* 조건검색 */
   .board-search {margin-bottom:80px; border-top: 2.5px solid #000;}
   .board-search__row {display:flex; align-items: center; flex-wrap: wrap; padding:16px 0; border-bottom:1px solid #ccc}
@@ -338,9 +338,12 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
   .board-search__label {margin-bottom:8px; font-weight: bold; font-size: 14px; white-space: nowrap;}
   .board-search__input {width:100%;}
 
-  .board-write__table colgroup {display:none;}
-  .board-write__table th {display:block; width:100%; padding:12px 0 0;}
-  .board-write__table td {display:block; width:100%; padding:12px 0}
+  .board-write__table colgroup,
+  .board-view__table colgroup {display:none;}
+  .board-write__table th,
+  .board-view__table th {display:block; width:100%; padding:12px 0 0;}
+  .board-write__table td,
+  .board-view__table td {display:block; width:100%; padding:12px 0}
 
   .board-list-headFixed .fixed--body {top:38px}
 }
@@ -385,7 +388,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 /* 모바일 */
 @media screen and (max-width: 800px) {  
   .modal-popup__head {padding:20px;}
-  .modal-popup__body {max-height:calc(100vh - 200px); min-height:auto;}
+  .modal-popup__body {max-height:calc(85vh - 200px); min-height:auto;}
   .modal-popup__content {padding:0 20px 30px;}
   .modal-popup__foot {padding-bottom:20px;}
   .modal-popup__close {top:20px; right:20px}
@@ -781,15 +784,14 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 /* ==== 마이페이지 메인 ==== */
 .mypage-main {border-top:2px solid #000;}
-.mypage-main__head {display:flex; align-items: center; justify-content: space-between; padding:40px; font-size: 24px; background-color:#f5f6fa;}
+.mypage-main__head {display:flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom:32px; padding:40px; font-size: 24px; background-color:#f5f6fa;}
 .mypage-main__member .btn-member {color: #7f3cff; font-weight: bold; text-decoration: underline; background-color: transparent;}
 .mypage-main__cash em {padding-left:16px; color: #587fff; text-decoration: underline; font-weight: bold;}
 .mypage-main__cash .btn-cash {margin-left:24px;}
-.mypage-main__menu {display:flex; max-width:1144px; margin:0 auto;}
-.mypage-main__box {flex:1; margin:32px 0; padding:58px 15px 15px; border-radius: 15px; color:#fff; }
+.mypage-main__menu {display:flex; flex-wrap: wrap; justify-content: space-around; max-width:1144px; margin:0 auto;}
+.mypage-main__box {width:155px; margin:12px 0; padding:58px 15px 15px; border-radius: 15px; color:#fff; }
 .mypage-main__box .title {margin-bottom:12px; text-align: center;}
 .mypage-main__box .btn {display:block; width:100%; padding:8px 0; border-radius:12px; font-size: 14px; text-align:center; color:#fff; background-color: rgba(0,0,0,.2);}
-.mypage-main__box + .mypage-main__box {margin-left:32px;}
 
 .mypageBox--style1 {background: #9874f9 url('../images/icon-mypage-1.svg') no-repeat center 25px / 32px 24px;}
 .mypageBox--style2 {background: #5b71ea url('../images/icon-mypage-2.svg') no-repeat center 25px / 35px 22px;}
@@ -805,6 +807,11 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .mypageBox--style4 .btn {background-color: #3dafc8}
 .mypageBox--style5 .btn {background-color: #7ab252}
 .mypageBox--style6 .btn {background-color: #c09161} */
+
+@media screen and (max-width: 800px) {
+  .mypage-main__head {padding:20px 20px; font-size:19px;}
+  .mypage-main__cash {margin-top:12px;}
+}
 
 
 /* ==== 회원등급 ==== */
@@ -834,4 +841,42 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .cash-payment__amount dt strong {font-weight: bold;}
 .cash-payment__amount dd {font-size:19px;}
 .cash-payment .btn-wrap {margin-top:24px; text-align:right}
+
+
+/* ==== 바이어 정보 ==== */
+.buyer-info-wrap {display:flex; align-items: flex-start;}
+
+/* 신용등급정보 */
+.credit-rating-info {flex:0 0 319px; margin-left:48px; padding:32px 24px; border-radius: 24px; background-color: #f5f6fa;}
+.credit-rating-info .com-tit4 {margin-bottom:24px;}
+.credit-rating-info .title {margin-bottom:16px; font-weight: bold; font-size:14px;}
+.credit-rating-info .my {position:absolute; top:-10px; right:0; display:flex; align-items: center; justify-content: center; width:28px; height:28px; border-radius: 100%; color:#fff; font-weight: bold; background-color: #ccc;}
+.credit-rating-info .btn-sec {width:100%;}
+.info-rating {position:relative; margin-bottom:24px;}
+.rating__table {display:flex; border: 1px solid #e0e0e0; background-color: #fff;}
+.rating__table > li {flex:1; padding:6px 0; text-align: center; color: #999;}
+.rating__table > li + li {border-left:1px solid #e0e0e0;}
+.rating__table > li.on {color:#fff; font-weight: bold;}
+.info-rating .my.r1,
+.info-rating .my.r2,
+.rating__table > li.on:nth-child(1),
+.rating__table > li.on:nth-child(2),
+.info-paydex .my.pd1 {background-color: #43bf78;}
+.info-rating .my.r3,
+.rating__table > li.on:nth-child(3),
+.info-paydex .my.pd2 {background-color: #4da6ff;}
+.info-rating .my.r4,
+.info-rating .my.r5,
+.rating__table > li.on:nth-child(4),
+.rating__table > li.on:nth-child(5),
+.info-paydex .my.pd3 {background-color: #ff526b;}
+
+.info-paydex {position:relative;}
+.paydex__table img {width:100%; height:auto}
+
+
+@media screen and (max-width: 1000px) {
+  .buyer-info-wrap {display:block}
+  .credit-rating-info {width:100%; max-width:319px; margin:24px auto;}
+}
 

@@ -81,7 +81,7 @@
 
       <!-- content-body -->
       <div class="content-body">
-        <div class="section-cont">
+        <div class="section-cont buyer-info-wrap">
           <h4 class="blind">바이어 정보</h4>
           <!-- board-view -->
           <div class="board-view">
@@ -147,6 +147,31 @@
               </tbody>
             </table>
           </div><!-- //board-view -->
+          <div class="credit-rating-info">
+            <h4 class="com-tit4">신용등급 정보</h4>
+            <div class="info-rating">
+              <p class="title">D&B Rating</p>
+              <p class="my r1">2</p> <!-- r1:우수, r2:양호, r3:보통, r4:열위, r5:보류 -->
+              <ul class="rating__table">
+                <li>우수</li>
+                <li class="on" >양호</li>
+                <li>보통</li>
+                <li>열위</li>
+                <li>보류</li>
+              </ul>
+            </div>
+            <div class="info-paydex">
+              <p class="title">D&B Paydex</p>
+              <p class="my pd2">70</p><!-- pd1:100~80 / pd2:70~50 / pd3:40~0 -->
+              <div class="paydex__table">
+                <img src="../assets/images/paydex-table.png" alt="100~80 Low 70~50 보통 40~0 high">
+              </div>
+            </div>
+
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="confirmPop01">보고서 확인</button>
+            </div>
+          </div>
         </div>
 
         <div class="section-cont">
@@ -185,10 +210,6 @@
               </tbody>
             </table>
           </div><!-- //board-view -->
-
-          <div class="btn-wrap">
-            <button type="button" class="btn-sec btn--large" data-roll="modal-popup" data-popid="confirmPop01">보고서 확인</button>
-          </div>
         </div> <!-- //section-cont -->      
       </div><!-- //content-body -->
     </div><!-- //container -->

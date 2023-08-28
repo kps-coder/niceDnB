@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+.main-sec1-link {overflow:hidden; max-width:1366px; margin:110px auto 0;}
+.main-sec1-link  li {position:relative; flex:0 0 334px;}
+.main-sec1-link  li + li {margin-left:10px}
+.main-sec1-link .link-box {position:absolute; top:40px; left:0; display:block; padding:0 40px; color:#fff;}
+.main-sec1-link .link-box__title {display: block; margin-bottom:20px; font-weight: bold; font-size: 36px;}
+.main-sec1-link .link-box__desc {word-break: keep-all; line-height: 24px; text-align: center;}
+
 /* PC */
 @media screen and (min-width: 1201px) {
   html, body, div {line-height: normal;}
@@ -35,5 +42,12 @@
 
   .white * {color:#fff}
   .main-cont .white h2 {color:#fff;}
+
+ 
+
 }
 
+/* 모바일 */
+@media screen and (max-width: 1200px) {
+  .main-sec1-link {padding:0 20px}
+}

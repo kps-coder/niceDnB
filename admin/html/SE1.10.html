@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../../guide/asset/js/admin-include.js"></script> <!-- head, gnb -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header" id="headerInclud"></header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav" id="gnbInclud"></div>
+
+      <div class="content-area">
+        <div class="content-head">
+          <div class="title-area">
+            <h2 class="com-tit2">버전 관리</h2>
+          </div>   
+
+          <!-- bread-crumb -->
+          <div class="bread-crumb">
+            <ul class="bread-crumb__list">
+              <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
+              <li><a href="#none">시스템 관리</a></li>
+              <li><span>버전 관리</span></li>
+            </ul>
+          </div><!-- //bread-crumb -->  
+        </div>
+
+        <div class="content-body">
+          <div class="section-cont">
+            <div class="board-head">
+              <div class="board-head__left">
+                <span class="board-count">총 <em>125</em> 건</span>
+              </div>
+              <div class="board-head__right">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-sec">행삭제</button>
+                  <button type="button" class="btn-sec">행추가</button>
+                  <button type="button" class="btn-sec">엑셀업로드</button>
+                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                </div>                
+                <span class="input-select">
+                  <select name="inpLine" id="inpLine">
+                    <option>100개 씩</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>회원 통계 목록</caption>
+                <colgroup>
+                  <col style="width:50px">
+                  <col style="width:60%">
+                  <col style="width:40%">
+                  <col style="width:100px">
+                  <col style="width:150px">
+                  <col style="width:100px">
+                  <col style="width:100px">
+                </colgroup>
+                <thead>
+                  <tr>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">항목</th>
+                    <th scope="col">첨부파일</th>
+                    <th scope="col">파일크기</th>
+                    <th scope="col">게시자</th>
+                    <th scope="col">업데이트</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td><button type="button" class="btn-sec btn--small">파일첨부</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">품목 카테고리</td>
+                    <td><a href="#n" class="btn-line-link">품목정리_ver3.0.xml</a></td>
+                    <td>55MB</td>
+                    <td>홍길이</td>
+                    <td>2023.05.01</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">품목 카테고리</td>
+                    <td><a href="#n" class="btn-line-link">사기바이어이메일_ver1.3.xml</a></td>
+                    <td>55MB</td>
+                    <td>홍길이</td>
+                    <td>2023.05.01</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">품목 카테고리</td>
+                    <td><a href="#n" class="btn-line-link">품목정리_ver3.0.xml</a></td>
+                    <td>55MB</td>
+                    <td>홍길이</td>
+                    <td>2023.05.01</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- //board-list -->
+
+            <div class="board-foot">
+              <div class="board-foot__left">
+                <p class="board-info">Showing 1 to 10 of 55 entries</p>
+              </div>
+              <div class="pagination">
+                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                <div class="pagination__page">
+                  <a href="#n">1</a>
+                  <a href="#n">2</a>
+                  <a href="#n">3</a>
+                  <a href="#n">4</a>
+                  <a href="#n">5</a>
+                </div>
+                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- //container -->
+
+    
+  </div><!-- //wrap -->
+
+  <script>
+    $( function() {
+      $( "#datepicker01" ).datepicker();
+      $( "#datepicker02" ).datepicker();
+    } );
+    </script>
+</body>
+</html>

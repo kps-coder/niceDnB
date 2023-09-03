@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../../guide/asset/js/admin-include.js"></script> <!-- head, gnb -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header" id="headerInclud"></header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav" id="gnbInclud"></div>
+
+      <div class="content-area">
+        <div class="content-head">
+          <div class="title-area">
+            <h2 class="com-tit2">행사 조회</h2>
+          </div>   
+
+          <!-- bread-crumb -->
+          <div class="bread-crumb">
+            <ul class="bread-crumb__list">
+              <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
+              <li><a href="#none">행사 관리</a></li>
+              <li><span>행사 조회</span></li>
+            </ul>
+          </div><!-- //bread-crumb -->  
+        </div>
+
+        <div class="content-body">
+          <div class="board-search">
+            <table class="board-search__table">
+              <caption>검색조건</caption>
+              <colgroup>
+                <col style="width:100px">
+                <col style="width:30%">
+                <col style="width:100px">
+                <col style="width:30%">
+                <col style="width:100px">
+                <col style="width:30%">
+              </colgroup>
+              <tbody>
+                <tr>  
+                  <th scope="row"><label for="datepicker01">행사기간</label></th>
+                  <td>
+                    <span class="input-date">
+                      <input type="text" id="datepicker01" class="input-jq-date"> 
+                      <em>~</em>
+                      <input type="text" id="datepicker02" class="input-jq-date"> 
+                    </span>
+                  </td>
+                  <th scope="row"><label for="inpNation">지역</label></th>
+                  <td>
+                    <input type="text" id="inpNation" class="input-text">
+                  </td>
+                  <th scope="row"><label for="inpKeyword">키워드</label></th>
+                  <td>
+                    <input type="text" id="inpKeyword" class="input-text">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="inpItem">품목</label></th>
+                  <td colspan="5">
+                    <div class="input-withBtn">
+                      <button type="button" class="btn-sec btn--small">선택</button>
+                      <input type="text" id="classificationCode" class="input-text">
+                    </div>                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec">취소</button>
+              <button type="button" class="btn-pri">조회</button>
+            </div>
+          </div>
+
+          <div class="section-cont">
+            <div class="board-head">
+              <div class="board-head__left">
+                <span class="board-count">총 <em>125</em> 건</span>
+              </div>
+              <div class="board-head__right">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-sec">행삭제</button>
+                  <button type="button" class="btn-sec">행추가</button>
+                  <button type="button" class="btn-sec">엑셀업로드</button>
+                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                </div>                
+                <span class="input-select">
+                  <select name="" id="">
+                    <option>100개 씩</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>행사 조회 목록</caption>
+                <colgroup>
+                  <col style="width:50px">
+                  <col style="width:200px">
+                  <col style="width:auto">
+                  <col style="width:20%">
+                  <col style="width:10%">
+                  <col style="width:20%">
+                  <col style="width:100px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">행사기간</th>
+                    <th scope="col">전시회명</th>
+                    <th scope="col">국가</th>
+                    <th scope="col">도시</th>
+                    <th scope="col">품목</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>55</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button type="button" class="btn-sec btn--small">등록</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>54</td>
+                    <td>2023.01.01~2023.11.30</td>
+                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td>볼로냐</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>54</td>
+                    <td>2023.01.01~2023.11.30</td>
+                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td>볼로냐</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>54</td>
+                    <td>2023.01.01~2023.11.30</td>
+                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td>볼로냐</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- //board-list -->
+
+            <div class="board-foot">
+              <div class="board-foot__left">
+                <p class="board-info">Showing 1 to 10 of 55 entries</p>
+              </div>
+              <div class="pagination">
+                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                <div class="pagination__page">
+                  <a href="#n">1</a>
+                  <a href="#n">2</a>
+                  <a href="#n">3</a>
+                  <a href="#n">4</a>
+                  <a href="#n">5</a>
+                </div>
+                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- //container -->
+
+    
+  </div><!-- //wrap -->
+
+  <script>
+    $( function() {
+      $( "#datepicker01" ).datepicker();
+      $( "#datepicker02" ).datepicker();
+    } );
+    </script>
+</body>
+</html>

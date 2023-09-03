@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header">
+      <h1 class="logo"><a href="main.html"><span class="blind">Linker</span></a></h1>
+      <div class="user-menu">
+        <div class="user-name">홍길동 님</div>
+        <ul class="user-menu__mymenu">
+          <li><a href="#none" class="btn-logout">로그아웃</a></li>
+          <li><a href="#none" class="btn-mypage">마이페이지</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav">
+        <ul class="global-nav__list">
+          <li class="open"><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">바이어 조회/등록</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun02"></i>행사관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">행사조회/등록</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun03"></i>컨설팅관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">컨설팅신청내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun04"></i>서비스관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">마케팅메일템플릿</a></li>
+              <li><a href="#none">캐시관리</a></li>
+              <li><a href="#none">공지사항</a></li>
+              <li><a href="#none">문의내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun05"></i>회원관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">회원조회</a></li>
+              <li><a href="#none">사업자등록승인</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun06"></i>통계</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">매출통계</a></li>
+              <li><a href="#none">빅데이터바이어 발굴이용</a></li>
+              <li><a href="#none">마케팅이용</a></li>
+              <li><a href="#none">컨설팅이용</a></li>
+              <li><a href="#none">보고서이용</a></li>
+              <li><a href="#none">바이어메시지유입</a></li>
+              <li><a href="#none">장애</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun07"></i>시스템</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">버전관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-area">
+        <div class="content-head">
+          <div class="title-area">
+            <h2 class="com-tit2">바이어 조회</h2>
+          </div>   
+
+          <!-- bread-crumb -->
+          <div class="bread-crumb">
+            <ul class="bread-crumb__list">
+              <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
+              <li><a href="#none">바이어 관리</a></li>
+              <li><span>바이어 조회</span></li>
+            </ul>
+          </div><!-- //bread-crumb -->  
+        </div>
+
+        <div class="content-body">
+          <div class="board-search">
+            <table class="board-search__table">
+              <caption>검색조건</caption>
+              <colgroup>
+                <col style="width:100px">
+                <col style="width:30%">
+                <col style="width:100px">
+                <col style="width:30%">
+                <col style="width:100px">
+                <col style="width:30%">
+              </colgroup>
+              <tbody>
+                <tr>  
+                  <th scope="row"><label for="datepicker01">등록기간</label></th>
+                  <td>
+                    <span class="input-date">
+                      <input type="text" id="datepicker01" class="input-jq-date"> 
+                      <em>~</em>
+                      <input type="text" id="datepicker02" class="input-jq-date"> 
+                    </span>
+                  </td>
+                  <th scope="row"><label for="inpNation">국가</label></th>
+                  <td>
+                    <input type="text" id="inpNation" class="input-text">
+                  </td>
+                  <th scope="row"><label for="inpKeyword">키워드</label></th>
+                  <td>
+                    <input type="text" id="inpKeyword" class="input-text">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="classificationCode">산업분류코드</label></th>
+                  <td colspan="3">
+                    <div class="input-withBtn">
+                      <button type="button" class="btn-sec btn--small">선택</button>
+                      <input type="text" id="classificationCode" class="input-text">
+                    </div>                    
+                  </td>
+                  <th scope="row"><label for="managementLevel">관리 등급</label></th>
+                  <td>
+                    <span class="input-select">
+                      <select name="managementLevel" id="managementLevel">
+                        <option>전체</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec">취소</button>
+              <button type="button" class="btn-pri">조회</button>
+            </div>
+          </div>
+
+          <div class="section-cont">
+            <div class="board-head">
+              <div class="board-head__left">
+                <span class="board-count">총 <em>125</em> 건</span>
+              </div>
+              <div class="board-head__right">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-sec">행삭제</button>
+                  <button type="button" class="btn-sec">행추가</button>
+                  <button type="button" class="btn-sec">엑셀업로드</button>
+                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                </div>                
+                <span class="input-select">
+                  <select name="inpLine" id="inpLine">
+                    <option>100개 씩</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>바이어 조회 목록</caption>
+                <colgroup>
+                  <col style="width:50px">
+                  <col style="width:120px">
+                  <col style="width:10%">
+                  <col style="width:100px">
+                  <col style="width:auto">
+                  <col style="width:15%">
+                  <col style="width:13%">
+                  <col style="width:10%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">DUNS number</th>
+                    <th scope="col">국가</th>
+                    <th scope="col">SIC Code</th>
+                    <th scope="col">카테고리</th>
+                    <th scope="col">관심품목</th>
+                    <th scope="col">CEO</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>55</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button type="button" class="btn-sec btn--small">등록</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>54</td>
+                    <td>15-536-6107</td>
+                    <td>오스트리아</td>
+                    <td>5812</td>
+                    <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
+                    <td>Fruit, snack, beverage</td>
+                    <td>Kevin R Johnson</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- //board-list -->
+
+            <div class="board-foot">
+              <div class="board-foot__left">
+                <p class="board-info">Showing 1 to 10 of 55 entries</p>
+              </div>
+              <div class="pagination">
+                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                <div class="pagination__page">
+                  <a href="#n" class="on">1</a>
+                  <a href="#n">2</a>
+                  <a href="#n">3</a>
+                  <a href="#n">4</a>
+                  <a href="#n">5</a>
+                </div>
+                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- //container -->
+
+    
+  </div><!-- //wrap -->
+
+  <script>
+    $( function() {
+      $( "#datepicker01" ).datepicker();
+      $( "#datepicker02" ).datepicker();
+    } );
+    </script>
+</body>
+</html>

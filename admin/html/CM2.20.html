@@ -6,9 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=1920, initial-scale=1.0">
 
-  <!-- 퍼블 전용 UI : 사용금지 -->
-  <script src="../../guide/asset/js/admin-include.js"></script> <!-- head, gnb -->
-
+  
   <!-- jquery datepicker -->
   <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
   <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
@@ -22,10 +20,67 @@
 </head>
 <body> 
   <div class="wrap" id="wrap">
-    <header class="header" id="headerInclud"></header>
+    <header class="header">
+      <h1 class="logo"><a href="main.html"><span class="blind">Linker</span></a></h1>
+      <div class="user-menu">
+        <div class="user-name"><strong>홍길동 님</strong> 환영합니다.</div>
+        <ul class="user-menu__mymenu">
+          <li><a href="#none" class="btn-logout">로그아웃</a></li>
+          <li><a href="#none" class="btn-mypage">마이페이지</a></li>
+        </ul>
+      </div>
+    </header>
 
     <div class="container" id="container"> 
-      <div class="global-nav" id="gnbInclud"></div>
+      <div class="global-nav">
+        <ul class="global-nav__list">
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">바이어 조회/등록</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun02"></i>행사관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">행사조회/등록</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun03"></i>컨설팅관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">컨설팅신청내역</a></li>
+            </ul>
+          </li>
+          <li class="open"><a href="#none" class="btn-depth-1"><i class="icon-meun04"></i>서비스관리</a>
+            <ul class="global-nav__depth2">
+              <li class="on"><a href="#none">마케팅메일템플릿</a></li>
+              <li><a href="#none">캐시관리</a></li>
+              <li><a href="#none">공지사항</a></li>
+              <li><a href="#none">문의내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun05"></i>회원관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">회원조회</a></li>
+              <li><a href="#none">사업자등록승인</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun06"></i>통계</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">매출통계</a></li>
+              <li><a href="#none">빅데이터바이어 발굴이용</a></li>
+              <li><a href="#none">마케팅이용</a></li>
+              <li><a href="#none">컨설팅이용</a></li>
+              <li><a href="#none">보고서이용</a></li>
+              <li><a href="#none">바이어메시지유입</a></li>
+              <li><a href="#none">장애</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun07"></i>시스템</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">버전관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
       <div class="content-area">
         <div class="content-head">
@@ -49,11 +104,11 @@
               <caption>검색조건</caption>
               <colgroup>
                 <col style="width:100px">
-                <col style="width:300px">
+                <col style="width:30%">
                 <col style="width:100px">
-                <col style="width:50%">
+                <col style="width:30%">
                 <col style="width:100px">
-                <col style="width:50%">
+                <col style="width:30%">
               </colgroup>
               <tbody>
                 <tr>  
@@ -84,11 +139,11 @@
                   </td>
                   <th scope="row"><label for="managementLevel">관리 등급</label></th>
                   <td>
-                    <spen class="input-select">
+                    <span class="input-select">
                       <select name="managementLevel" id="managementLevel">
                         <option>전체</option>
                       </select>
-                    </spen>
+                    </span>
                   </td>
                 </tr>
               </tbody>
@@ -113,7 +168,7 @@
                   <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
-                  <select name="" id="">
+                  <select name="inpLine" id="inpLine">
                     <option>100개 씩</option>
                   </select>
                 </span>
@@ -176,15 +231,17 @@
                 <p class="board-info">Showing 1 to 10 of 55 entries</p>
               </div>
               <div class="pagination">
+                <button type="button" class="btn-first"><span class="blind">첫페이지</span></button>
                 <button type="button" class="btn-prev"><span class="blind">이전</span></button>
                 <div class="pagination__page">
-                  <a href="#n">1</a>
+                  <a href="#n" class="on">1</a>
                   <a href="#n">2</a>
                   <a href="#n">3</a>
                   <a href="#n">4</a>
                   <a href="#n">5</a>
                 </div>
                 <button type="button" class="btn-next"><span class="blind">다음</span></button>
+                <button type="button" class="btn-last"><span class="blind">끝페이지</span></button>
               </div>
             </div>
           </div>
@@ -196,141 +253,20 @@
     
   </div><!-- //wrap -->
 
-  <!-- [팝업]바이어 정보 -->
-  <div class="modal-popup modal-popup--large" id="modalPop01">
+  <!-- [팝업]로그아웃 안내 -->
+  <div class="modal-popup modal-popup--xsmall" id="modalPop01">
     <div class="modal-popup__wrap">
       <div class="modal-popup__head">
-        <h1 class="modal-popup__title">바이어 정보</h1>
+        <h1 class="modal-popup__title">로그아웃 안내</h1>
       </div>
       <div class="modal-popup__body">
-        <div class="modal-popup__content">
-          <h2 class="com-tit2">MESSE FRANKFURT(H.K.)LTD.</h2>
-          <div class="board-write">
-            <table class="board-write__table">
-              <caption>회원가입을 위한 항목 입력 표</caption>
-              <colgroup>
-                <col style="width:170px;">
-                <col style="width:30%;">
-                <col style="width:170px;">
-                <col style="width:70%;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_name">D-U-N-S® Number</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_name" value="15-536-6107">
-                  </td>
-                  <th scope="row">
-                    <label for="inpTransactionBuyer">한국거래바이어 </label>
-                  </th>
-                  <td>
-                    <span>D&B Rating: 양호(2) │ D&B Paydex: 70</span>
-                    <button type="button" class="btn-sec btn--small ml-20">보고서</button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPriamrySICCode">Priamry SIC Code</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPriamrySICCode" value="15-536-6107">
-                  </td>
-                  <th scope="row">
-                    <label for="inpCategory">카테고리</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpCategory" value="Food & Beverage > Food > Fresh fruit">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpFoundingYear">창립연도</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpFoundingYear" value="1985">
-                  </td>
-                  <th scope="row">
-                    <label for="inpItemsOfInterest">관심품목</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpItemsOfInterest" value="Fruit, snack, beverage">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpCEOName">CEO Name</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpCEOName" value="Kevin R Johnson">
-                  </td>
-                  <th scope="row">
-                    <label for="inpAnnualSales">Annual Sales</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpAnnualSales" value="000024719500000">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPhone">Phone</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPhone" value="2064471575">
-                  </td>
-                  <th scope="row">
-                    <label for="inpForeignTrade">Foreign Trade</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpForeignTrade" value="G">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpEmployees">Employees(All site)</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpEmployees" value="0277000">
-                  </td>
-                  <th scope="row">
-                    <label for="inpAddress">주소</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpAddress" value="608 CHINA RESOURCES BUILDING 26 HARBOUR">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPriamryLine">Priamry Line of Business</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPriamryLine" value="Eating places">
-                  </td>
-                  <th scope="row">
-                    <label for="inpSite">홈페이지</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpSite" value="www.messefrankfurt.com">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpManagementLevel">관리 등급</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpManagementLevel" value="S">
-                  </td>
-                  <th scope="row"></th>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>   
-          
-          <div class="btn-wrap">
-            <a href="Main.html" class="btn-pri btn--large">변경</a>
-          </div>
+        <div class="notice-msg">
+          <i class="icon-logout"><!-- 로그아웃 아이콘 --></i>
+          <p class="notice-msg__text"><strong>로그아웃 되었습니다.</strong></p>
+        </div>   
+        
+        <div class="btn-wrap">
+          <a href="Main.html" class="btn-pri btn--large">로그인</a>
         </div>
       </div><!-- //modal-popup__body -->
       <div class="modal-popup__close">
@@ -338,15 +274,10 @@
       </div>
     </div>
   </div>
-  <!-- //[팝업]바이어 정보 -->
+  <!-- //[팝업]로그아웃 안내 -->
 
   <script>
-    $( function() {
-      $( "#datepicker01" ).datepicker();
-      $( "#datepicker02" ).datepicker();
-    } );
-
-    modalPopupOpen('modalPop01');
+    modalPopupOpen('modalPop01')
   </script>
 </body>
 </html>

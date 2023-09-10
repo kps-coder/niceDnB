@@ -49,11 +49,11 @@
               <caption>검색조건</caption>
               <colgroup>
                 <col style="width:100px">
-                <col style="width:30%">
+                <col style="width:300px">
                 <col style="width:100px">
-                <col style="width:30%">
+                <col style="width:50%">
                 <col style="width:100px">
-                <col style="width:30%">
+                <col style="width:50%">
               </colgroup>
               <tbody>
                 <tr>  
@@ -67,7 +67,11 @@
                   </td>
                   <th scope="row"><label for="inpNation">국가</label></th>
                   <td>
-                    <input type="text" id="inpNation" class="input-text">
+                    <span class="input-select">
+                      <select name="inpNation" id="inpNation">
+                        <option>전체</option>
+                      </select>
+                    </span>  
                   </td>
                   <th scope="row"><label for="inpState">진행상태</label></th>
                   <td>
@@ -83,7 +87,7 @@
                   <td colspan="3">
                     <div class="input-withBtn">
                       <button type="button" class="btn-sec btn--small">선택</button>
-                      <input type="text" id="inpItem" class="input-text">
+                      <input type="text" id="inpItem" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;" disabled>
                     </div>                    
                   </td>
                   <th scope="row"><label for="inpKeyword">키워드</label></th>
@@ -107,8 +111,8 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec">엑셀업로드</button>
-                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
                   <select name="inpLine" id="inpLine">
@@ -193,10 +197,10 @@
   </div><!-- //wrap -->
 
   <script>
-    $( function() {
-      $( "#datepicker01" ).datepicker();
-      $( "#datepicker02" ).datepicker();
-    } );
-    </script>
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+  </script>
 </body>
 </html>

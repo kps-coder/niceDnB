@@ -93,6 +93,8 @@
   .btn--small {height:27px; font-size: 13px; min-width:80px; padding:0 10px;}
   .btn--large {height:39px; font-size:16px;}
   /* .btn--small {height:20px; font-size:10px;} */
+
+  .board-list + .btn-wrap {margin-top:24px;}
 }
 
 /* ==== title ==== */
@@ -337,16 +339,16 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 }
 
 /* 모바일 */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 699px) {
   /* 조건검색 */
-  .board-search {margin-bottom:20px;}
+  .board-search {margin-bottom:20px; border-top: 2.5px solid #000;}
+  .board-search__row {padding:16px 0; border-bottom:1px solid #ccc}
   .board-search__col {width:100%;}
-  .board-search__row ~ .board-search__row,
-  .board-search__col ~ .board-search__col,
   .board-search__input > * + * {margin-top:15px;}
   .board-search__input > *:not(button) {width:100%;}
   .board-search__label {margin-bottom:8px; font-weight: bold; font-size: 14px; white-space: nowrap;}
   .board-search__input {width:100%;}
+  .board-search .btn-wrap {margin-top:24px}
 
   .board-write__table colgroup,
   .board-view__table colgroup {display:none;}

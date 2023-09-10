@@ -1,34 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+<svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="17.949" viewBox="0 0 12.5 17.949">
   <defs>
     <style>
       .cls-1 {
-        fill: #e7e7ea;
-      }
-
-      .cls-2 {
         fill: #fff;
       }
 
-      .cls-3 {
+      .cls-2 {
         fill: #1d1d1b;
       }
 
-      .cls-4 {
+      .cls-3 {
         fill: #707070;
       }
     </style>
   </defs>
-  <g id="Group_47" data-name="Group 47" transform="translate(0.021)">
-    <circle id="타원_985" data-name="타원 985" class="cls-1" cx="13" cy="13" r="13" transform="translate(-0.021)"/>
-    <g id="그룹_12967" data-name="그룹 12967" transform="translate(7.387 7.443)">
-      <rect id="사각형_4873" data-name="사각형 4873" class="cls-2" width="11.226" height="13.421" transform="translate(0 0.002)"/>
-      <path id="사각형_4873_-_윤곽선" data-name="사각형 4873 - 윤곽선" class="cls-3" d="M0-.75H11.226a.75.75,0,0,1,.75.75V13.421a.75.75,0,0,1-.75.75H0a.75.75,0,0,1-.75-.75V0A.75.75,0,0,1,0-.75ZM10.476.75H.75V12.671h9.725Z" transform="translate(0 0.002)"/>
-      <path id="패스_12871" data-name="패스 12871" class="cls-2" d="M.5,13.8l7.947,2.76V3.26L.5.5Z" transform="translate(-0.5 -0.422)"/>
-      <path id="패스_12871_-_윤곽선" data-name="패스 12871 - 윤곽선" class="cls-4" d="M9.2,17.61-.25,14.329V-.555L9.2,2.726ZM1.25,13.262,7.7,15.5V3.793L1.25,1.554Z" transform="translate(-0.5 -0.422)"/>
-      <path id="패스_12872" data-name="패스 12872" class="cls-3" d="M8.447,17.458a.749.749,0,0,1-.248-.042L.252,14.629a.75.75,0,0,1-.5-.708V.5a.75.75,0,0,1,1-.708L8.7,2.579a.75.75,0,0,1,.5.708V16.708a.75.75,0,0,1-.75.75ZM1.25,13.39,7.7,15.65V3.818L1.25,1.558Z" transform="translate(-0.5 -0.5)"/>
-      <path id="패스_12873" data-name="패스 12873" class="cls-2" d="M6.633,14.806v0Z" transform="translate(-1.439 -4.166)"/>
-      <path id="패스_12873_-_윤곽선" data-name="패스 12873 - 윤곽선" class="cls-4" d="M7.383,14.806h-1.5V11.4h1.5Z" transform="translate(-1.439 -4.166)"/>
-      <path id="선_268" data-name="선 268" class="cls-3" d="M.75,3.4H-.75V0H.75Z" transform="translate(5.194 7.236)"/>
-    </g>
+  <g id="그룹_12967" data-name="그룹 12967" transform="translate(0.75 0.972)">
+    <rect id="사각형_4873" data-name="사각형 4873" class="cls-1" width="11" height="13.214" transform="translate(0 0.002)"/>
+    <path id="사각형_4873_-_윤곽선" data-name="사각형 4873 - 윤곽선" class="cls-2" d="M0-.75H11a.75.75,0,0,1,.75.75V13.214a.75.75,0,0,1-.75.75H0a.75.75,0,0,1-.75-.75V0A.75.75,0,0,1,0-.75ZM10.25.75H.75V12.464h9.5Z" transform="translate(0 0.002)"/>
+    <path id="패스_12871" data-name="패스 12871" class="cls-1" d="M.5,13.624l7.947,2.725V3.224L.5.5Z" transform="translate(-0.5 -0.422)"/>
+    <path id="패스_12871_-_윤곽선" data-name="패스 12871 - 윤곽선" class="cls-3" d="M9.2,17.4-.25,14.16V-.55L9.2,2.689ZM1.25,13.088,7.7,15.3V3.76L1.25,1.55Z" transform="translate(-0.5 -0.422)"/>
+    <path id="패스_12872" data-name="패스 12872" class="cls-2" d="M8.222,17.25a.749.749,0,0,1-.252-.043L.248,14.456a.75.75,0,0,1-.5-.707V.5a.75.75,0,0,1,1-.707L8.474,2.544a.75.75,0,0,1,.5.707V16.5a.75.75,0,0,1-.75.75ZM1.25,13.221l6.222,2.216V3.78L1.25,1.564Z" transform="translate(-0.5 -0.5)"/>
+    <path id="패스_12873" data-name="패스 12873" class="cls-1" d="M6.633,14.806v0Z" transform="translate(-1.544 -4.283)"/>
+    <path id="패스_12873_-_윤곽선" data-name="패스 12873 - 윤곽선" class="cls-3" d="M7.383,14.806h-1.5V11.4h1.5Z" transform="translate(-1.544 -4.283)"/>
+    <path id="선_268" data-name="선 268" class="cls-2" d="M.75,3.4H-.75V0H.75Z" transform="translate(5.09 7.119)"/>
   </g>
 </svg>

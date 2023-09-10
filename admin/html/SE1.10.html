@@ -51,10 +51,10 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec">행삭제</button>
-                  <button type="button" class="btn-sec">행추가</button>
-                  <button type="button" class="btn-sec">엑셀업로드</button>
-                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                  <button type="button" class="btn-sec btn--small">행삭제</button>
+                  <button type="button" class="btn-sec btn--small">행추가</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
                   <select name="inpLine" id="inpLine">
@@ -65,7 +65,7 @@
             </div>
             <div class="board-list">
               <table class="board-list__table">
-                <caption>회원 통계 목록</caption>
+                <caption>버전 관리 목록</caption>
                 <colgroup>
                   <col style="width:50px">
                   <col style="width:60%">
@@ -154,10 +154,10 @@
   </div><!-- //wrap -->
 
   <script>
-    $( function() {
-      $( "#datepicker01" ).datepicker();
-      $( "#datepicker02" ).datepicker();
-    } );
-    </script>
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+  </script>
 </body>
 </html>

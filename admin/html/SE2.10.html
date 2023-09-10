@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../../guide/asset/js/admin-include.js"></script> <!-- head, gnb -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header" id="headerInclud"></header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav" id="gnbInclud"></div>
+
+      <div class="content-area">
+        <div class="content-head">
+          <div class="title-area">
+            <h2 class="com-tit2">관리자 메뉴 권한</h2>
+          </div>   
+
+          <!-- bread-crumb -->
+          <div class="bread-crumb">
+            <ul class="bread-crumb__list">
+              <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
+              <li><a href="#none">시스템 관리</a></li>
+              <li><span>관리자 메뉴 권한</span></li>
+            </ul>
+          </div><!-- //bread-crumb -->  
+        </div>
+
+        <div class="content-body">
+          <div class="section-cont">
+            <div class="board-head">
+              <div class="board-head__left">
+                <span class="board-count">총 <em>125</em> 건</span>
+              </div>
+              <div class="board-head__right">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-sec btn--small">행삭제</button>
+                  <button type="button" class="btn-sec btn--small">행추가</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
+                </div>                
+                <span class="input-select">
+                  <select name="inpLine" id="inpLine">
+                    <option>100개 씩</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>관리자 메뉴 권한 목록</caption>
+                <colgroup>
+                  <col style="width:50px">
+                  <col style="width:200px">
+                  <col style="width:auto">
+                  <col style="width:100px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">사용자</th>
+                    <th scope="col">메뉴 접근 권한</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <span class="input-select w100p">
+                        <select id="manager" name="manager">
+                          <option>관리자</option>
+                        </select>
+                      </span>
+                    </td>
+                    <td class="text-left">
+                      <div class="area-checkbox">
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_1" name="ch01">
+                          <label for="ch01_1">바이어 관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_2" name="ch01">
+                          <label for="ch01_2">행사관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_3" name="ch01">
+                          <label for="ch01_3">컨설팅관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_4" name="ch01">
+                          <label for="ch01_4">서비스관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_5" name="ch01">
+                          <label for="ch01_5">회원관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_6" name="ch01">
+                          <label for="ch01_6">통계관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch01_7" name="ch01">
+                          <label for="ch01_7">시스템</label>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <button type="button" class="btn-sec btn--small">등록</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>관리일</td>
+                    <td class="text-left">
+                      <div class="area-checkbox">
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_1" name="ch02">
+                          <label for="ch02_1">바이어 관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_2" name="ch02" checked>
+                          <label for="ch02_2">행사관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_3" name="ch02">
+                          <label for="ch02_3">컨설팅관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_4" name="ch02">
+                          <label for="ch02_4">서비스관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_5" name="ch02">
+                          <label for="ch02_5">회원관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_6" name="ch02" checked>
+                          <label for="ch02_6">통계관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch02_7" name="ch02">
+                          <label for="ch02_7">시스템</label>
+                        </span>
+                      </div>
+                    </td>
+                    <td>2023.07.25</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>관리이</td>
+                    <td class="text-left">
+                      <div class="area-checkbox">
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_1" name="ch03">
+                          <label for="ch03_1">바이어 관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_2" name="ch03">
+                          <label for="ch03_2">행사관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_3" name="ch03">
+                          <label for="ch03_3">컨설팅관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_4" name="ch03" checked>
+                          <label for="ch03_4">서비스관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_5" name="ch03">
+                          <label for="ch03_5">회원관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_6" name="ch03">
+                          <label for="ch03_6">통계관리</label>
+                        </span>
+                        <span class="input-checkbox">
+                          <input type="checkbox" id="ch03_7" name="ch03">
+                          <label for="ch03_7">시스템</label>
+                        </span>
+                      </div>
+                    </td>
+                    <td>2023.07.25</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- //board-list -->
+
+            <div class="board-foot">
+              <div class="board-foot__left">
+                <p class="board-info">Showing 1 to 10 of 55 entries</p>
+              </div>
+              <div class="pagination">
+                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                <div class="pagination__page">
+                  <a href="#n">1</a>
+                  <a href="#n">2</a>
+                  <a href="#n">3</a>
+                  <a href="#n">4</a>
+                  <a href="#n">5</a>
+                </div>
+                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- //container -->
+  </div><!-- //wrap -->
+
+  <script>
+   let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+  </script>
+</body>
+</html>

@@ -30,15 +30,15 @@
       <div class="content-area">
         <div class="content-head">
           <div class="title-area">
-            <h2 class="com-tit2">행사 조회</h2>
+            <h2 class="com-tit2">바이어 회신율</h2>
           </div>   
 
           <!-- bread-crumb -->
           <div class="bread-crumb">
             <ul class="bread-crumb__list">
               <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
-              <li><a href="#none">행사 관리</a></li>
-              <li><span>행사 조회</span></li>
+              <li><a href="#none">통계 조회</a></li>
+              <li><span>바이어 회신율</span></li>
             </ul>
           </div><!-- //bread-crumb -->  
         </div>
@@ -50,14 +50,14 @@
               <colgroup>
                 <col style="width:100px">
                 <col style="width:300px">
-                <col style="width:100px">
+                <col style="width:20%">
                 <col style="width:50%">
                 <col style="width:100px">
-                <col style="width:50%">
+                <col style="width:30%">
               </colgroup>
               <tbody>
                 <tr>  
-                  <th scope="row"><label for="datepicker01">행사기간</label></th>
+                  <th scope="row"><label for="datepicker01">조회 기간</label></th>
                   <td>
                     <span class="input-date">
                       <input type="text" id="datepicker01" class="input-jq-date"> 
@@ -65,22 +65,30 @@
                       <input type="text" id="datepicker02" class="input-jq-date"> 
                     </span>
                   </td>
-                  <th scope="row"><label for="inpNation">지역</label></th>
+                  <th scope="row"><label for="inpKeyword">조회 기준</label></th>
                   <td>
-                    <input type="text" id="inpNation" class="input-text">
+                    <div class="area-radioBtn">
+                      <span class="radioBtn">
+                        <input type="radio" id="radioBtn01" name="radioBtn">
+                        <label for="radioBtn01">월별</label>
+                      </span>
+                      <span class="radioBtn">
+                        <input type="radio" id="radioBtn01" name="radioBtn">
+                        <label for="radioBtn01">년별</label>
+                      </span>
+                      <span class="radioBtn">
+                        <input type="radio" id="radioBtn01" name="radioBtn">
+                        <label for="radioBtn01">분기별</label>
+                      </span>
+                    </div>
                   </td>
-                  <th scope="row"><label for="inpKeyword">키워드</label></th>
+                  <th scope="row"><label for="inpRank">순위</label></th>
                   <td>
-                    <input type="text" id="inpKeyword" class="input-text">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row"><label for="inpItem">품목</label></th>
-                  <td colspan="5">
-                    <div class="input-withBtn">
-                      <button type="button" class="btn-sec btn--small">선택</button>
-                      <input type="text" id="classificationCode" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;  유선 통신장비 제조업" disabled>
-                    </div>                    
+                    <span class="input-select">
+                      <select name="inpRank" id="inpRank">
+                        <option>TOP 10</option>
+                      </select>
+                    </span>
                   </td>
                 </tr>
               </tbody>
@@ -99,79 +107,97 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec btn--small">행삭제</button>
-                  <button type="button" class="btn-sec btn--small">행추가</button>
-                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
                   <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
-                  <select name="" id="">
+                  <select name="inpLine" id="inpLine">
                     <option>100개 씩</option>
                   </select>
                 </span>
               </div>
             </div>
-            <div class="board-list">
+            <div class="board-list statistics-list"><!-- statistics-list : 통계 게시판 -->
               <table class="board-list__table">
-                <caption>행사 조회 목록</caption>
+                <caption>회원 통계 목록</caption>
                 <colgroup>
                   <col style="width:50px">
-                  <col style="width:200px">
-                  <col style="width:auto">
-                  <col style="width:20%">
-                  <col style="width:10%">
-                  <col style="width:20%">
                   <col style="width:100px">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:12%">
+                  <col style="width:12%">
+                  <col style="width:12%">
+                  <col style="width:12%">
+                  <col style="width:12%">
+                  <col style="width:12%">
                 </colgroup>
                 <thead>
                   <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">행사기간</th>
-                    <th scope="col">전시회명</th>
-                    <th scope="col">국가</th>
-                    <th scope="col">도시</th>
-                    <th scope="col">품목</th>
-                    <th scope="col">등록일</th>
+                    <th scope="col" rowspan="2">No</th>
+                    <th scope="col" rowspan="2">월별</th>
+                    <th scope="col" rowspan="2">바이어발굴</th>
+                    <th scope="col" rowspan="2">바이어발송</th>
+                    <th scope="col" colspan="2">수신확인</th>
+                    <th scope="col" colspan="2">메시지답변메일</th>
+                    <th scope="col" colspan="2">메시지이용</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">건수</th>
+                    <th scope="col">확인율</th>
+                    <th scope="col">건수</th>
+                    <th scope="col">회신율</th>
+                    <th scope="col">건수</th>
+                    <th scope="col">회신율</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>55</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn-sec btn--small">등록</button>
-                    </td>
+                    <th scope="row">1</th>
+                    <th scope="row">2023-08</th>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
                   </tr>
                   <tr>
-                    <td>54</td>
-                    <td>2023.01.01~2023.11.30</td>
-                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
-                    <td>이탈리아(ITALY)│IT</td>
-                    <td>볼로냐</td>
-                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
-                    <td>2023.01.01</td>
+                    <th scope="row">1</th>
+                    <th scope="row">2023-08</th>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
                   </tr>
                   <tr>
-                    <td>54</td>
-                    <td>2023.01.01~2023.11.30</td>
-                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
-                    <td>이탈리아(ITALY)│IT</td>
-                    <td>볼로냐</td>
-                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
-                    <td>2023.01.01</td>
+                    <th scope="row">1</th>
+                    <th scope="row">2023-08</th>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
                   </tr>
                   <tr>
-                    <td>54</td>
-                    <td>2023.01.01~2023.11.30</td>
-                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
-                    <td>이탈리아(ITALY)│IT</td>
-                    <td>볼로냐</td>
-                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
-                    <td>2023.01.01</td>
+                    <th scope="row">1</th>
+                    <th scope="row">2023-08</th>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
+                    <td class="text-right">121</td>
+                    <td>100.00%</td>
                   </tr>
                 </tbody>
               </table>

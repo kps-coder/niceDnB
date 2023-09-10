@@ -49,11 +49,11 @@
               <caption>검색조건</caption>
               <colgroup>
                 <col style="width:100px">
-                <col style="width:25%">
+                <col style="width:300px">
                 <col style="width:100px">
-                <col style="width:25%">
+                <col style="width:30%">
                 <col style="width:100px">
-                <col style="width:50%">
+                <col style="width:70%">
               </colgroup>
               <tbody>
                 <tr>  
@@ -101,8 +101,8 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec">엑셀업로드</button>
-                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                  <button type="button" class="btn-sec"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
                   <select name="inpLine" id="inpLine">
@@ -187,10 +187,10 @@
   </div><!-- //wrap -->
 
   <script>
-    $( function() {
-      $( "#datepicker01" ).datepicker();
-      $( "#datepicker02" ).datepicker();
-    } );
-    </script>
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+  </script>
 </body>
 </html>

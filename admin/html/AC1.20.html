@@ -30,15 +30,15 @@
       <div class="content-area">
         <div class="content-head">
           <div class="title-area">
-            <h2 class="com-tit2">회원 조회</h2>
+            <h2 class="com-tit2">행사 조회</h2>
           </div>   
 
           <!-- bread-crumb -->
           <div class="bread-crumb">
             <ul class="bread-crumb__list">
               <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
-              <li><a href="#none">회원 관리 </a></li>
-              <li><span>회원 조회</span></li>
+              <li><a href="#none">행사 관리</a></li>
+              <li><span>행사 조회</span></li>
             </ul>
           </div><!-- //bread-crumb -->  
         </div>
@@ -51,11 +51,13 @@
                 <col style="width:100px">
                 <col style="width:300px">
                 <col style="width:100px">
-                <col style="width:auto">
+                <col style="width:50%">
+                <col style="width:100px">
+                <col style="width:50%">
               </colgroup>
               <tbody>
                 <tr>  
-                  <th scope="row"><label for="datepicker01">가입기간</label></th>
+                  <th scope="row"><label for="datepicker01">신청기간</label></th>
                   <td>
                     <span class="input-date">
                       <input type="text" id="datepicker01" class="input-jq-date"> 
@@ -63,31 +65,34 @@
                       <input type="text" id="datepicker02" class="input-jq-date"> 
                     </span>
                   </td>
-                  <th scope="row"><label for="inpKeyword">키워드</label></th>
-                  <td><input type="text" class="input-text" id="inpKeyword" placeholder="키워드/회원명/회원기업명"></td>
-                </tr>
-                <tr>  
-                  <th scope="row"><label for="inpMemberLevel">회원등급</label></th>
+                  <th scope="row"><label for="inpNation">국가</label></th>
                   <td>
                     <span class="input-select">
-                      <select name="inpMemberLevel" id="inpMemberLevel">
+                      <select name="inpNation" id="inpNation">
                         <option>전체</option>
-                        <option>프리</option>
-                        <option>베이직</option>
-                        <option>프리미엄</option>
                       </select>
-                    </span>
+                    </span>  
                   </td>
-                  <th scope="row"><label for="inpMemberState">활동상태</label></th>
+                  <th scope="row"><label for="inpState">진행상태</label></th>
                   <td>
                     <span class="input-select">
-                      <select name="inpMemberState" id="inpMemberState">
+                      <select name="inpState" id="inpState">
                         <option>전체</option>
-                        <option>활동</option>
-                        <option>휴먼</option>
-                        <option>탈퇴</option>
                       </select>
-                    </span>
+                    </span>                    
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="inpItem">품목</label></th>
+                  <td colspan="3">
+                    <div class="input-withBtn">
+                      <button type="button" class="btn-sec btn--small">선택</button>
+                      <input type="text" id="inpItem" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;" disabled>
+                    </div>                    
+                  </td>
+                  <th scope="row"><label for="inpKeyword">키워드</label></th>
+                  <td>
+                    <input type="text" id="inpKeyword" class="input-text">
                   </td>
                 </tr>
               </tbody>
@@ -106,8 +111,8 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec"><i class="icon-excel"></i>업로드</button>
-                  <button type="button" class="btn-sec"><i class="icon-excel"></i>다운로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
                   <select name="inpLine" id="inpLine">
@@ -118,93 +123,49 @@
             </div>
             <div class="board-list">
               <table class="board-list__table">
-                <caption>문의내역 목록</caption>
+                <caption>행사 조회 목록</caption>
                 <colgroup>
                   <col style="width:50px">
+                  <col style="width:120px">
                   <col style="width:100px">
                   <col style="width:100px">
-                  <col style="width:150px">
-                  <col style="width:150px">
-                  <col style="width:200px">
-                  <col style="width:150px">
+                  <col style="width:15%">
+                  <col style="width:20%">
+                  <col style="width:auto">
                   <col style="width:100px">
-                  <col style="width:350px">
-                  <col style="width:200px">
                 </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">활동상태</th>
-                    <th scope="col">가입일</th>
+                    <th scope="col">진행상태</th>
+                    <th scope="col">신청일</th>
                     <th scope="col">회원명</th>
-                    <th scope="col">연락처</th>
                     <th scope="col">회원기업명</th>
-                    <th scope="col">사업자번호</th>
-                    <th scope="col">대표자명</th>
-                    <th scope="col">사업장주소</th>
-                    <th scope="col">보유캐시</th>
+                    <th scope="col">국가</th>
+                    <th scope="col">품목</th>
+                    <th scope="col">HS CODE</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>54</td>
-                    <td>활동</td>
+                    <td>[신규 신청]</td>
                     <td>2023.01.01</td>
                     <td>홍길이</td>
-                    <td>010-1234-5678</td>
                     <td>나이스디앤비</td>
-                    <td>미등록</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>123456</td>
                   </tr>
                   <tr>
                     <td>54</td>
-                    <td>활동</td>
+                    <td>[신규 신청]</td>
                     <td>2023.01.01</td>
                     <td>홍길이</td>
-                    <td>010-1234-5678</td>
                     <td>나이스디앤비</td>
-                    <td>123-45-67890</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>활동</td>
-                    <td>2023.01.01</td>
-                    <td>홍길이</td>
-                    <td>010-1234-5678</td>
-                    <td>나이스디앤비</td>
-                    <td><button type="button" class="btn-sec btn--small">승인신청</button></td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>활동</td>
-                    <td>2023.01.01</td>
-                    <td>홍길이</td>
-                    <td>010-1234-5678</td>
-                    <td>나이스디앤비</td>
-                    <td>123-45-67890</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>활동</td>
-                    <td>2023.01.01</td>
-                    <td>홍길이</td>
-                    <td>010-1234-5678</td>
-                    <td>나이스디앤비</td>
-                    <td>123-45-67890</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123 서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
+                    <td>미국(UNITED STATES)│US</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>123456</td>
                   </tr>
                 </tbody>
               </table>
@@ -235,11 +196,81 @@
     
   </div><!-- //wrap -->
 
+  <!-- [팝업]컨설팅 신청상세 -->
+  <div class="modal-popup" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">컨설팅 신청상세</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <h2 class="com-tit2">2023.02.02│홍길동│나이스디앤비</h2>
+          <div class="board-write">
+            <table class="board-write__table">
+              <caption>컨설팅 신청상세 입력 표</caption>
+              <colgroup>
+                <col style="width:120px;">
+                <col style="width:50%;">
+                <col style="width:120px;">
+                <col style="width:50%;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="inpProgress">진행상태</label>
+                  </th>
+                  <td>
+                    <span class="input-radio">
+                      <input type="radio" name="radio01" id="radio01_1">
+                      <label for="radio01_1">진행 중</label>
+                    </span>
+                    <span class="input-radio">
+                      <input type="radio" name="radio01" id="radio01_2">
+                      <label for="radio01_2">컨설팅 완료</label>
+                    </span>
+                  </td>
+                  <th scope="row">
+                    <label for="inpManager">담당자</label>
+                  </th>
+                  <td>
+                    <span class="input-select">
+                      <select name="inpManager" id="inpManager">
+                        <option>미지정</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpConsultingMemo">컨설팅진행메모</label>
+                  </th>
+                  <td colspan="3">
+                    <textarea name="inpConsultingMemo" id="inpConsultingMemo" cols="30" rows="6" class="input-textarea"></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>   
+          
+          <div class="btn-wrap">
+            <a href="#none" class="btn-pri btn--large">변경</a>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]컨설팅 신청상세 -->
+
   <script>
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
     });
+
+    modalPopupOpen('modalPop01');
   </script>
 </body>
 </html>

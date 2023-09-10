@@ -1,0 +1,11 @@
+<svg id="그룹_13011" data-name="그룹 13011" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e0e0e0;
+      }
+    </style>
+  </defs>
+  <circle id="타원_987" data-name="타원 987" class="cls-1" cx="12" cy="12" r="12"/>
+  <path id="다각형_16" data-name="다각형 16" d="M3.132,1.519a1,1,0,0,1,1.736,0L7.145,5.5A1,1,0,0,1,6.277,7H1.723A1,1,0,0,1,.855,5.5Z" transform="translate(7.5 16) rotate(-90)"/>
+</svg>

@@ -23,7 +23,7 @@
     <header class="header">
       <h1 class="logo"><a href="main.html"><span class="blind">Linker</span></a></h1>
       <div class="user-menu">
-        <div class="user-name">홍길동 님</div>
+        <div class="user-name"><strong>홍길동 님</strong> 환영합니다.</div>
         <ul class="user-menu__mymenu">
           <li><a href="#none" class="btn-logout">로그아웃</a></li>
           <li><a href="#none" class="btn-mypage">마이페이지</a></li>
@@ -34,7 +34,7 @@
     <div class="container" id="container"> 
       <div class="global-nav">
         <ul class="global-nav__list">
-          <li class="open"><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
             <ul class="global-nav__depth2">
               <li><a href="#none">바이어 조회/등록</a></li>
             </ul>
@@ -49,9 +49,9 @@
               <li><a href="#none">컨설팅신청내역</a></li>
             </ul>
           </li>
-          <li><a href="#none" class="btn-depth-1"><i class="icon-meun04"></i>서비스관리</a>
+          <li class="open"><a href="#none" class="btn-depth-1"><i class="icon-meun04"></i>서비스관리</a>
             <ul class="global-nav__depth2">
-              <li><a href="#none">마케팅메일템플릿</a></li>
+              <li class="on"><a href="#none">마케팅메일템플릿</a></li>
               <li><a href="#none">캐시관리</a></li>
               <li><a href="#none">공지사항</a></li>
               <li><a href="#none">문의내역</a></li>
@@ -162,10 +162,10 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec">행삭제</button>
-                  <button type="button" class="btn-sec">행추가</button>
-                  <button type="button" class="btn-sec">엑셀업로드</button>
-                  <button type="button" class="btn-sec">엑셀다운로드</button>
+                  <button type="button" class="btn-sec btn--small">행삭제</button>
+                  <button type="button" class="btn-sec btn--small">행추가</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
                   <select name="inpLine" id="inpLine">
@@ -231,6 +231,7 @@
                 <p class="board-info">Showing 1 to 10 of 55 entries</p>
               </div>
               <div class="pagination">
+                <button type="button" class="btn-first"><span class="blind">첫페이지</span></button>
                 <button type="button" class="btn-prev"><span class="blind">이전</span></button>
                 <div class="pagination__page">
                   <a href="#n" class="on">1</a>
@@ -240,6 +241,7 @@
                   <a href="#n">5</a>
                 </div>
                 <button type="button" class="btn-next"><span class="blind">다음</span></button>
+                <button type="button" class="btn-last"><span class="blind">끝페이지</span></button>
               </div>
             </div>
           </div>

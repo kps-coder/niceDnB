@@ -30,15 +30,15 @@
       <div class="content-area">
         <div class="content-head">
           <div class="title-area">
-            <h2 class="com-tit2">회원 조회</h2>
+            <h2 class="com-tit2">문의내역</h2>
           </div>   
 
           <!-- bread-crumb -->
           <div class="bread-crumb">
             <ul class="bread-crumb__list">
               <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
-              <li><a href="#none">회원 관리 </a></li>
-              <li><span>회원 조회</span></li>
+              <li><a href="#none">서비스 관리</a></li>
+              <li><span>문의내역</span></li>
             </ul>
           </div><!-- //bread-crumb -->  
         </div>
@@ -51,11 +51,13 @@
                 <col style="width:100px">
                 <col style="width:300px">
                 <col style="width:100px">
-                <col style="width:auto">
+                <col style="width:30%">
+                <col style="width:100px">
+                <col style="width:70%">
               </colgroup>
               <tbody>
                 <tr>  
-                  <th scope="row"><label for="datepicker01">가입기간</label></th>
+                  <th scope="row"><label for="datepicker01">문의기간</label></th>
                   <td>
                     <span class="input-date">
                       <input type="text" id="datepicker01" class="input-jq-date"> 
@@ -63,31 +65,24 @@
                       <input type="text" id="datepicker02" class="input-jq-date"> 
                     </span>
                   </td>
-                  <th scope="row"><label for="inpKeyword">키워드</label></th>
-                  <td><input type="text" class="input-text" id="inpKeyword" placeholder="키워드/회원명/회원기업명"></td>
-                </tr>
-                <tr>  
-                  <th scope="row"><label for="inpMemberLevel">회원등급</label></th>
+                  <th scope="row"><label for="inpItem">문의상태</label></th>
                   <td>
                     <span class="input-select">
-                      <select name="inpMemberLevel" id="inpMemberLevel">
+                      <select name="inpItem" id="inpItem">
                         <option>전체</option>
-                        <option>프리</option>
-                        <option>베이직</option>
-                        <option>프리미엄</option>
                       </select>
                     </span>
                   </td>
-                  <th scope="row"><label for="inpMemberState">활동상태</label></th>
+                  <th scope="row"><label for="inpKeyword">키워드</label></th>
                   <td>
-                    <span class="input-select">
-                      <select name="inpMemberState" id="inpMemberState">
-                        <option>전체</option>
-                        <option>활동</option>
-                        <option>휴먼</option>
-                        <option>탈퇴</option>
-                      </select>
-                    </span>
+                    <div class="flex-box">
+                      <span class="input-select">
+                        <select name="inpKeyword" id="inpKeyword">
+                          <option>전체</option>
+                        </select>
+                      </span>  
+                      <input type="text" id="inpKeyword01" name="inpKeyword01" class="input-text" placeholder="키워드">  
+                    </div>                                    
                   </td>
                 </tr>
               </tbody>
@@ -121,90 +116,46 @@
                 <caption>문의내역 목록</caption>
                 <colgroup>
                   <col style="width:50px">
-                  <col style="width:100px">
+                  <col style="width:160px">
                   <col style="width:100px">
                   <col style="width:150px">
-                  <col style="width:150px">
-                  <col style="width:200px">
-                  <col style="width:150px">
+                  <col style="width:15%">
+                  <col style="width:auto">
                   <col style="width:100px">
-                  <col style="width:350px">
-                  <col style="width:200px">
                 </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">활동상태</th>
-                    <th scope="col">가입일</th>
+                    <th scope="col">문의상태</th>
+                    <th scope="col">문의일</th>
                     <th scope="col">회원명</th>
-                    <th scope="col">연락처</th>
                     <th scope="col">회원기업명</th>
-                    <th scope="col">사업자번호</th>
-                    <th scope="col">대표자명</th>
-                    <th scope="col">사업장주소</th>
-                    <th scope="col">보유캐시</th>
+                    <th scope="col">문의 내용</th>
+                    <th scope="col">첨부파일</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>54</td>
-                    <td>활동</td>
+                    <td><a href="#n" class="btn-link">[답변대기]</a></td>
                     <td>2023.01.01</td>
                     <td>홍길이</td>
-                    <td>010-1234-5678</td>
                     <td>나이스디앤비</td>
-                    <td>미등록</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
+                    <td class="txt-ellipsis">문의합니다. 문의합니다. 문의합니다.문의합니다.문의합니다.문의합니다.문의합니다.문의합니다.문의합니다.</td>
+                    <td>
+                      <a href="#n" class="btn-link">[파일]</a>
+                    </td>
                   </tr>
                   <tr>
                     <td>54</td>
-                    <td>활동</td>
+                    <td><a href="#n" class="btn-link">[답변완료-유선연락]</a></td>
                     <td>2023.01.01</td>
                     <td>홍길이</td>
-                    <td>010-1234-5678</td>
                     <td>나이스디앤비</td>
-                    <td>123-45-67890</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>활동</td>
-                    <td>2023.01.01</td>
-                    <td>홍길이</td>
-                    <td>010-1234-5678</td>
-                    <td>나이스디앤비</td>
-                    <td><button type="button" class="btn-sec btn--small">승인신청</button></td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>활동</td>
-                    <td>2023.01.01</td>
-                    <td>홍길이</td>
-                    <td>010-1234-5678</td>
-                    <td>나이스디앤비</td>
-                    <td>123-45-67890</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>활동</td>
-                    <td>2023.01.01</td>
-                    <td>홍길이</td>
-                    <td>010-1234-5678</td>
-                    <td>나이스디앤비</td>
-                    <td>123-45-67890</td>
-                    <td>일대표</td>
-                    <td class="text-left">서울특별시 마포구 공덕대로 123 서울특별시 마포구 공덕대로 123</td>
-                    <td class="text-right">10,000 캐시</td>
+                    <td class="txt-ellipsis">문의합니다.</td>
+                    <td>
+                      <a href="#n" class="btn-link">[파일]</a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -235,11 +186,81 @@
     
   </div><!-- //wrap -->
 
+  <!-- [팝업]문의답변 -->
+  <div class="modal-popup" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">문의답변</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <h2 class="com-tit2">문의합니다</h2>
+          <div class="board-write">
+            <table class="board-write__table">
+              <caption>문의답변 입력 표</caption>
+              <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="inpProcess">답변 처리</label>
+                  </th>
+                  <td>
+                    <span class="input-radio">
+                      <input type="radio" id="answer01_1" name="answer01">
+                      <label for="answer01_1">이메일</label>
+                    </span>
+                    <span class="input-radio">
+                      <input type="radio" id="answer01_2" name="answer01">
+                      <label for="answer1_2">유선 연락</label>
+                    </span>
+                  </td>
+                  <th scope="row">
+                    <label for="inpManager">담당자</label>
+                  </th>
+                  <td>
+                    <span class="input-select">
+                      <select name="inpManager" id="inpManager">
+                        <option>미지정</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="inpMemo">기타 메모</label>
+                  </th>
+                  <td colspan="3">
+                    <textarea name="textarea01" id="textarea01" cols="30" rows="10" class="input-textarea">이메일로 답변함</textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>   
+          
+          <div class="btn-wrap">
+            <a href="#none" class="btn-pri btn--large">변경</a>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]문의답변 -->
+
   <script>
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
     });
+
+    modalPopupOpen('modalPop01');
   </script>
 </body>
 </html>

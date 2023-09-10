@@ -57,7 +57,7 @@
               </colgroup>
               <tbody>
                 <tr>  
-                  <th scope="row"><label for="datepicker01">행사기간</label></th>
+                  <th scope="row"><label for="datepicker01">신청기간</label></th>
                   <td>
                     <span class="input-date">
                       <input type="text" id="datepicker01" class="input-jq-date"> 
@@ -65,22 +65,34 @@
                       <input type="text" id="datepicker02" class="input-jq-date"> 
                     </span>
                   </td>
-                  <th scope="row"><label for="inpNation">지역</label></th>
+                  <th scope="row"><label for="inpNation">국가</label></th>
                   <td>
-                    <input type="text" id="inpNation" class="input-text">
+                    <span class="input-select">
+                      <select name="inpNation" id="inpNation">
+                        <option>전체</option>
+                      </select>
+                    </span>  
                   </td>
-                  <th scope="row"><label for="inpKeyword">키워드</label></th>
+                  <th scope="row"><label for="inpState">진행상태</label></th>
                   <td>
-                    <input type="text" id="inpKeyword" class="input-text">
+                    <span class="input-select">
+                      <select name="inpState" id="inpState">
+                        <option>전체</option>
+                      </select>
+                    </span>                    
                   </td>
                 </tr>
                 <tr>
                   <th scope="row"><label for="inpItem">품목</label></th>
-                  <td colspan="5">
+                  <td colspan="3">
                     <div class="input-withBtn">
                       <button type="button" class="btn-sec btn--small">선택</button>
-                      <input type="text" id="classificationCode" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;  유선 통신장비 제조업" disabled>
+                      <input type="text" id="inpItem" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;" disabled>
                     </div>                    
+                  </td>
+                  <th scope="row"><label for="inpKeyword">키워드</label></th>
+                  <td>
+                    <input type="text" id="inpKeyword" class="input-text">
                   </td>
                 </tr>
               </tbody>
@@ -99,13 +111,11 @@
               </div>
               <div class="board-head__right">
                 <div class="btn-wrap">
-                  <button type="button" class="btn-sec btn--small">행삭제</button>
-                  <button type="button" class="btn-sec btn--small">행추가</button>
                   <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
                   <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
                 </div>                
                 <span class="input-select">
-                  <select name="" id="">
+                  <select name="inpLine" id="inpLine">
                     <option>100개 씩</option>
                   </select>
                 </span>
@@ -116,62 +126,46 @@
                 <caption>행사 조회 목록</caption>
                 <colgroup>
                   <col style="width:50px">
-                  <col style="width:200px">
+                  <col style="width:120px">
+                  <col style="width:100px">
+                  <col style="width:100px">
+                  <col style="width:15%">
+                  <col style="width:20%">
                   <col style="width:auto">
-                  <col style="width:20%">
-                  <col style="width:10%">
-                  <col style="width:20%">
                   <col style="width:100px">
                 </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">행사기간</th>
-                    <th scope="col">전시회명</th>
+                    <th scope="col">진행상태</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">회원기업명</th>
                     <th scope="col">국가</th>
-                    <th scope="col">도시</th>
                     <th scope="col">품목</th>
-                    <th scope="col">등록일</th>
+                    <th scope="col">HS CODE</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>55</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn-sec btn--small">등록</button>
-                    </td>
+                    <td>54</td>
+                    <td>[신규 신청]</td>
+                    <td>2023.01.01</td>
+                    <td>홍길이</td>
+                    <td>나이스디앤비</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>123456</td>
                   </tr>
                   <tr>
                     <td>54</td>
-                    <td>2023.01.01~2023.11.30</td>
-                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
-                    <td>이탈리아(ITALY)│IT</td>
-                    <td>볼로냐</td>
-                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>[신규 신청]</td>
                     <td>2023.01.01</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>2023.01.01~2023.11.30</td>
-                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
-                    <td>이탈리아(ITALY)│IT</td>
-                    <td>볼로냐</td>
+                    <td>홍길이</td>
+                    <td>나이스디앤비</td>
+                    <td>미국(UNITED STATES)│US</td>
                     <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
-                    <td>2023.01.01</td>
-                  </tr>
-                  <tr>
-                    <td>54</td>
-                    <td>2023.01.01~2023.11.30</td>
-                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
-                    <td>이탈리아(ITALY)│IT</td>
-                    <td>볼로냐</td>
-                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
-                    <td>2023.01.01</td>
+                    <td>123456</td>
                   </tr>
                 </tbody>
               </table>
@@ -202,11 +196,98 @@
     
   </div><!-- //wrap -->
 
+  <!-- [팝업]컨설팅 신청상세 -->
+  <div class="modal-popup modal-popup--small" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">컨설팅 신청상세</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <h2 class="com-tit2">2023.02.02│홍길동│나이스디앤비</h2>
+          <div class="board-view">
+            <table class="board-view__table">
+              <caption>행사정보 입력 표</caption>
+              <colgroup>
+                <col style="width:180px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">국가</th>
+                  <td>AUSTRIA / 오스트리아 / AT</td>
+                </tr>
+                <tr>
+                  <th scope="row">품목</th>
+                  <td>------</td>
+                </tr>
+                <tr>
+                  <th scope="row">HS CODE</th>
+                  <td>134987</td>
+                </tr>
+                <tr>
+                  <th scope="row">수출준비단계</th>
+                  <td>수출 준비 중</td>
+                </tr>
+                <tr>
+                  <th scope="row">기선정 바우처</th>
+                  <td>수출바우처</td>
+                </tr>
+                <tr>
+                  <th scope="row">카탈로그(품목관련)</th>
+                  <td><a href="#none" class="btn-line-link">카달로그.pdf</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">홈페이지</th>
+                  <td><a href="#none" class="btn-line-link">http://www.nice.com</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">기타전달사항</th>
+                  <td>----</td>
+                </tr>
+                <tr>
+                  <th scope="row">[추가 사항]</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">희망 서비스</th>
+                  <td>바이어리스트, 전시회, 해외시장조사</td>
+                </tr>
+                <tr>
+                  <th scope="row">희망 조사 항목</th>
+                  <td>희망 조사항목입니다.</td>
+                </tr>
+                <tr>
+                  <th scope="row">경쟁사</th>
+                  <td>㈜가나다기업</td>
+                </tr>
+                <tr>
+                  <th scope="row">조사 중점 사항</th>
+                  <td>해외전시</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>   
+          
+          <div class="btn-wrap">
+            <a href="#none" class="btn-pri btn--large">신청접수확인</a>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]컨설팅 신청상세 -->
+
   <script>
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
     });
+
+    modalPopupOpen('modalPop01');
   </script>
 </body>
 </html>

@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
    headerInclud.innerHTML = `
    <h1 class="logo"><a href="main.html"><span class="blind">Linker</span></a></h1>
       <div class="user-menu">
-        <div class="user-name">홍길동 님</div>
+        <div class="user-name"><strong>홍길동 님</strong> 환영합니다.</div>
         <ul class="user-menu__mymenu">
           <li><a href="#none" class="btn-logout">로그아웃</a></li>
           <li><a href="#none" class="btn-mypage">마이페이지</a></li>

@@ -235,11 +235,91 @@
     
   </div><!-- //wrap -->
 
+  <!-- [팝업]회원 상세정보 -->
+  <div class="modal-popup modal-popup--large" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">회원 상세정보</h1>
+      </div>
+      <div class="modal-popup__body">
+        <div class="modal-popup__content">
+          <h2 class="com-tit2">홍길동│나이스디앤비/ 프리미엄</h2>
+          <div class="board-view">
+            <table class="board-view__table">
+              <caption>회원 상세정보 표</caption>
+              <colgroup>
+                <col style="width:120px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">아이디</th>
+                  <td>abcid123</td>
+                </tr>
+                <tr>
+                  <th scope="row">휴대폰</th>
+                  <td>010-1234-5678</td>
+                </tr>
+                <tr>
+                  <th scope="row">이메일</th>
+                  <td>abcd1234@email.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+          
+          <h3 class="com-tit3">회사정보</h3>
+          <div class="board-view">
+            <table class="board-view__table">
+              <caption>회원 상세정보 표</caption>
+              <colgroup>
+                <col style="width:120px;">
+                <col style="width:50%;">
+                <col style="width:120px;">
+                <col style="width:50%;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">사업자번호</th>
+                  <td>123-45-67890</td>
+                  <th scope="row">전화번호</th>
+                  <td>02-1234-5678</td>
+                </tr>
+                <tr>
+                  <th scope="row">대표자</th>
+                  <td>홍대표</td>
+                  <th scope="row">업태 / 업종</th>
+                  <td>서비스 / 화장품</td>
+                </tr>
+                <tr>
+                  <th scope="row">사업장 주소</th>
+                  <td>서울특별시 마포구 공덕대로 1234 서울특별시 마포구 공덕대로 1234</td>
+                  <th scope="row">주수출 국가</th>
+                  <td>베트남</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+          
+          <div class="btn-wrap">
+            <a href="#none" class="btn-pri btn--large">신청접수확인</a>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]회원 상세정보 -->
+
   <script>
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
     });
+
+    modalPopupOpen('modalPop01');
   </script>
 </body>
 </html>

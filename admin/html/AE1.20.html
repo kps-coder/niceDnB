@@ -30,15 +30,15 @@
       <div class="content-area">
         <div class="content-head">
           <div class="title-area">
-            <h2 class="com-tit2">바이어 조회</h2>
+            <h2 class="com-tit2">행사 조회</h2>
           </div>   
 
           <!-- bread-crumb -->
           <div class="bread-crumb">
             <ul class="bread-crumb__list">
               <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
-              <li><a href="#none">바이어 관리</a></li>
-              <li><span>바이어 조회</span></li>
+              <li><a href="#none">행사 관리</a></li>
+              <li><span>행사 조회</span></li>
             </ul>
           </div><!-- //bread-crumb -->  
         </div>
@@ -57,7 +57,7 @@
               </colgroup>
               <tbody>
                 <tr>  
-                  <th scope="row"><label for="datepicker01">등록기간</label></th>
+                  <th scope="row"><label for="datepicker01">행사기간</label></th>
                   <td>
                     <span class="input-date">
                       <input type="text" id="datepicker01" class="input-jq-date"> 
@@ -65,7 +65,7 @@
                       <input type="text" id="datepicker02" class="input-jq-date"> 
                     </span>
                   </td>
-                  <th scope="row"><label for="inpNation">국가</label></th>
+                  <th scope="row"><label for="inpNation">지역</label></th>
                   <td>
                     <input type="text" id="inpNation" class="input-text">
                   </td>
@@ -75,20 +75,12 @@
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row"><label for="classificationCode">산업분류코드</label></th>
-                  <td colspan="3">
+                  <th scope="row"><label for="inpItem">품목</label></th>
+                  <td colspan="5">
                     <div class="input-withBtn">
                       <button type="button" class="btn-sec btn--small">선택</button>
-                      <input type="text" id="classificationCode" class="input-text">
+                      <input type="text" id="classificationCode" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;  유선 통신장비 제조업" disabled>
                     </div>                    
-                  </td>
-                  <th scope="row"><label for="managementLevel">관리 등급</label></th>
-                  <td>
-                    <spen class="input-select">
-                      <select name="managementLevel" id="managementLevel">
-                        <option>전체</option>
-                      </select>
-                    </spen>
                   </td>
                 </tr>
               </tbody>
@@ -121,26 +113,24 @@
             </div>
             <div class="board-list">
               <table class="board-list__table">
-                <caption>바이어 조회 목록</caption>
+                <caption>행사 조회 목록</caption>
                 <colgroup>
                   <col style="width:50px">
-                  <col style="width:120px">
-                  <col style="width:10%">
-                  <col style="width:100px">
+                  <col style="width:200px">
                   <col style="width:auto">
-                  <col style="width:15%">
-                  <col style="width:13%">
+                  <col style="width:20%">
                   <col style="width:10%">
+                  <col style="width:20%">
+                  <col style="width:100px">
                 </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">DUNS number</th>
+                    <th scope="col">행사기간</th>
+                    <th scope="col">전시회명</th>
                     <th scope="col">국가</th>
-                    <th scope="col">SIC Code</th>
-                    <th scope="col">카테고리</th>
-                    <th scope="col">관심품목</th>
-                    <th scope="col">CEO</th>
+                    <th scope="col">도시</th>
+                    <th scope="col">품목</th>
                     <th scope="col">등록일</th>
                   </tr>
                 </thead>
@@ -152,19 +142,35 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                     <td>
                       <button type="button" class="btn-sec btn--small">등록</button>
                     </td>
                   </tr>
                   <tr>
                     <td>54</td>
-                    <td>15-536-6107</td>
-                    <td>오스트리아</td>
-                    <td>5812</td>
-                    <td class="text-left">Food & Beverage > Food > Fresh fruit</td>
-                    <td>Fruit, snack, beverage</td>
-                    <td>Kevin R Johnson</td>
+                    <td>2023.01.01~2023.11.30</td>
+                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td>볼로냐</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>54</td>
+                    <td>2023.01.01~2023.11.30</td>
+                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td>볼로냐</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>54</td>
+                    <td>2023.01.01~2023.11.30</td>
+                    <td class="txt-ellipsis">2020 이태리 볼로냐 Cosmoprof 뷰</td>
+                    <td>이탈리아(ITALY)│IT</td>
+                    <td>볼로냐</td>
+                    <td class="txt-ellipsis">Perfumery & Cosmetics, Hair, Beaut</td>
                     <td>2023.01.01</td>
                   </tr>
                 </tbody>
@@ -196,140 +202,99 @@
     
   </div><!-- //wrap -->
 
-  <!-- [팝업]바이어 정보 -->
+  <!-- [팝업]행사정보 -->
   <div class="modal-popup modal-popup--large" id="modalPop01">
     <div class="modal-popup__wrap">
       <div class="modal-popup__head">
-        <h1 class="modal-popup__title">바이어 정보</h1>
+        <h1 class="modal-popup__title">행사정보</h1>
       </div>
       <div class="modal-popup__body">
         <div class="modal-popup__content">
-          <h2 class="com-tit2">MESSE FRANKFURT(H.K.)LTD.</h2>
+          <h2 class="com-tit2">2020 이태리 볼로냐 Cosmoprof 뷰티 전시회</h2>
           <div class="board-write">
             <table class="board-write__table">
-              <caption>회원가입을 위한 항목 입력 표</caption>
+              <caption>행사정보 입력 표</caption>
               <colgroup>
-                <col style="width:170px;">
-                <col style="width:30%;">
-                <col style="width:170px;">
-                <col style="width:70%;">
+                <col style="width:120px;">
+                <col style="width:300px;">
+                <col style="width:120px;">
+                <col style="width:auto;">
+                <col style="width:120px;">
+                <col style="width:auto;">
               </colgroup>
               <tbody>
                 <tr>
                   <th scope="row">
-                    <label for="inp_name">D-U-N-S® Number</label>
+                    <label for="inpDate">행사기간</label>
                   </th>
                   <td>
-                    <input type="text" class="input-text" id="inp_name" value="15-536-6107">
+                    <span class="input-date">
+                      <input type="text" id="datepicker03" class="input-jq-date"> 
+                      <em>~</em>
+                      <input type="text" id="datepicker04" class="input-jq-date"> 
+                    </span>
                   </td>
-                  <th scope="row">
-                    <label for="inpTransactionBuyer">한국거래바이어 </label>
-                  </th>
+                  <th scope="row"><label for="inpNation">국가</label></th>
                   <td>
-                    <span>D&B Rating: 양호(2) │ D&B Paydex: 70</span>
-                    <button type="button" class="btn-sec btn--small ml-20">보고서</button>
+                    <span class="input-select">
+                      <select id="inpNation">
+                        <option>이탈리아(ITALY)│IT</option>
+                      </select>
+                    </span>
                   </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPriamrySICCode">Priamry SIC Code</label>
-                  </th>
+                  <th scope="row"><label for="inpCity">도시</label></th>
                   <td>
-                    <input type="text" class="input-text" id="inpPriamrySICCode" value="15-536-6107">
-                  </td>
-                  <th scope="row">
-                    <label for="inpCategory">카테고리</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpCategory" value="Food & Beverage > Food > Fresh fruit">
+                    <input type="text" id="inpCity" class="input-text" value="볼로냐">
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <label for="inpFoundingYear">창립연도</label>
+                    <label for="inpItem">품목</label>
                   </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpFoundingYear" value="1985">
-                  </td>
-                  <th scope="row">
-                    <label for="inpItemsOfInterest">관심품목</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpItemsOfInterest" value="Fruit, snack, beverage">
+                  <td colspan="5">
+                    <input type="text" id="inpItem" class="input-text" value="Perfumery & Cosmetics, Hair, Beauty & Spa, Cosmopac, green & Organic, Nail 등 뷰티산업 전반">
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <label for="inpCEOName">CEO Name</label>
+                    <label for="inpEventDetailsmemo">행사내용메모</label>
                   </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpCEOName" value="Kevin R Johnson">
-                  </td>
-                  <th scope="row">
-                    <label for="inpAnnualSales">Annual Sales</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpAnnualSales" value="000024719500000">
+                  <td colspan="5">
+                    <textarea name="textarea01" id="textarea01" cols="30" rows="10" class="input-textarea">
+2020 이태리 볼로냐 Cosmoprof 뷰티 전시회 준비 진행 중
+행사 참여 바이어 리스트 완료
+                    </textarea>
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <label for="inpPhone">Phone</label>
+                    <label for="inpFile">행사파일</label>
                   </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPhone" value="2064471575">
+                  <td colspan="5">
+                    <span class="input-file">
+                      <input type="file" name="inpFile" id="inpFile">
+                      <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+                    </span>
+                    <span class="selected-file">
+                      <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                      파일명.png
+                    </span>
+                    <span class="selected-file">
+                      <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                      파일명.png
+                    </span>
+                    <span class="selected-file">
+                      <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                      파일명.png
+                    </span>
                   </td>
-                  <th scope="row">
-                    <label for="inpForeignTrade">Foreign Trade</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpForeignTrade" value="G">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpEmployees">Employees(All site)</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpEmployees" value="0277000">
-                  </td>
-                  <th scope="row">
-                    <label for="inpAddress">주소</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpAddress" value="608 CHINA RESOURCES BUILDING 26 HARBOUR">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPriamryLine">Priamry Line of Business</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPriamryLine" value="Eating places">
-                  </td>
-                  <th scope="row">
-                    <label for="inpSite">홈페이지</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpSite" value="www.messefrankfurt.com">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpManagementLevel">관리 등급</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpManagementLevel" value="S">
-                  </td>
-                  <th scope="row"></th>
-                  <td></td>
                 </tr>
               </tbody>
             </table>
           </div>   
           
           <div class="btn-wrap">
-            <a href="Main.html" class="btn-pri btn--large">변경</a>
+            <a href="#none" class="btn-pri btn--large">변경</a>
           </div>
         </div>
       </div><!-- //modal-popup__body -->
@@ -338,13 +303,13 @@
       </div>
     </div>
   </div>
-  <!-- //[팝업]바이어 정보 -->
+  <!-- //[팝업]행사정보 -->
 
   <script>
-    $( function() {
-      $( "#datepicker01" ).datepicker();
-      $( "#datepicker02" ).datepicker();
-    } );
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
 
     modalPopupOpen('modalPop01');
   </script>

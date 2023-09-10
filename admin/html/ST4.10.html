@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../../guide/asset/js/admin-include.js"></script> <!-- head, gnb -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header" id="headerInclud"></header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav" id="gnbInclud"></div>
+
+      <div class="content-area">
+        <div class="content-head">
+          <div class="title-area">
+            <h2 class="com-tit2">바이어 발굴 현황</h2>
+          </div>   
+
+          <!-- bread-crumb -->
+          <div class="bread-crumb">
+            <ul class="bread-crumb__list">
+              <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
+              <li><a href="#none">통계 조회</a></li>
+              <li><span>바이어 발굴 현황</span></li>
+            </ul>
+          </div><!-- //bread-crumb -->  
+        </div>
+
+        <div class="content-body">
+          <div class="board-search">
+            <table class="board-search__table">
+              <caption>검색조건</caption>
+              <colgroup>
+                <col style="width:100px">
+                <col style="width:300px">
+                <col style="width:20%">
+                <col style="width:50%">
+                <col style="width:100px">
+                <col style="width:30%">
+              </colgroup>
+              <tbody>
+                <tr>  
+                  <th scope="row"><label for="datepicker01">조회 기간</label></th>
+                  <td>
+                    <span class="input-date">
+                      <input type="text" id="datepicker01" class="input-jq-date"> 
+                      <em>~</em>
+                      <input type="text" id="datepicker02" class="input-jq-date"> 
+                    </span>
+                  </td>
+                  <th scope="row"><label for="inpKeyword">조회 기준</label></th>
+                  <td>
+                    <div class="area-radioBtn">
+                      <span class="radioBtn">
+                        <input type="radio" id="radioBtn01" name="radioBtn">
+                        <label for="radioBtn01">월별</label>
+                      </span>
+                      <span class="radioBtn">
+                        <input type="radio" id="radioBtn01" name="radioBtn">
+                        <label for="radioBtn01">년별</label>
+                      </span>
+                      <span class="radioBtn">
+                        <input type="radio" id="radioBtn01" name="radioBtn">
+                        <label for="radioBtn01">분기별</label>
+                      </span>
+                    </div>
+                  </td>
+                  <th scope="row"><label for="inpRank">순위</label></th>
+                  <td>
+                    <span class="input-select">
+                      <select name="inpRank" id="inpRank">
+                        <option>TOP 10</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec">취소</button>
+              <button type="button" class="btn-pri">조회</button>
+            </div>
+          </div>
+
+          <div class="section-cont">
+            <div class="board-head">
+              <div class="board-head__left">
+                <span class="board-count">총 <em>125</em> 건</span>
+              </div>
+              <div class="board-head__right">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
+                </div>                
+                <span class="input-select">
+                  <select name="inpLine" id="inpLine">
+                    <option>100개 씩</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="board-list statistics-list"><!-- statistics-list : 통계 게시판 -->
+              <table class="board-list__table">
+                <caption>회원 통계 목록</caption>
+                <colgroup>
+                  <col style="width:50px">
+                  <col style="width:100px">
+                  <col style="width:50px">
+                  <col style="width:30%">
+                  <col style="width:10%">
+                  <col style="width:10%">
+                  <col style="width:30%">
+                  <col style="width:10%">
+                  <col style="width:10%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" rowspan="2">No</th>
+                    <th scope="col" rowspan="2">월별</th>
+                    <th scope="col" rowspan="2">순위</th>
+                    <th scope="col" colspan="3">국가</th>
+                    <th scope="col" colspan="3">국가</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">국가명</th>
+                    <th scope="col">발굴 건수</th>
+                    <th scope="col">발송 건수</th>
+                    <th scope="col">품목명</th>
+                    <th scope="col">발굴 건수</th>
+                    <th scope="col">발송 건수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" rowspan="10">1</th>
+                    <th scope="row" rowspan="10">2023-08</th>
+                    <td>1</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="10">2</th>
+                    <th scope="row" rowspan="10">2023-07</th>
+                    <td>1</td>
+                    <td class="text-left">중국│CHINA│CN</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">카메라 및 디스플레이</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td class="text-left">미국│USA│US</td>
+                    <td>15,623</td>
+                    <td>14,623</td>
+                    <td class="text-left">의료기기</td>
+                    <td>15,623</td>
+                    <td>15,623</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- //board-list -->
+
+            <div class="board-foot">
+              <div class="board-foot__left">
+                <p class="board-info">Showing 1 to 10 of 55 entries</p>
+              </div>
+              <div class="pagination">
+                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                <div class="pagination__page">
+                  <a href="#n">1</a>
+                  <a href="#n">2</a>
+                  <a href="#n">3</a>
+                  <a href="#n">4</a>
+                  <a href="#n">5</a>
+                </div>
+                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- //container -->
+
+    
+  </div><!-- //wrap -->
+
+  <script>
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+  </script>
+</body>
+</html>

@@ -30,15 +30,15 @@
       <div class="content-area">
         <div class="content-head">
           <div class="title-area">
-            <h2 class="com-tit2">행사 조회</h2>
+            <h2 class="com-tit2">컨설팅 신청내역</h2>
           </div>   
 
           <!-- bread-crumb -->
           <div class="bread-crumb">
             <ul class="bread-crumb__list">
               <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
-              <li><a href="#none">행사 관리</a></li>
-              <li><span>행사 조회</span></li>
+              <li><a href="#none"> 컨설팅 관리</a></li>
+              <li><span>컨설팅 신청내역</span></li>
             </ul>
           </div><!-- //bread-crumb -->  
         </div>
@@ -200,6 +200,10 @@
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
+    });
+
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(2, 0);
     });
   </script>
 </body>

@@ -79,7 +79,7 @@
                   <td colspan="5">
                     <div class="input-withBtn">
                       <button type="button" class="btn-sec btn--small">선택</button>
-                      <input type="text" id="classificationCode" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;  유선 통신장비 제조업" disabled>
+                      <input type="text" id="inpItem" class="input-text" value="비메모리용 및 기타 전자집적회로 제조업;  기타 주변 기기 제조업;  유선 통신장비 제조업" disabled>
                     </div>                    
                   </td>
                 </tr>
@@ -206,6 +206,10 @@
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
+    });
+
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(1, 0);
     });
   </script>
 </body>

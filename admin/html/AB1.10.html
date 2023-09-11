@@ -197,10 +197,15 @@
   </div><!-- //wrap -->
 
   <script>
-    $( function() {
-      $( "#datepicker01" ).datepicker();
-      $( "#datepicker02" ).datepicker();
-    } );
-    </script>
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(0,0);
+    });
+    
+  </script>
 </body>
 </html>

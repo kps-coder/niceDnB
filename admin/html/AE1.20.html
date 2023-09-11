@@ -306,12 +306,17 @@
   <!-- //[팝업]행사정보 -->
 
   <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(1, 0);
+      modalPopupOpen('modalPop01');
+    });
+
     let dataPicker = $(".input-jq-date");
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
     });
 
-    modalPopupOpen('modalPop01');
+
   </script>
 </body>
 </html>

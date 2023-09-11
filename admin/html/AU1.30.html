@@ -298,7 +298,10 @@
       $("#datepicker0" + (idx+1)).datepicker();
     });
 
-    modalPopupOpen('modalPop01');
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(4, 0);
+      modalPopupOpen('modalPop01');
+    });
   </script>
 </body>
 </html>

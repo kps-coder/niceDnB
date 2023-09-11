@@ -366,6 +366,10 @@
     dataPicker.each(function(idx, elem){
       $("#datepicker0" + (idx+1)).datepicker();
     });
+
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(5, 3);
+    });
   </script>
 </body>
 </html>

@@ -41,10 +41,14 @@ function modalPopupClose(popUpID) {
 }
 
 
-function gnbCtrl() {
-  let globalNav = document.querySelector(".global-nav");
+function gnbCtrl(depth1, depth2) {
   let globalNavBtn1 = document.querySelectorAll(".btn-depth-1");
-  let globalNavList = document.querySelectorAll(".global-nav__list > li");
+  let globalNavList = document.querySelectorAll(".global-nav__list > li");  
+  
+  let globalNavDepth2 = globalNavList[depth1].querySelectorAll(".global-nav__depth2 > li");   
+  globalNavList[depth1].classList.add("open");
+  globalNavDepth2[depth2].classList.add("on");
+
   globalNavBtn1.forEach(function(elem, i){
     elem.addEventListener("click", function(){
       globalNavList.forEach(function(elem, i){

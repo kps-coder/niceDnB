@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   gnbInclud.innerHTML = `
   <ul class="global-nav__list">
-    <li class="open"><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
+    <li><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
       <ul class="global-nav__depth2">
         <li><a href="#none">바이어 조회/등록</a></li>
       </ul>
@@ -37,23 +37,23 @@ window.addEventListener('DOMContentLoaded', function() {
     <li><a href="#none" class="btn-depth-1"><i class="icon-meun05"></i>회원관리</a>
       <ul class="global-nav__depth2">
         <li><a href="#none">회원조회</a></li>
-        <li><a href="#none">사업자등록승인</a></li>
+        <li><a href="#none">회원등급</a></li>
       </ul>
     </li>
     <li><a href="#none" class="btn-depth-1"><i class="icon-meun06"></i>통계</a>
       <ul class="global-nav__depth2">
+        <li><a href="#none">회원통계</a></li>
         <li><a href="#none">매출통계</a></li>
-        <li><a href="#none">빅데이터바이어 발굴이용</a></li>
-        <li><a href="#none">마케팅이용</a></li>
-        <li><a href="#none">컨설팅이용</a></li>
-        <li><a href="#none">보고서이용</a></li>
-        <li><a href="#none">바이어메시지유입</a></li>
-        <li><a href="#none">장애</a></li>
+        <li><a href="#none">서비스 이용 통계</a></li>
+        <li><a href="#none">바이어 발굴 현황</a></li>
+        <li><a href="#none">바이어 회신율</a></li>
+        <li><a href="#none">단계별 장애 통계</a></li>
       </ul>
     </li>
     <li><a href="#none" class="btn-depth-1"><i class="icon-meun07"></i>시스템</a>
       <ul class="global-nav__depth2">
         <li><a href="#none">버전관리</a></li>
+        <li><a href="#none">관리자 메뉴 권한</a></li>
       </ul>
     </li>
   </ul>`;

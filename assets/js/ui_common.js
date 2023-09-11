@@ -77,6 +77,11 @@ window.addEventListener("DOMContentLoaded", function() {
     sitemapPC();
   }
 
+  // mobile sitemap
+  if(document.querySelector(".header-mobile .btn-sitemap") !== null){
+    sitemapMobile();
+  }
+
   // tab
   if(document.querySelector(".com-tab") !== null){
     tabCtrl();
@@ -169,6 +174,23 @@ function sitemapPC() {
   let sitemapBtn = document.querySelector(".header-pc .btn-sitemap");
   let sitemapWrap = document.querySelector(".sitemap");
   let sitemapClose = document.querySelector(".btn-sitemap-close");
+  sitemapBtn.addEventListener("click", function(){
+    sitemapWrap.classList.add("show");
+    sitemapWrap.setAttribute("tabindex", '0');
+    sitemapWrap.focus();
+
+  });
+  sitemapClose.addEventListener("click", function(){
+    sitemapWrap.classList.remove("show");
+    sitemapWrap.removeAttribute("tabindex");
+  });
+}
+
+//mobile sitemap
+function sitemapMobile() {
+  let sitemapBtn = document.querySelector(".header-mobile .btn-sitemap");
+  let sitemapWrap = document.querySelector(".header-mobile .gnb");
+  let sitemapClose = document.querySelector(".btn-gnb-close");
   sitemapBtn.addEventListener("click", function(){
     sitemapWrap.classList.add("show");
     sitemapWrap.setAttribute("tabindex", '0');

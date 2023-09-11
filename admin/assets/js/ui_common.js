@@ -14,6 +14,8 @@ window.addEventListener("DOMContentLoaded", function() {
     });
   });
   /* [E] 레이어팝업 */  
+
+  gnbCtrl();
 });
 
 //레어어팝업 열기
@@ -37,3 +39,19 @@ function modalPopupClose(popUpID) {
   closePopup.removeAttribute("tabindex");
   document.body.removeAttribute('style');
 }
+
+
+function gnbCtrl() {
+  let globalNav = document.querySelector(".global-nav");
+  let globalNavBtn1 = document.querySelectorAll(".btn-depth-1");
+  let globalNavList = document.querySelectorAll(".global-nav__list > li");
+  globalNavBtn1.forEach(function(elem, i){
+    elem.addEventListener("click", function(){
+      globalNavList.forEach(function(elem, i){
+        elem.classList.remove("open");
+      });
+      globalNavList[i].classList.add("open");
+    });
+  });
+}
+

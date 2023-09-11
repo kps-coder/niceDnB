@@ -110,7 +110,7 @@ body { background-color: #f0f1f7;}
 .global-nav__list .btn-depth-1::after {position:absolute; right:0; top:0; content:""; display:block; width:24px; height:24px; background: url('../images/icon-menu.svg') no-repeat 0 -168px / 48px 240px;}
 .global-nav__list .btn-depth-1 i {margin-right:12px;}
 .global-nav__depth2 {display:none; margin:0 0 0 36px;}
-.global-nav__depth2 a {display:block; padding:6px 0; line-height: 1.5;}
+.global-nav__depth2 a {display:block; padding:6px 0; line-height: 1.5; letter-spacing: -0.8px;}
 
 .global-nav__list > li.open {padding-top:26px; padding-bottom:26px; border-radius: 16px 0 0 16px; filter: drop-shadow(3px 3px 5px rgba(143, 149, 179, 0.2)); background-color: #fff;}
 .global-nav__list > li.open .btn-depth-1 {color:#7F3CFF; font-weight: bold;}

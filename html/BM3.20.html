@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <div class="section-cont">
+      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="confirmPop01">수신확인 바이어</button>
+    </div>    
+  </div><!-- //wrap -->
+
+  <!-- [L팝업]수신확인 바이어 -->
+  <div class="modal-popup" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">마케팅팀 에밀리 입니다. 2023년 08월 01일 미팅 회의록 첨부합니다. 마케팅팀 에밀리 입니다. 2023년 08월 01일 미팅 회의록 첨부합니다.</h1>
+        <div class="txt-date">23.06.28 16:00</div>
+      </div>
+      <div class="modal-popup__body">
+         <div class="modal-popup__content">
+          <div class="board-head">
+            <div class="board-head__left"></div>
+            <div class="board-head__right">
+              <span>총 <strong>33</strong>건 중 <strong class="txt-point02">25</strong>개 바이어 읽음</span>
+            </div>
+          </div>
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>바이어, 이메일 수신여부 항목 표</caption>
+              <colgroup>
+                <col style="width:auto">
+                <col style="width:30%">
+                <col style="width:18%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">바이어</th>
+                  <th scope="col">이메일</th>
+                  <th scope="col">수신여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike01">
+                      <label for="inpLike01"><span class="blind">관심바이어</span></label>
+                    </span>
+                    <a href="BD1.20.html">바이어기업1</a> 
+                  </td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>읽지 않음</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike02">
+                      <label for="inpLike02"><span class="blind">관심바이어</span></label>
+                    </span>
+                    <a href="BD1.20.html">바이어기업1</a>
+                  </td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>23.05.25 15:11</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike03">
+                      <label for="inpLike03"><span class="blind">관심바이어</span></label>
+                    </span>
+                    <a href="BD1.20.html">바이어기업1</a>
+                  </td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>읽지 않음</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike04">
+                      <label for="inpLike04"><span class="blind">관심바이어</span></label>
+                    </span>
+                    <a href="BD1.20.html">바이어기업1</a>
+                  </td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>23.05.25 15:11</td>
+                </tr>
+                <tr>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="inpLike" id="inpLike05">
+                      <label for="inpLike05"><span class="blind">관심바이어</span></label>
+                    </span>
+                    <a href="BD1.20.html">바이어기업1</a>
+                  </td>
+                  <td class="text-left">12345@abc.com</td>
+                  <td>읽지 않음</td>
+                </tr>                
+              </tbody>
+            </table>
+          </div>
+
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[L팝업]수신확인 바이어 -->
+
+  <script>
+    modalPopupOpen("modalPop01");
+  </script>
+</body>
+</html>

@@ -125,7 +125,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn-sec btn--small">등록</button>
+                      <button type="button" class="btn-sec btn--small" onclick="bottomSheetCtrl('bottomPop01');">등록</button>
                     </td>
                   </tr>
                   <tr>
@@ -182,79 +182,82 @@
             </div>
           </div>
         </div><!-- //content-body -->
+
+        <!-- [바텀시트]템플릿정보 -->
+        <div class="bottomSheet" id="bottomPop01">
+          <div class="bottomSheet__wrap">
+            <div class="bottomSheet__head">
+              <h1 class="bottomSheet__h1">템플릿정보</h1>
+              <div class="bottomSheet__close">
+                <button type="button"><span class="blind">팝업닫기</span></button>
+              </div>
+            </div>
+            <!-- contents  -->
+            <div class="bottomSheet__body">
+              <div class="bottomSheet__topArea">
+                <h2 class="com-tit2">회사 소개 및 수출 상품 안내</h2>
+              </div>
+              <div class="board-write">
+                <table class="board-write__table">
+                  <caption>템플릿정보 입력 표</caption>
+                  <colgroup>
+                    <col style="width:120px;">
+                    <col style="width:auto;">
+                    <col style="width:100px;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpDivision">구분</label>
+                      </th>
+                      <td colspan="2">
+                        <span class="input-select">
+                          <select name="inpDivision" id="inpDivision">
+                            <option>기업소개</option>
+                          </select>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpTemplateName">템플릿명</label>
+                      </th>
+                      <td colspan="2">
+                        <input type="text" id="inpTemplateName" class="input-text" value="회사 소개 및 수출 상품 안내">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpHtml">HTML등록</label>
+                      </th>
+                      <td>
+                        <span class="input-file">
+                          <input type="file" name="inpFile" id="inpFile">
+                          <label for="inpFile" class="btn-sec btn--small">HTML</label>
+                        </span>
+                        <span class="selected-file">
+                          <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                          회사소개.html
+                        </span>
+                      </td>
+                      <td><button type="button" class="btn-sec btn--small">미리보기</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>   
+              
+              <div class="btn-wrap">
+                <a href="#none" class="btn-pri btn--large">변경</a>
+              </div>
+            </div><!-- //bottomSheet__body__body -->
+          </div>
+        </div>
+        <!-- //[바텀시트]템플릿정보 -->
       </div>
     </div><!-- //container -->
   </div><!-- //wrap -->
 
-  <!-- [팝업]템플릿정보 -->
-  <div class="modal-popup" id="modalPop01">
-    <div class="modal-popup__wrap">
-      <div class="modal-popup__head">
-        <h1 class="modal-popup__title">템플릿정보</h1>
-      </div>
-      <div class="modal-popup__body">
-        <div class="modal-popup__content">
-          <h2 class="com-tit2">회사 소개 및 수출 상품 안내</h2>
-          <div class="board-write">
-            <table class="board-write__table">
-              <caption>템플릿정보 입력 표</caption>
-              <colgroup>
-                <col style="width:120px;">
-                <col style="width:auto;">
-                <col style="width:100px;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label for="inpDivision">구분</label>
-                  </th>
-                  <td colspan="2">
-                    <span class="input-select">
-                      <select name="inpDivision" id="inpDivision">
-                        <option>기업소개</option>
-                      </select>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpTemplateName">템플릿명</label>
-                  </th>
-                  <td colspan="2">
-                    <input type="text" id="inpTemplateName" class="input-text" value="회사 소개 및 수출 상품 안내">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpHtml">HTML등록</label>
-                  </th>
-                  <td>
-                    <span class="input-file">
-                      <input type="file" name="inpFile" id="inpFile">
-                      <label for="inpFile" class="btn-sec btn--small">HTML</label>
-                    </span>
-                    <span class="selected-file">
-                      <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
-                      회사소개.html
-                    </span>
-                  </td>
-                  <td><button type="button" class="btn-sec btn--small">미리보기</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>   
-          
-          <div class="btn-wrap">
-            <a href="#none" class="btn-pri btn--large">변경</a>
-          </div>
-        </div>
-      </div><!-- //modal-popup__body -->
-      <div class="modal-popup__close">
-        <button type="button"><span class="blind">팝업닫기</span></button>
-      </div>
-    </div>
-  </div>
-  <!-- //[팝업]템플릿정보-->
+
 
   <script>
     let dataPicker = $(".input-jq-date");
@@ -264,7 +267,7 @@
 
     window.addEventListener("DOMContentLoaded", function() {
       gnbCtrl(3, 0);
-      modalPopupOpen('modalPop01');
+      bottomSheetCtrl('bottomPop01');
     });
     
   </script>

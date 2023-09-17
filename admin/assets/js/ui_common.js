@@ -13,9 +13,11 @@ window.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
-  /* [E] 레이어팝업 */  
-
+  /* [E] 레이어팝업 */ 
+  
   gnbCtrl();
+
+  
 });
 
 //레어어팝업 열기
@@ -57,5 +59,32 @@ function gnbCtrl(depth1, depth2) {
       globalNavList[i].classList.add("open");
     });
   });
+}
+
+//bottomSheet 
+function bottomSheetCtrl(bottomSheetId) {
+  let bottomSheet = document.querySelector("#" + bottomSheetId);
+  let bottomSheetWrap = document.querySelector("#" + bottomSheetId + " .bottomSheet__wrap");
+  let bottomSheetClose = document.querySelector("#" + bottomSheetId + " .bottomSheet__close > button");
+
+  bottomSheet.style.display = "block";
+  bottomSheet.style.bottom = -bottomSheetWrap.offsetHeight - 100 + "px";
+  setTimeout(function(){
+    bottomSheet.animate(
+      [{ bottom: 0 }],
+      {fill: "forwards", duration: 200}      
+    );
+  }, 100);
+  bottomSheetClose.addEventListener("click", function(e){
+    console.log(bottomSheetWrap.offsetHeight);
+    bottomSheet.animate(
+      [{ bottom: -bottomSheetWrap.offsetHeight - 200 + "px" }],
+      {fill: "forwards", duration: 200}      
+    );
+    setTimeout(function(){
+      bottomSheet.style.display = "none";
+    },100);
+  });
+
 }
 

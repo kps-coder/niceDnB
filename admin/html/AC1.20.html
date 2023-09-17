@@ -189,80 +189,79 @@
             </div>
           </div>
         </div>
+
+        <!-- [바텀시트]컨설팅 신청상세 -->
+        <div class="bottomSheet" id="bottomPop01">
+          <div class="bottomSheet__wrap">
+            <div class="bottomSheet__head">
+              <h1 class="bottomSheet__h1">컨설팅진행</h1>
+              <div class="bottomSheet__close">
+                <button type="button"><span class="blind">팝업닫기</span></button>
+              </div>
+            </div>
+            <!-- contents  -->
+            <div class="bottomSheet__body">
+              <div class="bottomSheet__topArea">
+                <h2 class="com-tit2">2023.02.02│홍길동│나이스디앤비</h2>
+              </div>
+              <div class="board-write">
+                <table class="board-write__table">
+                  <caption>컨설팅 신청상세 입력 표</caption>
+                  <colgroup>
+                    <col style="width:120px;">
+                    <col style="width:50%;">
+                    <col style="width:120px;">
+                    <col style="width:50%;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpProgress">진행상태</label>
+                      </th>
+                      <td>
+                        <span class="input-radio">
+                          <input type="radio" name="radio01" id="radio01_1">
+                          <label for="radio01_1">진행 중</label>
+                        </span>
+                        <span class="input-radio">
+                          <input type="radio" name="radio01" id="radio01_2">
+                          <label for="radio01_2">컨설팅 완료</label>
+                        </span>
+                      </td>
+                      <th scope="row">
+                        <label for="inpManager">담당자</label>
+                      </th>
+                      <td>
+                        <span class="input-select">
+                          <select name="inpManager" id="inpManager">
+                            <option>미지정</option>
+                          </select>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpConsultingMemo">컨설팅진행메모</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="inpConsultingMemo" id="inpConsultingMemo" cols="30" rows="6" class="input-textarea"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>   
+              
+              <div class="btn-wrap">
+                <a href="#none" class="btn-pri btn--large">변경</a>
+              </div>
+            </div><!-- //modal-popup__body -->
+          </div>
+        </div>
+        <!-- //[바텀시트]컨설팅 신청상세 -->
       </div>
       
     </div><!-- //container -->
-
-    
   </div><!-- //wrap -->
-
-  <!-- [팝업]컨설팅 신청상세 -->
-  <div class="modal-popup" id="modalPop01">
-    <div class="modal-popup__wrap">
-      <div class="modal-popup__head">
-        <h1 class="modal-popup__title">컨설팅 신청상세</h1>
-      </div>
-      <div class="modal-popup__body">
-        <div class="modal-popup__content">
-          <h2 class="com-tit2">2023.02.02│홍길동│나이스디앤비</h2>
-          <div class="board-write">
-            <table class="board-write__table">
-              <caption>컨설팅 신청상세 입력 표</caption>
-              <colgroup>
-                <col style="width:120px;">
-                <col style="width:50%;">
-                <col style="width:120px;">
-                <col style="width:50%;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label for="inpProgress">진행상태</label>
-                  </th>
-                  <td>
-                    <span class="input-radio">
-                      <input type="radio" name="radio01" id="radio01_1">
-                      <label for="radio01_1">진행 중</label>
-                    </span>
-                    <span class="input-radio">
-                      <input type="radio" name="radio01" id="radio01_2">
-                      <label for="radio01_2">컨설팅 완료</label>
-                    </span>
-                  </td>
-                  <th scope="row">
-                    <label for="inpManager">담당자</label>
-                  </th>
-                  <td>
-                    <span class="input-select">
-                      <select name="inpManager" id="inpManager">
-                        <option>미지정</option>
-                      </select>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpConsultingMemo">컨설팅진행메모</label>
-                  </th>
-                  <td colspan="3">
-                    <textarea name="inpConsultingMemo" id="inpConsultingMemo" cols="30" rows="6" class="input-textarea"></textarea>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>   
-          
-          <div class="btn-wrap">
-            <a href="#none" class="btn-pri btn--large">변경</a>
-          </div>
-        </div>
-      </div><!-- //modal-popup__body -->
-      <div class="modal-popup__close">
-        <button type="button"><span class="blind">팝업닫기</span></button>
-      </div>
-    </div>
-  </div>
-  <!-- //[팝업]컨설팅 신청상세 -->
 
   <script>
     let dataPicker = $(".input-jq-date");
@@ -273,7 +272,7 @@
     
     window.addEventListener("DOMContentLoaded", function() {
       gnbCtrl(2, 0);
-      modalPopupOpen('modalPop01');
+      bottomSheetCtrl('bottomPop01');
     });
   </script>
 </body>

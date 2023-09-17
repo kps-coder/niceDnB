@@ -99,7 +99,7 @@
                     <td>4</td>
                     <td class="text-right">500,000 cash</td>
                     <td class="text-right">0 % (0 cash)</td>
-                    <td class="text-right"><a href="#n">550,000 원</a></td>
+                    <td class="text-right"><a href="#none" onclick="bottomSheetCtrl('bottomPop01');">550,000 원</a></td>
                     <td>미적용</td>
                     <td>2023.01.01</td>
                   </tr>
@@ -107,7 +107,7 @@
                     <td>4</td>
                     <td class="text-right">500,000 cash</td>
                     <td class="text-right">0 % (0 cash)</td>
-                    <td class="text-right"><a href="#n">550,000 원</a></td>
+                    <td class="text-right"><a href="#none" onclick="bottomSheetCtrl('bottomPop01');">550,000 원</a></td>
                     <td>미적용</td>
                     <td>2023.01.01</td>
                   </tr>
@@ -115,7 +115,7 @@
                     <td>4</td>
                     <td class="text-right">500,000 cash</td>
                     <td class="text-right">0 % (0 cash)</td>
-                    <td class="text-right"><a href="#n">550,000 원</a></td>
+                    <td class="text-right"><a href="#none" onclick="bottomSheetCtrl('bottomPop01');">550,000 원</a></td>
                     <td>미적용</td>
                     <td>2023.01.01</td>
                   </tr>
@@ -141,6 +141,81 @@
             </div>
           </div>
         </div>
+
+        <!-- [바텀시트]캐시정보 -->
+        <div class="bottomSheet" id="bottomPop01">
+          <div class="bottomSheet__wrap">
+            <div class="bottomSheet__head">
+              <h1 class="bottomSheet__h1">캐시정보</h1>
+              <div class="bottomSheet__close">
+                <button type="button"><span class="blind">팝업닫기</span></button>
+              </div>
+            </div>
+            <!-- contents  -->
+            <div class="bottomSheet__body">
+              <div class="board-write">
+                <table class="board-write__table">
+                  <caption>캐시정보 입력 표</caption>
+                  <colgroup>
+                    <col style="width:200px;">
+                    <col style="width:auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpCash">캐시</label>
+                      </th>
+                      <td>
+                        <input type="text" id="inpCash" class="input-text text-right" value="1,500,000">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpBonusCash">보너스 캐시</label>
+                      </th>
+                      <td>
+                        <span class="input-select">
+                          <select name="inpBonusCash" id="inpBonusCash">
+                            <option>0%</option>
+                            <option>10%</option>
+                            <option>20%</option>
+                          </select>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpCashApply">캐시 적용</label>
+                      </th>
+                      <td>
+                        <span class="input-radio">
+                          <input type="radio" id="cash01_1" name="cashi01">
+                          <label for="cash01_1">적용</label>
+                        </span>
+                        <span class="input-radio">
+                          <input type="radio" id="cash01_2" name="cashi01">
+                          <label for="cash01_2">미적용</label>
+                        </span>
+                        <span class="txt-error ml-20">프론트에 적용됩니다.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpPayment">실 결제 금액(VAT 포함)</label>
+                      </th>
+                      <td class="text-right"><strong>1,650,000 원</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>   
+              
+              <div class="btn-wrap">
+                <a href="#none" class="btn-pri btn--large">변경</a>
+              </div>
+            </div><!-- //modal-popup__body -->
+          </div>
+        </div>
+        <!-- //[바텀시트]캐시정보 -->
       </div>
       
     </div><!-- //container -->
@@ -232,7 +307,7 @@
 
     window.addEventListener("DOMContentLoaded", function() {
       gnbCtrl(3, 1);
-      modalPopupOpen('modalPop01');
+      bottomSheetCtrl('bottomPop01');
     });
     
   </script>

@@ -154,7 +154,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn-sec btn--small">등록</button>
+                      <button type="button" class="btn-sec btn--small" onclick="bottomSheetCtrl('bottomPop01');">등록</button>
                     </td>
                   </tr>
                   <tr>
@@ -189,167 +189,166 @@
             </div>
           </div>
         </div>
+
+        <!-- [바텀시트]바이어 정보 -->
+        <div class="bottomSheet" id="bottomPop01">
+          <div class="bottomSheet__wrap">
+            <div class="bottomSheet__head">
+              <h1 class="bottomSheet__h1">바이어 정보</h1>
+              <div class="bottomSheet__close">
+                <button type="button"><span class="blind">팝업닫기</span></button>
+              </div>
+            </div>
+            <!-- contents  -->
+            <div class="bottomSheet__body">
+              <div class="bottomSheet__topArea">
+                <h2 class="com-tit2">MESSE FRANKFURT(H.K.)LTD.</h2>
+              </div>
+              <div class="board-write">
+                <table class="board-write__table">
+                  <caption>회원가입을 위한 항목 입력 표</caption>
+                  <colgroup>
+                    <col style="width:170px;">
+                    <col style="width:30%;">
+                    <col style="width:170px;">
+                    <col style="width:70%;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="inp_name">D-U-N-S® Number</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inp_name" value="15-536-6107">
+                      </td>
+                      <th scope="row">
+                        <label for="inpTransactionBuyer">한국거래바이어 </label>
+                      </th>
+                      <td>
+                        <span>D&B Rating: 양호(2) │ D&B Paydex: 70</span>
+                        <button type="button" class="btn-sec btn--small ml-20">보고서</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpPriamrySICCode">Priamry SIC Code</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpPriamrySICCode" value="15-536-6107">
+                      </td>
+                      <th scope="row">
+                        <label for="inpCategory">카테고리</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpCategory" value="Food & Beverage > Food > Fresh fruit">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpFoundingYear">창립연도</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpFoundingYear" value="1985">
+                      </td>
+                      <th scope="row">
+                        <label for="inpItemsOfInterest">관심품목</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpItemsOfInterest" value="Fruit, snack, beverage">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpCEOName">CEO Name</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpCEOName" value="Kevin R Johnson">
+                      </td>
+                      <th scope="row">
+                        <label for="inpAnnualSales">Annual Sales</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpAnnualSales" value="000024719500000">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpPhone">Phone</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpPhone" value="2064471575">
+                      </td>
+                      <th scope="row">
+                        <label for="inpForeignTrade">Foreign Trade</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpForeignTrade" value="G">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpEmployees">Employees(All site)</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpEmployees" value="0277000">
+                      </td>
+                      <th scope="row">
+                        <label for="inpAddress">주소</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpAddress" value="608 CHINA RESOURCES BUILDING 26 HARBOUR">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpPriamryLine">Priamry Line of Business</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpPriamryLine" value="Eating places">
+                      </td>
+                      <th scope="row">
+                        <label for="inpSite">홈페이지</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpSite" value="www.messefrankfurt.com">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpManagementLevel">관리 등급</label>
+                      </th>
+                      <td>
+                        <input type="text" class="input-text" id="inpManagementLevel" value="S">
+                      </td>
+                      <th scope="row"></th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>   
+              
+              <div class="btn-wrap">
+                <a href="#n" class="btn-pri btn--large">변경</a>
+              </div>
+            </div><!-- //modal-popup__body -->
+          </div>
+        </div>
+        <!-- //[바텀시트]바이어 정보 -->
       </div>
-      
     </div><!-- //container -->
 
     
   </div><!-- //wrap -->
 
-  <!-- [팝업]바이어 정보 -->
-  <div class="modal-popup modal-popup--large" id="modalPop01">
-    <div class="modal-popup__wrap">
-      <div class="modal-popup__head">
-        <h1 class="modal-popup__title">바이어 정보</h1>
-      </div>
-      <div class="modal-popup__body">
-        <div class="modal-popup__content">
-          <h2 class="com-tit2">MESSE FRANKFURT(H.K.)LTD.</h2>
-          <div class="board-write">
-            <table class="board-write__table">
-              <caption>회원가입을 위한 항목 입력 표</caption>
-              <colgroup>
-                <col style="width:170px;">
-                <col style="width:30%;">
-                <col style="width:170px;">
-                <col style="width:70%;">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label for="inp_name">D-U-N-S® Number</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inp_name" value="15-536-6107">
-                  </td>
-                  <th scope="row">
-                    <label for="inpTransactionBuyer">한국거래바이어 </label>
-                  </th>
-                  <td>
-                    <span>D&B Rating: 양호(2) │ D&B Paydex: 70</span>
-                    <button type="button" class="btn-sec btn--small ml-20">보고서</button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPriamrySICCode">Priamry SIC Code</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPriamrySICCode" value="15-536-6107">
-                  </td>
-                  <th scope="row">
-                    <label for="inpCategory">카테고리</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpCategory" value="Food & Beverage > Food > Fresh fruit">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpFoundingYear">창립연도</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpFoundingYear" value="1985">
-                  </td>
-                  <th scope="row">
-                    <label for="inpItemsOfInterest">관심품목</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpItemsOfInterest" value="Fruit, snack, beverage">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpCEOName">CEO Name</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpCEOName" value="Kevin R Johnson">
-                  </td>
-                  <th scope="row">
-                    <label for="inpAnnualSales">Annual Sales</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpAnnualSales" value="000024719500000">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPhone">Phone</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPhone" value="2064471575">
-                  </td>
-                  <th scope="row">
-                    <label for="inpForeignTrade">Foreign Trade</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpForeignTrade" value="G">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpEmployees">Employees(All site)</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpEmployees" value="0277000">
-                  </td>
-                  <th scope="row">
-                    <label for="inpAddress">주소</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpAddress" value="608 CHINA RESOURCES BUILDING 26 HARBOUR">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpPriamryLine">Priamry Line of Business</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpPriamryLine" value="Eating places">
-                  </td>
-                  <th scope="row">
-                    <label for="inpSite">홈페이지</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpSite" value="www.messefrankfurt.com">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="inpManagementLevel">관리 등급</label>
-                  </th>
-                  <td>
-                    <input type="text" class="input-text" id="inpManagementLevel" value="S">
-                  </td>
-                  <th scope="row"></th>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>   
-          
-          <div class="btn-wrap">
-            <a href="#n" class="btn-pri btn--large">변경</a>
-          </div>
-        </div>
-      </div><!-- //modal-popup__body -->
-      <div class="modal-popup__close">
-        <button type="button"><span class="blind">팝업닫기</span></button>
-      </div>
-    </div>
-  </div>
-  <!-- //[팝업]바이어 정보 -->
-
-  <script>
+ <script>
     $( function() {
       $( "#datepicker01" ).datepicker();
       $( "#datepicker02" ).datepicker();
     } );
 
-    modalPopupOpen('modalPop01');
-
     window.addEventListener("DOMContentLoaded", function() {
       gnbCtrl(0,0);
+      bottomSheetCtrl('bottomPop01');
     });
   </script>
 </body>

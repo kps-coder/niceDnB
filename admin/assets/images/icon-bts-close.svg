@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #7e3cff;
+      }
+    </style>
+  </defs>
+  <g id="Icon" transform="translate(-364 -0.229)">
+    <circle id="타원_959" data-name="타원 959" class="cls-1" cx="8" cy="8" r="8" transform="translate(364 0.229)"/>
+    <path id="패스_12584" data-name="패스 12584" class="cls-2" d="M364.238,1568.449a1,1,0,0,1-.707-1.707l5-5a1,1,0,1,1,1.414,1.414l-5,5A1,1,0,0,1,364.238,1568.449Z" transform="translate(5.262 -1556.72)"/>
+    <path id="패스_12585" data-name="패스 12585" class="cls-2" d="M369.238,1568.449a1,1,0,0,1-.707-.293l-5-5a1,1,0,0,1,1.414-1.414l5,5a1,1,0,0,1-.707,1.707Z" transform="translate(5.262 -1556.721)"/>
+  </g>
+</svg>

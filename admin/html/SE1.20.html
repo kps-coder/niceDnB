@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../../guide/asset/js/admin-include.js"></script> <!-- head, gnb -->
+
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header" id="headerInclud"></header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav" id="gnbInclud"></div>
+
+      <div class="content-area">
+        <div class="content-head">
+          <div class="title-area">
+            <h2 class="com-tit2">버전 관리</h2>
+          </div>   
+
+          <!-- bread-crumb -->
+          <div class="bread-crumb">
+            <ul class="bread-crumb__list">
+              <li class="home"><a href="#none"><span class="blind">Home</span></a></li>
+              <li><a href="#none">시스템 관리</a></li>
+              <li><span>버전 관리</span></li>
+            </ul>
+          </div><!-- //bread-crumb -->  
+        </div>
+
+        <div class="content-body">
+          <div class="section-cont">
+            <div class="board-head">
+              <div class="board-head__left">
+                <span class="board-count">총 <em>125</em> 건</span>
+              </div>
+              <div class="board-head__right">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-sec btn--small">행삭제</button>
+                  <button type="button" class="btn-sec btn--small">행추가</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>업로드</button>
+                  <button type="button" class="btn-sec btn--small"><i class="icon-excel"></i>다운로드</button>
+                </div>                
+                <span class="input-select">
+                  <select name="inpLine" id="inpLine">
+                    <option>100개 씩</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>버전 관리 목록</caption>
+                <colgroup>
+                  <col style="width:50px">
+                  <col style="width:60%">
+                  <col style="width:40%">
+                  <col style="width:100px">
+                  <col style="width:150px">
+                  <col style="width:100px">
+                  <col style="width:100px">
+                </colgroup>
+                <thead>
+                  <tr>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">항목</th>
+                    <th scope="col">첨부파일</th>
+                    <th scope="col">파일크기</th>
+                    <th scope="col">게시자</th>
+                    <th scope="col">업데이트</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td><button type="button" class="btn-sec btn--small" onclick="bottomSheetCtrl('bottomPop01');">파일첨부</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">품목 카테고리</td>
+                    <td><a href="#n" class="btn-line-link">품목정리_ver3.0.xml</a></td>
+                    <td>55MB</td>
+                    <td>홍길이</td>
+                    <td>2023.05.01</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">품목 카테고리</td>
+                    <td><a href="#n" class="btn-line-link">사기바이어이메일_ver1.3.xml</a></td>
+                    <td>55MB</td>
+                    <td>홍길이</td>
+                    <td>2023.05.01</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="text-left">품목 카테고리</td>
+                    <td><a href="#n" class="btn-line-link">품목정리_ver3.0.xml</a></td>
+                    <td>55MB</td>
+                    <td>홍길이</td>
+                    <td>2023.05.01</td>
+                    <td>2023.01.01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- //board-list -->
+
+            <div class="board-foot">
+              <div class="board-foot__left">
+                <p class="board-info">Showing 1 to 10 of 55 entries</p>
+              </div>
+              <div class="pagination">
+                <button type="button" class="btn-prev"><span class="blind">이전</span></button>
+                <div class="pagination__page">
+                  <a href="#n">1</a>
+                  <a href="#n">2</a>
+                  <a href="#n">3</a>
+                  <a href="#n">4</a>
+                  <a href="#n">5</a>
+                </div>
+                <button type="button" class="btn-next"><span class="blind">다음</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [바텀시트]버전 업데이트 -->
+        <div class="bottomSheet" id="bottomPop01">
+          <div class="bottomSheet__wrap">
+            <div class="bottomSheet__head">
+              <h1 class="bottomSheet__h1">버전 업데이트</h1>
+              <div class="bottomSheet__close">
+                <button type="button"><span class="blind">팝업닫기</span></button>
+              </div>
+            </div>
+            <!-- contents  -->
+            <div class="bottomSheet__body">
+              <div class="bottomSheet__topArea">
+                <h2 class="com-tit2">사기바이어 이메일 리스트</h2>
+              </div>
+              <div class="board-write">
+                <table class="board-write__table">
+                  <caption>문의답변 입력 표</caption>
+                  <colgroup>
+                    <col style="width:150px;">
+                    <col style="width:auto;">
+                    <col style="width:150px;">
+                    <col style="width:auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="inpMemo">파일첨부</label>
+                      </th>
+                      <td colspan="3">
+                        <span class="input-file">
+                          <input type="file" name="inpFile" id="inpFile">
+                          <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+                        </span>
+                        <span class="selected-file">
+                          <button type="button" class="btn-file-del"><em class="blind">삭제</em></button>
+                          파일명.png
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label>게시자</label></th>
+                      <td>홍길동</td>
+                      <th scope="row"><label>등록일</label></th>
+                      <td>2023.01.01</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> 
+
+              <div class="bottomSheet__topArea">
+                <h2 class="com-tit2">업데이트 이력</h2>
+              </div>
+              <div class="board-head">
+                <div class="board-head__left">
+                  <span class="input-date">
+                    <input type="text" id="datepicker01" class="input-jq-date"> 
+                    <em>~</em>
+                    <input type="text" id="datepicker02" class="input-jq-date"> 
+                    <button type="button" class="btn-sec">조회</button>
+                  </span>
+                </div>
+                <div class="board-head__right">
+                  <span class="input-select">
+                    <select name="" id="">
+                      <option>100개 씩</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+
+              <div class="board-list-headFixed">
+                <div class="board-list fixed--head">
+                  <table class="board-list__table">
+                    <caption>업데이트 이력 목록</caption>
+                    <colgroup><!-- fixed body 와 동일 설정 -->
+                      <col style="width:20%">
+                      <col style="width:auto">
+                      <col style="width:15%">
+                      <col style="width:15%">
+                      <col style="width:15%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">업데이트 일자</th>
+                        <th scope="col">첨부파일</th>
+                        <th scope="col">파일크기</th>
+                        <th scope="col">게시자</th>
+                        <th scope="col">삭제</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="board-list fixed--body">
+                  <table class="board-list__table">
+                    <caption>업데이트 이력 목록</caption>
+                    <colgroup><!-- fixed head 와 동일 설정 -->
+                      <col style="width:20%">
+                      <col style="width:auto">
+                      <col style="width:15%">
+                      <col style="width:15%">
+                      <col style="width:15%">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2023.09.11 10:10:08</td>
+                        <td><a href="#none" class="btn-line-link">사기바이어이메일_ver1.4.xml</a></td>
+                        <td>55MB</td>
+                        <td>홍길이</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="btn-wrap">
+                <a href="#none" class="btn-pri btn--large">변경</a>
+              </div>
+            </div><!-- /bottomSheet__body -->
+          </div>
+        </div>
+        <!-- //[바텀시트]버전 업데이트 -->
+      </div>
+      
+    </div><!-- //container -->
+
+    
+  </div><!-- //wrap -->
+
+  <script>
+    let dataPicker = $(".input-jq-date");
+    dataPicker.each(function(idx, elem){
+      $("#datepicker0" + (idx+1)).datepicker();
+    });
+
+    window.addEventListener("DOMContentLoaded", function() {
+      gnbCtrl(6, 0);
+      bottomSheetCtrl('bottomPop01');
+    });
+  </script>
+</body>
+</html>

@@ -58,7 +58,7 @@
 
 .btn-del {display:inline-block; width:14px; height:14px; border-radius: 100px; font-weight: 500; background: #000 url('../images/btn-del.svg') no-repeat center / 6px 6px;}
 
-.btn-reset {width:35px; height:35px; background:url('../images/btn-reset-bk.svg') no-repeat center / 100%;}
+.btn-reset {display:inline-block; width:35px; height:35px; background:url('../images/btn-reset-bk.svg') no-repeat center / 100%;}
 .reset--small {width:30px; height:30px; }
 
 .btn-file-del {display:inline-block; width:14px; height:14px; font-weight: 500;  background: url('../images/btn-file-del.svg') no-repeat center / 12px 13px;}

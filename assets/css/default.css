@@ -13,7 +13,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* html::-webkit-scrollbar, body::-webkit-scrollbar {width:0;} */
 button { cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 1); background-color: #fff; font-family: inherit; font-size: inherit;}
 button, select {box-shadow: none; cursor: pointer;}
-select {color:#818181; }
+select {color:#818181;font-family: 'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif; }
 ::-webkit-input-placeholder { color: #989898; font-size:14px}
 
 a { font-size: inherit; color: inherit; text-decoration:none; cursor:pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }

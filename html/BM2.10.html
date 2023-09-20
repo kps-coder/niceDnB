@@ -101,12 +101,75 @@
                 <tr>
                   <th scope="row">대상 바이어</th>
                   <td>
-                    <div class="td__row">
+                    <!-- 20230920 추가 -->
+                    <div class="buyer-select">
                       <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop01">바이어선택</button>
-                      <button type="button" class="btn-sec btn--small" disabled>이메일 입력</button>
+                      <div class="buyer-select__list">
+                        <div class="buyer-select__cont">
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업  
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                          <span class="selected-item">
+                            <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                            벨기에 바이어 기업
+                          </span>
+                        </div>                 
+                        
+                        <button class="btn-combo"><span class="blind">보기</span></button>
+                      </div>
                     </div>
+
                     <!-- 20230918 개발요청 수정 : drop down -->
-                    <div class="td__row">
+                    <!-- <div class="td__row">
                       <div class="input-withBtn">
                         <span class="input-select">
                           <select name="select_1" id="select_1">
@@ -116,7 +179,7 @@
                         </span>
                         <button type="button" class="btn-reset"><span class="blind">초기화</span></button>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="td__row">
                       <button type="button" class="btn-reset reset--small"><span class="blind">초기화</span></button>
                       <span class="selected-item">
@@ -131,27 +194,13 @@
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">대상 바이어</th>
-                  <td>
-                    <div class="td__row">
-                      <button type="button" class="btn-sec btn--small" disabled>바이어선택</button>
-                      <button type="button" class="btn-sec btn--small">이메일 입력</button>
-                    </div>
-                    <div class="td__row">
-                      <div class="input-withBtn">
-                        <input type="email" class="input-text" id="inpEmail" title="이메일">
-                        <button type="button" class="btn-reset"><span class="blind">초기화</span></button>
-                      </div>                      
-                    </div>
-                  </td>
-                </tr>
-                <tr>
                   <th scope="row">파일첨부</th>
                   <td>
                     <div class="td__row">
+                      <button type="button" class="btn-sec btn--small">나의 파일함</button>
                       <span class="input-file">
                         <input type="file" name="inpFile" id="inpFile">
-                        <label for="inpFile" class="btn-sec btn--small">파일찾기</label>
+                        <label for="inpFile" class="btn-sec btn--small">내 PC</label>
                       </span>
                     </div>
                     <div class="td__row">
@@ -184,6 +233,10 @@
                   <th scope="row"></th>
                   <td>
                     <div style="display:flex; align-items: center; justify-content: center; height:200px; background-color: #eee;">HTML 편집기</div>
+                    <div class="btn-wrap text-right">
+                      <button type="button" class="btn-sec btn--small">템플릿</button>
+                      <button type="button" class="btn-pri btn--small">템플릿 저장</button>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -520,6 +573,15 @@
     mailPreview.addEventListener("click", function(){
       modalPopupClose('confirmPop01');
       modalPopupOpen('modalPop02');
+    });
+
+
+    //바이어 선택
+    let buyerSelectBtn = document.querySelector(".btn-combo");
+    let buyerSelecList = document.querySelector(".buyer-select__list");
+    
+    buyerSelectBtn.addEventListener("click", function(){
+      buyerSelecList.classList.toggle("show");
     });
   </script>
 </body>

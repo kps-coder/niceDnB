@@ -215,7 +215,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .input-withBtn [class^="btn-"] {margin-left:8px}
 
 /* 선택된 text */
-.selected-item {display: inline-flex; align-items: center; margin:2px 4px 2px 0; padding:0 16px 0 8px; border:1px dashed #ccc; border-radius: 15px; line-height:29px; vertical-align: middle; background-color: #fff;}
+.selected-item {display: inline-flex; align-items: center; height:29px; margin:2px 4px 2px 0; padding:0 16px 0 8px; border:1px dashed #ccc; border-radius: 15px; line-height:1.3; vertical-align: middle; background-color: #fff;}
 .selected-item .btn-del {margin-right:8px;}
 .btn-reset + .selected-item {margin-left:16px;}
 
@@ -927,3 +927,15 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
   .credit-rating-info {width:100%; max-width:319px; margin:24px auto;}
 }
 
+/* ==== 마케팅 발송 ==== */
+.buyer-select {position:relative; display:flex; align-items: baseline;}
+.buyer-select__list {position:absolute; left:118px; right:0; top:-7px; z-index: 4; overflow:hidden; height:50px; min-height:50px; padding:5px 40px 5px 20px; border:1px solid #ccc; background-color: #fff; }
+.buyer-select__list .selected-item {margin-top:5px; margin-bottom:5px;}
+.buyer-select__list .btn-combo {position:absolute; right:0; top:0; display:block; width:30px; height:50px; background: url(../images/select-combo.svg) no-repeat center center / 10px 7px;}
+.buyer-select__list.show {height:auto;}
+.buyer-select__list.show .btn-combo {transform: rotate(-180deg);}
+
+@media screen and (max-width: 1000px) {
+  .buyer-select {display: block;}
+  .buyer-select__list {position: relative; left:0; right:0; top:0; margin-top:12px;padding:5px 30px 5px 10px;}
+}

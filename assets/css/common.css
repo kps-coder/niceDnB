@@ -939,3 +939,14 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
   .buyer-select {display: block;}
   .buyer-select__list {position: relative; left:0; right:0; top:0; margin-top:12px;padding:5px 30px 5px 10px;}
 }
+
+/* ==== 툴팁 ==== */
+.tooltip {position:relative;}
+.tooltip > .btn-tooltip {display:inline-block; width:16px; height:16px;border:1px solid #333; border-radius: 100%; vertical-align: 0; background-color: #fff;}
+.tooltip > .btn-tooltip::before {content:"!"; color:#333}
+.tooltip__cont {display:none; position: absolute; left:-50%; top:24px; width:200px; padding:16px; border: 1.5px solid #000; line-height:1.3; transform: translateX(-50%); background-color: #fff;}
+.tooltip__cont::before {content: ""; position: absolute; z-index: 5; left:calc(50% + 10px); top:-6px; display:block; width:10px; height:10px; border-top:1.5px solid #000; border-right:1.5px solid #000; background-color: #fff; transform: rotate(-45deg);}
+.tooltip__cont.show {display:block;}
+
+
+

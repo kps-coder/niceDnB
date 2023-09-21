@@ -97,9 +97,17 @@ window.addEventListener("DOMContentLoaded", function() {
     contentHeadSticky();
   }
 
-  if(document.querySelector(".btn-quick-alarm") !== null){
+  //tooltip
+  if(document.querySelector(".tooltip") !== null){
+    tooltip();
+  }
+
+  if(document.querySelector(".quick-message") !== null){
     quickMessage();
   }
+  
+  
+  
 });
 
 
@@ -260,5 +268,18 @@ function quickMessage() {
     setTimeout(function(){
       quickMessageWrap.style.display = "none";
     }, 100); 
+  });
+}
+
+function tooltip() {
+  let tooltip = document.querySelectorAll(".tooltip");
+  
+  tooltip.forEach(function(elem, idx){
+    let tooltipCont = elem.querySelector(".tooltip__cont");
+    let tooltipBtn = elem.querySelector("button");
+    console.log(tooltipBtn);
+    tooltipBtn.addEventListener("click", function(){
+      tooltipCont.classList.toggle("show");
+    });
   });
 }

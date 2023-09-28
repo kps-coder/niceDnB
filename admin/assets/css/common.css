@@ -187,12 +187,19 @@ div + .bottomSheet__topArea {margin-top:40px;}
 .pagination__page > a {display: block; width:30px; height:30px; margin-left:-1px; line-height: 30px; text-align: center; }
 .pagination__page > a.on {font-weight: bold;}
 
+/* 통계 */
 .statistics-list .board-list__table thead th {height:40px; padding:8px 5px; border-right:1px solid #000; background-color: #ebe3ff;}
 .statistics-list .board-list__table thead th:last-child {border-right:0;}
 .statistics-list .board-list__table tbody th,
 .statistics-list .board-list__table tbody td {border-bottom:1px solid #000; border-right:1px solid #000;}
 .statistics-list .board-list__table tbody td:last-child {border-right:0;}
 .statistics-list .board-list__table thead th.bg {background-color: #fae6fa;}
+
+
+/* 틀고정 */
+.board-left-fixed {display:flex; justify-content: flex-start;}
+.board-fixed__left {width:25%; border-right:3px solid #000;}
+.board-fixed__right {overflow-x: auto; flex:0 0 75%}
  
 /* 게시판 쓰기 & 상세 */
 .board-write {border-top:3px solid #000;}

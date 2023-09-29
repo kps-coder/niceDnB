@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.main-content-area {position:relative; width:calc(100% - 239px); max-width:1681px; min-height:calc(100vh - 135px); padding:40px 40px 40px 16px;}
+.main-title {margin-bottom:40px; font-size: 24px; color: #171717;}
+
+.welcom {margin-bottom:32px;}
+.welocm__text {padding-left:56px; font-size: 32px; color: #171717; font-weight: bold; line-height: 40px; background: url('../images/icon-main-welcom.svg') no-repeat 0 center / 40px 40px;}
+
+.dashBoard {display:flex; flex-wrap: wrap; margin:0 -20px 66px;}
+.dashBoard__cont {margin:0 18px 24px 18px; border-radius: 16px; box-shadow: 5px 5px 6px rgba(143, 149, 179, 0.15);}
+.dashBoard__link {display:flex; flex-direction: column; justify-content: center; align-items: flex-end; width: 292px; height: 157px; padding:0 30px 0 135px;}
+.dashBoard__title {font-size: 14px; font-weight: bold; color: #171717; line-height: 26px;}
+.dashBoard__count {font-weight: bold;}
+.dashBoard__count > strong {font-size: 40px; line-height: 44px;}
+.dashBoard__count > em {margin-left:8px; font-size: 16px;}
+
+.dashBoard--01 {background: #fff url('../images/icon_main_01.svg') no-repeat left 30px top 50% / 86px 80px;}
+.dashBoard--02 {background: #fff url('../images/icon_main_02.svg') no-repeat left 30px top 50% / 86px 80px;}
+.dashBoard--03 {background: #fff url('../images/icon_main_03.svg') no-repeat left 30px top 50% / 86px 80px;}
+.dashBoard--04 {background: #fff url('../images/icon_main_04.svg') no-repeat left 30px top 50% / 86px 80px;}
+.dashBoard--05 {background: #fff url('../images/icon_main_05.svg') no-repeat left 30px top 50% / 86px 80px;}
+.dashBoard--06 {background: #fff url('../images/icon_main_06.svg') no-repeat left 30px top 50% / 86px 80px;}
+.dashBoard--07 {background: #fff url('../images/icon_main_07.svg') no-repeat left 30px top 50% / 86px 80px;}
+
+.dashBoard--01 .dashBoard__count > strong {color: #43affd;} 
+.dashBoard--02 .dashBoard__count > strong {color: #0048ea;}
+.dashBoard--03 .dashBoard__count > strong {color: #8a3aea;}
+.dashBoard--04 .dashBoard__count > strong {color: #ff52bc;}
+.dashBoard--05 .dashBoard__count > strong {color: #ff8810;}
+.dashBoard--06 .dashBoard__count > strong {color: #fcc200;}
+.dashBoard--07 .dashBoard__count > strong {color: #fe4e59;}
+
+.graph__legend {display:flex; margin-bottom:40px;}
+.graph__legendBox {display:flex; align-items: center; justify-content: center; height: 33px; padding:0 16px; border-radius: 8px; box-shadow: 2px 2px 4px rgba(18, 37, 77, 0.15); background-color: #fff;}
+.graph__legendBox + .graph__legendBox {margin-left:16px;}
+.graph__legendBox [class^="color_"] {display:block; width:16px; height:16px; margin-right:10px; border-radius: 3px;}
+.graph__legendBox .color_1 {background-color: #4864f0;} 
+.graph__legendBox .color_2 {background-color: #26c9a7;}
+.graph__legendBox .color_3 {background-color: #ffce00;}
+.graph__legendBox .color_4 {background-color: #ff526b;}

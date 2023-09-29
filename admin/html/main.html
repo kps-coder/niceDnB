@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  
+  <!-- jquery datepicker -->
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <script src="../assets/js/lib/jquery-3.7.0.min.js"></script>
+  <script src="../assets/js/lib/chart.min.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <div class="wrap" id="wrap">
+    <header class="header">
+      <h1 class="logo"><a href="main.html"><span class="blind">Linker</span></a></h1>
+      <div class="user-menu">
+        <div class="user-name"><strong>홍길동 님</strong> 환영합니다.</div>
+        <ul class="user-menu__mymenu">
+          <li><a href="#none" class="btn-logout">로그아웃</a></li>
+          <li><a href="#none" class="btn-mypage">마이페이지</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container" id="container"> 
+      <div class="global-nav">
+        <ul class="global-nav__list">
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun01"></i>바이어 관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">바이어 조회/등록</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun02"></i>행사관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">행사조회/등록</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun03"></i>컨설팅관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">컨설팅신청내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun04"></i>서비스관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">마케팅메일템플릿</a></li>
+              <li><a href="#none">캐시관리</a></li>
+              <li><a href="#none">공지사항</a></li>
+              <li><a href="#none">문의내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun05"></i>회원관리</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">회원조회</a></li>
+              <li><a href="#none">사업자등록승인</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun06"></i>통계</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">회원통계</a></li>
+              <li><a href="#none">매출통계</a></li>
+              <li><a href="#none">서비스 이용 통계</a></li>
+              <li><a href="#none">바이어 발굴 현황</a></li>
+              <li><a href="#none">바이어 회신율</a></li>
+              <li><a href="#none">단계별 장애 통계</a></li>
+            </ul>
+          </li>
+          <li><a href="#none" class="btn-depth-1"><i class="icon-meun07"></i>시스템</a>
+            <ul class="global-nav__depth2">
+              <li><a href="#none">버전관리</a></li>
+              <li><a href="#none">관리자 메뉴 권한</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content-area">
+        <div class="welcom">
+          <p class="welocm__text"><span>홍길동</span> 님 반갑습니다!</p>
+        </div>  
+        <div class="dashBoard">
+          <h2 class="blind">집계 건수</h2>
+          <div class="dashBoard__cont dashBoard--01">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">컨설팅 신규 신청 건수</span>
+              <span class="dashBoard__count"><strong>20</strong><em>건</em></span>
+            </a>
+          </div>
+          <div class="dashBoard__cont dashBoard--02">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">회원이탈수(Today)</span>
+              <span class="dashBoard__count"><strong>20</strong><em>건</em></span>
+            </a>
+          </div>
+          <div class="dashBoard__cont dashBoard--03">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">방문자 수</span>
+              <span class="dashBoard__count"><strong>20</strong><em>건</em></span>
+            </a>
+          </div>
+          <div class="dashBoard__cont dashBoard--04">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">전체 회원수</span>
+              <span class="dashBoard__count"><strong>20</strong><em>건</em></span>
+            </a>
+          </div>
+          <div class="dashBoard__cont dashBoard--05">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">문의 신규 접수</span>
+              <span class="dashBoard__count"><strong>20</strong><em>건</em></span>
+            </a>
+          </div>
+          <div class="dashBoard__cont dashBoard--06">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">사업자등록 승인요청</span>
+              <span class="dashBoard__count"><strong>20</strong><em>건</em></span>
+            </a>
+          </div>
+          <div class="dashBoard__cont dashBoard--07">
+            <a href="#n" class="dashBoard__link">
+              <span class="dashBoard__title">오늘의 행사 / 전체 행사</span>
+              <span class="dashBoard__count"><strong>20</strong><em>/ 12건</em></span>
+            </a>
+          </div>
+        </div>       
+        
+        <div class="dashBoard-graph">
+          <h2 class="main-title">Liker 매출 현황</h2>
+          <div class="graph">
+            <div class="graph__legend">
+              <div class="graph__legendBox">
+                <span class="color_1"></span>
+                <span class="text">빅데이터 발굴</span>
+              </div>
+              <div class="graph__legendBox">
+                <span class="color_2"></span>
+                <span class="text">마케팅 발송</span>
+              </div>
+              <div class="graph__legendBox">
+                <span class="color_3"></span>
+                <span class="text">해외보고서</span>
+              </div>
+              <div class="graph__legendBox">
+                <span class="color_4"></span>
+                <span class="text">총 매출</span>
+              </div>
+            </div>
+            <canvas id="myChart" class="graph-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- //container -->
+
+    
+  </div><!-- //wrap -->
+
+  <script>
+    $( function() {
+      $( "#datepicker01" ).datepicker();
+      $( "#datepicker02" ).datepicker();
+    } );
+
+    const ctx = document.getElementById('myChart');
+    const data = [
+      { mouth: 1, count: 10, data: 3 },
+      { mouth: 2, count: 20, data: 3 },
+      { mouth: 3, count: 15, data: 3 },
+      { mouth: 4, count: 25, data: 3 },
+      { mouth: 5, count: 22, data: 3 },
+      { mouth: 6, count: 30, data: 3 },
+      { mouth: 7, count: 28, data: 3 },
+      { mouth: 8, count: 28, data: 3 },
+      { mouth: 9, count: 28, data: 3 },
+      { mouth: 10, count: 28, data: 3 },
+      { mouth: 11, count: 28, data: 3 },
+      { mouth: 12, count: 28, data: 3 },
+    ];
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['1월', '2월', '3월', '4월', '5월', '7월', '8월', '9월', '10월', '11월', '12월' ],
+        datasets:[
+          {
+              label:'빅데이터 발굴',
+              data:[10,8,6,5,12,7,10,8,6,5,12,7],
+              backgroundColor:'#4864f0',
+              borderColor:'#4864f0',
+              borderWidth:2,
+              borderRadius:6,
+              barThickness:13,
+              borderColor:'transparent'
+          },
+          {
+              label:'마케팅 발송',
+              data:[5,10,5,3,4,2,5,10,5,3,4,2],
+              backgroundColor:'#26c9a7',
+              borderColor:'#26c9a7',
+              borderWidth:2,
+              borderRadius:6,
+              barThickness:13,
+              borderColor:'transparent'
+          },
+          {
+              label:'해외보고서',
+              data:[5,10,5,3,4,2,5,10,5,3,4,2],
+              backgroundColor:'#ffce00',
+              borderColor:'#ffce00',
+              borderWidth:2,
+              borderRadius:6,
+              barThickness:13,
+              borderColor:'transparent'
+          },
+          {
+              label:'총 매출',
+              data:[5,10,5,3,4,2,5,10,5,3,4,2],
+              backgroundColor:'#ff526b',
+              borderColor:'#ff526b',
+              borderWidth:2,
+              borderRadius:6,
+              barThickness:13,
+              borderColor:'transparent'
+          }
+        ]
+      },
+      options: {
+        plugins: {
+            legend: {
+                display : false,
+            }
+        },
+        scales: {
+          x:{
+            grid: {
+                display: false,
+            },
+            ticks: {
+              font: {
+                  size: 14,
+                  weight : 'bold',
+                  family : "'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif"
+              }
+            }
+          },
+          y:{
+            ticks: {
+              font: {
+                  size: 12
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

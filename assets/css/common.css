@@ -928,7 +928,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .mypage-main__member .btn-member {color: #7f3cff; font-weight: bold; text-decoration: underline; background-color: transparent;}
 .mypage-main__cash em {padding-left:16px; color: #587fff; text-decoration: underline; font-weight: bold;}
 .mypage-main__cash .btn-cash {margin-left:24px;}
-.mypage-main__menu {display:flex; flex-wrap: wrap; justify-content: space-around; max-width:1144px; margin:0 auto;}
+.mypage-main__menu {display:flex; flex-wrap: wrap; justify-content: space-around; margin:0 auto;}
 .mypage-main__box {width:155px; margin:12px 0; padding:58px 15px 15px; border-radius: 15px; color:#fff; }
 .mypage-main__box .title {margin-bottom:12px; text-align: center;}
 .mypage-main__box .btn {display:block; width:100%; padding:8px 0; border-radius:12px; font-size: 14px; text-align:center; color:#fff; background-color: rgba(0,0,0,.2);}

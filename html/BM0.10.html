@@ -31,21 +31,9 @@
     <!-- //header -->
 
     <div class="container container--subBg1" id="container"> 
-      <!-- bread-crumb -->
-      <div class="bread-crumb">
-        <ul class="bread-crumb__inner">
-          <li><a href="/" class="btn-home"><span class="blind">HOME</span></a></li>
-          <li>
-            <button type="button" class="btn-downMenu">빅바이어 마케팅</button>
-            <ul class="down-menu">
-              <li><a href="#n">빅바이어 마케팅</a></li>
-              <li><a href="#n">바이어정보</a></li>
-              <li><a href="#n">해외기업보고서</a></li>
-              <li><a href="#n">수출바우처 컨설팅</a></li>
-            </ul>
-          </li>
-        </ul>        
-      </div><!-- //bread-crumb -->
+      <div class="bg-img">
+        <img src="../assets/images/bg-intro.png.png">
+      </div>
 
       <!-- content-body -->
       <div class="content-body">
@@ -69,7 +57,76 @@
               <span>마케팅 <br>내역 관리</span>
             </a>
           </div>
-        </div>       
+        </div>     
+        <div class="bigBuyer-intro">
+          <div class="bigBuyer-intro__leftBox">
+            <div class="bigBuyer-intro__textArea">
+              <p class="txt-1">나이스디앤비가 보유한  2억 건 이상의 글로벌 기업 빅데이터를 바탕으로</p>
+              <p class="txt-2"><strong>최적화된 RPA 로직과 정교한 AI 솔루션</strong>을 결합하여 기업의 <strong>니즈에 맞는 
+              바이어 정보를 빠르고 정확하게 제공</strong>해 드리는 서비스입니다</p>  
+              <div class="btn-wrap">
+                <a href="#n" class="btn-pri btn--small">서비스 바로가기</a>
+              </div>
+            </div>           
+            <div class="bigBuyer-intro__descArea">
+              <div class="descArea-left">
+                <dl class="bigBuyer-intro__desc01">
+                  <dt>BIG DATA</dt>
+                  <dd>
+                    <p class="txt-1">
+                      세계 최대의 글로벌 기업정보
+                      회사인 미국 Dun & Bradstreet 
+                      社 에 의해 수시로 업데이트 되는 
+                      2억 건 이상의 빅데이터
+                    </p>
+                    <p class="txt-2">
+                      아시아 지역 약 1억 건, <br>
+                      유럽 지역  약 4,800 만 건,<br>
+                      중남미 지역 약 3,000 만 건, <br>
+                      북미 지역 약 2,000 만 건,<br>
+                      아프리카 지역 약 400 만 건, <br>
+                      중동 지역 약 80 만 건
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="descArea-right">
+                <dl class="bigBuyer-intro__desc02">
+                  <dt>RPA</dt>
+                  <dd>
+                    <p class="txt-1">
+                      바이어 정보 탐색·추출에 최적화된
+                      자동화 로직으로 기업 니즈에
+                      부합하는해외 바이어 정보를
+                      빠르게 정제 및 취합
+                      (자사 보유 빅데이터  + 웹 상 데이터)
+                    </p>
+                  </dd>
+                </dl>
+                <dl class="bigBuyer-intro__desc03">
+                  <dt>AI</dt>
+                  <dd>
+                    <p class="txt-1">
+                      **** 건 이상의 실제 바이어-셀러<br>
+                      매칭 데이터 및 **년 이상의 무역지원
+                      노하우를 기반으로 실시간 학습 중인
+                      AI 솔루션이 요청 기업의 니즈에
+                      부합하는 최선의 바이어 정보를 선별하여 제공
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+            </div>            
+          </div>
+          <div class="bigBuyer-intro__rightBox">
+            <div class="bigBuyer-intro__linkBox">
+              <a href="#n">마케팅<br>메시지 발송</a>
+            </div>
+            <div class="bigBuyer-intro__linkBox">
+              <a href="#n">마케팅<br>내역관리</a>
+            </div>
+          </div>
+        </div>  
       </div><!-- //content-body -->
     </div><!-- //container -->
 
@@ -79,189 +136,7 @@
     <!-- //footer -->
   </div><!-- //wrap -->
 
-  <!-- [팝업]산업분류코드 조회 -->
-  <div class="modal-popup" id="modalPop01">
-    <div class="modal-popup__wrap">
-      <div class="modal-popup__head">
-        <h1 class="modal-popup__title">산업분류코드 조회</h1>
-      </div>
-      <div class="modal-popup__body">
-         <div class="modal-popup__content">
-            <!-- 조건검색 -->
-            <div class="board-search">
-              <div class="board-search__row">
-                <dl class="board-search__col">
-                  <dt class="board-search__label blind">
-                    <label for="sel01">산업분류코드</label>
-                  </dt>
-                  <dd class="board-search__input">
-                    <span class="input-select">
-                      <select name="sel01" id="sel01">
-                        <option>선택하세요</option>
-                      </select>
-                    </span>
-                  </dd>
-                </dl>
-                <dl class="board-search__col flex-2">
-                  <dt class="board-search__label blind">
-                    <label for="inpSearch">키워드</label>
-                  </dt>
-                  <dd class="board-search__input">
-                    <div class="input-search">
-                      <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="키워드를 입력하세요.">
-                      <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
-                    </div>
-                  </dd>
-                </dl>
-              </div>
-            </div><!-- //조건검색 -->
-
-            <div class="board-head">
-              <div class="board-head__left">
-                <span class="board-count">총 <em>125</em> 건</span>
-              </div>
-            </div>
-            <div class="board-list-headFixed">
-              <div class="board-list fixed--head">
-                <table class="board-list__table">
-                  <caption>산업분류코드, 산업명 선택 표</caption>
-                  <colgroup><!-- fixed body 와 동일 설정 -->
-                    <col style="width:10%">
-                    <col style="width:15%">
-                    <col style="width:30%">
-                    <col style="width:auto">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_01">
-                          <label for="ch01_01"><span class="blind">전체</span></label>
-                        </span>
-                      </th>
-                      <th scope="col">No</th>
-                      <th scope="col">산업분류코드</th>
-                      <th scope="col">산업명</th>
-                    </tr>
-                  </thead>
-                </table>
-              </div>
-              <div class="board-list fixed--body">
-                <table class="board-list__table">
-                  <caption>산업분류코드, 산업명 선택 표</caption>
-                  <colgroup><!-- fixed head 와 동일 설정 -->
-                    <col style="width:10%">
-                    <col style="width:15%">
-                    <col style="width:30%">
-                    <col style="width:auto">
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_02">
-                          <label for="ch01_02"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_03">
-                          <label for="ch01_03"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_04">
-                          <label for="ch01_04"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_05">
-                          <label for="ch01_05"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_06">
-                          <label for="ch01_06"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_07">
-                          <label for="ch01_07"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_08">
-                          <label for="ch01_08"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="input-checkbox">
-                          <input type="checkbox" name="ch01" id="ch01_09">
-                          <label for="ch01_09"><span class="blind">125</span></label>
-                        </span>
-                      </td>
-                      <td>75</td>
-                      <td>26112</td>
-                      <td class="text-left">비메모리용 및 기타 전자집적회로 제조업</td>
-                    </tr>  
-                  </tbody>
-                </table>
-              </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal-popup__foot">
-        <div class="btn-wrap">
-          <button type="button" class="btn-pri">확인</button>
-        </div>
-      </div>
-      <div class="modal-popup__close">
-        <button type="button"><span class="blind">팝업닫기</span></button>
-      </div>
-    </div>
-  </div>
-  <!-- //[팝업]산업분류코드 조회 -->
-
+  
   <script>
     let ctaBtn = document.querySelector("#btnBlock");
     ctaBtn.addEventListener("click", function(){

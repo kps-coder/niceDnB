@@ -22,6 +22,7 @@
 .icon16-clip-bk {background: url('../images/icon16-clip.svg') no-repeat center center / 16px 16px}
 .icon16-send-wt {background: url('../images/icon12-send-white.svg') no-repeat center center / 15px 15px;}
 .icon16-reset-wt {background: url('../images/icon16-reset-wt.svg') no-repeat center center / 16px 16px;}
+.icon16-search-wt {background: url('../images/icon16-search-wt.svg') no-repeat center center / 16px 16px;}
 
 [class^="icon40-"] {width:40px; height:40px;}
 .icon40-email {background: url('../images/icon40-email.svg') no-repeat center center / 37px 39px}
@@ -45,6 +46,7 @@
 
 .btn-line-link {display:inline-block; padding-bottom:2px; text-decoration: underline; font-weight: bold; color:#000}
 .btn-link {font-weight:bold;}
+.btn-line:hover {text-decoration: underline;}
 
 
 [class^="btn-"] > [class^="icon"] {margin:0 4px;}
@@ -72,7 +74,8 @@
 /*  버튼레이아웃 */
 .btn-wrap {position:relative; margin-top:45px; text-align: center;}
 .btn-wrap-right {text-align:right;}
-.board-list + .btn-wrap {margin-top:45px;}
+.board-list + .btn-wrap, 
+.btn-wrap + .board-list {margin-top:45px;}
 .btn-wrap-between {display:flex; justify-content: space-between;}
 .btn-wrap-secede {position:absolute; right:0;}/* 회원탈퇴 */
 
@@ -810,22 +813,53 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .message-area + .message-area {margin-top:40px;}
 
 /* ==== 빅바이어 마케팅 소개 ==== */
-
 @media screen and (min-width: 1200px) {
-  .container--subBg1 {position:relative; height:100%; min-height:800px; background: url('../images/bg-sub1.png') no-repeat 0 0 / 100% 100%;}
-  .bigBuyer-marketing {display:flex; max-width:1366px; margin:0 auto; padding:0 20px; box-sizing: content-box;}
+  .container--subBg1 {position:relative; height:100%; min-height:800px; background: url('../images/bg-intro.png') no-repeat 0 0 / 100% 100%;}
+  .bg-img {display:none;}
+  .bigBuyer-marketing {display:flex; max-width:1366px; min-height:800px; margin:0 auto; padding:0 20px; box-sizing: content-box;}
   .bigBuyer-marketing > div {flex:1;}
   .bigBuyer-marketing__title {margin-bottom:33px; font-size: 30px; color: #7c8190;}
   .bigBuyer-marketing__desc {max-width:576px; margin-bottom:42px; font-size: 56px; font-weight: bold; line-height: 70px; color: #000;  word-break: keep-all;}
   .bigBuyer-marketing__text {max-width:550px; line-height:1.3; font-size:20px; word-break: keep-all;}
 
   .bigBuyer-marketing__right {position: relative; display:flex; width:100%; height:100%;}
-  .bigBuyer-marketing__box {display:block; width:300px; padding:140px 40px 60px; border:3px solid rgba(255,255,255,0.1); border-radius: 15px; background: rgba(255, 255, 255, 0.3) url('../images/icon-ticket.svg') no-repeat 36px 24px / 70px 67px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);}
+  .bigBuyer-marketing__box {display:block; width:300px; padding:140px 40px 47px; border:3px solid rgba(255,255,255,0.1); border-radius: 24px 0; background: rgba(255, 255, 255, 0.3) url('../images/icon-pc.svg') no-repeat 36px 24px / 57px 45px;  -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);}
   .bigBuyer-marketing__box b {display:block; color: #949599; font-size: 14px; font-weight: 900; line-height: 38px;} 
   .bigBuyer-marketing__box span {display:block; color: #333; font-size: 25px; font-weight: bold; line-height: 35px;}
   .bigBuyer-marketing__box span::after {content:url('../images/icon-arr.svg'); padding-left:8px;}
-  .bigBuyer-marketing__box:nth-child(2) {position:absolute; top:-100px; right:50px;}
-  .bigBuyer-marketing__box:nth-child(3) {position:absolute; right:0; top:240px;}
+  .bigBuyer-marketing__box:nth-child(2) {position:absolute; top:-100px; right:50px; background: rgba(255, 255, 255, 0.3) url('../images/icon-mail.svg') no-repeat 36px 24px / 45px 45px;}
+  .bigBuyer-marketing__box:nth-child(3) {position:absolute; right:0; top:240px; background: rgba(255, 255, 255, 0.3) url('../images/icon-talk.svg') no-repeat 36px 24px / 56px 55px;}
+
+  .bigBuyer-intro {display:flex; max-width: 1366px; margin:0 auto}
+  .bigBuyer-intro__leftBox {
+    width:1075px;
+    padding:95px 100px;
+    border:3px solid rgba(255,255,255,0.1);
+    border-radius: 24px 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);
+  }
+
+  .bigBuyer-intro__descArea {display:flex; justify-content: space-between; margin-top:81px;}
+  .bigBuyer-intro__textArea .txt-1 {margin-bottom:16px; text-align: center; color: #7c8190;}
+  .bigBuyer-intro__textArea .txt-2 {text-align: center; font-size: 29px; color: #000; line-height: 42px; word-break: keep-all;}
+  .bigBuyer-intro__descArea {background: url('../images/img_intro_earth.png') no-repeat center center / 249px 255px;}
+  [class^="bigBuyer-intro__desc0"] dt {margin-bottom:10px; color: #000; font-size: 18px; font-weight: bold;}
+  [class^="bigBuyer-intro__desc0"] dd .txt-1 {color: #000; line-height: 24px; word-break: keep-all;}
+  [class^="bigBuyer-intro__desc0"] dd .txt-2 {margin-top:12px; font-size: 11px; line-height: 18px; color: #000;}
+  .bigBuyer-intro__desc01 {width: 206px;}
+  .bigBuyer-intro__desc02 {width: 210px; text-align: right;}
+  .bigBuyer-intro__desc03 {width: 283px; margin:32px 24px 0 0; text-align: right;}
+  .descArea-right {display: flex; flex-direction: column; align-items: flex-end;}
+
+  .bigBuyer-intro__rightBox {display: flex; margin-left:40px;}
+  .bigBuyer-intro__linkBox {display:flex; flex-direction: column; justify-content: center; min-width:180px; border-radius: 40px 0px; font-size:24px; color:#fff;  background-color: rgba(40,47,88, 0.33);}
+  .bigBuyer-intro__linkBox + .bigBuyer-intro__linkBox {margin-left:8px}
+  .bigBuyer-intro__linkBox > a {display:block; padding-top:100px; line-height: 32px; font-weight: bold; text-align: center;}
+  .bigBuyer-intro__linkBox > a::after {content: ""; display:block; width:55px; height:22px; margin:16px auto 0; background: url('../images/btn-go.svg') no-repeat center center / 100%;}
+
+  .bigBuyer-intro__linkBox:nth-child(1) > a {background: url('../images/icon-mail.svg') no-repeat center 0 / 82px 76px;}
+  .bigBuyer-intro__linkBox:nth-child(2) > a {background: url('../images/icon-talk.svg') no-repeat center 0 / 77px 76px;}
 }
 
 

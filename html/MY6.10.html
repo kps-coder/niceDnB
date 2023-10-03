@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 퍼블 전용 UI : 사용금지 -->
+  <script src="../guide/asset/js/ui-include.js"></script> <!-- skip nav, footer includ -->
+  <script src="../guide/asset/js/ui-header-gnb.js"></script> <!-- header includ -->
+
+  <!-- ui -->  
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css">  
+  
+  <script src="../assets/js/ui_common.js"></script>
+</head>
+<body> 
+  <!-- skip nav -->
+  <div id="skipNavInclud"><!-- 퍼블 includ용 사용금지 Layout.html 참조 --></div>
+  <!-- //skip nav -->
+
+  <div class="wrap" id="wrap">
+    <div class="section-cont">
+      <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="modalPop01">나의 파일함</button>
+    </div>    
+  </div><!-- //wrap -->
+
+  <!-- [팝업]나의 파일함 -->
+  <div class="modal-popup" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">나의 파일함</h1>
+      </div>
+      <div class="modal-popup__body">
+         <div class="modal-popup__content">
+          <div class="com-notiBox">
+            <strong>회원님이 등록한 파일 관리함 입니다.</strong>
+            <p>파일 업로드 시, 파일 개수 10개, 용량 최대 20MB이하로 등록해 주세요.</p>
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-sec btn--small">파일 삭제</button>
+            <button type="button" class="btn-pri btn--small">파일 업로드</button>
+          </div>
+
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>파일명 목록</caption>
+              <colgroup>
+                <col style="width:70px">
+                <col style="width:auto">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_01">
+                      <label for="ch01_01"><span class="blind">125</span></label>
+                    </span>
+                  </th>
+                  <th scope="col">파일명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td class="text-left"><a href="#n" class="btn-line">마케팅문서.pdf</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_03">
+                      <label for="ch01_03"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td class="text-left"><a href="#n" class="btn-line">마케팅문서.pdf</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_04">
+                      <label for="ch01_04"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td class="text-left"><a href="#n" class="btn-line">마케팅문서.pdf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]나의 파일함 -->
+
+  <script>
+    modalPopupOpen("modalPop01");
+  </script>
+</body>
+</html>

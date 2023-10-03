@@ -49,7 +49,7 @@
             </ul>
           </li>
           <li>
-            <button type="button" class="btn-downMenu">마케팅 발송내역</button>
+            <button type="button" class="btn-downMenu">임시저장내역</button>
             <ul class="down-menu">
               <li><a href="#n">빅데이터바이어발굴</a></li>
               <li><a href="#n">마케팅발송</a></li>
@@ -63,8 +63,14 @@
       <div class="content-head">
         <div class="content-head__inner">
           <div class="title-area">
-            <h3 class="com-tit3">마케팅 발송내역</h3>
+            <h3 class="com-tit3">임시저장</h3>
             <div class="com-titDesc">abcdf@nicednb.com</div>
+          </div>
+          <div class="btn-wrap">
+            <div class="input-search">
+              <input type="text" name="inpSearch" id="inpSearch" class="input-search__input" placeholder="검색어를 입력해주세요">
+              <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
+            </div>
           </div>
         </div>      
       </div><!-- //content-head -->
@@ -72,76 +78,11 @@
       <!-- content-body -->
       <div class="content-body">
         <div class="section-cont">
-          <!-- 조건검색 --> <!-- 20231003 조건검색 추가 -->
-          <div class="board-search">
-            <div class="board-search__row">
-              <dl class="board-search__col">
-                <dt class="board-search__label">
-                  <label for="datepicker01">발송 기간</label>
-                </dt>
-                <dd class="board-search__input">
-                  <span class="input-date">
-                    <input type="text" id="datepicker01" class="input-jq-date">
-                    <em>~</em> 
-                    <input type="text" id="datepicker02" class="input-jq-date">
-                  </span>
-                </dd>
-              </dl>
-            </div>
-            <div class="board-search__row">
-              <dl class="board-search__col">
-                <dt class="board-search__label">
-                  <label for="sel01">발송 구분</label>
-                </dt>
-                <dd class="board-search__input">
-                  <span class="input-select">
-                    <select name="sel01" id="sel01">
-                      <option>전체</option>
-                    </select>
-                  </span>
-                </dd>
-              </dl>
-            </div>
-            <div class="board-search__row">
-              <dl class="board-search__col">
-                <dt class="board-search__label">
-                  <label for="sel02">수신 확인</label>
-                </dt>
-                <dd class="board-search__input">
-                  <span class="input-select">
-                    <select name="sel02" id="sel02">
-                      <option>전체</option>
-                    </select>
-                  </span>
-                </dd>
-              </dl>
-            </div>
-            <div class="board-search__row">
-              <dl class="board-search__col flex-1_5">
-                <dt class="board-search__label">
-                  <label for="inpSearch">키워드</label>
-                </dt>
-                <dd class="board-search__input">
-                  <div class="input-search">
-                    <input type="text" name="inpSearch" id="inpCompName" class="input-search__input" placeholder="키워드 입력" title="기업명">
-                    <button type="button" class="input-search__btn"><span class="blind">검색</span></button>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-            
-            <div class="btn-wrap">
-              <button type="button" class="btn-sec btn--small">초기화</button>
-              <button type="button" class="btn-pri btn--small">검색 <i class="icon16-search-wt"></i></button>
-            </div>
-          </div><!-- //board-search -->
-
           <!-- 게시판 -->
           <div class="board-head">
             <div class="board-head__left">
               <span class="board-count">총 <em>125</em> 건</span>
             </div>
-            <!-- 2023 검색삭제 및 버튼 추가 -->
             <div class="board-head__right">
               <button type="button" class="btn-sec btn--small">삭제</button>
             </div>
@@ -155,8 +96,6 @@
                 <col style="width:15%">
                 <col style="width:auto">
                 <col style="width:15%">
-                <col style="width:15%">
-                <col style="width:15%">
               </colgroup>
               <thead>
                 <tr>
@@ -167,9 +106,7 @@
                   </th>
                   <th scope="col">대상바이어</th>
                   <th scope="col">제목</th>
-                  <th scope="col">파일크기</th>
-                  <th scope="col">수신확인</th>
-                  <th scope="col">일시</th>
+                  <th scope="col">임시저장 일시</th>
                 </tr>
               </thead>
               <tbody>
@@ -181,30 +118,29 @@
                     </span>
                   </td>
                   <td>바이어기업1 외 32건</td>
-                  <td class="text-left"><a href="#n" onclick="window.open('CM6.20.html','보낸메일', 'width=900, height=900');">마케팅입니다.</a></td>
-                  <td>12MB</td>
-                  <td>
-                    <button type="button" data-roll="modal-popup" data-popid="modalPop01">
-                      <i class="icon-email-off"><span class="blind">읽지않음</span></i>
-                    </button> 
-                  </td>
+                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
                   <td>23.06.15 14:12</td>
                 </tr>
                 <tr>
                   <td>
                     <span class="input-checkbox">
-                      <input type="checkbox" name="ch01" id="ch01_03">
-                      <label for="ch01_03"><span class="blind">125</span></label>
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
                     </span>
                   </td>
                   <td>바이어기업1 외 32건</td>
-                  <td class="text-left"><a href="#n" onclick="window.open('CM6.20.html','보낸메일', 'width=900, height=900');">마케팅입니다.</a></td>
-                  <td>12MB</td>
+                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
+                  <td>23.06.15 14:12</td>
+                </tr>
+                <tr>
                   <td>
-                    <button type="button" data-roll="modal-popup" data-popid="modalPop01">
-                      <i class="icon-email-on"><span class="blind">읽음</span></i>
-                    </button> 
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
+                    </span>
                   </td>
+                  <td>바이어기업1 외 32건</td>
+                  <td class="text-left"><a href="#n">마케팅입니다.</a></td>
                   <td>23.06.15 14:12</td>
                 </tr>
               </tbody>

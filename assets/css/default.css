@@ -218,6 +218,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 /* 태블릿 */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
   .gnb {display:none}
+  .sitemap {padding-top:70px;}
 
   /* .bread-crumb__inner,
   .content-head__inner,
@@ -244,7 +245,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .header-mobile {position:absolute; top:0; z-index: 15; width:100%; background-color: #fff;}
   .header__inner {display:flex; align-items: center; justify-content: space-between; height:54px; padding:0 20px;}
   .header-mobile__logo a {display:block;}
-  .header-mobile__logo img {width:75px; height:auto; vertical-align: top;}
+  .header-mobile__logo img {width:75px; height:auto; vertical-align: middle;}
   .header-mobile__util {display:flex; align-items: center;}
   .header-mobile__util .btn-search {margin-right:20px;}
   .btn-page-prev {display:block; width:24px; height:24px; background-color: #999;}

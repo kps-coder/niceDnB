@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function() {
    <!-- 로그인, 회원가입, 처리방침, 약관 등의 화면 PC용 -->
    <header class="header-pc header--gnbNone">
      <div class="header__inner">
-       <h1 class="header__logo"><a href="Main.html"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>
+       <h1 class="header__logo"><a href="Main.html"><img src="../assets/images/logo.png" alt="수출지원서비스"></a></h1>
        <p class="header__msg">수출지원서비스플랫폼에 오신 것을 환영합니다.</p>
        <div class="util-menu">
          <div class="util-menu__wrap">
@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
     <!-- mobile header -->
     <header class="header-mobile">
       <div class="header__inner">
-        <h1 class="header-mobile__logo"><a href="/"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>        
+        <h1 class="header-mobile__logo"><a href="/"><img src="../assets/images/logo.png" alt="수출지원서비스"></a></h1>        
         <button class="btn-sitemap"><span class="blind">전체메뉴</span></button>
       </div>      
       <nav class="gnb">

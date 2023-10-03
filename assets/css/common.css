@@ -816,6 +816,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 @media screen and (min-width: 1200px) {
   .container--subBg1 {position:relative; height:100%; min-height:800px; background: url('../images/bg-intro.png') no-repeat 0 0 / 100% 100%;}
   .bg-img {display:none;}
+  .container--subBg1 .content-body {padding-top:200px;}
   .bigBuyer-marketing {display:flex; max-width:1366px; min-height:800px; margin:0 auto; padding:0 20px; box-sizing: content-box;}
   .bigBuyer-marketing > div {flex:1;}
   .bigBuyer-marketing__title {margin-bottom:33px; font-size: 30px; color: #7c8190;}

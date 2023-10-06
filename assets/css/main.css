@@ -156,3 +156,37 @@
   .sec6-icon2 {background: url('../images/main-mo-sec6-icon2.png') no-repeat center center / contain;}
   .sec6-icon3 {background: url('../images/main-mo-sec6-icon3.png') no-repeat center center / contain;}
 }
+
+.ani {
+  opacity: 0;
+}
+.aniPlay .ani {
+  animation: view 0.5s ease-out forwards;
+}
+
+.aniPlay .delay-1 {
+  animation-delay: 0.4s;
+}
+.aniPlay .delay-2 {
+  animation-delay: 0.8s;
+}
+.aniPlay .delay-3 {
+  animation-delay: 1s;
+}
+.aniPlay .delay-4 {
+  animation-delay: 1.2s;
+}
+.aniPlay .delay-5 {
+  animation-delay: 1.4s;
+}
+.aniPlay .delay-6 {
+  animation-delay: 1.6s;
+}
+.aniPlay .delay-7 {
+  animation-delay: 1.8s;
+}
+
+@keyframes view {
+  from {opacity: 0; transform: translateY(80px);}
+  to {opacity: 1; transform: translateY(0);}
+}

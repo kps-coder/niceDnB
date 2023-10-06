@@ -2508,6 +2508,7 @@
       }
 
       addClass(element, ACTIVE);
+      addClass(element, "aniPlay");
       removeClass(siblings(element), ACTIVE);
       updateState();
       lazyLoad(element); //preventing from activating the MouseWheelHandler event

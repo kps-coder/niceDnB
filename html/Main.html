@@ -344,7 +344,7 @@
         <div class="pc-show">
           <h2 class="ani delay-1">알림제공! 실시간 확인!</h2>
           <p class="main-cont__desc ani delay-2">나만의 관심바이어를 관리하는 서비스를 편리하게 이용하세요.</p>
-          <div class="img ani delay-3">
+          <div class="img">
             <img src="../assets/images/temp-sec03.png" alt="">
           </div>
         </div>
@@ -363,10 +363,10 @@
       <div class="section-inner">
         <!-- sec3 pc -->
         <div class="pc-show">
-          <h2 class="black ani delay-1">프리미엄서비스</h2>
-          <p class="main-cont__desc ani delay-2">한국과 거래하는 글로벌 유망 바이어들의 신용정보를 제공합니다.</p>
-          <p class="main-cont__text ani delay-3">OOO의 프리미엄 회원이 되셔서 바이어의 신용정보를 확인하시고 보다 안전한 거래를 하시기 바랍니다.</p>
-          <div class="img ani delay-4">
+          <h2 class="black ani">프리미엄서비스</h2>
+          <p class="main-cont__desc ani delay-1">한국과 거래하는 글로벌 유망 바이어들의 신용정보를 제공합니다.</p>
+          <p class="main-cont__text ani delay-2">OOO의 프리미엄 회원이 되셔서 바이어의 신용정보를 확인하시고 보다 안전한 거래를 하시기 바랍니다.</p>
+          <div class="img">
             <img src="../assets/images/temp-sec04.png" alt=""  style="max-width:1100px;">
           </div>
         </div>
@@ -644,19 +644,6 @@
       keyboardScrolling: true,
       autoScrolling: true,
       animateAnchor:true,
-      onSlideLeave: function( section, origin, destination, direction, trigger){
-		var leavingSlide = this;
-
-		//두번째 구역의 첫번째 슬라이드를 떠나서 오른쪽으로 이동
-		if(section.index == 1 && origin.index == 0 && direction == 'right'){
-			alert("Leaving the fist slide!!");
-		}
-
-		//두번째 구역의 세번째 슬라이드를 떠나서 왼쪽으로 이동
-		if(section.index == 1 && origin.index == 2 && direction == 'left'){
-			alert("Going to slide 2! ");
-		}
-	}
     });
     
 

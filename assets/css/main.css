@@ -28,7 +28,7 @@
 
   .img {max-width:1600px; margin: 110px auto 0; padding:0 80px;}
 
-  .section-inner {text-align:center;}
+  .section-inner {overflow:hidden; text-align:center;}
   .main-cont h2 {margin-bottom:15px; color: #808080; text-align: center; font-size: 32px; font-weight: 500;}
   .main-cont__desc {color: #000; text-align: center; font-size: 54px; font-weight: bold; word-break: keep-all;}
   .main-cont__text {margin-top:24px; color: #808080; font-size: 24px;}

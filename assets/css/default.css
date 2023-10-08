@@ -329,3 +329,8 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
 .message-box--open {background-color: #e0e0e0;}
 .message-box--open .message-box__text,
 .message-box--open .message-box__date {color:#999}
+
+@media screen and (max-width: 500px) {
+  .quick-message {width:310px;}
+  .quick-message__list {padding:16px 20px;}
+}

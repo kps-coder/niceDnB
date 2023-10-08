@@ -928,19 +928,19 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .mypage-main__member .btn-member {color: #7f3cff; font-weight: bold; text-decoration: underline; background-color: transparent;}
 .mypage-main__cash em {padding-left:16px; color: #587fff; text-decoration: underline; font-weight: bold;}
 .mypage-main__cash .btn-cash {margin-left:24px;}
-.mypage-main__menu {display:flex; flex-wrap: wrap; justify-content: space-around; margin:0 auto;}
+.mypage-main__menu {display:flex; flex-wrap: wrap; justify-content: space-around; max-width: 700px; margin:0 auto;}
 .mypage-main__box {width:155px; margin:12px 0; padding:58px 15px 15px; border-radius: 15px; color:#fff; }
 .mypage-main__box .title {margin-bottom:12px; text-align: center;}
 .mypage-main__box .btn {display:block; width:100%; padding:8px 0; border-radius:12px; font-size: 14px; text-align:center; color:#fff; background-color: rgba(0,0,0,.2);}
 
-.mypageBox--style1 {background: #9874f9 url('../images/icon-mypage-1.svg') no-repeat center 25px / 32px 24px;}
-.mypageBox--style2 {background: #5b71ea url('../images/icon-mypage-2.svg') no-repeat center 25px / 35px 22px;}
-.mypageBox--style3 {background: #44aafb url('../images/icon-mypage-3.svg') no-repeat center 25px / 24px 20px;}
-.mypageBox--style4 {background: #50d5e6 url('../images/icon-mypage-4.svg') no-repeat center 25px / 24px 24px;}
-.mypageBox--style5 {background: #a0d85e url('../images/icon-mypage-5.svg') no-repeat center 25px / 24px 25px;}
-.mypageBox--style6 {background: #fcb06f url('../images/icon-mypage-6.svg') no-repeat center 25px / 29px 26px;}
-.mypageBox--style7 {background: #fcb06f url('../images/icon-mypage-6.svg') no-repeat center 25px / 29px 26px;}
-.mypageBox--style8 {background: #fcb06f url('../images/icon-mypage-6.svg') no-repeat center 25px / 29px 26px;}
+.mypageBox--style1 {background: #d566ea url('../images/icon-mypage-9.svg') no-repeat center 25px / 32px 24px;} /* 관심바이어 */
+.mypageBox--style2 {background: #5b71ea url('../images/icon-mypage-2.svg') no-repeat center 25px / 35px 22px;} /* 캐시내역 */
+.mypageBox--style3 {background: #44aafb url('../images/icon-mypage-3.svg') no-repeat center 25px / 24px 20px;} /* 문의내역 */
+.mypageBox--style4 {background: #50d5e6 url('../images/icon-mypage-4.svg') no-repeat center 25px / 24px 24px;} /* 마케팅 발송내역 */
+.mypageBox--style5 {background: #a0d85e url('../images/icon-mypage-5.svg') no-repeat center 25px / 24px 25px;} /* 컨설팅 신청내역 */
+.mypageBox--style6 {background: #fcb06f url('../images/icon-mypage-6.svg') no-repeat center 25px / 29px 26px;} /* 보고서 신청내역 */
+.mypageBox--style7 {background: #9874f9 url('../images/icon-mypage-1.svg') no-repeat center 25px / 29px 26px;} /* 마케팅 템플릿 */
+.mypageBox--style8 {background: #6969ea url('../images/icon-mypage-8.svg') no-repeat center 25px / 29px 26px;} /* 나의 파일함 */
 
 /*
 .mypageBox--style1 .btn {background-color: #7460D8;}

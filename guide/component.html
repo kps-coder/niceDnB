@@ -16,6 +16,11 @@
     <!-- //가이드용 -->
 
     <style>
+
+      h2 {margin-bottom:0;}
+      .board-list {margin-top:30px;}
+      .darkBg {background-color: #000;}
+      td.text-left {padding-left:30px}
     </style>
 
   </head>
@@ -38,17 +43,279 @@
       </div>
       <div class="g_tabBody">
         <section class="tabContent on">
-          <h2><i class="far fa-caret-square-right"></i> Component</h2>
+          <h2><i class="far fa-caret-square-right"></i> Title & Text</h2>
           <div class="contBody">
-            <ul>
-              <li>* </li>
-              <li>* </li>
-            </ul>
-  <xmp>
-    <div class="">
-      코드 삽입           
-    </div>
-  </xmp>
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>타이틀 스타일</caption>
+                <colgroup>
+                  <col style="width:20%">
+                  <col style="width:20%">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <th scope="col">class</th>
+                  <th scope="col">style</th>
+                  <th scope="col">시각화</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>.com-tit2</td>
+                    <td>font-size:24px;<br>color:#333;<br></td>
+                    <td><h2 class="com-tit2">타이틀 스타일 2</h2></td>
+                  </tr>
+                  <tr>
+                    <td>.com-tit3</td>
+                    <td>font-size:32px;<br>color:#000;<br></td>
+                    <td><h2 class="com-tit3">타이틀 스타일 3</h2></td>
+                  </tr>
+                  <tr>
+                    <td>.com-tit4</td>
+                    <td>margin-bottom:16px;<br> font-size:24px;<br> color:#000;</td>
+                    <td><h2 class="com-tit4">타이틀 스타일 4</h2></td>
+                  </tr>
+                  <tr>
+                    <td>.com-tit5</td>
+                    <td>margin-bottom:16px;<br> font-size:20px;<br> color:#000;<br> line-height: 1.3;</td>
+                    <td><h2 class="com-tit5">타이틀 스타일 5</h2></td>
+                  </tr>
+                  <tr>
+                    <td>.com-titDesc</td>
+                    <td>margin-left:16px; <br>color: #999; <br>font-size: 16px;<br> line-height: 1.3;<br> word-break: keep-all;</td>
+                    <td><p class="com-titDesc">타이틀 옆 설명글</p></td>
+                  </tr>
+                  <tr>
+                    <td>.text-accent</td>
+                    <td>color:#ff0000</td>
+                    <td><span class="text-accent">강조 구문</span></td>
+                  </tr>
+                  <tr>
+                    <td>.txt-point01</td>
+                    <td>color:#4D6AFF</td>
+                    <td><span class="txt-point01">텍스트 포인트 컬러 1</span></td>
+                  </tr>
+                  <tr>
+                    <td>.txt-point02</td>
+                    <td>color:#FF4DD6</td>
+                    <td><span class="txt-point02">텍스트 포인트 컬러 2</span></td>
+                  </tr>
+                  <tr>
+                    <td>.txt-date</td>
+                    <td>color:#999</td>
+                    <td><span class="txt-date">공통 date 스타일</span></td>
+                  </tr>
+                  <tr>
+                    <td>.txt-error</td>
+                    <td>margin-top:9px; <br>color: #e5576c;;<br> font-size:12px;</td>
+                    <td><span class="txt-error">에러 문구 , form 에러 문구에 사용</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>  
+          </div>
+
+          <h2><i class="far fa-caret-square-right"></i> ICON</h2>
+          <div class="contBody">
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>아이콘 스타일</caption>
+                <colgroup>
+                  <col style="width:20%">
+                  <col style="width:20%">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <th scope="col">class</th>
+                  <th scope="col">시각화</th>
+                  <th scope="col">비고</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>.icon12-arrDown-wt</td>
+                    <td class="darkBg"><i class="icon12-arrDown-wt"></i></td>
+                    <td class="text-left">12 * 12 / 흰색 아래 화살표</td>
+                  </tr>
+                  <tr>
+                    <td>.icon12-send-wt</td>
+                    <td class="darkBg"><i class="icon12-send-wt"></i></td>
+                    <td class="text-left">12 * 12 / 흰색 발송 </td>
+                  </tr>
+                  <tr>
+                    <td>.icon16-arrRight-bk</td>
+                    <td><i class="icon16-arrRight-bk"></i></td>
+                    <td class="text-left">16 * 16 / 오른쪽 화살표</td>
+                  </tr>
+                  <tr>
+                    <td>.icon16-clip-bk</td>
+                    <td><i class="icon16-clip-bk"></i></td>
+                    <td class="text-left">16 * 16 / 클립</td>
+                  </tr>
+                  <tr>
+                    <td>.icon16-send-wt</td>
+                    <td class="darkBg"><i class="icon16-send-wt"></i></td>
+                    <td class="text-left">16 * 16 / 흰색 발송</td>
+                  </tr>
+                  <tr>
+                    <td>.icon16-reset-wt</td>
+                    <td class="darkBg"><i class="icon16-reset-wt"></i></td>
+                    <td class="text-left">16 * 16 / 흰색 초기화</td>
+                  </tr>
+                  <tr>
+                    <td>.icon16-search-wt</td>
+                    <td class="darkBg"><i class="icon16-search-wt"></i></td>
+                    <td class="text-left">16 * 16 / 흰색 조회</td>
+                  </tr>
+                  <tr>
+                    <td>.icon40-email</td>
+                    <td><i class="icon40-email"></i></td>
+                    <td class="text-left">40 * 40 / 마케팅 발송 미리보기 / CM6.10 </td>
+                  </tr>
+                  <tr>
+                    <td>.icon-email-off</td>
+                    <td><i class="icon-email-off"></i></td>
+                    <td class="text-left">28 * 20 / 수신확인 / BM3.10 </td>
+                  </tr>
+                  <tr>
+                    <td>.icon-email-on</td>
+                    <td><i class="icon-email-on"></i></td>
+                    <td class="text-left">28 * 30 / 수신확인 / BM3.10 </td>
+                  </tr>
+                  <tr>
+                    <td>.icon-logout</td>
+                    <td><i class="icon-logout"></i></td>
+                    <td class="text-left">66 * 57 / 로그아웃 안내 / CM5.40 </td>
+                  </tr>
+                  <tr>
+                    <td>.icon-page-error</td>
+                    <td><i class="icon-page-error"></i></td>
+                    <td class="text-left">163 * 157 / 페이지 에러 / CM5.60 </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h2><i class="far fa-caret-square-right"></i> NotiBox & List</h2>
+          <div class="contBody">
+            <div class="board-list">
+              <table class="board-list__table">
+                <caption>아이콘 스타일</caption>
+                <colgroup>
+                  <col style="width:15%">
+                  <col style="width:50%">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <th scope="col">class</th>
+                  <th scope="col">시각화</th>
+                  <th scope="col">비고</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>.com-notiBox</td>
+                    <td class="text-left">
+                      <div class="com-notiBox">
+                        <strong>마케팅 발송에서 입력에서 내용을 저장합니다.</strong>
+                        <p>새 메일쓰기 화면에만 템플릿이 적용됩니다. <br>
+                          템플릿은 최대 20개까지 저장할 수 있습니다. 
+                          </p>
+                      </div>
+                      <div class="com-notiBox">
+                        <strong>마케팅 발송에서 입력에서 내용을 저장합니다.</strong>
+                        <p>새 메일쓰기 화면에만 템플릿이 적용됩니다. <br>
+                          템플릿은 최대 20개까지 저장할 수 있습니다. 
+                          </p>
+                      </div>
+                      <div class="com-notiBox">
+                        <p class="com-notiBox__title">[로그인 안내]</p>
+                        <ul class="txt-li">
+                          <li>비밀번호 입력 시, 영문대소문자, 숫자, 특수문자 포함 8자리~16자리입니다.</li>
+                          <li>로그인에 문제가 있을 경우 연락 주시기 바랍니다.</li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td class="text-left"></td>
+                  </tr>
+                  <tr>
+                    <td>.com-list-info</td>
+                    <td class="text-left">
+                      <div class="com-list-info">
+                        <dl>
+                          <dt>발신자</dt>
+                          <dd>가나기업(abcdf@nicednb.com)</dd>
+                        </dl>
+                        <dl>
+                          <dt>대상 바이어</dt>
+                          <dd>바이어기업1 외 50개 바이어 </dd>
+                        </dl>
+                        <dl>
+                          <dt>차감 캐시</dt>
+                          <dd><strong>2500</strong> 캐시 (캐시잔액: 2500캐시)</dd>
+                        </dl>
+                      </div>  
+                    </td>
+                    <td>
+                      div.com-list-info > dl > dt, dd
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      .notice-msg &gt;<br>
+                      하위<br>
+                      .notice-msg__title<br>
+                      .notice-msg__text<br>
+                      .notice-msg__desc
+                    </td>
+                    <td class="text-left">
+                      <div class="notice-msg">
+                        <i class="icon-logout"><!-- 로그아웃 아이콘 --></i>
+                        <p class="notice-msg__text"><strong>로그아웃 되었습니다.</strong></p>
+                      </div>   
+                      <div class="notice-msg">
+                        <p class="notice-msg__title">사업자등록번호 미등록</p>
+                        <p class="notice-msg__text">회원가입 시, 등록하신 사업자등록번호 정보를 검토하고 있습니다.<br>
+                          등록이 완료되면 휴대폰(회원정보)으로 알려드리겠습니다.<br>
+                          등록 완료 전까지 [FREE] 회원의 서비스를 이용할 수 있습니다.</p>
+                      </div>   
+                      <div class="notice-msg">
+                        <p class="notice-msg__title">00:52</p>
+                        <p class="notice-msg__text"><strong>자동 로그아웃 예정입니다.</strong></p>
+                        <p class="notice-msg__desc">고객님의 안전한 이용을 위하여 15분 동안 이용이 없을 경우 자동으로 로그아웃 됩니다. <br>계속 이용하시려면 <strong class="txt-point01">로그인 연장</strong>을 해주세요.</p>
+                      </div>   
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>.txt-li-dot</td>
+                    <td class="text-left">
+                      <ul class="txt-li-dot">
+                        <li>바이어 조회</li>
+                        <li>빅데이터 바이어 발굴</li>
+                        <li>마케팅 서비스 - 마케팅 이메일 발송, 바이어 간의 메시지 관리, 발송내역 관리<br> (마케팅 메시지 1건당 1cash(500원)) </li>
+                        <li>사기바이어 검증</li>
+                      </ul>
+                    </td>
+                    <td>
+                      ul.txt-li-dot &gt; li
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>.txt-li-dash</td>
+                    <td class="text-left">
+                      <ul class="txt-li-dash">
+                        <li>바이어 조회</li>
+                        <li>빅데이터 바이어 발굴</li>
+                        <li>마케팅 서비스 - 마케팅 이메일 발송, 바이어 간의 메시지 관리, 발송내역 관리<br> (마케팅 메시지 1건당 1cash(500원)) </li>
+                        <li>사기바이어 검증</li>
+                      </ul>
+                    </td>
+                    <td>
+                      ul.txt-li-dash &gt; li
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
       </div>

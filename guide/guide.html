@@ -24,6 +24,8 @@
       iframe {border:1px solid #ccc}
       .grp_flex_wrap {display: flex;}
       .grp_flex_wrap > * {margin-left:24px}
+      ul > li {line-height: 1.5;}
+      .indent {padding-left:15px}
     </style>
 
   </head>
@@ -46,14 +48,21 @@
       </div>
       <div class="g_tabBody">
         <section class="tabContent on">
-          <h2><i class="far fa-caret-square-right"></i> Sub layout</h2>
+          <h2><i class="far fa-caret-square-right"></i> Guide</h2>
           <div class="contBody">
             <ul>
-              <li>* </li>
+              <li>* 레이아웃 :  <a href="../html/Layout.html" target="_blank" class="btn-line-link">layout.html</a> 참조</li>
+              <li>* 구현방식 : 반응형 웹</li>
+              <li>* 해상도 
+                <p class="indent">- PC : 1920px기준 (최소 해상도 1366px)</p>
+                <p class="indent">- Mobile: 360px ~ 720px / 비율16:9 비율(Galaxy, iPhone)</p>
+              </li>
+              <li>* 브라우저 호환 : IE11, Edge, chrome, Safari, Firefox, Opera</li>
+              <li>* 문서 유형 : HTML5, CSS3</li>
+              <li>* 인코딩 방식 : UTF-8</li>
+              <li>* 웹접근성 : 웹접근성 준수 목표</li>
+              <li>* 장차법 : 한국정보화진흥원에서 제시하는 22개 웹접근성 항목을 기준으로 구현</li>
             </ul>
-  <xmp>
-    <div></div>
-  </xmp>
           </div>
           <div class="contBody">
             
@@ -64,6 +73,9 @@
           <div class="contBody">
             <ul>
               <li>* 파일위치 : <strong>assets &gt; css</strong></li>
+              <li>* main.css : 메인 전용</li>
+              <li>* default.css : 초기화, 레이아웃 정의</li>
+              <li>* common.css : 팝업, form, 버튼 그외 content</li>
             </ul>
           </div>
         </section>
@@ -72,6 +84,7 @@
           <div class="contBody">
             <ul>
               <li>* 파일위치 : <strong>assets &gt; images</strong></li>
+              <li>* 이미지가 많지 않아 이미지 폴더 하나 사용</li>
             </ul>
           </div>
         </section>
@@ -80,6 +93,23 @@
           <div class="contBody">
             <ul>
               <li>* 파일위치 : <strong>assets &gt; js</strong></li>
+              <li>* lib 폴더 : 라이브러리 전용 폴더 <br>
+                <p class="indent">fullpage.js : main 전용</p>
+                <p class="indent">jquery-3.7.0.min.js</p>
+                <p class="indent">jquery-ui.min.js : datepicker 사용</p>
+                <p class="indent">swiper.min.js : 주로 main 사용</p>
+              </li>
+              <li>*ui_common.js : 퍼블 전용 / GNB, TAB, sitemap, accordion, tooltip, 레이어 팝업</li>
+            </ul>
+          </div>
+        </section>
+        <section class="tabContent on">
+          <h2><i class="far fa-caret-square-right"></i> admin Guide</h2>
+          <div class="contBody">
+            <ul>
+              <li>* 파일위치 : <strong class="txt-point01">admin 전용 폴더</strong></li>
+              <li>* front와 별도 관리이지만 폴더 구조 및 css는 front와 유사</li>
+              <li>* 레이아웃 구조 : <a href="../admin/html/layout.html" target="_blank" class="btn-line-link">admin &gt; html &gt; layout.html</a> 참조</li>
             </ul>
           </div>
         </section>

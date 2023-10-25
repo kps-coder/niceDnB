@@ -8,7 +8,9 @@ window.addEventListener('DOMContentLoaded', function() {
     <div class="quick-menu">
       <ul class="quick-menu__wrap">
         <li><a href="#quickMessage" class="btn-quick-alarm"><span class="blind">알람메세지</span><i class="icon-alarm"><span class="blind">새알람</span></i></a></li>
-        <li><a href="BD3.10.html" class="btn-quick-msg"><span class="blind">사기바이어이메일</span></a></li>
+        <li><a href="#none" class="btn-quick-like"><span class="blind">관심바이어</span></a></li>
+        <li><a href="BD3.10.html" class="btn-quick-danger"><span class="blind">사기바이어이메일</span></a></li>
+        <li><a href="#time" class="btn-quick-time">12:27</a></li>
       </ul>
     </div>
   `;

@@ -108,7 +108,7 @@
     let dropBuyer = document.querySelector(".drop-buyer");
     let btnBuyerSel = document.querySelectorAll(".btn-buyer-sel");
     btnDropBuyer.addEventListener("click", function(){
-      dropBuyer.classList.add("show");
+      dropBuyer.classList.toggle("show");
     });
     btnBuyerSel.forEach(function(elem, i){
       elem.addEventListener("click", function(){

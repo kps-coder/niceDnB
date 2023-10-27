@@ -796,9 +796,16 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 /* ==== 바이어 메시지 ==== */
 .buyer-message-head {display:flex; align-items: center; justify-content: space-between;}
 .buyer-message-head_title {display:flex; align-items: center; font-size:24px;}
-.buyer-message-head_title h1 {margin-left:16px; font-size:19px;}
+.buyer-message-head_title h1 {font-size:19px;}
 .buyer-message-head .btn-wrap {margin-top:0;}
 .buyer-message__btn {display:inline-block; padding:8px 32px 7px 15px; border-radius: 8px; font-size: 14px; white-space: nowrap; background: #ebecf2 url('../images/icon-send-bk.svg') no-repeat right 15px center / 11px 11px;}
+.drop-buyer {position: relative; margin-left:16px;}
+.drop-buyer__head {display:flex; align-items: center;}
+.drop-buyer__head .btn-combo {display:block; width:30px; height:20px; background: url(../images/select-combo.svg) no-repeat center center / 10px 7px;}
+.drop-buyer__list {display:none; position: absolute; overflow-y:auto; max-height:300px; margin: 9px 0 0 0; padding:12px; border:1px solid #ccc; background-color: #fff;}
+.btn-buyer-sel {max-width:65vw; font-size:initial; line-height: 1.5; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.drop-buyer.show .drop-buyer__list {display:block;}
+.drop-buyer.show .btn-combo {transform: rotate(180deg);}
 
 .buyer-message-window {overflow-y:auto; padding:20px; height:calc(100% - 72px); background: #f3f2fa;}
 .member-img img {width:40px; height:40px;}

@@ -21,7 +21,34 @@
             <input type="checkbox" id="inputLike">
             <label for="inputLike"><span class="blind">관심바이어</span></label>
           </span>
-          <h1>Pak Mohamed</h1>
+          <div class="drop-buyer">
+            <div class="drop-buyer__head">
+              <h1 id="buyerName">Pak Mohamed</h1>
+              <button type="button" class="btn-combo" id="btnDropBuyer"><span class="blind">선택</span></button>
+            </div>  
+            <div class="drop-buyer__list">
+              <ul>
+                <li><button type="button" class="btn-buyer-sel">Pak Mohamed</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 바이어명  바이어명</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 3</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 4</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 5</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 6</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 7</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 8</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 9</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 10</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 11</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 12</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 13</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 14</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 15</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 16</button></li>
+                <li><button type="button" class="btn-buyer-sel">바이어명 17</button></li>
+              </ul>
+            </div>
+          </div>
+          
         </div>        
         <div class="btn-wrap">
           <a href="#n" class="buyer-message__btn">마케팅 발송</a>
@@ -75,5 +102,21 @@
       </div>
     </div>
   </div>
+
+  <script>
+    let btnDropBuyer = document.getElementById("btnDropBuyer");
+    let dropBuyer = document.querySelector(".drop-buyer");
+    let btnBuyerSel = document.querySelectorAll(".btn-buyer-sel");
+    btnDropBuyer.addEventListener("click", function(){
+      dropBuyer.classList.add("show");
+    });
+    btnBuyerSel.forEach(function(elem, i){
+      elem.addEventListener("click", function(){
+        buyerName.innerHTML = elem.innerText;
+        dropBuyer.classList.remove("show");
+      });
+    });
+    
+  </script>
 </body>
 </html>

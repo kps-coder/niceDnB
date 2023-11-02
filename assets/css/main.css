@@ -219,9 +219,9 @@
 
   /* sec5 */
   .sec5-cont {position:relative; overflow:hidden; flex:0 0 auto; width:240px; height:228px; border-radius: 24px 0px;}
-  .sec5-cont:nth-child(1) {background: url('../images/main-mo-sec5-img1.png') no-repeat 0 center / 403px 254px;}
-  .sec5-cont:nth-child(2) {background: url('../images/main-mo-sec5-img2.png') no-repeat 0 center / 418px 245px;}
-  .sec5-cont:nth-child(3) {background: url('../images/main-mo-sec5-img3.png') no-repeat 0 center / 403px 254px;}
+  .sec5-cont:nth-child(1) {background: url('../images/main-mo-sec5-img1.jpg') no-repeat center center / 403px 254px;} /* 1102 수정 */
+  .sec5-cont:nth-child(2) {background: url('../images/main-mo-sec5-img2.jpg') no-repeat center center / auto 100%;} /* 1102 수정 */
+  .sec5-cont:nth-child(3) {background: url('../images/main-mo-sec5-img3.jpg') no-repeat center center / auto 100%;} /* 1102 수정 */
   .sec5-cont__textArea {position:absolute; bottom:0; width:100%; padding:11px 16px; text-align: left; background: rgba(0,0,0,.8);}
   .sec5-cont__textArea dt {margin-bottom:7px; font-weight: bold;}
   .sec5-cont__textArea dd {height:40px; line-height: 24px; word-break: keep-all;}

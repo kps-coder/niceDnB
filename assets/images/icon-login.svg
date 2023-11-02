@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="타원_952" data-name="타원 952" cx="10" cy="10" r="10" transform="translate(-0.151)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icon_01" data-name="icon 01" transform="translate(-7.849 -8)">
+    <circle id="타원_949" data-name="타원 949" cx="12" cy="12" r="12" transform="translate(7.849 8)" fill="#fff"/>
+    <path id="타원_949_-_윤곽선" data-name="타원 949 - 윤곽선" d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2m0-2A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z" transform="translate(7.849 8)"/>
+    <g id="마스크_그룹_17" data-name="마스크 그룹 17" transform="translate(10 10)" clip-path="url(#clip-path)">
+      <ellipse id="타원_951" data-name="타원 951" cx="8" cy="8.5" rx="8" ry="8.5" transform="translate(1.849 10)" fill="#fff"/>
+      <path id="타원_951_-_윤곽선" data-name="타원 951 - 윤곽선" d="M8,2A6.272,6.272,0,0,0,2,8.5,6.272,6.272,0,0,0,8,15a6.272,6.272,0,0,0,6-6.5A6.272,6.272,0,0,0,8,2M8,0a8.261,8.261,0,0,1,8,8.5A8.261,8.261,0,0,1,8,17,8.261,8.261,0,0,1,0,8.5,8.261,8.261,0,0,1,8,0Z" transform="translate(1.849 10)"/>
+    </g>
+    <circle id="타원_950" data-name="타원 950" cx="5" cy="5" r="5" transform="translate(14.849 13)" fill="#fff"/>
+    <path id="타원_950_-_윤곽선" data-name="타원 950 - 윤곽선" d="M5,2A3,3,0,1,0,8,5,3,3,0,0,0,5,2M5,0A5,5,0,1,1,0,5,5,5,0,0,1,5,0Z" transform="translate(14.849 13)"/>
+  </g>
+</svg>

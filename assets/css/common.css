@@ -797,6 +797,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 .buyer-message-head {display:flex; align-items: center; justify-content: space-between;}
 .buyer-message-head_title {display:flex; align-items: center; font-size:24px;}
 .buyer-message-head_title h1 {font-size:19px;}
+.buyer-message-head_title .email {color: #999; font-size: 14px;}  /*2023-10-27 타이틀이메일란 추가[sy]*/
 .buyer-message-head .btn-wrap {margin-top:0;}
 .buyer-message__btn {display:inline-block; padding:8px 32px 7px 15px; border-radius: 8px; font-size: 14px; white-space: nowrap; background: #ebecf2 url('../images/icon-send-bk.svg') no-repeat right 15px center / 11px 11px;}
 .drop-buyer {position: relative; margin-left:16px;}

@@ -74,6 +74,22 @@
               <label for="btnLike01" class="btnLike01"><span class="blind">관심바이어</span></label>
             </span>   
             <button type="button" class="btn-msg-check"><span class="blind">메시지 확인</span></button>
+            <div class="email-list">
+              <div class="email-list__cont" style="display: block;">
+                <p class="email-list__tit">해당하는 담당자 이메일을 선택해 주세요.</p>
+                <ul class="email-list__list">
+                  <li>
+                    <span class="input-radio"><input type="radio" name="ra01" id="ra01_1"><label for="ra01_1">Bet*****@hongkong.messefrankfurt.com</label></span>
+                  </li>
+                  <li>
+                    <span class="input-radio"><input type="radio" name="ra01" id="ra01_2"><label for="ra01_2">Bet*****@hongkong.messefrankfurt.com</label></span>
+                  </li>
+                  <li>
+                    <span class="input-radio"><input type="radio" name="ra01" id="ra01_3"><label for="ra01_3">Bet*****@hongkong.messefrankfurtmessefrankfurtmessefran.com</label></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <a href="BM2.10.html" class="btn-pri">마케팅 발송 <i class="icon12-send-wt"></i></a>  
           </div>
         </div>      
@@ -261,5 +277,14 @@
     </div>
   </div>
   <!-- //[L팝업]보고서 확인 안내-->
+
+  <script>
+    let btnMsgCheck = document.querySelector(".btn-msg-check");
+    let emailList = document.querySelector(".email-list");
+    btnMsgCheck.addEventListener("click", function(){
+      this.classList.toggle("on");
+      emailList.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

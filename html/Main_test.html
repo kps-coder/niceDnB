@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>수출지원서비스 플랫폼</title>
+
+  <!-- 20231116 파비콘 추가 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png"> 
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ui -->
+  <link rel="stylesheet" href="../assets/css/lib/fullpage.min.css">
+  <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/common.css"> <!-- 20231110 추가 -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  
+  <script src="../assets/js/lib/fullpage.min.js"></script>
+  <script src="../assets/js/lib/swiper.min.js"></script>
+  <script src="../assets/js/ui_common.js"></script>
+  <style>
+    .fp-section.active .ani {
+      animation: view 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body> 
+  <div class="skip-nav">
+    <a href="#gnbWrap">주요 메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+  </div>
+
+  <div class="quick-menu">
+    <ul class="quick-menu__wrap">
+      <li><a href="#quickMessage" class="btn-quick-alarm"><span class="blind">알람메세지</span><i class="icon-alarm"><span class="blind">새알람</span></i></a></li>
+      <li><a href="#none" class="btn-quick-like" data-roll="modal-popup" data-popid="modalPop01"><span class="blind">관심바이어</span></a></li>
+      <li><a href="BD3.10.html" class="btn-quick-danger"><span class="blind">사기바이어이메일</span></a></li>
+      <li><a href="#time" class="btn-quick-time">12:27</a></li>
+    </ul>
+  </div>
+
+  <header class="header-pc">
+    <div class="header__inner">
+      <h1 class="header__logo"><a href="Main.html"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>
+      <nav class="gnb" id="gnbWrap">
+        <ul class="gnb__wrap">
+          <li class="gnb__depth01">
+            <a href="BM0.10.html" class="gnb__a01">빅바이어 마케팅</a>
+            <ul class="gnb__depth02">
+              <li><a href="BM1.10.html" class="gnb__a02">빅데이터 바이어 발굴</a></li>
+              <li><a href="BM2.10.html" class="gnb__a02">마케팅 발송</a></li>
+              <li><a href="BM3.10.html" class="gnb__a02">마케팅 발송내역</a></li>
+            </ul>
+          </li>
+          <li class="gnb__depth01">
+            <a href="BD1.10.html" class="gnb__a01">바이어 정보</a>
+            <ul class="gnb__depth02">
+              <li><a href="BD1.10.html" class="gnb__a02">바이어 조회</a></li>
+              <!-- <li><a href="#n" class="gnb__a02">관심 바이어</a></li> -->
+              <li><a href="BD3.10.html" class="gnb__a02">사기바이어 이메일</a></li>
+            </ul>
+          </li>
+          <li class="gnb__depth01">
+            <a href="CR1.10.html" class="gnb__a01">해외기업 보고서</a>
+            <ul class="gnb__depth02">
+              <li><a href="CR1.10.html" class="gnb__a02">보고서 신청</a></li>
+              <li><a href="CR2.10.html" class="gnb__a02">보고서 신청내역</a></li>
+            </ul>
+          </li>
+          <li class="gnb__depth01">
+            <a href="EC1.10.html" class="gnb__a01">수출바우처 컨설팅</a>
+            <ul class="gnb__depth02">
+              <li><a href="EC1.10.html" class="gnb__a02">컨설팅 신청</a></li>
+              <li><a href="EC2.10.html" class="gnb__a02">신청내역</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="util-menu">
+        <div class="util-menu__wrap">
+          <a href="MY0.10.html" class="btn-login"><span class="blind">마이페이지</span></a>
+          <a href="CS1.10.html" class="btn-support"><span class="blind">고객센터</span></a>
+          <a href="CM1.10.html" class="btn-search"><span class="blind">통합검색</span></a>
+          <button class="btn-sitemap"><span class="blind">전체메뉴</span></button>
+        </div>
+      </div>
+    </div>      
+  </header><!-- //pc header -->
+
+  <!-- mobile header --><!-- 20230911 수정 : 디자인 적용으로 마크업 변경 -->
+  <header class="header-mobile">
+    <div class="header__inner">
+      <h1 class="header-mobile__logo"><a href="/"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>
+      <div class="header-mobile__util">
+        <a href="CM1.10.html" class="btn-search"><span class="blind">통합검색</span></a>
+        <button class="btn-sitemap"><span class="blind">전체메뉴</span></button>
+      </div>
+    </div>      
+    <nav class="gnb">
+      <ul class="gnb__wrap">
+        <li class="gnb__depth01"><a href="#n" class="gnb__a01">빅바이어 마케팅</a></li>
+        <li class="gnb__depth01"><a href="#n" class="gnb__a01">바이어 정보</a></li>
+        <li class="gnb__depth01"><a href="#n" class="gnb__a01">해외기업 보고서</a></li>
+        <li class="gnb__depth01"><a href="#n" class="gnb__a01">수출바우처 컨설팅</a></li>
+        <li class="gnb__depth01"><a href="#n" class="gnb__a01">고객센터</a></li>
+        <li class="gnb__depth01"><a href="#n" class="gnb__a01">마이페이지</a></li>
+      </ul>
+      <button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+    </nav>
+  </header><!-- //mobile header -->
+
+  <!-- sitemap --><!-- 20230911 수정 : 디자인 적용으로 마크업 변경 -->
+  <div class="sitemap">
+    <div class="sitemap__inner">
+      <h1 class="header__logo"><a href="/"><img src="../assets/images/logo.png" alt="NTS 수출지원서비스"></a></h1>
+      <div class="sitemap__gnb">
+        <ul class="sitemap__list">
+          <li>
+            <a href="#n" class="sitemap__depth01">빅바이어 마케팅</a>
+            <ul>
+              <li><a href="#n" class="sitemap__depth02">빅데이터바이어발굴</a></li>
+              <li><a href="#n" class="sitemap__depth02">마케팅발송</a></li>
+              <li><a href="#n" class="sitemap__depth02">마케팅발송내역</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="sitemap__depth01">바이어 정보</a>
+            <ul>
+              <li><a href="#n" class="sitemap__depth02">바이어조회</a></li>
+              <li><a href="#n" class="sitemap__depth02">마케팅발송</a></li>
+              <li><a href="#n" class="sitemap__depth02">관심바이어</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="sitemap__depth01">해외기업 보고서</a>
+            <ul>
+              <li><a href="#n" class="sitemap__depth02">보고서신청</a></li>
+              <li><a href="#n" class="sitemap__depth02">보고서신청내역</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="sitemap__depth01">수출바우처 컨설팅</a>
+            <ul>
+              <li><a href="#n" class="sitemap__depth02">서비스신청</a></li>
+              <li><a href="#n" class="sitemap__depth02">신청내역</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sitemap__list">
+          <li>
+            <a href="#n" class="sitemap__depth01">마이페이지</a>
+            <ul>
+              <li><a href="#n" class="sitemap__depth02">정보 수정</a></li>
+              <li><a href="#n" class="sitemap__depth02">비밀번호변경</a></li>
+              <li><a href="#n" class="sitemap__depth02">캐쉬 충전</a></li>
+              <li><a href="#n" class="sitemap__depth02">관심 기업</a></li>
+              <li><a href="#n" class="sitemap__depth02">문의 내역</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="sitemap__depth01">고객지원</a>
+            <ul>
+              <li><a href="#n" class="sitemap__depth02">문의하기</a></li>
+              <li><a href="#n" class="sitemap__depth02">정보마당</a></li>
+            </ul>
+          </li>
+          <!-- 20231025 추가 -->
+          <li>
+            <a href="#n" class="sitemap__depth01">메시지알림 (<em class="txt-count">10</em>)</a>
+            <a href="#n" class="sitemap__depth01">로그아웃</a>
+          </li>
+          <!-- //20231025 추가 -->
+        </ul>
+      </div>
+      
+      <div class="util-menu">
+        <div class="util-menu__wrap">
+          <a href="#n" class="btn-login"><span class="blind">로그인</span></a>
+          <a href="#n" class="btn-support"><span class="blind">고객센터</span></a>
+          <button type="button" class="btn-search"><span class="blind">통합검색</span></button>
+          <button type="button" class="btn-sitemap-close"><span class="blind">닫기</span></button>
+        </div>
+
+        <!-- 20231025 추가 -->
+        <div class="log-info">
+          <div class="log-info__welcom"><strong>홍길동</strong>님 안녕하세요.</div>
+          <dl class="log-info__time">
+            <dt>최근 로그인</dt>
+            <dd>2023.07.20 15:52:02</dd>
+          </dl>
+          <div class="log-info__logout">
+            <p class="count">12분 30초</p>
+            <button type="button" class="btn-login-keep">로그인연장</button>
+          </div>
+        </div>
+        <!-- //20231025 추가 -->
+      </div>
+    </div>
+    
+  </div>
+  <!-- //sitemap --><!-- //20230911 수정 : 디자인 적용 -->
+
+
+
+  <div id="fullpage" class="main-cont">
+    <div class="section sec0 aniPlay" id="section0">
+      <div class="section-inner">
+        <!-- sec0 pc -->
+        <div class="pc-show">
+          <h2 class="ani">마케팅 서비스</h2>
+          <p class="main-cont__desc ani delay-1">5억개 이상의 DB POOL을 활용하여 <br>잠재된 바이어들에게 마케팅 서비스를 제공합니다.</p>        
+          <div class="swiper main-sec0-link">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide ani delay-2">
+                <img src="../assets/images/mian-sec1-img1.png" alt="">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">빅바이어 마케팅</span>
+                  <span class="link-box__desc">ICE D&B가 보유한 5억 개 이상의 해외기업 DB POOL을 활용하여,
+                    잠재된 바이어들에게 마케팅 서비스를 제공합니다.</span>
+                </a>
+              </li>
+              <li class="swiper-slide ani delay-3">
+                <img src="../assets/images/mian-sec1-img2.png" alt="">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">수출바우처컨설팅</span>
+                  <span class="link-box__desc">전문 MD가 귀사를 위한 맞춤 컨설팅을 무료로 제공해 드립니다.</span>
+                </a>
+              </li>
+              <li class="swiper-slide ani delay-4">
+                <img src="../assets/images/mian-sec1-img3.png" alt="">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">해외기업보고서</span>
+                  <span class="link-box__desc">D&B의 글로벌 네트워크를 통해 모든 국가 내 대상 기업을 조회하고
+                    보고서를 발급받으세요.</span>
+                </a>
+              </li>
+              <li class="swiper-slide ani delay-5">
+                <img src="../assets/images/mian-sec1-img4.png" alt="">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">바이어정보</span>
+                  <span class="link-box__desc">해외기업의 중요 거래정보(불량/우량정보, 위험정보 등)를 실시간으로 공유해 드립니다.</span>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+
+        <!-- sec0 mobile -->
+        <div class="mobile-show">
+          <div class="swiper mobileMain-sec1-link">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">빅바이어 마케팅</span>
+                  <span class="link-box__desc">ICE D&B가 보유한 5억 개 이상의 해외기업 DB POOL을 활용하여,
+                    잠재된 바이어들에게 마케팅 서비스를 제공합니다.</span>
+                </a>
+                <img src="../assets/images/main-mo-sec1-img1.png" alt="">
+              </li>
+              <li class="swiper-slide">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">수출바우처컨설팅</span>
+                  <span class="link-box__desc">전문 MD가 귀사를 위한 맞춤 컨설팅을 무료로 제공해 드립니다.</span>
+                </a>
+                <img src="../assets/images/main-mo-sec1-img2.png" alt="">
+              </li>
+              <li class="swiper-slide">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">해외기업보고서</span>
+                  <span class="link-box__desc">D&B의 글로벌 네트워크를 통해 모든 국가 내 대상 기업을 조회하고
+                    보고서를 발급받으세요.</span>
+                </a>
+                <img src="../assets/images/main-mo-sec1-img3.png" alt="">
+              </li>
+              <li class="swiper-slide">
+                <a href="#n" class="link-box">
+                  <span class="link-box__title">바이어정보</span>
+                  <span class="link-box__desc">해외기업의 중요 거래정보(불량/우량정보, 위험정보 등)를 실시간으로 공유해 드립니다.</span>
+                </a>
+                <img src="../assets/images/main-mo-sec1-img4.png" alt="">
+              </li>
+            </ul>
+            <div class="mobileMain-sec1-pagination"></div>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div class="section sec1" id="section1">
+      <div class="section-inner">
+        <!-- sec1 pc -->
+        <div class="pc-show">
+          <h2 class="ani delay-1">서비스 소개</h2>
+          <p class="main-cont__desc ani delay-2">바이어 AI 발굴부터,마케팅 발송까지 간편하게!</p>
+          
+          <div class="main-sec1 ani delay-3">
+            <div class="main-sec1__desc">
+              <div class="main-sec1__descPaging"><strong id="descPaging">01</strong> / 08</div>
+              <ul class="main-sec1__descList">
+                <li class="on">
+                  <h3>빅데이터 발굴</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>바이어 AI 추천</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>eDM 마케팅 작성화면</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>마케팅 발송</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>바이어 확인</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>마케팅 발송</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>관심바이어 등록 <br>바이어 답변 메시지 확인</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+                <li>
+                  <h3>관심바이어 관리까지~</h3>
+                  <p class="text">스마트 혁명과 함께 이용자가 생산하는 데이터 양이 폭증하고 데이터 유형이 다양화 되면서, 이들 데이터를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성장에 대한 기대감이 올라가면서 다양한 서비스 모델들이 개발되고 있다.</p>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="main-sec1__img"></div>
+            <div class="main-sec1__list">
+              <ul class="main-sec1__listWrap">
+                <li class="on"><button type="button" class="main-sec1__btn"><em>01</em><span>빅데이터 발굴</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>02</em><span>AI추천</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>03</em><span>eDM 마케팅 작성화면</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>04</em><span>마케팅 발송</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>05</em><span>바이어 확인</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>06</em><span>마케팅 발송</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>07</em><span>관심바이어 등록<br>바이어 답변 메시지 확인</span></button></li>
+                <li><button type="button" class="main-sec1__btn"><em>08</em><span>관심바이어 관리까지~</span></button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- sec1 mobile -->
+        <div class="mobile-show">
+          <p class="main-cont__desc">바이어 AI 발굴부터,<br>마케팅 발송까지 간편하게!</p>
+          <div class="img">
+            <img src="../assets/images/main-mo-sec2.png" alt="">
+          </div>
+          <div class="mobileMain-sec1-sw">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>빅데이터 발굴</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>AI추천</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>eDM 마케팅 작성화면</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>마케팅 발송</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>바이어 확인</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>마케팅 발송</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>관심바이어 등록<br>바이어 답변 메시지 확인</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+              <li class="swiper-slide">
+                <dl class="sec-dl">
+                  <dt>관심바이어 관리까지~</dt>
+                  <dd>스마트 혁명과 함께 이용자가 생산하는 데이터 양이 
+                    폭증하고 데이터 유형이 다양화 되면서, 이들 데이터
+                    를 수집, 축적, 분석, 활용하여 새로운 가치를 만들어 
+                    내는 빅데이터가 ICT 분야의 이슈로 부상하고 있다. 
+                    또한, 해외는 물론, 국내에서도 관련 기술 및 시장 성
+                    장에 대한 기대감이 올라가면서 다양한 서비스 모델
+                    들이 개발되고 있다.</dd>
+                </dl>
+              </li>
+            </ul>
+            <div class="mobileMain-sec1-sw-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section sec2" id="section2">
+      <div class="section-inner">
+        <!-- sec2 pc -->
+        <div class="pc-show">
+          <h2 class="ani delay-1">알림제공! 실시간 확인!</h2>
+          <p class="main-cont__desc ani delay-2">나만의 관심바이어를 관리하는 서비스를 편리하게 이용하세요.</p>
+          <div class="img ani delay-3">
+            <img src="../assets/images/temp-sec03.png" alt="" class="main-sec2-img">
+          </div>
+        </div>
+        
+        <!-- sec2 mobile -->
+        <div class="mobile-show">
+          <h2 class="black">실시간 알람 제공</h2>
+          <p class="main-cont__desc">나만의 관심바이어를 관리하는 서비스를 편리하게 이용하세요.</p>
+          <div class="img-full">
+            <img src="../assets/images/main-mo-sec3.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section sec3" id="section3">
+      <div class="section-inner">
+        <!-- sec3 pc -->
+        <div class="pc-show">
+          <h2 class="black ani">프리미엄서비스</h2>
+          <p class="main-cont__desc ani delay-1">한국과 거래하는 글로벌 유망 바이어들의 신용정보를 제공합니다.</p>
+          <p class="main-cont__text ani delay-2">OOO의 프리미엄 회원이 되셔서 바이어의 신용정보를 확인하시고 보다 안전한 거래를 하시기 바랍니다.</p>
+          <div class="img ani delay-3">
+            <img src="../assets/images/main-sec3-img.svg" alt="" class="main-sec3-img" role="img">
+          </div>
+        </div>
+
+        <!-- sec3 mobile -->
+        <div class="mobile-show">
+          <h2 class="black">프리미엄서비스</h2>
+          <p class="main-cont__desc">한국과 거래하는 글로벌 유망 바이어들의 신용정보를 제공합니다.</p>
+          <div class="img">
+            <img src="../assets/images/main-mo-sec3.svg" alt="글로벌 바이어정보, NICE BIG DATA, RPA, 한국거래 바이어 신용정보">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section sec4 darkBg" id="section4">
+      <div class="section-inner white">
+        <!-- sec4 pc -->
+        <div class="pc-show">
+          <h2 class="ani delay-1">컨설팅 서비스</h2>
+          <p class="main-cont__desc ani delay-2">해외기업 신용조사</p>
+          <div class="main-sec4 ani delay-3">
+            <dl class="main-sec4__cont cont--1">
+              <dt>Africa</dt>
+              <dd><strong>4,175,590</strong>건</dd>
+            </dl>
+            <dl class="main-sec4__cont cont--2">
+              <dt>Europe</dt>
+              <dd><strong>128,420,913</strong>건</dd>
+            </dl>
+            <dl class="main-sec4__cont cont--3">
+              <dt>Asia Pacific</dt>
+              <dd><strong>4,175,590</strong>건</dd>
+            </dl>
+            <dl class="main-sec4__cont cont--4">
+              <dt>Middle East</dt>
+              <dd><strong>2,311,551</strong>건</dd>
+            </dl>
+            <dl class="main-sec4__cont cont--5">
+              <dt>Latin America</dt>
+              <dd><strong>42,310,067</strong>건</dd>
+            </dl>
+            <dl class="main-sec4__cont cont--6">
+              <dt>North America</dt>
+              <dd><strong>88,570,457</strong>건</dd>
+            </dl>
+            <dl class="main-sec4__total">
+              <dt>Global Total</dt>
+              <dd><strong>339,036,288</strong> 건</dd>
+            </dl>
+          </div>
+        </div>  
+
+        <!-- sec4 mobile -->
+        <div class="mobile-show">
+          <h2 class="white">컨설팅 서비스</h2>
+          <p class="main-cont__desc">해외기업 신용도 조사 서비스</p>
+
+          <div class="main-mo-sec4">
+            <dl class="main-mo-sec4__cont cont--1">
+              <dt>Africa</dt>
+              <dd><strong>4,175,590</strong></dd>
+            </dl>
+            <dl class="main-mo-sec4__cont cont--2">
+              <dt>Europe</dt>
+              <dd><strong>128,420,913</strong></dd>
+            </dl>
+            <dl class="main-mo-sec4__cont cont--3">
+              <dt>Asia Pacific</dt>
+              <dd><strong>4,175,590</strong></dd>
+            </dl>
+            <dl class="main-mo-sec4__cont cont--4">
+              <dt>Middle East</dt>
+              <dd><strong>2,311,551</strong></dd>
+            </dl>
+            <dl class="main-mo-sec4__cont cont--5">
+              <dt>Latin America</dt>
+              <dd><strong>42,310,067</strong></dd>
+            </dl>
+            <dl class="main-mo-sec4__cont cont--6">
+              <dt>North America</dt>
+              <dd><strong>88,570,457</strong></dd>
+            </dl>
+            <dl class="main-mo-sec4__total">
+              <dt>Global Total</dt>
+              <dd><strong>339,036,288</strong></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section sec5 darkBg" id="section5">
+      <div class="section-inner white">
+        <!-- sec5 pc -->
+        <div class="pc-show">
+          <h2 class="ani delay-1">기업조회 서비스</h2>
+          <p class="main-cont__desc ani delay-2">거래기업의 등록상태를 확인 할 수 있습니다.</p>
+          <p class="main-cont__text ani delay-3">공공/민간 각 부문이 보유한 해외기업의 중요 거래정보(불량/우량정보, <Br> 위험정보 등)를 실시간 공유합니다.</p>
+          <div class="main-sec5">
+            <ul class="main-sec5__list">
+              <li class="main-sec5__cont ani delay-4">
+                <img src="../assets/images/main-sec5-1.jpg" class="main-sec5__img" alt="">
+                <dl class="main-sec5__desc">
+                  <dt>금융기관</dt>
+                  <dd>무역사가, 대금지급 지연, 부정당 체제, 탈세, 자금세탁 등</dd>
+                </dl>
+              </li>
+              <li class="main-sec5__cont ani delay-5">
+                <img src="../assets/images/main-sec5-2.jpg" class="main-sec5__img" alt="">
+                <dl class="main-sec5__desc">
+                  <dt>우량정보</dt>
+                  <dd>적기 결제, 무역활동 지수</dd>
+                </dl>
+              </li>
+              <li class="main-sec5__cont ani delay-6">
+                <img src="../assets/images/main-sec5-3.jpg" class="main-sec5__img" alt="">
+                <dl class="main-sec5__desc">
+                  <dt>등급정보</dt>
+                  <dd>D&B Rating, PAYDEX, 수출거래 위험지표</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- sec5 mobile -->
+        <div class="mobile-show">
+          <h2 class="white">기업조회 서비스</h2>
+          <p class="main-cont__desc">거래기업의 등록상태를<br> 확인 할 수 있습니다.</p>
+          <div class="scroll-col">
+            <div class="sec5-cont">
+              <dl class="sec5-cont__textArea">
+                <dt>금융기관</dt>
+                <dd>무역사기,대금지급 지연, 부정당 체재, 탈세,자금 세탁 등</dd>
+              </dl>
+            </div>
+            <div class="sec5-cont">
+              <dl class="sec5-cont__textArea">
+                <dt>우량정보</dt>
+                <dd>적기결제, 무역활동 지수</dd>
+              </dl>
+            </div>
+            <div class="sec5-cont">
+              <dl class="sec5-cont__textArea">
+                <dt>등급정보</dt>
+                <dd>D&B Rating, PAYDEX,수출거래 위험지표</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section sec6" id="section6">
+      <div class="section-inner">
+        <!-- sec6 pc -->
+        <div class="pc-show">
+          <h2 class="ani delay-1">불량 바이어 정보제공 서비스</h2>
+          <p class="main-cont__desc ani delay-2">공공/민간 각 부문이 보유한 해외기업의 중요 거래정보를 <br>실시간으로 확인할 수 있습니다.</p>
+          <div class="sec6-col ani delay-3">
+            <div class="sec6-cont">
+              <i class="sec6-icon1"></i>
+              <dl class="sec6-cont__textArea">
+                <dt>금융기관 정보</dt>
+                <dd>무역사기, 대금지급 지연, 부정당체재, 탈세, 자금세탁 등</dd>
+              </dl>
+            </div>
+            <div class="sec6-cont ani delay-4">
+              <i class="sec6-icon2"></i>
+              <dl class="sec6-cont__textArea">
+                <dt>기업 우량정보</dt>
+                <dd>적기 결제, 무역활동 지수등 정보를 제공합니다.</dd>
+              </dl>
+            </div>
+            <div class="sec6-cont ani delay-5">
+              <i class="sec6-icon3"></i>
+              <dl class="sec6-cont__textArea">
+                <dt>기업 등급정보</dt>
+                <dd>D&B Rating, PAYDEX, 수출거래 위험지표를 제공합니다.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        
+        <!-- sec6 mobile -->
+        <div class="mobile-show">
+          <h2 class="black">불량 바이어 정보제공</h2>
+          <p class="main-cont__desc">해외기업의 중요 거래정보를 <br>실시간으로 확인할 수 있습니다.</p>
+          <div class="scroll-col">
+            <div class="sec6-cont">
+              <i class="sec6-icon1"></i>
+              <dl class="sec6-cont__textArea">
+                <dt>금융기관 정보</dt>
+                <dd>무역사기, 대금지급 지연, 부정당제재, 탈세, 자금세탁 등</dd>
+              </dl>
+            </div>
+            <div class="sec6-cont">
+              <i class="sec6-icon2"></i>
+              <dl class="sec6-cont__textArea">
+                <dt>기업 우량정보</dt>
+                <dd>적기 결제, 무역활동 지수등 정보를 제공합니다.</dd>
+              </dl>
+            </div>
+            <div class="sec6-cont">
+              <i class="sec6-icon3"></i>
+              <dl class="sec6-cont__textArea">
+                <dt>기업 등급정보</dt>
+                <dd>D&B Rating, PAYDEX, 수출거래 위험지표를 제공합니다.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer section fp-auto-height">
+      <div class="footer__inner">
+        <div class="fnb">
+          <ul class="fnb__wrap">
+            <li><a href="#n" class="fnb__link">개인정보처리방침</a></li>
+            <li><a href="#n" class="fnb__link">이용약관</a></li>
+            <li><a href="#n" class="fnb__link">신용정보활용체제공시</a></li>
+            <li><a href="#n" class="fnb__link">이메일무단수집거부</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__row">
+          <div class="footer__logo"><img src="../assets/images/footer-logo.png" alt="NICE dun & bradstreet"></div>
+
+          <div class="footer__familySite">
+            <select id="familySite" name="familySite">
+              <option>Family site</option>
+              <option>family 1</option>
+              <option>family 2</option>
+            </select>
+          </div>
+        </div>       
+
+        <address class="site-address">
+          서울특별시 마포구 마포대로 217 크레디트센터 16층 ㈜나이스디앤비<br>
+          통신판매업신고: 제2012-서울마포-0168호 
+          사업자등록번호: 107-86-24874 
+          TEL: 02-2122-2500 FAX: 02-2122-2591
+        </address>
+
+        <p class="copyright">COPYRIGHT 2006 NICE D&B Co.,Ltd. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer><!-- //footer -->
+  </div>
+
+  <div class="quick-message" id="quickMessage">
+    <div class="quick-message__inner">
+      <h2 class="quick-message__title">바이어 메시지</h2>
+      <div class="quick-message__list">
+        <a href="#n" class="message-box" onclick="window.open('CM2.20.html','바이어 메시지', 'width=500, height=720');">
+          <span class="message-box__date">2023.07.01 09:00</span>
+          <span class="message-box__text"><strong>{OO바이어}</strong>에게 메시지가 도착했습니다.</span>
+        </a>
+        <a href="#n"  class="message-box" onclick="window.open('CM2.20.html','바이어 메시지', 'width=500, height=720');">
+          <span class="message-box__date">2023.07.01 09:00</span>
+          <span class="message-box__text"><strong>{OO바이어}</strong>에게 메시지가 도착했습니다.</span>
+        </a>
+        <a href="#n"  class="message-box" onclick="window.open('CM2.20.html','바이어 메시지', 'width=500, height=720');">
+          <span class="message-box__date">2023.07.01 09:00</span>
+          <span class="message-box__text"><strong>{OO바이어}</strong>에게 메시지가 도착했습니다.</span>
+        </a>
+        <a href="#n"  class="message-box message-box--open" title="읽음" onclick="window.open('CM2.20.html','바이어 메시지', 'width=500, height=720');">
+          <span class="message-box__date">2023.07.01 09:00</span>
+          <span class="message-box__text"><strong>{OO바이어}</strong>에게 메시지가 도착했습니다.</span>
+        </a>
+        <a href="#n"  class="message-box" onclick="window.open('CM2.20.html','바이어 메시지', 'width=500, height=720');">
+          <span class="message-box__date">2023.07.01 09:00</span>
+          <span class="message-box__text"><strong>{OO바이어}</strong>에게 메시지가 도착했습니다.</span>
+        </a>
+      </div>
+      <button type="button" class="quick-message__close"><span class="blind">닫기</span></button>
+    </div>
+  </div>
+
+  <!-- [팝업]관심 바이어 -->
+  <div class="modal-popup modal-popup--large" id="modalPop01">
+    <div class="modal-popup__wrap">
+      <div class="modal-popup__head">
+        <h1 class="modal-popup__title">관심 바이어</h1>
+      </div>
+      <div class="modal-popup__body">
+         <div class="modal-popup__content">
+          <!-- 조건검색 -->
+          <div class="board-search">
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="sel02">국가</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-select">
+                    <select name="sel02" id="sel02">
+                      <option>선택하세요</option>
+                    </select>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="inpSearchKeyword">키워드</label>
+                </dt>
+                <dd class="board-search__input">
+                  <input type="text" name="inpSearch" id="inpSearchKeyword" class="input-text" placeholder="키워드 입력">
+                </dd>
+              </dl>
+            </div>
+            <div class="board-search__row">
+              <dt class="board-search__label">
+                <label for="inpSearch04">산업분류코드</label>
+              </dt>
+              <dd class="board-search__itemSelect">
+                <button type="button" class="btn-pri btn--small">코드조회</button>
+                <span class="selected-item">
+                  <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                  벨기에 바이어 기업 1
+                </span>
+                <span class="selected-item">
+                  <button type="button" class="btn-del"><em class="blind">삭제</em></button>
+                  벨기에 바이어 기업 2
+                </span>
+              </dd>
+            </div>
+
+            <!-- 20231003 조회버튼 추가 -->
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec btn--small">초기화</button>
+              <button type="button" class="btn-pri btn--small">조회 <i class="icon16-search-wt"></i></button>
+            </div>
+          </div><!-- //조건검색 -->
+
+          <div class="board-head">
+            <div class="board-head__left">
+              <span class="board-count">총 <em>125</em> 건</span>
+            </div>
+            <!-- 20231003 삭제버튼 추가 -->
+            <div class="board-head__right">
+              <button type="button" class="btn-sec btn--small">삭제</button>
+            </div>
+          </div>
+          <div class="board-list">
+            <table class="board-list__table">
+              <caption>산업분류코드, 산업명 선택 표</caption>
+              <colgroup>
+                <col style="width:30px">
+                <col style="width:7%">
+                <col style="width:15%">
+                <col style="width:28%">
+                <col style="width:100px">
+                <col style="width:auto">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_01">
+                      <label for="ch01_01"><span class="blind">125</span></label>
+                    </span>
+                  </th>
+                  <th scope="col">No</th>
+                  <th scope="col">국가명</th>
+                  <th scope="col">기업명</th>
+                  <th scope="col">산업분류코드</th>
+                  <th scope="col">관심품목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike01" checked>
+                      <label for="btnLike01" class="btnLike01"><span class="blind">관심바이어</span></label>
+                    </span>                    
+                    <a href="BD1.20.html">STARBUCKS</a>
+                    <span class="badge">한국거래바이어</span>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_03">
+                      <label for="ch01_03"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike02">
+                      <label for="btnLike02"><span class="blind">관심바이어</span></label>
+                    </span>   
+                    <a href="BD1.20.html">STARBUCKS VETNAM</a>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_04">
+                      <label for="ch01_04"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike03">
+                      <label for="btnLike03"><span class="blind">관심바이어</span></label>
+                    </span>     
+                    <a href="BD1.20.html">COFFEE ABCD</a>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="input-checkbox">
+                      <input type="checkbox" name="ch01" id="ch01_05">
+                      <label for="ch01_05"><span class="blind">125</span></label>
+                    </span>
+                  </td>
+                  <td>75</td>
+                  <td>VATICAN CITY</td>
+                  <td class="text-left">
+                    <span class="input-like">
+                      <input type="checkbox" name="btnLike" id="btnLike04">
+                      <label for="btnLike04"><span class="blind">관심바이어</span></label>
+                    </span>     
+                    <a href="BD1.20.html">STARBUCKS</a>
+                  </td>
+                  <td>161201</td>
+                  <td class="text-left"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+      </div><!-- //modal-popup__body -->
+      <div class="modal-popup__close">
+        <button type="button"><span class="blind">팝업닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- //[팝업]관심 바이어 -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function(){
+      //sec1
+      mainSec1();
+      
+      let i = 0;
+      sec1Play = setInterval(function() {        
+        i++
+        if(i == 8){
+          i = 0;
+        }
+        let mainSec1List = document.querySelectorAll(".main-sec1__listWrap > li");
+        let mainSec1DescList = document.querySelectorAll(".main-sec1__descList > li");
+        let mainSec1Btn = document.querySelectorAll(".main-sec1__btn");
+
+        mainSec1DescList.forEach(function(obj){
+          obj.classList.remove("on");
+        });
+        mainSec1List.forEach(function(obj){
+          obj.classList.remove("on");
+        });
+        mainSec1DescList[i].classList.add("on");
+        mainSec1List[i].classList.add("on"); 
+        descPaging.innerHTML = "0" + (i + 1); 
+      }, 5000); //속도 조절
+
+      
+    });
+
+    function mainSec1() {
+      let mainSec1List = document.querySelectorAll(".main-sec1__listWrap > li");
+      let mainSec1DescList = document.querySelectorAll(".main-sec1__descList > li");
+      let mainSec1Btn = document.querySelectorAll(".main-sec1__btn");
+      mainSec1Btn.forEach(function(elem, idx){
+        elem.addEventListener("click", function(){
+          mainSec1DescList.forEach(function(obj){
+            obj.classList.remove("on");
+          });
+          mainSec1List.forEach(function(obj){
+            obj.classList.remove("on");
+          });
+          mainSec1DescList[idx].classList.add("on");
+          mainSec1List[idx].classList.add("on");
+          descPaging.innerHTML = "0" + (idx + 1); 
+        });
+      });
+    }
+
+    var swiper = new Swiper(".main-sec0-link", {
+      slidesPerView: 'auto',
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+    });
+
+    var swiperMoblile = new Swiper(".mobileMain-sec1-link", {
+      slidesPerView: 1,
+      pagination: {
+        el: '.mobileMain-sec1-pagination',
+        type: 'fraction',
+      },
+      spaceBetween: 32,
+    });
+
+    var swiperMoblileSec1 = new Swiper(".mobileMain-sec1-sw", {
+      slidesPerView: 1,
+      pagination: {
+        el: '.mobileMain-sec1-sw-pagination',
+        type: 'fraction',
+      }
+    });
+    
+    var myFullpage = new fullpage('#fullpage', {
+      licenseKey: 'OLF97-ULNPK-49K2J-JQJ4H-SNWWN',
+      anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+      navigation: true,
+      navigationPosition: 'left',
+      keyboardScrolling: true,
+      autoScrolling: true,
+      animateAnchor:true,
+    });
+    
+    //20231204 추가
+    let fullpageNav = document.getElementById("fp-nav");
+    let pageNum = fullpageNav.querySelectorAll(".fp-sr-only");
+    pageNum.forEach(function(obj, idx){
+      let pageNumSpan = obj.nextElementSibling;
+      console.log(obj.nextElementSibling);
+      pageNumSpan.classList.add("num")
+      obj.nextElementSibling.innerHTML = idx + 1;
+    });
+  </script>
+</body>
+</html>

@@ -19,6 +19,29 @@
 #fp-nav-new a.active {background-color: #000;}
 #fp-nav-new a.active .num {color:#fff; font-weight: bold;}
 
+/* 20231204 추가 -------- */
+#fp-nav > ul > li:nth-child(8) {display:none !important;}
+
+#fp-nav.fp-left {
+  position: fixed;
+  z-index: 15;
+  left:0;
+  top: 50%;
+  opacity: 1;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translate3d(0,-50%,0)
+}
+
+#fp-nav ul li span.num {position: static; color: rgba(0,0,0,0.3); background-color: transparent; transition: none;}
+#fp-nav ul li:hover a span.num {all:unset; margin:0 0 0 -2px;}
+#fp-nav ul li {all:unset;}
+#fp-nav ul li a {display:block; width: 37px; height: 22px; line-height: 22px; border-radius: 0px 0px 8px 0px; padding-left:16px;}
+#fp-nav a.active {background-color: #000;}
+#fp-nav ul li a.active span.num {color:#fff; font-weight: bold; margin: 0 0 0 -2px;}
+
+/* --------- */
+
 /* PC */
 @media screen and (min-width: 601px) {
   html, body, div {line-height: normal;}
@@ -40,7 +63,7 @@
   #section4 {background: #1b263c url('../images/main-sec4-bg.png') no-repeat center bottom / auto 80%;}
   #section5 {background: #1b263c url('../images/main-sec5-bg.png') no-repeat center top / auto 80%;}
   
-  .main-sec0-link {overflow:hidden; max-width:1366px; margin:110px auto 0; padding:0 20px}
+  .main-sec0-link {overflow:hidden; max-width:1366px; margin:110px auto 0; padding:0 20px; box-sizing: content-box;}
   .main-sec0-link > ul {display:flex;}
   .main-sec0-link  li {position:relative; flex:0 0 334px;}
   .main-sec0-link  li + li {margin-left:10px}

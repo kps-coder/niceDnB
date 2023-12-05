@@ -282,7 +282,7 @@ b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:7
   .sub-visual--sub1::before {content: ""; position: absolute; top:125px; right:20px; display:block;  width:240px; height:128px; background:url(../images/sub-visual-1.png) no-repeat 0 0 / 240px auto;}
 
   /* linemap */
-  .bread-crumb {border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+  .bread-crumb {position:sticky; top:-1px; border-top:1px solid #ccc; border-bottom:1px solid #ccc;} /* 20231205 수정 */
   .bread-crumb__inner {display:flex;}
   .bread-crumb__inner > li {position: relative; flex:1;}
   .bread-crumb__inner > li:first-child {display:none;}

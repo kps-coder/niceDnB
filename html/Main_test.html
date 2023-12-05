@@ -18,16 +18,11 @@
   <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../assets/css/default.css">
   <link rel="stylesheet" href="../assets/css/common.css"> <!-- 20231110 추가 -->
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main_test.css">
   
   <script src="../assets/js/lib/fullpage.min.js"></script>
   <script src="../assets/js/lib/swiper.min.js"></script>
   <script src="../assets/js/ui_common.js"></script>
-  <style>
-    .fp-section.active .ani {
-      animation: view 0.5s ease-out forwards;
-    }
-  </style>
 </head>
 <body> 
   <div class="skip-nav">
@@ -1039,6 +1034,12 @@
       keyboardScrolling: true,
       autoScrolling: true,
       animateAnchor:true,
+      onLeave: function(section, nextSection, direction){
+        let elemSec = nextSection.item;
+        //let pageIdx = section.index;
+        //console.log(elemSec);  
+        elemSec.classList.add("aniPlay");
+      }
     });
     
     //20231204 추가
@@ -1048,7 +1049,12 @@
       let pageNumSpan = obj.nextElementSibling;
       console.log(obj.nextElementSibling);
       pageNumSpan.classList.add("num")
-      obj.nextElementSibling.innerHTML = idx + 1;
+      pageNumSpan.innerHTML = idx + 1;
+    });
+
+    window.addEventListener("scroll", function(e){
+      console.log( window.scrollY);
+      alert("dd");
     });
   </script>
 </body>

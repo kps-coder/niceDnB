@@ -165,7 +165,7 @@
               </tbody>
             </table>
           </div><!-- //board-view -->
-          <div class="credit-rating-info">
+          <div class="credit-rating-info" style="display: none;">
             <h4 class="com-tit4">신용등급 정보</h4>
             <div class="info-rating">
               <p class="title">D&B Rating</p>
@@ -185,11 +185,28 @@
                 <img src="../assets/images/paydex-table.png" alt="100~80 Low 70~50 보통 40~0 high">
               </div>
             </div>
-
             <div class="btn-wrap">
               <button type="button" class="btn-sec btn--small" data-roll="modal-popup" data-popid="confirmPop01">보고서 확인</button>
             </div>
           </div>
+
+          <!-- 20231206 추가 : 신용등급 정보가 없을 경우 -->
+          <div class="credit-rating-info">
+            <h4 class="com-tit4">신용등급 정보</h4>
+            <div class="rating-none">
+              <div class="rating-none__noti">
+                <img src="../assets/images/temp_img.jpg" alt="보고서 샘플">
+                <div class="rating-none__txt">
+                  <p class="txt">해당 바이어의 신용등급 보고서 정보가 없습니다. <br>NICE D&B보고서 서비스에서 신청 후, 이용 확인 바랍니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-wrap">
+              <button type="button" class="btn-sec btn--small">보고서 신청</button>
+            </div>
+          </div>
+          <!-- //20231206 추가 -->
         </div>
 
         <div class="section-cont">
@@ -222,7 +239,7 @@
                   <th scope="row">이메일</th>
                   <td>
                     Bet************@hongkong.messefrankfurt.com 
-                    <a href="#n" class="btn-line-link maLeft10">사이바어이이메일</a>
+                    <a href="#n" class="btn-sec btn--small maLeft10">사이바어이이메일</a>
                   </td>
                 </tr>
               </tbody>

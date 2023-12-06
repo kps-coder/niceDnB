@@ -143,7 +143,7 @@
           <button type="button" class="btn-cta-pri" id="btnBlock">발굴하기</button>
         </div>
 
-        <div class="section-cont" id="buyerResult" style="display:none">
+        <div class="section-cont" id="buyerResult" style="display:block">
           <div class="buyer-result">
             <div class="buyer-result__col">
               <span class="buyer-result__tit">검색결과</span>
@@ -158,9 +158,22 @@
               <span class="buyer-result__count"><strong>152,500</strong> 캐시</span>
             </div>
           </div>
-          <div class="btn-wrap">
-            <a href="BM2.10.html" class="btn-cta-pri">마케팅 작성</a>
+
+          <!-- 20231206 추가 -->
+          <div class="buyer-send-mail">
+            <i class="icon-send-email"></i>
+            <p class="buyer-send-mail__txt">발송 건수를 선택해 주세요.</p>
+            <span class="input-select">
+              <select id="sel01">
+                <option>100건</option>
+                <option>50건</option>
+              </select>
+            </span>
+            <div class="btn-wrap">
+              <a href="BM2.10.html" class="btn-cta-pri">마케팅 작성</a>
+            </div>
           </div>
+          <!-- //20231206 추가 -->
         </div>
         
       </div><!-- //content-body -->

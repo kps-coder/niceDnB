@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../assets/css/common.css"> <!-- 20231110 추가 -->
   <link rel="stylesheet" href="../assets/css/main.css">
   
-  <script src="../assets/js/lib/fullpage.js"></script>
+  <script src="../assets/js/lib/fullpage.min.js"></script>
   <script src="../assets/js/lib/swiper.min.js"></script>
   <script src="../assets/js/ui_common.js"></script>
 </head>
@@ -616,26 +616,30 @@
         <div class="mobile-show">
           <h2 class="white">기업조회 서비스</h2>
           <p class="main-cont__desc">거래기업의 등록상태를<br> 확인 할 수 있습니다.</p>
-          <div class="scroll-col">
-            <div class="sec5-cont">
-              <dl class="sec5-cont__textArea">
-                <dt>금융기관</dt>
-                <dd>무역사기,대금지급 지연, 부정당 체재, 탈세,자금 세탁 등</dd>
-              </dl>
-            </div>
-            <div class="sec5-cont">
-              <dl class="sec5-cont__textArea">
-                <dt>우량정보</dt>
-                <dd>적기결제, 무역활동 지수</dd>
-              </dl>
-            </div>
-            <div class="sec5-cont">
-              <dl class="sec5-cont__textArea">
-                <dt>등급정보</dt>
-                <dd>D&B Rating, PAYDEX,수출거래 위험지표</dd>
-              </dl>
+          <!-- 20231206 swiper로 변경 -->
+          <div class="mobileMain-sec5-sw">
+            <div class="swiper-wrapper">
+              <div class="sec5-cont swiper-slide">
+                <dl class="sec5-cont__textArea">
+                  <dt>금융기관</dt>
+                  <dd>무역사기,대금지급 지연, 부정당 체재, 탈세,자금 세탁 등</dd>
+                </dl>
+              </div>
+              <div class="sec5-cont swiper-slide">
+                <dl class="sec5-cont__textArea">
+                  <dt>우량정보</dt>
+                  <dd>적기결제, 무역활동 지수</dd>
+                </dl>
+              </div>
+              <div class="sec5-cont swiper-slide">
+                <dl class="sec5-cont__textArea">
+                  <dt>등급정보</dt>
+                  <dd>D&B Rating, PAYDEX,수출거래 위험지표</dd>
+                </dl>
+              </div>
             </div>
           </div>
+          <!-- //20231206 swiper로 변경 -->
         </div>
       </div>
     </div>
@@ -674,29 +678,33 @@
         <div class="mobile-show">
           <h2 class="black">불량 바이어 정보제공</h2>
           <p class="main-cont__desc">해외기업의 중요 거래정보를 <br>실시간으로 확인할 수 있습니다.</p>
-          <div class="scroll-col">
-            <div class="sec6-cont">
-              <i class="sec6-icon1"></i>
-              <dl class="sec6-cont__textArea">
-                <dt>금융기관 정보</dt>
-                <dd>무역사기, 대금지급 지연, 부정당제재, 탈세, 자금세탁 등</dd>
-              </dl>
-            </div>
-            <div class="sec6-cont">
-              <i class="sec6-icon2"></i>
-              <dl class="sec6-cont__textArea">
-                <dt>기업 우량정보</dt>
-                <dd>적기 결제, 무역활동 지수등 정보를 제공합니다.</dd>
-              </dl>
-            </div>
-            <div class="sec6-cont">
-              <i class="sec6-icon3"></i>
-              <dl class="sec6-cont__textArea">
-                <dt>기업 등급정보</dt>
-                <dd>D&B Rating, PAYDEX, 수출거래 위험지표를 제공합니다.</dd>
-              </dl>
+          <!-- 20231206 swiper로 변경 -->
+          <div class="mobileMain-sec6-sw">
+            <div class="swiper-wrapper">
+              <div class="sec6-cont swiper-slide">
+                <i class="sec6-icon1"></i>
+                <dl class="sec6-cont__textArea">
+                  <dt>금융기관 정보</dt>
+                  <dd>무역사기, 대금지급 지연, 부정당제재, 탈세, 자금세탁 등</dd>
+                </dl>
+              </div>
+              <div class="sec6-cont swiper-slide">
+                <i class="sec6-icon2"></i>
+                <dl class="sec6-cont__textArea">
+                  <dt>기업 우량정보</dt>
+                  <dd>적기 결제, 무역활동 지수등 정보를 제공합니다.</dd>
+                </dl>
+              </div>
+              <div class="sec6-cont swiper-slide">
+                <i class="sec6-icon3"></i>
+                <dl class="sec6-cont__textArea">
+                  <dt>기업 등급정보</dt>
+                  <dd>D&B Rating, PAYDEX, 수출거래 위험지표를 제공합니다.</dd>
+                </dl>
+              </div>
             </div>
           </div>
+          <!-- //20231206 swiper로 변경 -->
         </div>
       </div>
     </div>
@@ -1025,6 +1033,18 @@
         type: 'fraction',
       }
     });
+
+    // 20231206 추가
+    var swiperMoblileSec5 = new Swiper(".mobileMain-sec5-sw", {
+      slidesPerView: 'auto',
+      freeMode: true,
+    });
+
+    // 20231206 추가
+    var swiperMoblileSec6 = new Swiper(".mobileMain-sec6-sw", {
+      slidesPerView: 'auto',
+      freeMode: true,
+    });
     
     var myFullpage = new fullpage('#fullpage', {
       licenseKey: 'OLF97-ULNPK-49K2J-JQJ4H-SNWWN',
@@ -1034,9 +1054,25 @@
       keyboardScrolling: true,
       autoScrolling: true,
       animateAnchor:true,
+
+      //20231205 추가
+      onLeave: function(section, nextSection, direction){
+        let elemSec = nextSection.item;
+        //let pageIdx = section.index;
+        //console.log(elemSec);  
+        elemSec.classList.add("aniPlay");
+      }
     });
     
-
+    //20231204 추가
+    let fullpageNav = document.getElementById("fp-nav");
+    let pageNum = fullpageNav.querySelectorAll(".fp-sr-only");
+    pageNum.forEach(function(obj, idx){
+      let pageNumSpan = obj.nextElementSibling;
+      console.log(obj.nextElementSibling);
+      pageNumSpan.classList.add("num")
+      pageNumSpan.innerHTML = idx + 1;
+    });
   </script>
 </body>
 </html>

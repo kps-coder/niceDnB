@@ -101,6 +101,24 @@
                 </dd>
               </dl>
             </div>
+
+            <!-- 20231206 추가 -->
+            <div class="board-search__row">
+              <dl class="board-search__col">
+                <dt class="board-search__label">
+                  <label for="sel_detail">상세정보</label>
+                </dt>
+                <dd class="board-search__input">
+                  <span class="input-select">
+                    <select name="sel_detail" id="sel_detail">
+                      <option>있음</option>
+                    </select>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+            <!-- //20231206 추가 -->
+            
             <div class="board-search__row">
               <dl class="board-search__col">
                 <dt class="board-search__label">
@@ -159,13 +177,14 @@
               <button type="button" class="btn-pri">마케팅 발송 <i class="icon16-send-wt"></i></button>
             </div>
           </div>
-          <div class="board-list">
+          <div class="board-list"><!-- 20231206 상세정보, 이메일 건수 추가 -->
             <table class="board-list__table">
               <caption>산업분류코드, 산업명 선택 표</caption>
-              <colgroup><!-- fixed head 와 동일 설정 -->
+              <colgroup>
                 <col style="width:30px">
+                <col style="width:6%">
                 <col style="width:7%">
-                <col style="width:15%">
+                <col style="width:10%">
                 <col style="width:28%">
                 <col style="width:150px">
                 <col style="width:auto">
@@ -178,7 +197,8 @@
                       <label for="ch01_01"><span class="blind">125</span></label>
                     </span>
                   </th>
-                  <th scope="col">No</th>
+                  <th scope="col">상세정보</th>
+                  <th scope="col">이메일</th>
                   <th scope="col">국가</th>
                   <th scope="col">기업명</th>
                   <th scope="col">산업분류코드</th>
@@ -193,8 +213,9 @@
                       <label for="ch01_02"><span class="blind">125</span></label>
                     </span>
                   </td>
-                  <td>75</td>
-                  <td>VATICAN CITY</td>
+                  <td><a href="#n"><i class="icon-detail"></i><span class="blind">상세정보</span></a></td><!-- 20231206 추가 -->
+                  <td>2건</td><!-- 20231206 추가 -->
+                  <td>US</td>
                   <td class="text-left">
                     <span class="input-like">
                       <input type="checkbox" name="btnLike" id="btnLike01" checked>
@@ -213,8 +234,9 @@
                       <label for="ch01_03"><span class="blind">125</span></label>
                     </span>
                   </td>
-                  <td>75</td>
-                  <td>VATICAN CITY</td>
+                  <td><a href="#n"><i class="icon-detail"></i><span class="blind">상세정보</span></a></td>
+                  <td>2건</td>
+                  <td>US</td>
                   <td class="text-left">
                     <span class="input-like">
                       <input type="checkbox" name="btnLike" id="btnLike02">
@@ -228,40 +250,43 @@
                 <tr>
                   <td>
                     <span class="input-checkbox">
-                      <input type="checkbox" name="ch01" id="ch01_04">
-                      <label for="ch01_04"><span class="blind">125</span></label>
+                      <input type="checkbox" name="ch01" id="ch01_02">
+                      <label for="ch01_02"><span class="blind">125</span></label>
                     </span>
                   </td>
-                  <td>75</td>
-                  <td>VATICAN CITY</td>
+                  <td></td>
+                  <td>2건</td>
+                  <td>US</td>
                   <td class="text-left">
                     <span class="input-like">
-                      <input type="checkbox" name="btnLike" id="btnLike03">
-                      <label for="btnLike03"><span class="blind">관심바이어</span></label>
-                    </span>     
-                    <a href="BD1.20.html">COFFEE ABCD</a>
+                      <input type="checkbox" name="btnLike" id="btnLike01" checked>
+                      <label for="btnLike01" class="btnLike01"><span class="blind">관심바이어</span></label>
+                    </span>                    
+                    <a href="BD1.20.html">STARBUCKS</a>
+                    <span class="badge">한국거래바이어</span>
                   </td>
                   <td>15-5**-****</td>
-                  <td class="text-left"></td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
                 </tr>
                 <tr>
                   <td>
                     <span class="input-checkbox">
-                      <input type="checkbox" name="ch01" id="ch01_05">
-                      <label for="ch01_05"><span class="blind">125</span></label>
+                      <input type="checkbox" name="ch01" id="ch01_03">
+                      <label for="ch01_03"><span class="blind">125</span></label>
                     </span>
                   </td>
-                  <td>75</td>
-                  <td>VATICAN CITY</td>
+                  <td><a href="#n"><i class="icon-detail"></i><span class="blind">상세정보</span></a></td>
+                  <td>2건</td>
+                  <td>US</td>
                   <td class="text-left">
                     <span class="input-like">
-                      <input type="checkbox" name="btnLike" id="btnLike04">
-                      <label for="btnLike04"><span class="blind">관심바이어</span></label>
-                    </span>     
-                    <a href="BD1.20.html">STARBUCKS</a>
+                      <input type="checkbox" name="btnLike" id="btnLike02">
+                      <label for="btnLike02"><span class="blind">관심바이어</span></label>
+                    </span>   
+                    <a href="BD1.20.html">STARBUCKS VETNAM</a>
                   </td>
                   <td>15-5**-****</td>
-                  <td class="text-left"></td>
+                  <td class="text-left">SIC, 관심품목(스크래핑 결과)</td>
                 </tr>
               </tbody>
             </table>

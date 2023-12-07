@@ -831,6 +831,12 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
   .search-head {position: sticky; top:65px; z-index: 9;}
 }
 
+/* 통합검색 모바일 20231206 추가 */
+@media screen and (max-width: 800px) {
+  .search-head {position: sticky; top:0; z-index: 9;}
+}
+
+
 
 /* ==== 바이어 메시지 ==== */
 .buyer-message-head {display:flex; align-items: center; justify-content: space-between;}

@@ -833,7 +833,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 /* 통합검색 모바일 20231206 추가 */
 @media screen and (max-width: 800px) {
-  .search-head {position: sticky; top:0; z-index: 9;}
+  .search-head {position: sticky; top:-42px; z-index: 9;}
 }
 
 

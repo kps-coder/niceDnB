@@ -78,6 +78,24 @@
             <div class="bigdata-buyer__input">
               <div class="input-withBtn">
                 <input type="text" class="input-text" id="inputKeyword" title="키워드">
+                <!-- 20231220 추가 -->
+                <div class="auto-keyword">
+                  <!-- 키워드 자동완성 -->
+                  <div class="auto-keyword__wrap atkwd--auto" id="autoKeyword" style="display: none;">
+                    <div class="auto-keyword__head">
+                      <div class="tit">키워드 자동완성</div>
+                    </div>
+                    <div class="auto-keyword__cont">
+                      <ul class="auto-keyword__list">
+                        <li><a href="#kw" class="kwd"><strong class="keyword">Food</strong> Agents</a></li>
+                        <li><a href="#kw" class="kwd"><strong class="keyword">Food</strong> Service Franchise</a></li>
+                        <li><a href="#kw" class="kwd"><strong class="keyword">Food</strong> Processing</a></li>
+                        <li><a href="#kw" class="kwd"><strong class="keyword">Food</strong> Projects</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- //20231220 추가 -->
                 <button type="button" class="btn">추가</button>
               </div>
               <button type="button" class="btn-reset"><span class="blind">초기화</span></button>
@@ -372,6 +390,14 @@
     let ctaBtn = document.querySelector("#btnBlock");
     ctaBtn.addEventListener("click", function(){
       buyerResult.style.display = "block";
+    });
+
+    // 20231220 최근검색어 : 화면 확인용
+    inputKeyword.addEventListener("input", function(){
+      autoKeyword.style.display = "block"; 
+    });
+    inputKeyword.addEventListener("focusout", function(){
+      autoKeyword.style.display = "none";
     });
   </script>
 </body>

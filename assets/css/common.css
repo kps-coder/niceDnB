@@ -830,7 +830,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 /* //20231206 자동완성 */
 
 /* 20231220 키워드 input 자동완성 */
-.input--autokeyword {position: relative; z-index: 10;}
+.input--autokeyword {position: relative; z-index: 4;}
 .input--autokeyword .auto-keyword {top:34px; margin:0;}
 /* //20231220 키워드 input 자동완성 */
 

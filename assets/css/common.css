@@ -816,7 +816,7 @@ textarea.input-textarea {resize: none; padding:6px; border:1px solid #ccc; font-
 
 /* 20231206 자동완성 */
 .auto-keyword {position:absolute; top:51px; width:100%; background-color: #fff;}
-.auto-keyword__wrap {padding:12px 0; border:1px solid #ccc;}
+.auto-keyword__wrap {overflow-y:auto; max-height:400px; padding:12px 0; border:1px solid #ccc;}
 .auto-keyword__head {padding:0 12px; margin-bottom:12px;}
 .auto-keyword__head .tit {font-size: 14px; color:#999;}
 .auto-keyword__list > li {display: flex; align-items: center; justify-content: space-between; padding:0 12px;}
